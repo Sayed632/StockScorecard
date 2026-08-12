@@ -1,0 +1,23 @@
+# StockScorecard Configuration
+
+market_cap_buckets:
+  large: 20000   # >= 20,000 Cr
+  mid: 5000      # 5,000 - 20,000 Cr
+  # small: < 5,000 Cr
+
+factor_weights:
+  Q: 0.30   # Quality / Financial Strength
+  G: 0.25   # Growth / Historical Performance
+  V: 0.25   # Valuation (higher = cheaper)
+  T: 0.20   # Technical / Price Trend
+
+# Lookback periods
+growth_years: 5
+quality_years: 5
+
+# Minimum liquidity filter (average daily volume)
+min_avg_volume: 50000
+
+# Output
+output_dir: data
+results_filename: scorecard_{date}.csv

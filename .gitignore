@@ -1,0 +1,25 @@
+# Data & cache
+data/
+*.csv
+*.parquet
+*.db
+*.sqlite
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+.env
+*.log
+.DS_Store
+.idea/
+.vscode/
+*.swp
+.ipynb_checkpoints/
+dist/
+build/
+*.egg-info/
