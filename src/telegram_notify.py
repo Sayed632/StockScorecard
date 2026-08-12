@@ -1,27 +1,44 @@
 """
 Telegram delivery for StockScorecard reports.
 Posts formatted Q-G-V-T score summaries to a channel.
+
+Credentials are read from environment variables (never hardcoded):
+  TELEGRAM_BOT_TOKEN
+  TELEGRAM_CHAT_ID   (e.g. @nsepyscan or -100xxxxxxxxxx)
 """
 
+import os
 import requests
 from typing import Optional
 import pandas as pd
 from datetime import datetime
+from dotenv import load_dotenv
+
+load_dotenv()  # loads .env if present
 
 
-# Default credentials (can be overridden via env or config)
-DEFAULT_BOT_TOKEN = "8872081985:AAESjKYUKUMYpikjJ95xT1r3gDpvHEr75Cg"
-DEFAULT_CHAT_ID = "@nsepyscan"   # or numeric -1003782252437
+def _get_credentials():
+    token = os.getenv("TELEGRAM_BOT_TOKEN", "").strip()
+    chat_id = os.getenv("TELEGRAM_CHAT_ID", "").strip()
+    return token, chat_id
 
 
 def send_message(
     text: str,
-    bot_token: str = DEFAULT_BOT_TOKEN,
-    chat_id: str = DEFAULT_CHAT_ID,
+    bot_token: Optional[str] = None,
+    chat_id: Optional[str] = None,
     parse_mode: str = "HTML",
     disable_preview: bool = True,
 ) -> bool:
     """Send a text message to the Telegram channel. Returns True on success."""
+    token, default_chat = _get_credentials()
+    bot_token = bot_token or token
+    chat_id = chat_id or default_chat
+
+    if not bot_token or not chat_id:
+        print("Telegram credentials missing. Set TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID in .env")
+        return False
+
     url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
     payload = {
         "chat_id": chat_id,
@@ -42,9 +59,7 @@ def send_message(
 
 
 def format_scorecard_report(df: pd.DataFrame, max_rows: int = 12) -> str:
-    """
-    Create a clean, readable HTML report for Telegram.
-    """
+    """Create a clean, readable HTML report for Telegram."""
     now = datetime.now().strftime("%d %b %Y, %H:%M IST")
 
     lines = [
@@ -55,7 +70,6 @@ def format_scorecard_report(df: pd.DataFrame, max_rows: int = 12) -> str:
         "<pre>",
     ]
 
-    # Header
     lines.append(f"{'Sym':<11} {'Cap':<5} {'Ovr':>5} {'Q':>4} {'G':>4} {'V':>4} {'T':>4}")
     lines.append("-" * 40)
 
@@ -71,7 +85,6 @@ def format_scorecard_report(df: pd.DataFrame, max_rows: int = 12) -> str:
     lines.append("</pre>")
     lines.append("")
 
-    # Market-cap averages
     if "market_cap_bucket" in df.columns:
         lines.append("<b>📦 Avg Score by Market Cap</b>")
         bucket_avg = (
@@ -86,7 +99,6 @@ def format_scorecard_report(df: pd.DataFrame, max_rows: int = 12) -> str:
             )
         lines.append("")
 
-    # Sector averages (top 6)
     if "sector" in df.columns:
         lines.append("<b>🏭 Top Sectors by Avg Overall</b>")
         sector_avg = (
@@ -104,15 +116,15 @@ def format_scorecard_report(df: pd.DataFrame, max_rows: int = 12) -> str:
     lines.append("<i>Q=Quality  G=Growth  V=Valuation  T=Technical</i>")
     lines.append("<i>Higher V = cheaper valuation</i>")
     lines.append("")
-    lines.append("🔗 Full CSV available in the repo / local run")
+    lines.append("🔗 Full CSV available from local run / repo")
 
     return "\n".join(lines)
 
 
 def send_scorecard_report(
     df: pd.DataFrame,
-    bot_token: str = DEFAULT_BOT_TOKEN,
-    chat_id: str = DEFAULT_CHAT_ID,
+    bot_token: Optional[str] = None,
+    chat_id: Optional[str] = None,
     max_rows: int = 12,
 ) -> bool:
     """Format and send the full scorecard report to Telegram."""
@@ -121,7 +133,6 @@ def send_scorecard_report(
 
     text = format_scorecard_report(df, max_rows=max_rows)
 
-    # Telegram has a 4096 char limit
     if len(text) > 4000:
         text = text[:3900] + "\n\n… (truncated)"
 
