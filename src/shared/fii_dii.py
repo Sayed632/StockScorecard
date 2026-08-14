@@ -1,10 +1,9 @@
 """
-FII / DII Monitor
-Fetches latest institutional flow data (cash market) from free public API.
+FII / DII Monitor + sector FPI allocation + Swing bias helpers.
 """
 
-from dataclasses import dataclass
-from typing import Optional, Dict, Any, List
+from dataclasses import dataclass, field
+from typing import Optional, Dict, Any, List, Tuple
 import requests
 import logging
 
@@ -12,6 +11,23 @@ logger = logging.getLogger(__name__)
 
 API_LATEST = "https://fii-diidata.mrchartist.com/api/data"
 API_HISTORY = "https://fii-diidata.mrchartist.com/api/history"
+API_SECTORS = "https://fii-diidata.mrchartist.com/api/sectors"
+
+# Map our scanner sector keys -> API sector name fragments
+SECTOR_NAME_MAP = {
+    "pharmaceuticals": ["healthcare", "pharma"],
+    "banks_financials": ["financial services", "financial"],
+    "information_technology": ["information technology", "it", "technology"],
+    "automobile_ev": ["automobile", "auto"],
+    "defence_aerospace": ["capital goods", "industrials", "defence"],
+    "chemicals": ["chemicals", "materials", "commodities"],
+    "fmcg": ["fmcg", "consumer", "fast moving"],
+    "metals_mining": ["metals", "mining"],
+    "energy_oil_gas_power": ["oil", "gas", "energy", "power"],
+    "capital_goods_infra": ["capital goods", "construction", "infrastructure"],
+    "realty": ["realty", "real estate"],
+    "telecom": ["telecommunication", "telecom"],
+}
 
 
 @dataclass
@@ -26,7 +42,7 @@ class FIIDIISnapshot:
     sentiment_score: Optional[float] = None
     source: str = ""
     updated_at: str = ""
-    history_nets: Optional[List[Dict[str, Any]]] = None  # last few days
+    history_nets: Optional[List[Dict[str, Any]]] = None
 
     @property
     def fii_bias(self) -> str:
@@ -46,7 +62,6 @@ class FIIDIISnapshot:
 
     @property
     def overall_tone(self) -> str:
-        # Simple combined view
         if self.fii_net < -2000 and self.dii_net > 1000:
             return "FII selling absorbed by DII"
         if self.fii_net > 1000 and self.dii_net > 500:
@@ -57,9 +72,56 @@ class FIIDIISnapshot:
             return "FII buying, DII light"
         return "Mixed / balanced flows"
 
+    def swing_bias_points(self) -> Tuple[float, str]:
+        """
+        Points to add to Swing scores (can be negative).
+        Strong FII selling → penalise swing aggressiveness.
+        FII+DII buying → mild boost.
+        """
+        pts = 0.0
+        reasons = []
+
+        if self.fii_net <= -3000:
+            pts -= 8
+            reasons.append("heavy FII selling")
+        elif self.fii_net <= -1000:
+            pts -= 4
+            reasons.append("FII selling")
+        elif self.fii_net >= 2000:
+            pts += 5
+            reasons.append("strong FII buying")
+        elif self.fii_net >= 500:
+            pts += 2
+            reasons.append("FII buying")
+
+        if self.dii_net >= 3000:
+            pts += 3
+            reasons.append("strong DII buying")
+        elif self.dii_net >= 1000:
+            pts += 1
+            reasons.append("DII buying")
+        elif self.dii_net <= -2000:
+            pts -= 3
+            reasons.append("DII selling")
+
+        # Cap
+        pts = max(-10.0, min(8.0, pts))
+        reason = ", ".join(reasons) if reasons else "neutral flows"
+        return pts, reason
+
+
+@dataclass
+class SectorFPI:
+    name: str
+    aum_pct: float
+    fortnight_cr: float
+    one_year_cr: float
+    last_date: str = ""
+    fii_own: Optional[float] = None
+    alpha: Optional[float] = None
+
 
 def fetch_fii_dii(include_history: bool = True) -> Optional[FIIDIISnapshot]:
-    """Fetch latest FII/DII cash market data."""
     try:
         r = requests.get(API_LATEST, timeout=15)
         r.raise_for_status()
@@ -71,7 +133,6 @@ def fetch_fii_dii(include_history: bool = True) -> Optional[FIIDIISnapshot]:
                 h = requests.get(API_HISTORY, timeout=15)
                 if h.ok:
                     rows = h.json()
-                    # Expect list newest first; keep last 5
                     if isinstance(rows, list):
                         history = []
                         for row in rows[:5]:
@@ -101,8 +162,72 @@ def fetch_fii_dii(include_history: bool = True) -> Optional[FIIDIISnapshot]:
         return None
 
 
+def fetch_sector_fpi() -> List[SectorFPI]:
+    """NSDL fortnightly FPI sector allocation (when available)."""
+    try:
+        r = requests.get(API_SECTORS, timeout=15)
+        r.raise_for_status()
+        rows = r.json()
+        out: List[SectorFPI] = []
+        if not isinstance(rows, list):
+            return out
+        for row in rows:
+            out.append(SectorFPI(
+                name=str(row.get("name", "")),
+                aum_pct=float(row.get("aumPct") or 0),
+                fortnight_cr=float(row.get("fortnightCr") or 0),
+                one_year_cr=float(row.get("oneYearCr") or 0),
+                last_date=str(row.get("lastDate") or ""),
+                fii_own=row.get("fiiOwn"),
+                alpha=row.get("alpha"),
+            ))
+        # Sort by fortnight flow descending
+        out.sort(key=lambda x: x.fortnight_cr, reverse=True)
+        return out
+    except Exception as e:
+        logger.warning(f"Sector FPI fetch failed: {e}")
+        return []
+
+
+def match_sector_fpi(sector_key: str, sectors: List[SectorFPI]) -> Optional[SectorFPI]:
+    keys = SECTOR_NAME_MAP.get(sector_key, [sector_key.replace("_", " ")])
+    for s in sectors:
+        name_l = s.name.lower()
+        for k in keys:
+            if k.lower() in name_l:
+                return s
+    return None
+
+
+def sector_swing_adjustment(sector_key: str, sectors: List[SectorFPI]) -> Tuple[float, str]:
+    """
+    Extra swing points from sector FPI fortnight flow.
+    Strong inflows → boost; strong outflows → penalise.
+    """
+    s = match_sector_fpi(sector_key, sectors)
+    if not s:
+        return 0.0, ""
+
+    pts = 0.0
+    if s.fortnight_cr >= 3000:
+        pts = 4
+        reason = f"FPI inflow {s.name} +{s.fortnight_cr:,.0f} Cr"
+    elif s.fortnight_cr >= 1000:
+        pts = 2
+        reason = f"FPI inflow {s.name} +{s.fortnight_cr:,.0f} Cr"
+    elif s.fortnight_cr <= -3000:
+        pts = -4
+        reason = f"FPI outflow {s.name} {s.fortnight_cr:,.0f} Cr"
+    elif s.fortnight_cr <= -1000:
+        pts = -2
+        reason = f"FPI outflow {s.name} {s.fortnight_cr:,.0f} Cr"
+    else:
+        reason = f"FPI flat {s.name}"
+        pts = 0
+    return pts, reason
+
+
 def format_fii_dii_section(snap: Optional[FIIDIISnapshot]) -> List[str]:
-    """Return Telegram HTML lines for FII/DII section."""
     lines = ["<b>🏦 FII / DII MONITOR</b>"]
     if not snap:
         lines.append("• Data unavailable today")
@@ -115,18 +240,19 @@ def format_fii_dii_section(snap: Optional[FIIDIISnapshot]) -> List[str]:
 
     fii_emoji = "🟢" if snap.fii_net > 500 else ("🔴" if snap.fii_net < -500 else "⚪")
     dii_emoji = "🟢" if snap.dii_net > 500 else ("🔴" if snap.dii_net < -500 else "⚪")
+    bias_pts, bias_reason = snap.swing_bias_points()
 
     lines.append(f"• Date: <b>{snap.date}</b>")
     lines.append(f"• FII Net: {fii_emoji} <b>{fmt(snap.fii_net)}</b> ({snap.fii_bias})")
     lines.append(f"• DII Net: {dii_emoji} <b>{fmt(snap.dii_net)}</b> ({snap.dii_bias})")
     lines.append(f"• Tone: <i>{snap.overall_tone}</i>")
+    lines.append(f"• Swing bias: <b>{bias_pts:+.0f}</b> pts ({bias_reason})")
 
     if snap.history_nets:
         recent = []
         for h in snap.history_nets[:3]:
             d = h.get("date", "")
-            fn = h.get("fii_net")
-            dn = h.get("dii_net")
+            fn, dn = h.get("fii_net"), h.get("dii_net")
             if fn is None or dn is None:
                 continue
             recent.append(f"{d}: FII {fmt(float(fn))} | DII {fmt(float(dn))}")
@@ -134,6 +260,32 @@ def format_fii_dii_section(snap: Optional[FIIDIISnapshot]) -> List[str]:
             lines.append("• Recent:")
             for r in recent:
                 lines.append(f"  – {r}")
+    lines.append("")
+    return lines
 
+
+def format_sector_fpi_section(sectors: List[SectorFPI], top_n: int = 6) -> List[str]:
+    lines = ["<b>🌍 SECTOR FPI ALLOCATION</b>"]
+    if not sectors:
+        lines.append("• Sector FPI data unavailable")
+        lines.append("")
+        return lines
+
+    lines.append("<i>Fortnight FPI flow (₹ Cr) – top inflows / outflows</i>")
+    # Top inflows
+    inflows = [s for s in sectors if s.fortnight_cr > 0][: top_n // 2 or 3]
+    outflows = sorted([s for s in sectors if s.fortnight_cr < 0], key=lambda x: x.fortnight_cr)[: top_n // 2 or 3]
+
+    if inflows:
+        lines.append("• Inflows:")
+        for s in inflows:
+            lines.append(f"  🟢 {s.name}: +{s.fortnight_cr:,.0f} Cr (AUM {s.aum_pct:.1f}%)")
+    if outflows:
+        lines.append("• Outflows:")
+        for s in outflows:
+            lines.append(f"  🔴 {s.name}: {s.fortnight_cr:,.0f} Cr (AUM {s.aum_pct:.1f}%)")
+
+    if sectors and sectors[0].last_date:
+        lines.append(f"<i>As of {sectors[0].last_date}</i>")
     lines.append("")
     return lines

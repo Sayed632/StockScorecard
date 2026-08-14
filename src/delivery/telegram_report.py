@@ -5,7 +5,7 @@ Produces the exact approved message format.
 
 from src.shared.models import ScanResult, Action
 from src.telegram_notify import send_message
-from src.shared.fii_dii import fetch_fii_dii, format_fii_dii_section
+from src.shared.fii_dii import fetch_fii_dii, fetch_sector_fpi, format_fii_dii_section, format_sector_fpi_section
 
 
 def format_report(result: ScanResult) -> str:
@@ -22,6 +22,8 @@ def format_report(result: ScanResult) -> str:
     # FII / DII institutional flows
     snap = fetch_fii_dii(include_history=True)
     lines.extend(format_fii_dii_section(snap))
+    sector_fpi = fetch_sector_fpi()
+    lines.extend(format_sector_fpi_section(sector_fpi))
 
     # Separate penny ideas (extras.penny == True) from normal lists for clarity
     def is_penny(idea) -> bool:

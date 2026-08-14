@@ -18,6 +18,7 @@ from src.sectors.chemicals import ChemicalsScanner
 from src.sectors.fmcg import FMCGScanner
 from src.sectors.penny_monitor import PennyMonitorScanner
 from src.decision.ranking import merge_and_rank
+from src.shared.fii_dii import fetch_fii_dii, fetch_sector_fpi
 from src.delivery.telegram_report import send_daily_report, format_report
 from src.shared.models import ScanResult
 
@@ -92,12 +93,21 @@ def run_full_scan(
         except Exception as e:
             logger.error(f"Sector {sector_key} failed: {e}")
 
-    # 3. Merge & rank
+    # 3. Institutional flows
+    fii_snap = fetch_fii_dii(include_history=True)
+    sector_fpi = fetch_sector_fpi()
+    if fii_snap:
+        logger.info(f"FII net={fii_snap.fii_net:.0f} | DII net={fii_snap.dii_net:.0f} | bias={fii_snap.swing_bias_points()[0]:+.0f}")
+    logger.info(f"Sector FPI rows: {len(sector_fpi)}")
+
+    # 4. Merge & rank (with FII/DII + sector FPI swing bias)
     scan_result = merge_and_rank(
         sector_results,
         max_per_list=max_ideas,
         frequency=freq,
         frequency_reason=freq_reason,
+        fii_dii=fii_snap,
+        sector_fpi=sector_fpi,
     )
 
     # 4. Deliver
