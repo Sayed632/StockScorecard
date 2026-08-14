@@ -76,3 +76,22 @@ src/
 ## License
 
 MIT
+
+## Automated Daily Run (GitHub Actions)
+
+The workflow `.github/workflows/daily_decision.yml` runs automatically on weekdays:
+
+| Slot | IST (approx) | UTC cron |
+|------|--------------|----------|
+| Pre-open | 08:50 | `20 3 * * 1-5` |
+| Post-close | 16:00 | `30 10 * * 1-5` |
+
+### One-time setup (required)
+
+1. Go to the repo → **Settings → Secrets and variables → Actions**
+2. Add two repository secrets:
+   - `TELEGRAM_BOT_TOKEN` → your bot token from @BotFather
+   - `TELEGRAM_CHAT_ID` → `@nsepyscan` (or numeric chat id)
+3. The workflow will then post reports automatically.
+
+You can also trigger it manually: **Actions → Daily Decision Report → Run workflow**.
