@@ -1,23 +1,44 @@
 # StockScorecard Configuration
+# Approved URS 1.1 + Architecture
+
+project_name: "StockScorecard"
+telegram_channel: "@nsepyscan"
 
 market_cap_buckets:
-  large: 20000   # >= 20,000 Cr
-  mid: 5000      # 5,000 - 20,000 Cr
-  # small: < 5,000 Cr
+  large: 20000
+  mid: 5000
+  small: 500
 
-factor_weights:
-  Q: 0.30   # Quality / Financial Strength
-  G: 0.25   # Growth / Historical Performance
-  V: 0.25   # Valuation (higher = cheaper)
-  T: 0.20   # Technical / Price Trend
+scanning_frequency:
+  normal: 1
+  elevated: 2
+  high_impact: 3
 
-# Lookback periods
-growth_years: 5
-quality_years: 5
+swing:
+  min_liquidity_volume: 50000
+  horizon_days_min: 5
+  horizon_days_max: 20
 
-# Minimum liquidity filter (average daily volume)
-min_avg_volume: 50000
+long_term:
+  max_debt_to_ebitda: 2.5
+  horizon_months_min: 6
+  horizon_months_max: 36
 
-# Output
+dark_horse:
+  max_market_cap_cr: 15000
+  prefer_low_institutional: true
+
+active_sectors:
+  - pharmaceuticals
+  - banks_financials
+  - information_technology
+  - automobile_ev
+  - defence_aerospace
+  - chemicals
+  - fmcg
+  - metals_mining
+  - energy_oil_gas_power
+  - capital_goods_infra
+
 output_dir: data
-results_filename: scorecard_{date}.csv
+max_ideas_per_list: 8

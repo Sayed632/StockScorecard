@@ -1,127 +1,78 @@
 # StockScorecard
 
-**Transparent Q-G-V-T Stock Scorecard for Indian Equities**
+**Automated Swing + Long-term + Dark Horse Decision System for Indian Equities**
 
-A clean, open-source implementation of a four-factor stock scoring model inspired by Moneycontrol / MarketsMojo style scorecards.
+Fully aligned with approved User Requirements Specification (URS 1.1).
 
-It produces an **Overall score (0-100)** plus four sub-scores for every stock:
+## What it does
 
-| Factor | Name | What it measures |
-|--------|------|------------------|
-| **Q** | Quality | Financial strength & quality of earnings (ROE, ROA, leverage, margins, liquidity) |
-| **G** | Growth  | Historical financial performance & growth trend (revenue/earnings growth, margin quality) |
-| **V** | Valuation | Relative & absolute valuation attractiveness (PE, PB, PEG, PS – higher score = cheaper) |
-| **T** | Technical | Price trend & momentum on charts (MAs, momentum, RSI, volume) |
+Every day (or multiple times when market conditions require) the system:
 
-Results are also grouped by **Market Cap** (Large / Mid / Small) and **Sector**.
+1. Automatically decides scanning frequency (1x / 2x / 3x)
+2. Scans sectors in parallel (Pharmaceuticals fully implemented – others follow same template)
+3. Produces three separate lists:
+   - 🟢 **Swing Trade** ideas
+   - 🔵 **Long-term Investment** ideas
+   - 🦄 **Dark Horse** ideas
+4. Sends a clean, emoji-based report to Telegram (`@nsepyscan`)
 
----
+Header always shows: **📊 StockScorecard | Daily Decision Report**
 
 ## Quick Start
 
 ```bash
-# 1. Clone
 git clone https://github.com/Sayed632/StockScorecard.git
 cd StockScorecard
 
-# 2. Create virtual environment (recommended)
 python -m venv venv
 source venv/bin/activate          # Windows: venv\Scripts\activate
-
-# 3. Install dependencies
 pip install -r requirements.txt
 
-# 4. Run (scores ~30 liquid NSE stocks by default)
-python scripts/run_scorecard.py
+# Create your secret file
+cp .env.example .env
+# Edit .env and add:
+# TELEGRAM_BOT_TOKEN=your_new_token
+# TELEGRAM_CHAT_ID=@nsepyscan
 
-# More stocks
-python scripts/run_scorecard.py --limit 50
+# Run the full decision system
+python scripts/run_decision.py
 
-# Custom output path
-python scripts/run_scorecard.py --limit 40 --output data/my_scores.csv
+# Run without sending to Telegram
+python scripts/run_decision.py --no-telegram
 ```
-
----
-
-## Sample Output
-
-```
-TOP 15 STOCKS BY OVERALL SCORE
-symbol       name                          market_cap_bucket  sector              Overall    Q    G    V    T
-LAURUSLABS   Laurus Labs Ltd               Mid                Healthcare             72.4  78  85  28  91
-...
-```
-
-CSV columns include: `symbol, name, sector, industry, market_cap_cr, market_cap_bucket, Overall, Q, G, V, T, pe, pb, roe, ...`
-
----
-
-## Configuration
-
-Edit `config.yaml`:
-
-```yaml
-market_cap_buckets:
-  large: 20000   # ≥ 20,000 Cr
-  mid: 5000      # 5,000 – 20,000 Cr
-  # small < 5,000 Cr
-
-factor_weights:
-  Q: 0.30
-  G: 0.25
-  V: 0.25
-  T: 0.20
-```
-
----
 
 ## Project Structure
 
 ```
-StockScorecard/
-├── config.yaml
-├── requirements.txt
-├── README.md
-├── scripts/
-│   └── run_scorecard.py          # CLI entry point
-├── src/
-│   ├── data_fetch/
-│   │   ├── universe.py           # NSE list + market-cap classification
-│   │   ├── prices.py             # yfinance OHLCV
-│   │   └── fundamentals.py       # key ratios via yfinance
-│   ├── factors/
-│   │   ├── quality.py            # Q-Factor
-│   │   ├── growth.py             # G-Factor
-│   │   ├── valuation.py          # V-Factor
-│   │   └── technical.py          # T-Factor
-│   └── scoring.py                # orchestration + summary
-└── data/                         # generated CSVs (git-ignored)
+src/
+├── orchestrator/          # Frequency decision + main runner
+├── sectors/               # One scanner per sector (Pharma complete)
+├── engines/               # (reserved for shared engine logic)
+├── decision/              # Ranking & final lists
+├── delivery/              # Telegram report formatter
+├── shared/                # Models (Action, StockIdea, etc.)
+├── data_fetch/            # Prices + fundamentals
+└── factors/               # Q / G / V / T building blocks
 ```
 
----
+## Current Status
 
-## Important Notes
+| Component                    | Status      |
+|-----------------------------|-------------|
+| URS 1.1                     | Approved    |
+| Architecture                | Approved    |
+| Pharmaceuticals rules       | Implemented |
+| Swing / Long-term / Dark Horse engines | Working |
+| Auto frequency (1x/2x/3x)   | Working     |
+| Telegram delivery           | Working     |
+| Remaining 21 sectors        | Template ready – to be added |
 
-- This is a **simplified, transparent** model. It is **not** a 1:1 copy of Moneycontrol / MarketsMojo (their exact formulas are proprietary).
-- Data comes primarily from **Yahoo Finance** via `yfinance`. Coverage and freshness for some Indian small-caps can vary.
-- Scores are relative and for educational / research purposes only. **Not investment advice.**
-- For production use you can later plug better fundamental sources (Screener.in APIs, paid data vendors, etc.).
+## Important
 
----
-
-## Extending the Model
-
-- Improve fundamental data quality (add quarterly results, consistency scores, promoter pledge, etc.).
-- Add peer-relative ranking inside each sector.
-- Back-test the overall score against future returns.
-- Add a simple Streamlit dashboard on top of the CSV output.
-
----
+- This is a **decision-support tool**, not investment advice.
+- Always use stop-losses for swing trades.
+- Never commit your real `.env` file.
 
 ## License
 
-MIT – use freely, modify, and share.
-
----
-
-Built for systematic, rules-based research on Indian equities.
+MIT
