@@ -22,6 +22,9 @@ from src.sectors.energy_oil_gas_power import EnergyOilGasPowerScanner
 from src.sectors.capital_goods_infra import CapitalGoodsInfraScanner
 from src.sectors.realty import RealtyScanner
 from src.sectors.telecom import TelecomScanner
+from src.sectors.media import MediaScanner
+from src.sectors.textiles import TextilesScanner
+from src.sectors.others_residual import OthersResidualScanner
 from src.decision.ranking import merge_and_rank
 from src.shared.fii_dii import fetch_fii_dii, fetch_sector_fpi
 from src.shared.results_logger import log_scan_result
@@ -52,6 +55,9 @@ SECTOR_REGISTRY = {
     "capital_goods_infra": CapitalGoodsInfraScanner,
     "realty": RealtyScanner,
     "telecom": TelecomScanner,
+    "media": MediaScanner,
+    "textiles": TextilesScanner,
+    "others_residual": OthersResidualScanner,
 }
 
 

@@ -41,6 +41,9 @@ active_sectors:
   - capital_goods_infra
   - realty
   - telecom
+  - media
+  - textiles
+  - others_residual
   - penny_monitor
 
 

@@ -12,6 +12,9 @@ from .energy_oil_gas_power import EnergyOilGasPowerScanner
 from .capital_goods_infra import CapitalGoodsInfraScanner
 from .realty import RealtyScanner
 from .telecom import TelecomScanner
+from .media import MediaScanner
+from .textiles import TextilesScanner
+from .others_residual import OthersResidualScanner
 
 __all__ = [
     "BaseSectorScanner",
@@ -28,4 +31,7 @@ __all__ = [
     "CapitalGoodsInfraScanner",
     "RealtyScanner",
     "TelecomScanner",
+    "MediaScanner",
+    "TextilesScanner",
+    "OthersResidualScanner",
 ]

@@ -27,6 +27,9 @@ SECTOR_NAME_MAP = {
     "capital_goods_infra": ["capital goods", "construction", "infrastructure"],
     "realty": ["realty", "real estate"],
     "telecom": ["telecommunication", "telecom"],
+    "media": ["media", "entertainment"],
+    "textiles": ["textiles", "consumer discretionary"],
+    "others_residual": ["services", "consumer services"],
 }
 
 
