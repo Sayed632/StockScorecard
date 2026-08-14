@@ -16,6 +16,7 @@ from src.sectors.automobile_ev import AutomobileEVScanner
 from src.sectors.defence_aerospace import DefenceAerospaceScanner
 from src.sectors.chemicals import ChemicalsScanner
 from src.sectors.fmcg import FMCGScanner
+from src.sectors.penny_monitor import PennyMonitorScanner
 from src.decision.ranking import merge_and_rank
 from src.delivery.telegram_report import send_daily_report, format_report
 from src.shared.models import ScanResult
@@ -38,6 +39,7 @@ SECTOR_REGISTRY = {
     "defence_aerospace": DefenceAerospaceScanner,
     "chemicals": ChemicalsScanner,
     "fmcg": FMCGScanner,
+    "penny_monitor": PennyMonitorScanner,
 }
 
 

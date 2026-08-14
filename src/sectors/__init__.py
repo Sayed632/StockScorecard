@@ -6,6 +6,7 @@ from .automobile_ev import AutomobileEVScanner
 from .defence_aerospace import DefenceAerospaceScanner
 from .chemicals import ChemicalsScanner
 from .fmcg import FMCGScanner
+from .penny_monitor import PennyMonitorScanner
 
 __all__ = [
     "BaseSectorScanner",
@@ -16,4 +17,5 @@ __all__ = [
     "DefenceAerospaceScanner",
     "ChemicalsScanner",
     "FMCGScanner",
+    "PennyMonitorScanner",
 ]

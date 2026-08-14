@@ -36,6 +36,7 @@ active_sectors:
   - defence_aerospace
   - chemicals
   - fmcg
+  - penny_monitor
   # Next batch (not yet implemented):
   # - metals_mining
   # - energy_oil_gas_power
