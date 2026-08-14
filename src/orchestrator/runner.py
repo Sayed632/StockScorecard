@@ -17,6 +17,11 @@ from src.sectors.defence_aerospace import DefenceAerospaceScanner
 from src.sectors.chemicals import ChemicalsScanner
 from src.sectors.fmcg import FMCGScanner
 from src.sectors.penny_monitor import PennyMonitorScanner
+from src.sectors.metals_mining import MetalsMiningScanner
+from src.sectors.energy_oil_gas_power import EnergyOilGasPowerScanner
+from src.sectors.capital_goods_infra import CapitalGoodsInfraScanner
+from src.sectors.realty import RealtyScanner
+from src.sectors.telecom import TelecomScanner
 from src.decision.ranking import merge_and_rank
 from src.shared.fii_dii import fetch_fii_dii, fetch_sector_fpi
 from src.shared.results_logger import log_scan_result
@@ -42,6 +47,11 @@ SECTOR_REGISTRY = {
     "chemicals": ChemicalsScanner,
     "fmcg": FMCGScanner,
     "penny_monitor": PennyMonitorScanner,
+    "metals_mining": MetalsMiningScanner,
+    "energy_oil_gas_power": EnergyOilGasPowerScanner,
+    "capital_goods_infra": CapitalGoodsInfraScanner,
+    "realty": RealtyScanner,
+    "telecom": TelecomScanner,
 }
 
 

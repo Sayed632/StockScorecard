@@ -36,13 +36,13 @@ active_sectors:
   - defence_aerospace
   - chemicals
   - fmcg
+  - metals_mining
+  - energy_oil_gas_power
+  - capital_goods_infra
+  - realty
+  - telecom
   - penny_monitor
-  # Next batch (not yet implemented):
-  # - metals_mining
-  # - energy_oil_gas_power
-  # - capital_goods_infra
-  # - realty
-  # - telecom
+
 
 output_dir: data
 max_ideas_per_list: 8

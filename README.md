@@ -71,7 +71,12 @@ src/
 | Swing / Long-term / Dark Horse | Working  |
 | Auto frequency (1x/2x/3x)   | Working     |
 | Telegram delivery           | Working     |
-| Remaining sectors           | Next batch  |
+| Metals & Mining             | Implemented |
+| Energy / Oil & Gas / Power  | Implemented |
+| Capital Goods & Infra       | Implemented |
+| Realty                      | Implemented |
+| Telecom                     | Implemented |
+| Penny monitor               | Implemented |
 
 ## Important
 
