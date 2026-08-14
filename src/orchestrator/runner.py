@@ -10,6 +10,12 @@ import logging
 
 from src.orchestrator.frequency import decide_scanning_frequency, is_results_season, get_scan_slots
 from src.sectors.pharmaceuticals import PharmaceuticalsScanner
+from src.sectors.banks_financials import BanksFinancialsScanner
+from src.sectors.information_technology import InformationTechnologyScanner
+from src.sectors.automobile_ev import AutomobileEVScanner
+from src.sectors.defence_aerospace import DefenceAerospaceScanner
+from src.sectors.chemicals import ChemicalsScanner
+from src.sectors.fmcg import FMCGScanner
 from src.decision.ranking import merge_and_rank
 from src.delivery.telegram_report import send_daily_report, format_report
 from src.shared.models import ScanResult
@@ -26,10 +32,12 @@ def load_config(path: str = "config.yaml") -> dict:
 # Registry of available sector scanners
 SECTOR_REGISTRY = {
     "pharmaceuticals": PharmaceuticalsScanner,
-    # Future sectors will be registered here:
-    # "banks_financials": BanksFinancialsScanner,
-    # "information_technology": ITScanner,
-    # ...
+    "banks_financials": BanksFinancialsScanner,
+    "information_technology": InformationTechnologyScanner,
+    "automobile_ev": AutomobileEVScanner,
+    "defence_aerospace": DefenceAerospaceScanner,
+    "chemicals": ChemicalsScanner,
+    "fmcg": FMCGScanner,
 }
 
 

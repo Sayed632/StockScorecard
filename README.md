@@ -61,11 +61,17 @@ src/
 |-----------------------------|-------------|
 | URS 1.1                     | Approved    |
 | Architecture                | Approved    |
-| Pharmaceuticals rules       | Implemented |
-| Swing / Long-term / Dark Horse engines | Working |
+| Pharmaceuticals             | Implemented |
+| Banks & Financial Services  | Implemented |
+| Information Technology      | Implemented |
+| Automobile & EV             | Implemented |
+| Defence & Aerospace         | Implemented |
+| Chemicals                   | Implemented |
+| FMCG & Consumer             | Implemented |
+| Swing / Long-term / Dark Horse | Working  |
 | Auto frequency (1x/2x/3x)   | Working     |
 | Telegram delivery           | Working     |
-| Remaining 21 sectors        | Template ready – to be added |
+| Remaining sectors           | Next batch  |
 
 ## Important
 
