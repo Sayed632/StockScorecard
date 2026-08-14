@@ -50,7 +50,9 @@ def format_report(result: ScanResult) -> str:
     buy_now = [i for i in swing_normal if i.action == Action.BUY_NOW]
     if buy_now:
         for idea in buy_now:
-            lines.append(f"• <b>{idea.symbol}</b> – {idea.reason}")
+            prob = (idea.extras or {}).get("probability")
+            ptxt = f" | P={prob:.0%}" if isinstance(prob, (int, float)) else ""
+            lines.append(f"• <b>{idea.symbol}</b> – {idea.reason}{ptxt}")
     else:
         lines.append("• No strong swing buy ideas today")
     lines.append("")
@@ -67,7 +69,9 @@ def format_report(result: ScanResult) -> str:
     invest = [i for i in long_normal if i.action == Action.HOLD_INVEST]
     if invest:
         for idea in invest:
-            lines.append(f"• <b>{idea.symbol}</b> – {idea.reason}")
+            prob = (idea.extras or {}).get("probability")
+            ptxt = f" | P={prob:.0%}" if isinstance(prob, (int, float)) else ""
+            lines.append(f"• <b>{idea.symbol}</b> – {idea.reason}{ptxt}")
     else:
         lines.append("• No new long-term ideas today")
     lines.append("")
@@ -76,7 +80,9 @@ def format_report(result: ScanResult) -> str:
     lines.append("<b>🦄 DARK HORSE IDEAS</b>")
     if dark_normal:
         for idea in dark_normal:
-            lines.append(f"• <b>{idea.symbol}</b> – {idea.reason}")
+            prob = (idea.extras or {}).get("probability")
+            ptxt = f" | P={prob:.0%}" if isinstance(prob, (int, float)) else ""
+            lines.append(f"• <b>{idea.symbol}</b> – {idea.reason}{ptxt}")
     else:
         lines.append("• No Dark Horse ideas surfaced today")
     lines.append("")
@@ -85,7 +91,9 @@ def format_report(result: ScanResult) -> str:
     lines.append("<b>🪙 PENNY STOCKS MONITOR</b> <i>(High Risk)</i>")
     if penny_ideas:
         for idea in penny_ideas[:8]:
-            lines.append(f"• <b>{idea.symbol}</b> – {idea.reason}")
+            prob = (idea.extras or {}).get("probability")
+            ptxt = f" | P={prob:.0%}" if isinstance(prob, (int, float)) else ""
+            lines.append(f"• <b>{idea.symbol}</b> – {idea.reason}{ptxt}")
     else:
         lines.append("• No penny setups meeting filters today")
     lines.append("")

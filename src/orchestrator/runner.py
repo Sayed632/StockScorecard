@@ -19,6 +19,7 @@ from src.sectors.fmcg import FMCGScanner
 from src.sectors.penny_monitor import PennyMonitorScanner
 from src.decision.ranking import merge_and_rank
 from src.shared.fii_dii import fetch_fii_dii, fetch_sector_fpi
+from src.shared.results_logger import log_scan_result
 from src.delivery.telegram_report import send_daily_report, format_report
 from src.shared.models import ScanResult
 
@@ -125,6 +126,7 @@ def run_full_scan(
 
     # 5. Save CSV snapshot
     _save_snapshot(scan_result)
+    log_scan_result(scan_result)
 
     logger.info("=== Scan Complete ===")
     return scan_result

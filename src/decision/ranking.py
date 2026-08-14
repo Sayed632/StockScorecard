@@ -11,6 +11,7 @@ from src.shared.fii_dii import (
     sector_swing_adjustment,
 )
 from datetime import datetime
+from src.decision.probability import attach_probabilities
 
 
 def _apply_swing_bias(
@@ -107,9 +108,10 @@ def merge_and_rank(
         if actionable > 0:
             sector_summary[sector_key] = f"{actionable} actionable ideas"
 
-    all_swing.sort(key=lambda x: x.score, reverse=True)
-    all_long.sort(key=lambda x: x.score, reverse=True)
-    all_dark.sort(key=lambda x: x.score, reverse=True)
+    all_swing = attach_probabilities(all_swing)
+    all_long = attach_probabilities(all_long)
+    all_dark = attach_probabilities(all_dark)
+    # Keep primary sort by probability, secondary by score already mixed in estimator
 
     notes = [f"Frequency: {frequency}x – {frequency_reason}"]
     if fii_dii:
