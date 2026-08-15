@@ -23,6 +23,7 @@ UNIVERSE = [
     {"symbol": "CHOLAFIN", "name": "Cholamandalam Investment"},
     {"symbol": "MFSL", "name": "Max Financial Services"},
     {"symbol": "IBULHSGFIN", "name": "Indiabulls Housing Finance"},
+    {"symbol": "SGFIN", "name": "SG Finserve Ltd"},
 ]
 
 
