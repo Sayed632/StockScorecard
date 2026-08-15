@@ -69,7 +69,18 @@ def main():
     parser = argparse.ArgumentParser(description="Validate StockScorecard tickers")
     parser.add_argument("--telegram", action="store_true", help="Send summary to Telegram")
     parser.add_argument("--limit", type=int, default=0, help="Limit symbols (debug)")
+    parser.add_argument("--sync", action="store_true", help="Sync registry from sector/strategy files first")
     args = parser.parse_args()
+
+    if args.sync:
+        import importlib.util
+        spec = importlib.util.spec_from_file_location(
+            "sync_tickers", ROOT / "scripts" / "sync_tickers.py"
+        )
+        mod = importlib.util.module_from_spec(spec)
+        spec.loader.exec_module(mod)
+        n_disc, n_add, added = mod.sync()
+        print(f"Sync: discovered={n_disc} added={n_add} {added[:10] if added else []}")
 
     data = load_registry()
     suffix = data.get("yahoo_suffix", ".NS")

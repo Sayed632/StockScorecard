@@ -29,7 +29,9 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: python scripts/validate_tickers.py --telegram
+        run: |
+          python scripts/sync_tickers.py
+          python scripts/validate_tickers.py --telegram
 
       - name: Upload validation CSV
         if: always()

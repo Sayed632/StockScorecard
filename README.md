@@ -114,8 +114,9 @@ Master list: `config/tickers.yaml` (all symbols used across sectors/strategies).
 Weekly validation (GitHub Actions – Mondays):
 
 ```bash
-python scripts/validate_tickers.py           # local
-python scripts/validate_tickers.py --telegram
+python scripts/sync_tickers.py              # add new symbols from code
+python scripts/validate_tickers.py          # check Yahoo status
+python scripts/validate_tickers.py --sync --telegram
 ```
 
 Updates each ticker `status` (`ok` / `not_found` / `error`) and writes `data/ticker_validation_YYYYMMDD.csv`.
