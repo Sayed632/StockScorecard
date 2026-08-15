@@ -106,3 +106,17 @@ The workflow `.github/workflows/daily_decision.yml` runs automatically on weekda
 3. The workflow will then post reports automatically.
 
 You can also trigger it manually: **Actions → Daily Decision Report → Run workflow**.
+
+## Ticker maintenance
+
+Master list: `config/tickers.yaml` (all symbols used across sectors/strategies).
+
+Weekly validation (GitHub Actions – Mondays):
+
+```bash
+python scripts/validate_tickers.py           # local
+python scripts/validate_tickers.py --telegram
+```
+
+Updates each ticker `status` (`ok` / `not_found` / `error`) and writes `data/ticker_validation_YYYYMMDD.csv`.
+

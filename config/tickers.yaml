@@ -1,0 +1,1602 @@
+version: 1
+description: Master ticker registry for StockScorecard. Weekly job validates symbols.
+yahoo_suffix: .NS
+tickers:
+- symbol: AARTIIND
+  name: Aarti Industries Ltd
+  sources:
+  - src/sectors/chemicals.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: ABB
+  name: ABB India Ltd
+  sources:
+  - src/sectors/capital_goods_infra.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: ABBOTTINDIA
+  name: Abbott India Ltd
+  sources:
+  - src/sectors/pharmaceuticals.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: ADANIENT
+  name: Adani Enterprises Ltd
+  sources:
+  - src/sectors/others_residual.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: ADANIGREEN
+  name: Adani Green Energy
+  sources:
+  - src/sectors/energy_oil_gas_power.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: ADANIPORTS
+  name: Adani Ports & SEZ
+  sources:
+  - src/sectors/others_residual.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: ADANIPOWER
+  name: Adani Power Ltd
+  sources:
+  - src/sectors/energy_oil_gas_power.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: AIAENG
+  name: AIA Engineering Ltd
+  sources:
+  - src/sectors/capital_goods_infra.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: ALKEM
+  name: Alkem Laboratories Ltd
+  sources:
+  - src/sectors/pharmaceuticals.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: ALKYLAMINE
+  name: Alkyl Amines Chemicals
+  sources:
+  - src/sectors/chemicals.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: APLAPOLLO
+  name: APL Apollo Tubes Ltd
+  sources:
+  - src/sectors/metals_mining.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: APTECHT
+  name: Aptech Ltd
+  sources:
+  - src/strategies/madhusudan_kela.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: ARVIND
+  name: Arvind Ltd
+  sources:
+  - src/sectors/textiles.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: ASHOKLEY
+  name: Ashok Leyland Ltd
+  sources:
+  - src/sectors/automobile_ev.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: AUROPHARMA
+  name: Aurobindo Pharma Ltd
+  sources:
+  - src/sectors/pharmaceuticals.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: AXISBANK
+  name: Axis Bank Ltd
+  sources:
+  - src/sectors/banks_financials.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: BAJAJ-AUTO
+  name: Bajaj Auto Ltd
+  sources:
+  - src/sectors/automobile_ev.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: BAJAJFINSV
+  name: Bajaj Finserv Ltd
+  sources:
+  - src/sectors/banks_financials.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: BAJFINANCE
+  name: Bajaj Finance Ltd
+  sources:
+  - src/sectors/banks_financials.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: BANKBARODA
+  name: Bank of Baroda
+  sources:
+  - src/sectors/banks_financials.py
+  - src/sectors/penny_monitor.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: BEL
+  name: Bharat Electronics Ltd
+  sources:
+  - src/sectors/defence_aerospace.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: BEML
+  name: BEML Ltd
+  sources:
+  - src/sectors/defence_aerospace.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: BHARATFORG
+  name: Bharat Forge Ltd
+  sources:
+  - src/sectors/automobile_ev.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: BHARTIARTL
+  name: Bharti Airtel Ltd
+  sources:
+  - src/sectors/telecom.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: BHARTIHEXA
+  name: Bharti Hexacom Ltd
+  sources:
+  - src/sectors/telecom.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: BHEL
+  name: Bharat Heavy Electricals
+  sources:
+  - src/sectors/capital_goods_infra.py
+  - src/sectors/defence_aerospace.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: BIOCON
+  name: Biocon Ltd
+  sources:
+  - src/sectors/pharmaceuticals.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: BLUEDART
+  name: Blue Dart Express Ltd
+  sources:
+  - src/sectors/others_residual.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: BOMDYEING
+  name: Bombay Dyeing & Mfg Co
+  sources:
+  - src/sectors/others_residual.py
+  - src/sectors/penny_monitor.py
+  - src/strategies/madhusudan_kela.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: BOSCHLTD
+  name: Bosch Ltd
+  sources:
+  - src/sectors/automobile_ev.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: BPCL
+  name: Bharat Petroleum Corp
+  sources:
+  - src/sectors/energy_oil_gas_power.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: BRIGADE
+  name: Brigade Enterprises Ltd
+  sources:
+  - src/sectors/realty.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: BRITANNIA
+  name: Britannia Industries Ltd
+  sources:
+  - src/sectors/fmcg.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: CENTRALBK
+  name: Central Bank of India
+  sources:
+  - src/sectors/penny_monitor.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: CHAMBLFERT
+  name: Chambal Fertilisers
+  sources:
+  - src/sectors/others_residual.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: CHOICEIN
+  name: Choice International Ltd
+  sources:
+  - src/strategies/madhusudan_kela.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: CHOLAFIN
+  name: Cholamandalam Investment
+  sources:
+  - src/sectors/banks_financials.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: CIPLA
+  name: Cipla Ltd
+  sources:
+  - src/sectors/pharmaceuticals.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: CLEAN
+  name: Clean Science & Technology
+  sources:
+  - src/sectors/chemicals.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: COALINDIA
+  name: Coal India Ltd
+  sources:
+  - src/sectors/metals_mining.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: COCHINSHIP
+  name: Cochin Shipyard Ltd
+  sources:
+  - src/sectors/defence_aerospace.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: COFORGE
+  name: Coforge Ltd
+  sources:
+  - src/sectors/information_technology.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: COLPAL
+  name: Colgate-Palmolive (India)
+  sources:
+  - src/sectors/fmcg.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: CONCOR
+  name: Container Corporation of India
+  sources:
+  - src/sectors/others_residual.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: COROMANDEL
+  name: Coromandel International
+  sources:
+  - src/sectors/others_residual.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: CUMMINSIND
+  name: Cummins India Ltd
+  sources:
+  - src/sectors/capital_goods_infra.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: DABUR
+  name: Dabur India Ltd
+  sources:
+  - src/sectors/fmcg.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: DATAPATTNS
+  name: Data Patterns (India) Ltd
+  sources:
+  - src/sectors/defence_aerospace.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: DEEPAKNTR
+  name: Deepak Nitrite Ltd
+  sources:
+  - src/sectors/chemicals.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: DELHIVERY
+  name: Delhivery Ltd
+  sources:
+  - src/sectors/others_residual.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: DISHTV
+  name: Dish TV India Ltd
+  sources:
+  - src/sectors/media.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: DIVISLAB
+  name: Divi's Laboratories Ltd
+  sources:
+  - src/sectors/pharmaceuticals.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: DIXON
+  name: Dixon Technologies Ltd
+  sources:
+  - src/sectors/others_residual.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: DLF
+  name: DLF Ltd
+  sources:
+  - src/sectors/realty.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: DMART
+  name: Avenue Supermarts Ltd
+  sources:
+  - src/sectors/others_residual.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: DRREDDY
+  name: Dr. Reddy's Laboratories Ltd
+  sources:
+  - src/sectors/pharmaceuticals.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: EICHERMOT
+  name: Eicher Motors Ltd
+  sources:
+  - src/sectors/automobile_ev.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: EIHOTEL
+  name: EIH Ltd
+  sources:
+  - src/sectors/others_residual.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: EMAMILTD
+  name: Emami Ltd
+  sources:
+  - src/sectors/fmcg.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: EMKAY
+  name: Emkay Global Financial Services
+  sources:
+  - src/sectors/others_residual.py
+  - src/strategies/madhusudan_kela.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: FACT
+  name: Fertilisers & Chemicals Travancore
+  sources:
+  - src/sectors/others_residual.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: FINEORG
+  name: Fine Organic Industries
+  sources:
+  - src/sectors/chemicals.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: FSL
+  name: Firstsource Solutions
+  sources:
+  - src/sectors/penny_monitor.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: GAIL
+  name: GAIL (India) Ltd
+  sources:
+  - src/sectors/energy_oil_gas_power.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: GALAXYSURF
+  name: Galaxy Surfactants Ltd
+  sources:
+  - src/sectors/chemicals.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: GLENMARK
+  name: Glenmark Pharmaceuticals Ltd
+  sources:
+  - src/sectors/pharmaceuticals.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: GMRINFRA
+  name: GMR Airports Infrastructure
+  sources:
+  - src/sectors/penny_monitor.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: GODREJCP
+  name: Godrej Consumer Products
+  sources:
+  - src/sectors/fmcg.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: GODREJPROP
+  name: Godrej Properties Ltd
+  sources:
+  - src/sectors/realty.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: GOKEX
+  name: Gokaldas Exports Ltd
+  sources:
+  - src/sectors/textiles.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: GRASIM
+  name: Grasim Industries Ltd
+  sources:
+  - src/sectors/others_residual.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: GRSE
+  name: Garden Reach Shipbuilders
+  sources:
+  - src/sectors/defence_aerospace.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: HAL
+  name: Hindustan Aeronautics Ltd
+  sources:
+  - src/sectors/defence_aerospace.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: HATHWAY
+  name: Hathway Cable & Datacom
+  sources:
+  - src/sectors/media.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: HAVELLS
+  name: Havells India Ltd
+  sources:
+  - src/sectors/capital_goods_infra.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: HCLTECH
+  name: HCL Technologies Ltd
+  sources:
+  - src/sectors/information_technology.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: HDFCBANK
+  name: HDFC Bank Ltd
+  sources:
+  - src/sectors/banks_financials.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: HDFCLIFE
+  name: HDFC Life Insurance
+  sources:
+  - src/sectors/banks_financials.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: HEROMOTOCO
+  name: Hero MotoCorp Ltd
+  sources:
+  - src/sectors/automobile_ev.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: HFCL
+  name: HFCL Ltd
+  sources:
+  - src/sectors/telecom.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: HINDALCO
+  name: Hindalco Industries Ltd
+  sources:
+  - src/sectors/metals_mining.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: HINDCOPPER
+  name: Hindustan Copper Ltd
+  sources:
+  - src/sectors/metals_mining.py
+  - src/sectors/penny_monitor.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: HINDPETRO
+  name: Hindustan Petroleum
+  sources:
+  - src/sectors/energy_oil_gas_power.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: HINDUNILVR
+  name: Hindustan Unilever Ltd
+  sources:
+  - src/sectors/fmcg.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: IBULHSGFIN
+  name: Indiabulls Housing Finance
+  sources:
+  - src/sectors/banks_financials.py
+  - src/sectors/penny_monitor.py
+  - src/strategies/madhusudan_kela.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: ICICIBANK
+  name: ICICI Bank Ltd
+  sources:
+  - src/sectors/banks_financials.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: IDEA
+  name: Vodafone Idea Ltd
+  sources:
+  - src/sectors/penny_monitor.py
+  - src/sectors/telecom.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: IDEAFORGE
+  name: ideaForge Technology Ltd
+  sources:
+  - src/sectors/defence_aerospace.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: IGL
+  name: Indraprastha Gas Ltd
+  sources:
+  - src/sectors/energy_oil_gas_power.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: INDHOTEL
+  name: Indian Hotels Company
+  sources:
+  - src/sectors/others_residual.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: INDIGO
+  name: InterGlobe Aviation Ltd
+  sources:
+  - src/sectors/others_residual.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: INDORAMA
+  name: Indo Rama Synthetics
+  sources:
+  - src/sectors/textiles.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: INDOSTAR
+  name: Indostar Capital Finance Ltd
+  sources:
+  - src/strategies/madhusudan_kela.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: INDUSINDBK
+  name: IndusInd Bank Ltd
+  sources:
+  - src/sectors/banks_financials.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: INDUSTOWER
+  name: Indus Towers Ltd
+  sources:
+  - src/sectors/telecom.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: INFY
+  name: Infosys Ltd
+  sources:
+  - src/sectors/information_technology.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: IOB
+  name: Indian Overseas Bank
+  sources:
+  - src/sectors/penny_monitor.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: IOC
+  name: Indian Oil Corporation
+  sources:
+  - src/sectors/energy_oil_gas_power.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: IPCALAB
+  name: IPCA Laboratories Ltd
+  sources:
+  - src/sectors/pharmaceuticals.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: IRB
+  name: IRB Infrastructure Developers
+  sources:
+  - src/sectors/capital_goods_infra.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: IRCTC
+  name: IRCTC Ltd
+  sources:
+  - src/sectors/others_residual.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: IREDA
+  name: Indian Renewable Energy Dev Agency
+  sources:
+  - src/sectors/penny_monitor.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: IRIS
+  name: IRIS Business Services Ltd
+  sources:
+  - src/sectors/others_residual.py
+  - src/strategies/madhusudan_kela.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: ITC
+  name: ITC Ltd
+  sources:
+  - src/sectors/fmcg.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: JAICORPLTD
+  name: Jai Corp Ltd
+  sources:
+  - src/sectors/penny_monitor.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: JINDALSTEL
+  name: Jindal Steel & Power
+  sources:
+  - src/sectors/metals_mining.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: JPPOWER
+  name: Jaiprakash Power Ventures
+  sources:
+  - src/sectors/penny_monitor.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: JSWSTEEL
+  name: JSW Steel Ltd
+  sources:
+  - src/sectors/metals_mining.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: KEI
+  name: KEI Industries Ltd
+  sources:
+  - src/sectors/capital_goods_infra.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: KIRLOSENG
+  name: Kirloskar Oil Engines
+  sources:
+  - src/sectors/capital_goods_infra.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: KOPRAN
+  name: Kopran Ltd
+  sources:
+  - src/sectors/pharmaceuticals.py
+  - src/strategies/madhusudan_kela.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: KOTAKBANK
+  name: Kotak Mahindra Bank Ltd
+  sources:
+  - src/sectors/banks_financials.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: KPITTECH
+  name: KPIT Technologies Ltd
+  sources:
+  - src/sectors/capital_goods_infra.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: KPRMILL
+  name: KPR Mill Ltd
+  sources:
+  - src/sectors/textiles.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: LAURUSLABS
+  name: Laurus Labs Ltd
+  sources:
+  - src/sectors/pharmaceuticals.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: LEMONTREE
+  name: Lemon Tree Hotels
+  sources:
+  - src/sectors/others_residual.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: LODHA
+  name: Macrotech Developers Ltd
+  sources:
+  - src/sectors/realty.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: LT
+  name: Larsen & Toubro Ltd
+  sources:
+  - src/sectors/capital_goods_infra.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: LTIM
+  name: LTIMindtree Ltd
+  sources:
+  - src/sectors/information_technology.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: LUPIN
+  name: Lupin Ltd
+  sources:
+  - src/sectors/pharmaceuticals.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: LUXIND
+  name: Lux Industries Ltd
+  sources:
+  - src/sectors/textiles.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: M&M
+  name: Mahindra & Mahindra Ltd
+  sources:
+  - src/sectors/automobile_ev.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: MAHLIFE
+  name: Mahindra Lifespace
+  sources:
+  - src/sectors/realty.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: MARICO
+  name: Marico Ltd
+  sources:
+  - src/sectors/fmcg.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: MARUTI
+  name: Maruti Suzuki India Ltd
+  sources:
+  - src/sectors/automobile_ev.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: MAXHEALTH
+  name: Max Healthcare
+  sources:
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: MAZDOCK
+  name: Mazagon Dock Shipbuilders
+  sources:
+  - src/sectors/defence_aerospace.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: MFSL
+  name: Max Financial Services
+  sources:
+  - src/sectors/banks_financials.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: MKVENTURES
+  name: MKVentures Capital Ltd
+  sources:
+  - src/strategies/madhusudan_kela.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: MOTHERSON
+  name: Samvardhana Motherson
+  sources:
+  - src/sectors/automobile_ev.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: MPHASIS
+  name: Mphasis Ltd
+  sources:
+  - src/sectors/information_technology.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: MTARTECH
+  name: MTAR Technologies Ltd
+  sources:
+  - src/sectors/defence_aerospace.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: MTNL
+  name: Mahanagar Telephone Nigam
+  sources:
+  - src/sectors/telecom.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: NATCOPHARM
+  name: Natco Pharma Ltd
+  sources:
+  - src/sectors/pharmaceuticals.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: NATIONALUM
+  name: National Aluminium Co
+  sources:
+  - src/sectors/metals_mining.py
+  - src/sectors/penny_monitor.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: NAVINFLUOR
+  name: Navin Fluorine International
+  sources:
+  - src/sectors/chemicals.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: NAZARA
+  name: Nazara Technologies Ltd
+  sources:
+  - src/sectors/media.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: NCC
+  name: NCC Ltd
+  sources:
+  - src/sectors/capital_goods_infra.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: NESTLEIND
+  name: Nestle India Ltd
+  sources:
+  - src/sectors/fmcg.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: NETWORK18
+  name: Network18 Media
+  sources:
+  - src/sectors/media.py
+  - src/sectors/penny_monitor.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: NHPC
+  name: NHPC Ltd
+  sources:
+  - src/sectors/energy_oil_gas_power.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: NIYOGIN
+  name: Niyogin Fintech Ltd
+  sources:
+  - src/strategies/madhusudan_kela.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: NMDC
+  name: NMDC Ltd
+  sources:
+  - src/sectors/metals_mining.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: NTPC
+  name: NTPC Ltd
+  sources:
+  - src/sectors/energy_oil_gas_power.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: NYKAA
+  name: FSN E-Commerce Ventures
+  sources:
+  - src/sectors/others_residual.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: OBEROIRLTY
+  name: Oberoi Realty Ltd
+  sources:
+  - src/sectors/realty.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: OFSS
+  name: Oracle Financial Services
+  sources:
+  - src/sectors/information_technology.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: ONGC
+  name: Oil & Natural Gas Corp
+  sources:
+  - src/sectors/energy_oil_gas_power.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: PAGEIND
+  name: Page Industries Ltd
+  sources:
+  - src/sectors/textiles.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: PARAS
+  name: Paras Defence & Space
+  sources:
+  - src/sectors/defence_aerospace.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: PERSISTENT
+  name: Persistent Systems Ltd
+  sources:
+  - src/sectors/information_technology.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: PFIZER
+  name: Pfizer Ltd
+  sources:
+  - src/sectors/pharmaceuticals.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: PHOENIXLTD
+  name: Phoenix Mills Ltd
+  sources:
+  - src/sectors/realty.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: PIDILITIND
+  name: Pidilite Industries Ltd
+  sources:
+  - src/sectors/chemicals.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: PIIND
+  name: PI Industries Ltd
+  sources:
+  - src/sectors/chemicals.py
+  - src/sectors/others_residual.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: PNB
+  name: Punjab National Bank
+  sources:
+  - src/sectors/banks_financials.py
+  - src/sectors/penny_monitor.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: POLYCAB
+  name: Polycab India Ltd
+  sources:
+  - src/sectors/capital_goods_infra.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: POWERGRID
+  name: Power Grid Corporation
+  sources:
+  - src/sectors/energy_oil_gas_power.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: PRESTIGE
+  name: Prestige Estates Projects
+  sources:
+  - src/sectors/realty.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: PVRINOX
+  name: PVR INOX Ltd
+  sources:
+  - src/sectors/media.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: RAYMOND
+  name: Raymond Ltd
+  sources:
+  - src/sectors/textiles.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: RCOM
+  name: Reliance Communications
+  sources:
+  - src/sectors/telecom.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: RELIANCE
+  name: Reliance Industries Ltd
+  sources:
+  - src/sectors/energy_oil_gas_power.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: REPRO
+  name: Repro India Ltd
+  sources:
+  - src/sectors/others_residual.py
+  - src/strategies/madhusudan_kela.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: ROUTE
+  name: Route Mobile Ltd
+  sources:
+  - src/sectors/telecom.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: RPOWER
+  name: Reliance Power Ltd
+  sources:
+  - src/sectors/penny_monitor.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: RPTECH
+  name: Rashi Peripherals Ltd
+  sources:
+  - src/sectors/others_residual.py
+  - src/strategies/madhusudan_kela.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: RTNPOWER
+  name: RattanIndia Power Ltd
+  sources:
+  - src/sectors/penny_monitor.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: SAIL
+  name: Steel Authority of India
+  sources:
+  - src/sectors/metals_mining.py
+  - src/sectors/penny_monitor.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: SANGAMIND
+  name: Sangam (India) Ltd
+  sources:
+  - src/sectors/textiles.py
+  - src/strategies/madhusudan_kela.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: SANOFI
+  name: Sanofi India Ltd
+  sources:
+  - src/sectors/pharmaceuticals.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: SAREGAMA
+  name: Saregama India Ltd
+  sources:
+  - src/sectors/media.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: SBILIFE
+  name: SBI Life Insurance
+  sources:
+  - src/sectors/banks_financials.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: SBIN
+  name: State Bank of India
+  sources:
+  - src/sectors/banks_financials.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: SGFIN
+  name: SG Finserve Ltd
+  sources:
+  - src/sectors/banks_financials.py
+  - src/strategies/madhusudan_kela.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: SIEMENS
+  name: Siemens Ltd
+  sources:
+  - src/sectors/capital_goods_infra.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: SIMPLEXINF
+  name: Simplex Infrastructures Ltd
+  sources:
+  - src/strategies/madhusudan_kela.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: SJVN
+  name: SJVN Ltd
+  sources:
+  - src/sectors/energy_oil_gas_power.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: SOBHA
+  name: Sobha Ltd
+  sources:
+  - src/sectors/realty.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: SOLARINDS
+  name: Solar Industries India
+  sources:
+  - src/sectors/defence_aerospace.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: SONATSOFTW
+  name: Sonata Software Ltd
+  sources:
+  - src/sectors/information_technology.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: SRF
+  name: SRF Ltd
+  sources:
+  - src/sectors/chemicals.py
+  - src/sectors/others_residual.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: SUBAM
+  name: Subam Papers Ltd
+  sources:
+  - src/sectors/others_residual.py
+  - src/strategies/madhusudan_kela.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: SUNPHARMA
+  name: Sun Pharmaceutical Industries Ltd
+  sources:
+  - src/sectors/pharmaceuticals.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: SUNTECK
+  name: Sunteck Realty Ltd
+  sources:
+  - src/sectors/realty.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: SUNTV
+  name: Sun TV Network Ltd
+  sources:
+  - src/sectors/media.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: SUZLON
+  name: Suzlon Energy Ltd
+  sources:
+  - src/sectors/penny_monitor.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: TATACHEM
+  name: Tata Chemicals Ltd
+  sources:
+  - src/sectors/chemicals.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: TATACOMM
+  name: Tata Communications Ltd
+  sources:
+  - src/sectors/telecom.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: TATACONSUM
+  name: Tata Consumer Products
+  sources:
+  - src/sectors/fmcg.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: TATAELXSI
+  name: Tata Elxsi Ltd
+  sources:
+  - src/sectors/information_technology.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: TATAMOTORS
+  name: Tata Motors Ltd
+  sources:
+  - src/sectors/automobile_ev.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: TATAPOWER
+  name: Tata Power Company
+  sources:
+  - src/sectors/energy_oil_gas_power.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: TATASTEEL
+  name: Tata Steel Ltd
+  sources:
+  - src/sectors/metals_mining.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: TATATELE
+  name: Tata Teleservices
+  sources:
+  - src/sectors/telecom.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: TCI
+  name: Transport Corporation of India
+  sources:
+  - src/sectors/others_residual.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: TCS
+  name: Tata Consultancy Services Ltd
+  sources:
+  - src/sectors/information_technology.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: TECHM
+  name: Tech Mahindra Ltd
+  sources:
+  - src/sectors/information_technology.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: THERMAX
+  name: Thermax Ltd
+  sources:
+  - src/sectors/capital_goods_infra.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: TIINDIA
+  name: Tube Investments of India
+  sources:
+  - src/sectors/automobile_ev.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: TIPS
+  name: Tips Industries Ltd
+  sources:
+  - src/sectors/media.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: TITAN
+  name: Titan Company Ltd
+  sources:
+  - src/sectors/others_residual.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: TORNTPHARM
+  name: Torrent Pharmaceuticals Ltd
+  sources:
+  - src/sectors/pharmaceuticals.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: TRENT
+  name: Trent Ltd
+  sources:
+  - src/sectors/others_residual.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: TRIDENT
+  name: Trident Ltd
+  sources:
+  - src/sectors/penny_monitor.py
+  - src/sectors/textiles.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: TV18BRDCST
+  name: TV18 Broadcast Ltd
+  sources:
+  - src/sectors/media.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: TVSMOTOR
+  name: TVS Motor Company Ltd
+  sources:
+  - src/sectors/automobile_ev.py
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: UCOBANK
+  name: UCO Bank
+  sources:
+  - src/sectors/penny_monitor.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: UNIECOM
+  name: Unicommerce eSolutions Ltd
+  sources:
+  - src/sectors/others_residual.py
+  - src/strategies/madhusudan_kela.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: UNITDSPR
+  name: United Spirits Ltd
+  sources:
+  - src/sectors/fmcg.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: UPL
+  name: UPL Ltd
+  sources:
+  - src/sectors/chemicals.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: VARDHACRLC
+  name: Vardhman Acrylics
+  sources:
+  - src/sectors/textiles.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: VARUNBEV
+  name: Varun Beverages
+  sources:
+  - src/strategies/minervini_oneil.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: VBL
+  name: Varun Beverages Ltd
+  sources:
+  - src/sectors/fmcg.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: VEDL
+  name: Vedanta Ltd
+  sources:
+  - src/sectors/metals_mining.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: WELCORP
+  name: Welspun Corp Ltd
+  sources:
+  - src/sectors/metals_mining.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: WELSPUNIND
+  name: Welspun India Ltd
+  sources:
+  - src/sectors/textiles.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: WINDMACH
+  name: Windsor Machines Ltd
+  sources:
+  - src/sectors/others_residual.py
+  - src/strategies/madhusudan_kela.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: WIPRO
+  name: Wipro Ltd
+  sources:
+  - src/sectors/information_technology.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: YESBANK
+  name: Yes Bank Ltd
+  sources:
+  - src/sectors/penny_monitor.py
+  status: unknown
+  last_checked: null
+  notes: ''
+- symbol: ZEEL
+  name: Zee Entertainment Enterprises
+  sources:
+  - src/sectors/media.py
+  status: unknown
+  last_checked: null
+  notes: ''

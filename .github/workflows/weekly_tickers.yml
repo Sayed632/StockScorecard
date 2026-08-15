@@ -1,0 +1,54 @@
+# Weekly ticker registry validation
+name: Weekly Ticker Maintenance
+
+on:
+  schedule:
+    # Monday 06:30 IST ≈ 01:00 UTC
+    - cron: "0 1 * * 1"
+  workflow_dispatch:
+
+jobs:
+  validate-tickers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Validate tickers
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/validate_tickers.py --telegram
+
+      - name: Upload validation CSV
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ticker-validation-${{ github.run_id }}
+          path: data/ticker_validation_*.csv
+          if-no-files-found: ignore
+          retention-days: 30
+
+      - name: Commit updated tickers.yaml statuses
+        if: success()
+        run: |
+          git config user.name "stockscorecard-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add config/tickers.yaml || true
+          if git diff --staged --quiet; then
+            echo "No registry changes"
+          else
+            git commit -m "chore: weekly ticker validation status update"
+            git push
+          fi
