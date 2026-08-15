@@ -1,12 +1,9 @@
 """
-Madhusudan Kela–inspired strategy module (separate sleeve).
+Madhusudan Kela portfolio tracker + multi-year strategy sleeve.
 
-IMPORTANT
-- This is NOT official advice from Madhusudan Kela.
-- We track selected *disclosed* holdings (stake >1% style public data)
-  and score them with a multi-year, bottom-up lens aligned to his
-  publicly described philosophy.
-- Horizon: typically 3–5+ years (NOT swing).
+Tracks selected *publicly disclosed* holdings (typically stake >1%).
+NOT official advice from Madhusudan Kela. Holdings change every quarter.
+Source basis: public shareholding / media compilations (Jun 2026 style data).
 """
 
 from typing import List, Dict, Any, Optional
@@ -22,55 +19,56 @@ from src.factors.technical import score_technical
 from src.sectors._helpers import market_cap_bucket
 
 
-# Selected disclosed / widely reported holdings (expandable)
-KELA_UNIVERSE = [
-    {"symbol": "CHOICEIN", "name": "Choice International Ltd", "note": "Core large holding (reported)"},
-    {"symbol": "SANGAMIND", "name": "Sangam (India) Ltd", "note": "Textiles / diversified"},
-    {"symbol": "WINDMACH", "name": "Windsor Machines Ltd", "note": "Capital goods / industrial"},
-    {"symbol": "KOPRAN", "name": "Kopran Ltd", "note": "Pharma"},
-    {"symbol": "RPTECH", "name": "Rashi Peripherals Ltd", "note": "Distribution / tech hardware"},
-    {"symbol": "SGFIN", "name": "SG Finserve Ltd", "note": "NBFC / supply-chain finance"},
-    {"symbol": "IBULHSGFIN", "name": "Indiabulls Housing Finance", "note": "Housing finance"},
-    {"symbol": "SUBAM", "name": "Subam Papers Ltd", "note": "Paper / packaging"},
-    {"symbol": "REPRO", "name": "Repro India Ltd", "note": "Print / publishing services"},
-    {"symbol": "EMKAY", "name": "Emkay Global Financial Services", "note": "Broking / financials"},
-    {"symbol": "BOMDYEING", "name": "Bombay Dyeing & Mfg Co", "note": "Textiles / realty legacy"},
-    {"symbol": "IRIS", "name": "IRIS Business Services Ltd", "note": "RegTech"},
-    {"symbol": "UNIECOM", "name": "Unicommerce eSolutions Ltd", "note": "E-commerce SaaS"},
+# Disclosed portfolio tracker (update when new bulk shareholding data is out)
+# stake_pct = last reported approximate holding %
+KELA_PORTFOLIO = [
+    {"symbol": "CHOICEIN", "name": "Choice International Ltd", "stake_pct": 7.2, "note": "Largest disclosed holding"},
+    {"symbol": "MKVENTURES", "name": "MKVentures Capital Ltd", "stake_pct": 74.4, "note": "Promoter / related entity"},
+    {"symbol": "WINDMACH", "name": "Windsor Machines Ltd", "stake_pct": 6.4, "note": "Trimmed in Jun quarter"},
+    {"symbol": "SANGAMIND", "name": "Sangam (India) Ltd", "stake_pct": 4.9, "note": "Textiles"},
+    {"symbol": "RPTECH", "name": "Rashi Peripherals Ltd", "stake_pct": 1.8, "note": "Strong CY26 performer"},
+    {"symbol": "SGFIN", "name": "SG Finserve Ltd", "stake_pct": 1.4, "note": "NBFC"},
+    {"symbol": "IBULHSGFIN", "name": "Indiabulls / related housing finance", "stake_pct": 2.2, "note": "Newer large entry"},
+    {"symbol": "INDOSTAR", "name": "Indostar Capital Finance Ltd", "stake_pct": 2.1, "note": "NBFC"},
+    {"symbol": "KOPRAN", "name": "Kopran Ltd", "stake_pct": 1.7, "note": "Pharma"},
+    {"symbol": "SUBAM", "name": "Subam Papers Ltd", "stake_pct": 7.0, "note": "Newer entry"},
+    {"symbol": "SIMPLEXINF", "name": "Simplex Infrastructures Ltd", "stake_pct": 1.2, "note": "Infra"},
+    {"symbol": "BOMDYEING", "name": "Bombay Dyeing & Mfg Co", "stake_pct": 1.5, "note": "Legacy textile/realty"},
+    {"symbol": "REPRO", "name": "Repro India Ltd", "stake_pct": 3.3, "note": "Print services"},
+    {"symbol": "IRIS", "name": "IRIS RegTech / Business Services", "stake_pct": 5.2, "note": "RegTech"},
+    {"symbol": "UNIECOM", "name": "Unicommerce eSolutions Ltd", "stake_pct": 1.5, "note": "E-comm SaaS"},
+    {"symbol": "APTECHT", "name": "Aptech Ltd", "stake_pct": 1.1, "note": "Education / training"},
+    {"symbol": "NIYOGIN", "name": "Niyogin Fintech Ltd", "stake_pct": 4.5, "note": "Fintech"},
+    {"symbol": "EMKAY", "name": "Emkay Global Financial Services", "stake_pct": 1.1, "note": "Broking"},
 ]
 
 
 @dataclass
-class KelaIdea:
+class KelaHolding:
     symbol: str
     name: str
-    action: str          # emoji + label
+    action: str
     reason: str
     score: float
+    stake_pct: Optional[float] = None
+    last_price: Optional[float] = None
     market_cap_cr: Optional[float] = None
     bucket: str = ""
     note: str = ""
     extras: Dict[str, Any] = field(default_factory=dict)
 
 
-def _score_kela_style(stock: Dict[str, Any]) -> Optional[KelaIdea]:
-    """
-    Multi-year bottom-up lens:
-    - Quality + growth primary
-    - Valuation secondary
-    - Mild technical only for entry timing tag (not for long thesis)
-    """
+def _score_holding(stock: Dict[str, Any], stake_pct: Optional[float], note: str) -> Optional[KelaHolding]:
     symbol = stock.get("symbol", "")
     name = stock.get("name", symbol)
     mcap = stock.get("market_cap_cr")
-    note = stock.get("_kela_note", "")
+    prices = stock.get("_prices")
 
     q = score_quality(stock)
     g = score_growth(stock)
     v = score_valuation(stock)
-    t = score_technical(stock.get("_prices"))
+    t = score_technical(prices)
 
-    # Kela-like: quality + growth heavy; mid/small preference soft bonus
     score = 0.40 * q + 0.35 * g + 0.15 * v + 0.10 * t
     if mcap is not None and mcap < 15000:
         score += 4
@@ -79,26 +77,34 @@ def _score_kela_style(stock: Dict[str, Any]) -> Optional[KelaIdea]:
 
     if score >= 68 and q >= 55:
         action = "🔵 HOLD / ACCUMULATE"
-        reason = "Fits multi-year quality-growth profile – patience required"
+        reason = "Multi-year quality-growth profile"
     elif score >= 55:
         action = "⚪ WATCHLIST"
-        reason = "On radar – wait for better entry or clearer fundamentals"
+        reason = "On radar – wait for clarity or better entry"
     else:
-        action = "🔴 AVOID / LIGHT"
-        reason = "Quality or growth not convincing for long-term sleeve"
+        action = "🔴 LIGHT / AVOID"
+        reason = "Fundamentals not convincing for long sleeve"
 
-    # Entry timing hint (does not change thesis)
     if t >= 65 and action.startswith("🔵"):
-        reason += " | Momentum supportive for staggered entry"
+        reason += " | Tape supportive for staggered entry"
     elif t < 40 and action.startswith("🔵"):
-        reason += " | Weak near-term tape – prefer staggered buys only"
+        reason += " | Weak near-term tape – stagger only"
 
-    return KelaIdea(
+    last_price = None
+    try:
+        if prices is not None and len(prices) > 0:
+            last_price = float(prices["close"].iloc[-1])
+    except Exception:
+        pass
+
+    return KelaHolding(
         symbol=symbol,
         name=name,
         action=action,
         reason=reason,
-        score=round(score, 1),
+        score=round(min(score, 99), 1),
+        stake_pct=stake_pct,
+        last_price=last_price,
         market_cap_cr=mcap,
         bucket=market_cap_bucket(mcap),
         note=note,
@@ -107,64 +113,65 @@ def _score_kela_style(stock: Dict[str, Any]) -> Optional[KelaIdea]:
 
 
 def run_kela_strategy() -> Dict[str, Any]:
-    """Fetch + score Kela universe. Returns structured result for Telegram."""
-    ideas: List[KelaIdea] = []
-    for item in KELA_UNIVERSE:
+    """Track Kela disclosed portfolio and score each holding."""
+    holdings: List[KelaHolding] = []
+    for item in KELA_PORTFOLIO:
         yahoo = item["symbol"] + ".NS"
         fund = fetch_basic_fundamentals(yahoo)
         fund["name"] = item["name"]
-        fund["_kela_note"] = item.get("note", "")
         fund["_prices"] = fetch_price_history(yahoo, period="1y")
-        idea = _score_kela_style(fund)
-        if idea:
-            ideas.append(idea)
+        h = _score_holding(fund, item.get("stake_pct"), item.get("note", ""))
+        if h:
+            holdings.append(h)
 
-    ideas.sort(key=lambda x: x.score, reverse=True)
+    holdings.sort(key=lambda x: (x.stake_pct or 0, x.score), reverse=True)
 
     return {
         "scan_time": datetime.now(),
-        "ideas": ideas,
+        "as_of_label": "Disclosed holdings basis ~Jun 2026 public data (update quarterly)",
+        "ideas": holdings,
         "philosophy": [
-            "Bottom-up stock picking (company first, not index)",
+            "Bottom-up stock picking (company first)",
             "Multi-year horizon (typically 3–5+ years)",
-            "Volatility treated as opportunity for quality names",
-            "High conviction / concentrated style – not a diversified index",
-            "Research first; execute when price/timing allows",
+            "Volatility as opportunity for quality names",
+            "High conviction – concentrated book",
+            "Research first; execute when price allows",
         ],
     }
 
 
 def format_kela_telegram(result: Dict[str, Any]) -> str:
-    """Separate Telegram message for this sleeve only."""
     now = result["scan_time"].strftime("%d %b %Y | %H:%M IST")
     lines = [
-        "<b>📌 Madhusudan Kela’s Strategy</b>",
+        "<b>📌 Madhusudan Kela’s Strategy – Portfolio Tracker</b>",
         f"{now}",
+        f"<i>{result.get('as_of_label', '')}</i>",
         "",
-        "<i>Inspired by his publicly described philosophy + selected disclosed holdings.</i>",
         "<i>Not official advice from Madhusudan Kela. Not investment advice.</i>",
+        "<i>Stakes are last reported public figures and can change.</i>",
         "",
         "<b>Strategy principles</b>",
     ]
     for p in result["philosophy"]:
         lines.append(f"• {p}")
     lines.append("")
-    lines.append("<b>Tracked investments (scored for multi-year sleeve)</b>")
+    lines.append("<b>Tracked portfolio</b>")
 
-    ideas: List[KelaIdea] = result.get("ideas") or []
+    ideas: List[KelaHolding] = result.get("ideas") or []
     if not ideas:
-        lines.append("• No names scored today (data unavailable)")
+        lines.append("• No holdings scored (data unavailable)")
     else:
-        for idea in ideas:
-            mcap = f"{idea.market_cap_cr:,.0f} Cr" if idea.market_cap_cr else "—"
-            note = f" ({idea.note})" if idea.note else ""
+        for h in ideas:
+            stake = f"{h.stake_pct:.1f}%" if h.stake_pct is not None else "—"
+            px = f"₹{h.last_price:.1f}" if h.last_price is not None else "—"
+            note = f" | {h.note}" if h.note else ""
             lines.append(
-                f"• <b>{idea.symbol}</b>{note}\n"
-                f"  {idea.action} | Score {idea.score} | {idea.bucket} | {mcap}\n"
-                f"  {idea.reason}"
+                f"• <b>{h.symbol}</b> (stake ~{stake}){note}\n"
+                f"  {h.action} | Score {h.score} | {px} | {h.bucket}\n"
+                f"  {h.reason}"
             )
 
     lines.append("")
-    lines.append("<i>Horizon: years, not days. Position sizing & due diligence are your responsibility.</i>")
-    lines.append("<i>StockScorecard – Kela sleeve (separate from Swing report)</i>")
+    lines.append(f"<i>Holdings tracked: {len(ideas)} | Horizon: years, not days</i>")
+    lines.append("<i>StockScorecard – Kela portfolio sleeve</i>")
     return "\n".join(lines)
