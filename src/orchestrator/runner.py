@@ -29,6 +29,7 @@ from src.decision.ranking import merge_and_rank
 from src.shared.fii_dii import fetch_fii_dii, fetch_sector_fpi
 from src.shared.results_logger import log_scan_result
 from src.strategies.madhusudan_kela import run_kela_strategy, format_kela_telegram
+from src.strategies.minervini_oneil import run_minervini_oneil, format_mo_telegram
 from src.telegram_notify import send_message as telegram_send
 from src.delivery.telegram_report import send_daily_report, format_report
 from src.shared.models import ScanResult
@@ -152,6 +153,17 @@ def run_full_scan(
             logger.info("Kela strategy Telegram: %s", "sent" if kok else "failed")
         except Exception as e:
             logger.warning("Kela strategy sleeve failed: %s", e)
+
+        # Separate message: Minervini/O'Neil strategy
+        try:
+            mo = run_minervini_oneil()
+            mo_text = format_mo_telegram(mo)
+            if len(mo_text) > 4000:
+                mo_text = mo_text[:3900] + "\n\n… (truncated)"
+            mok = telegram_send(mo_text)
+            logger.info("Minervini/O'Neil Telegram: %s", "sent" if mok else "failed")
+        except Exception as e:
+            logger.warning("Minervini/O'Neil sleeve failed: %s", e)
 
     # 5. Save CSV snapshot
     _save_snapshot(scan_result)
