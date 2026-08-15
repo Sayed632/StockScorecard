@@ -75,6 +75,24 @@ def run_full_scan(
     cfg = load_config(config_path)
     max_ideas = cfg.get("max_ideas_per_list", 8)
 
+    # Auto-sync ticker registry from sector/strategy files (no manual update needed)
+    try:
+        import importlib.util
+        from pathlib import Path as _P
+        _root = _P(__file__).resolve().parents[2]
+        _spec = importlib.util.spec_from_file_location(
+            "sync_tickers", _root / "scripts" / "sync_tickers.py"
+        )
+        _mod = importlib.util.module_from_spec(_spec)
+        _spec.loader.exec_module(_mod)
+        _n_disc, _n_add, _added = _mod.sync()
+        if _n_add:
+            logger.info("Ticker sync: added %s new symbols: %s", _n_add, _added[:15])
+        else:
+            logger.info("Ticker sync: registry up to date (%s symbols discovered)", _n_disc)
+    except Exception as e:
+        logger.warning("Ticker sync skipped: %s", e)
+
     # 1. Decide frequency
     if force_frequency:
         freq = force_frequency

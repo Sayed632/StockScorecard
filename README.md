@@ -109,6 +109,12 @@ You can also trigger it manually: **Actions → Daily Decision Report → Run wo
 
 ## Ticker maintenance
 
+**You do not need to edit `config/tickers.yaml` by hand.**
+Whenever symbols are added in sector/strategy code, they are synced automatically:
+- on every **daily decision run**, and
+- on the **weekly** ticker maintenance Action.
+
+
 Master list: `config/tickers.yaml` (all symbols used across sectors/strategies).
 
 Weekly validation (GitHub Actions – Mondays):
