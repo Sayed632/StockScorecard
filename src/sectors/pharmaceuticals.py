@@ -33,6 +33,7 @@ PHARMA_UNIVERSE = [
     {"symbol": "PFIZER", "name": "Pfizer Ltd"},
     {"symbol": "SANOFI", "name": "Sanofi India Ltd"},
     {"symbol": "ABBOTTINDIA", "name": "Abbott India Ltd"},
+    {"symbol": "KOPRAN", "name": "Kopran Ltd"},
 ]
 
 

@@ -18,6 +18,7 @@ UNIVERSE = [
     {"symbol": "INDORAMA", "name": "Indo Rama Synthetics"},
     {"symbol": "GOKEX", "name": "Gokaldas Exports Ltd"},
     {"symbol": "LUXIND", "name": "Lux Industries Ltd"},
+    {"symbol": "SANGAMIND", "name": "Sangam (India) Ltd"},
 ]
 
 

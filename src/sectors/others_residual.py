@@ -2,6 +2,7 @@
 Others / Residual scanner.
 Liquid names that often sit outside the main dedicated sector universes
 (conglomerates, logistics, hospitality, diversified services, etc.).
+Includes selected tracked investor holdings (e.g. Kela-type mid/small names).
 """
 
 from typing import List, Dict, Any, Optional
@@ -40,6 +41,15 @@ UNIVERSE = [
     {"symbol": "IRCTC", "name": "IRCTC Ltd"},
     {"symbol": "PIIND", "name": "PI Industries Ltd"},
     {"symbol": "DIXON", "name": "Dixon Technologies Ltd"},
+    # Tracked investor / mid-small residual (Kela portfolio examples)
+    {"symbol": "RPTECH", "name": "Rashi Peripherals Ltd"},
+    {"symbol": "WINDMACH", "name": "Windsor Machines Ltd"},
+    {"symbol": "SUBAM", "name": "Subam Papers Ltd"},
+    {"symbol": "REPRO", "name": "Repro India Ltd"},
+    {"symbol": "EMKAY", "name": "Emkay Global Financial Services"},
+    {"symbol": "UNIECOM", "name": "Unicommerce eSolutions Ltd"},
+    {"symbol": "IRIS", "name": "IRIS Business Services Ltd"},
+    {"symbol": "BOMDYEING", "name": "Bombay Dyeing & Mfg Co"},
 ]
 
 
