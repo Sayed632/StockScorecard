@@ -28,6 +28,8 @@ from src.sectors.others_residual import OthersResidualScanner
 from src.decision.ranking import merge_and_rank
 from src.shared.fii_dii import fetch_fii_dii, fetch_sector_fpi
 from src.shared.results_logger import log_scan_result
+from src.strategies.madhusudan_kela import run_kela_strategy, format_kela_telegram
+from src.telegram_notify import send_message as telegram_send
 from src.delivery.telegram_report import send_daily_report, format_report
 from src.shared.models import ScanResult
 
@@ -139,6 +141,17 @@ def run_full_scan(
             logger.info("Report successfully sent to Telegram")
         else:
             logger.warning("Telegram delivery failed – check TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID")
+
+        # Separate message: Madhusudan Kela strategy sleeve
+        try:
+            kela = run_kela_strategy()
+            kela_text = format_kela_telegram(kela)
+            if len(kela_text) > 4000:
+                kela_text = kela_text[:3900] + "\n\n… (truncated)"
+            kok = telegram_send(kela_text)
+            logger.info("Kela strategy Telegram: %s", "sent" if kok else "failed")
+        except Exception as e:
+            logger.warning("Kela strategy sleeve failed: %s", e)
 
     # 5. Save CSV snapshot
     _save_snapshot(scan_result)
