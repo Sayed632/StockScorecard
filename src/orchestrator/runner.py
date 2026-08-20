@@ -30,6 +30,7 @@ from src.shared.fii_dii import fetch_fii_dii, fetch_sector_fpi
 from src.shared.results_logger import log_scan_result
 from src.strategies.madhusudan_kela import run_kela_strategy, format_kela_telegram
 from src.strategies.minervini_oneil import run_minervini_oneil, format_mo_telegram
+from src.intelligence.news_layer import format_news_telegram_message
 from src.telegram_notify import send_message as telegram_send
 from src.delivery.telegram_report import send_daily_report, format_report
 from src.shared.models import ScanResult
@@ -182,6 +183,16 @@ def run_full_scan(
             logger.info("Minervini/O'Neil Telegram: %s", "sent" if mok else "failed")
         except Exception as e:
             logger.warning("Minervini/O'Neil sleeve failed: %s", e)
+
+        # Separate message: News intelligence
+        try:
+            news_text = format_news_telegram_message()
+            if len(news_text) > 4000:
+                news_text = news_text[:3900] + "\n\n… (truncated)"
+            nok = telegram_send(news_text)
+            logger.info("News intelligence Telegram: %s", "sent" if nok else "failed")
+        except Exception as e:
+            logger.warning("News intelligence failed: %s", e)
 
     # 5. Save CSV snapshot
     _save_snapshot(scan_result)
