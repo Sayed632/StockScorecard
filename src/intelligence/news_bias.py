@@ -140,7 +140,10 @@ def compute_news_bias_for_ideas(
         delta = 0.0
         reasons = []
         for n in strong:
-            if not _headline_matches_idea(n.title, idea):
+            matched = [m.upper() for m in (getattr(n, "matched_symbols", None) or [])]
+            if idea.symbol.upper() in matched:
+                pass  # direct ticker hit from news layer
+            elif not _headline_matches_idea(n.title, idea):
                 continue
             if n.bias == "Bullish":
                 delta += bull
