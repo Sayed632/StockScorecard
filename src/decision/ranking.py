@@ -12,6 +12,7 @@ from src.shared.fii_dii import (
 )
 from datetime import datetime
 from src.decision.probability import attach_probabilities
+from src.intelligence.news_bias import compute_news_bias_for_ideas, news_scoring_status
 
 
 def _apply_swing_bias(
@@ -72,6 +73,7 @@ def merge_and_rank(
     frequency_reason: str = "Normal",
     fii_dii: Optional[FIIDIISnapshot] = None,
     sector_fpi: Optional[List[SectorFPI]] = None,
+    cfg: Optional[dict] = None,
 ) -> ScanResult:
     sector_fpi = sector_fpi or []
     market_bias_pts, market_bias_reason = (0.0, "neutral")
@@ -108,6 +110,13 @@ def merge_and_rank(
         if actionable > 0:
             sector_summary[sector_key] = f"{actionable} actionable ideas"
 
+    # News score bias (auto-activates on config activate_on date)
+    news_note = ""
+    if cfg:
+        all_swing, news_note = compute_news_bias_for_ideas(all_swing, cfg)
+    else:
+        news_note = "News bias: no config passed"
+
     all_swing = attach_probabilities(all_swing)
     all_long = attach_probabilities(all_long)
     all_dark = attach_probabilities(all_dark)
@@ -116,6 +125,8 @@ def merge_and_rank(
     notes = [f"Frequency: {frequency}x – {frequency_reason}"]
     if fii_dii:
         notes.append(f"Swing market bias: {market_bias_pts:+.0f} ({market_bias_reason})")
+    if news_note:
+        notes.append(news_note)
 
     return ScanResult(
         scan_time=datetime.now(),

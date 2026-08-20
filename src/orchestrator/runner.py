@@ -147,6 +147,7 @@ def run_full_scan(
         frequency_reason=freq_reason,
         fii_dii=fii_snap,
         sector_fpi=sector_fpi,
+        cfg=cfg,
     )
 
     # 4. Deliver

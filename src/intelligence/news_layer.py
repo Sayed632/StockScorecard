@@ -179,12 +179,23 @@ def fetch_market_news(max_items: int = 12) -> List[NewsItem]:
     return strong[:max_items]
 
 
-def format_news_section(items: Optional[List[NewsItem]] = None) -> List[str]:
+def format_news_section(items: Optional[List[NewsItem]] = None, cfg: Optional[dict] = None) -> List[str]:
     """Lines for embedding in daily Telegram report."""
     if items is None:
         items = fetch_market_news()
 
     lines = ["<b>📰 NEWS INTELLIGENCE</b> <i>(market-moving)</i>"]
+    try:
+        from src.intelligence.news_bias import news_scoring_status
+        if cfg is None:
+            import yaml
+            from pathlib import Path
+            cp = Path("config.yaml")
+            cfg = yaml.safe_load(cp.read_text()) if cp.exists() else {}
+        st = news_scoring_status(cfg or {})
+        lines.append(f"<i>{st['message']}</i>")
+    except Exception:
+        pass
     if not items:
         lines.append("• No high-impact headlines fetched")
         lines.append("")

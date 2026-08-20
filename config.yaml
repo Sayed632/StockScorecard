@@ -49,3 +49,13 @@ active_sectors:
 
 output_dir: data
 max_ideas_per_list: 8
+
+# News → score bias (auto-activates on target date)
+news_intelligence:
+  enabled_display: true          # always show headlines in reports
+  score_bias_enabled: true       # master switch
+  activate_on: "2026-09-01"      # IST calendar date – scoring bias turns ON from this day
+  # Bias points applied to Swing ideas when headline matches sector/symbol
+  bullish_points: 4
+  bearish_points: -5
+  min_impact_score: 5            # only strong headlines drive bias
