@@ -7,6 +7,7 @@ from src.shared.models import ScanResult, Action
 from src.telegram_notify import send_message
 from src.shared.fii_dii import fetch_fii_dii, fetch_sector_fpi, format_fii_dii_section, format_sector_fpi_section
 from src.intelligence.news_layer import format_news_section
+from src.intelligence.nse_announcements import format_nse_section
 
 
 def format_report(result: ScanResult) -> str:
@@ -26,6 +27,7 @@ def format_report(result: ScanResult) -> str:
     sector_fpi = fetch_sector_fpi()
     lines.extend(format_sector_fpi_section(sector_fpi))
     lines.extend(format_news_section())
+    lines.extend(format_nse_section())
 
     # Separate penny ideas (extras.penny == True) from normal lists for clarity
     def is_penny(idea) -> bool:

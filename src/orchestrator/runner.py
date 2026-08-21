@@ -31,6 +31,7 @@ from src.shared.results_logger import log_scan_result
 from src.strategies.madhusudan_kela import run_kela_strategy, format_kela_telegram
 from src.strategies.minervini_oneil import run_minervini_oneil, format_mo_telegram
 from src.intelligence.news_layer import format_news_telegram_message
+from src.intelligence.nse_announcements import format_nse_telegram_message
 from src.telegram_notify import send_message as telegram_send
 from src.delivery.telegram_report import send_daily_report, format_report
 from src.shared.models import ScanResult
@@ -194,6 +195,15 @@ def run_full_scan(
             logger.info("News intelligence Telegram: %s", "sent" if nok else "failed")
         except Exception as e:
             logger.warning("News intelligence failed: %s", e)
+
+        try:
+            nse_text = format_nse_telegram_message()
+            if len(nse_text) > 4000:
+                nse_text = nse_text[:3900] + "\n\n… (truncated)"
+            nse_ok = telegram_send(nse_text)
+            logger.info("NSE announcements Telegram: %s", "sent" if nse_ok else "failed")
+        except Exception as e:
+            logger.warning("NSE announcements failed: %s", e)
 
     # 5. Save CSV snapshot
     _save_snapshot(scan_result)
