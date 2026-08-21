@@ -35,6 +35,10 @@ RSS_FEEDS = [
         "https://news.google.com/rss/search?q=site:moneycontrol.com+(Nifty+OR+Sensex+OR+share+market)&hl=en-IN&gl=IN&ceid=IN:en",
     ),
     (
+        "DSIJ markets",
+        "https://news.google.com/rss/search?q=site:dsij.in+(Nifty+OR+Sensex+OR+stocks+OR+order+OR+results)&hl=en-IN&gl=IN&ceid=IN:en",
+    ),
+    (
         "RBI policy",
         "https://news.google.com/rss/search?q=RBI+repo+rate+OR+monetary+policy+India&hl=en-IN&gl=IN&ceid=IN:en",
     ),
