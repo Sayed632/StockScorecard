@@ -34,6 +34,7 @@ from src.intelligence.news_layer import format_news_telegram_message
 from src.intelligence.nse_announcements import format_nse_telegram_message
 from src.intelligence.horizon_monitor import format_horizon_telegram
 from src.intelligence.hot_stocks import format_hot_telegram
+from src.intelligence.trade_plans import format_trade_plans_telegram
 from src.telegram_notify import send_message as telegram_send
 from src.delivery.telegram_report import send_daily_report, format_report
 from src.shared.models import ScanResult
@@ -224,6 +225,15 @@ def run_full_scan(
             logger.info("Hot stocks Telegram: %s", "sent" if hot_ok else "failed")
         except Exception as e:
             logger.warning("Hot stocks failed: %s", e)
+
+        try:
+            tp_text = format_trade_plans_telegram()
+            if len(tp_text) > 4000:
+                tp_text = tp_text[:3900] + "\n\n… (truncated)"
+            tp_ok = telegram_send(tp_text)
+            logger.info("Trade plans Telegram: %s", "sent" if tp_ok else "failed")
+        except Exception as e:
+            logger.warning("Trade plans failed: %s", e)
 
     # 5. Save CSV snapshot
     _save_snapshot(scan_result)
