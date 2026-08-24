@@ -33,6 +33,7 @@ from src.strategies.minervini_oneil import run_minervini_oneil, format_mo_telegr
 from src.intelligence.news_layer import format_news_telegram_message
 from src.intelligence.nse_announcements import format_nse_telegram_message
 from src.intelligence.horizon_monitor import format_horizon_telegram
+from src.intelligence.hot_stocks import format_hot_telegram
 from src.telegram_notify import send_message as telegram_send
 from src.delivery.telegram_report import send_daily_report, format_report
 from src.shared.models import ScanResult
@@ -214,6 +215,15 @@ def run_full_scan(
             logger.info("Horizon monitor Telegram: %s", "sent" if hok else "failed")
         except Exception as e:
             logger.warning("Horizon monitor failed: %s", e)
+
+        try:
+            hot_text = format_hot_telegram()
+            if len(hot_text) > 4000:
+                hot_text = hot_text[:3900] + "\n\n… (truncated)"
+            hot_ok = telegram_send(hot_text)
+            logger.info("Hot stocks Telegram: %s", "sent" if hot_ok else "failed")
+        except Exception as e:
+            logger.warning("Hot stocks failed: %s", e)
 
     # 5. Save CSV snapshot
     _save_snapshot(scan_result)

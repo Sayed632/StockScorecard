@@ -15,3 +15,5 @@ __all__ = [
     "run_horizon_monitor",
     "format_horizon_telegram",
 ]
+
+from .hot_stocks import run_hot_stocks, format_hot_telegram
