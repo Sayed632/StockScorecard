@@ -32,6 +32,7 @@ from src.strategies.madhusudan_kela import run_kela_strategy, format_kela_telegr
 from src.strategies.minervini_oneil import run_minervini_oneil, format_mo_telegram
 from src.intelligence.news_layer import format_news_telegram_message
 from src.intelligence.nse_announcements import format_nse_telegram_message
+from src.intelligence.horizon_monitor import format_horizon_telegram
 from src.telegram_notify import send_message as telegram_send
 from src.delivery.telegram_report import send_daily_report, format_report
 from src.shared.models import ScanResult
@@ -204,6 +205,15 @@ def run_full_scan(
             logger.info("NSE announcements Telegram: %s", "sent" if nse_ok else "failed")
         except Exception as e:
             logger.warning("NSE announcements failed: %s", e)
+
+        try:
+            hz = format_horizon_telegram()
+            if len(hz) > 4000:
+                hz = hz[:3900] + "\n\n… (truncated)"
+            hok = telegram_send(hz)
+            logger.info("Horizon monitor Telegram: %s", "sent" if hok else "failed")
+        except Exception as e:
+            logger.warning("Horizon monitor failed: %s", e)
 
     # 5. Save CSV snapshot
     _save_snapshot(scan_result)
