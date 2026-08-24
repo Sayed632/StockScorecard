@@ -35,6 +35,7 @@ from src.intelligence.nse_announcements import format_nse_telegram_message
 from src.intelligence.horizon_monitor import format_horizon_telegram
 from src.intelligence.hot_stocks import format_hot_telegram
 from src.intelligence.trade_plans import format_trade_plans_telegram
+from src.intelligence.fresh_buys import format_fresh_buys_telegram
 from src.telegram_notify import send_message as telegram_send
 from src.delivery.telegram_report import send_daily_report, format_report
 from src.shared.models import ScanResult
@@ -166,6 +167,16 @@ def run_full_scan(
             logger.info("Report successfully sent to Telegram")
         else:
             logger.warning("Telegram delivery failed – check TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID")
+
+        # Fresh buys – single sorted list
+        try:
+            fb_text = format_fresh_buys_telegram()
+            if len(fb_text) > 4000:
+                fb_text = fb_text[:3900] + "\n\n… (truncated)"
+            fb_ok = telegram_send(fb_text)
+            logger.info("Fresh buys Telegram: %s", "sent" if fb_ok else "failed")
+        except Exception as e:
+            logger.warning("Fresh buys failed: %s", e)
 
         # Separate message: Madhusudan Kela strategy sleeve
         try:
