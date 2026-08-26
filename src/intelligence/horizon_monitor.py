@@ -20,6 +20,7 @@ import re
 import pandas as pd
 
 from src.data_fetch.prices import fetch_price_history
+from src.intelligence.catalysts import build_catalyst_map, catalyst_for, format_price
 
 logger = logging.getLogger(__name__)
 
@@ -39,6 +40,7 @@ class HorizonRow:
     confidence: str  # High / Medium / Low
     reason: str
     extended: bool = False
+    catalyst: str = ""
 
 
 def _load_universe() -> List[Tuple[str, str, str]]:
@@ -169,6 +171,7 @@ def _policy(r: Dict[str, Optional[float]], symbol: str) -> Tuple[str, str, str, 
 
 def run_horizon_monitor(max_rows: int = 25) -> Dict[str, Any]:
     universe = _load_universe()
+    cmap = build_catalyst_map()
     rows: List[HorizonRow] = []
 
     for sym, name, sec in universe:
@@ -198,6 +201,7 @@ def run_horizon_monitor(max_rows: int = 25) -> Dict[str, Any]:
                     confidence=conf,
                     reason=reason,
                     extended=ext,
+                    catalyst=catalyst_for(sym, name, sec, cmap),
                 )
             )
         except Exception as e:
@@ -244,7 +248,8 @@ def format_horizon_telegram(result: Optional[Dict[str, Any]] = None) -> str:
         meta = " · ".join(parts)
         return (
             f"• <b>{r.symbol}</b> [{r.confidence}] hold {r.horizon_weeks}\n"
-            f"  {meta}\n"
+            f"  Price {format_price(r.price)} | {meta}\n"
+            f"  📌 {r.catalyst}\n"
             f"  {r.reason}"
         )
 

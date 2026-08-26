@@ -17,6 +17,9 @@ from datetime import datetime
 from typing import List, Dict, Any, Optional, Tuple
 import logging
 
+from src.intelligence.catalysts import build_catalyst_map, catalyst_for, format_price
+from src.data_fetch.prices import fetch_price_history
+
 logger = logging.getLogger(__name__)
 
 
@@ -29,6 +32,8 @@ class FreshBuy:
     confidence: str
     detail: str
     score: float  # for sorting
+    price: Optional[float] = None
+    catalyst: str = ""
 
 
 def collect_fresh_buys() -> Dict[str, Any]:
@@ -107,6 +112,18 @@ def collect_fresh_buys() -> Dict[str, Any]:
         logger.warning("fresh buys minervini: %s", e)
 
     # 3) Optional: exclude pure Extreme heat without horizon buy (already only horizon greens)
+    cmap = build_catalyst_map()
+    for fb in by_sym.values():
+        try:
+            df = fetch_price_history(fb.symbol + ".NS", period="5d")
+            if df is not None and len(df):
+                cols = {c.lower(): c for c in df.columns}
+                ccol = cols.get("close") or cols.get("adj close")
+                if ccol:
+                    fb.price = float(df[ccol].astype(float).iloc[-1])
+        except Exception:
+            pass
+        fb.catalyst = catalyst_for(fb.symbol, fb.name, "", cmap)
     items = sorted(by_sym.values(), key=lambda x: -x.score)
     return {
         "scan_time": datetime.now(),
@@ -137,7 +154,8 @@ def format_fresh_buys_telegram(result: Optional[Dict[str, Any]] = None) -> str:
             src = "+".join(b.sources)
             lines.append(f"<b>{i}. {b.symbol}</b> [{b.confidence}] · {src}")
             lines.append(f"   {b.name}")
-            lines.append(f"   Hold: {b.horizon}")
+            lines.append(f"   Price {format_price(b.price)} | Hold: {b.horizon}")
+            lines.append(f"   📌 {b.catalyst}")
             if b.detail:
                 d = b.detail if len(b.detail) <= 100 else b.detail[:97] + "…"
                 lines.append(f"   {d}")

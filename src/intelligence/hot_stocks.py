@@ -15,6 +15,7 @@ import logging
 import re
 
 from src.data_fetch.prices import fetch_price_history
+from src.intelligence.catalysts import build_catalyst_map, catalyst_for, format_price
 
 logger = logging.getLogger(__name__)
 
@@ -35,6 +36,7 @@ class HotStock:
     ret_6m: Optional[float]
     heat: str  # 🔥 Extreme / ♨️ Hot / 🌶 Warm
     note: str
+    catalyst: str = ""
 
 
 def _universe() -> List[Tuple[str, str, str]]:
@@ -58,6 +60,7 @@ def _ret(close, days: int) -> Optional[float]:
 
 
 def run_hot_stocks(limit: int = 20) -> Dict[str, Any]:
+    cmap = build_catalyst_map()
     hot: List[HotStock] = []
     for sym, name, sec in _universe():
         try:
@@ -109,6 +112,7 @@ def run_hot_stocks(limit: int = 20) -> Dict[str, Any]:
                     ret_6m=r6,
                     heat=heat,
                     note=note,
+                    catalyst=catalyst_for(sym, name, sec, cmap),
                 )
             )
         except Exception as e:
@@ -144,7 +148,9 @@ def format_hot_telegram(result: Optional[Dict[str, Any]] = None) -> str:
                 parts.append(f"2W {s.ret_2w:+.0f}%")
             meta = " · ".join(parts)
             lines.append(f"• {s.heat} <b>{s.symbol}</b> – {s.name}")
-            lines.append(f"  {meta} | {s.sector}")
+            lines.append(f"  Price {format_price(s.price)} | {meta}")
+            lines.append(f"  {s.sector}")
+            lines.append(f"  📌 {s.catalyst}")
             lines.append(f"  {s.note}")
     lines.append("")
     lines.append("<i>Use Horizon Monitor for buy/hold/sell. Hot list = visibility only.</i>")
