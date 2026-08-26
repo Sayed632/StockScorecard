@@ -231,7 +231,7 @@ def sector_swing_adjustment(sector_key: str, sectors: List[SectorFPI]) -> Tuple[
 
 
 def format_fii_dii_section(snap: Optional[FIIDIISnapshot]) -> List[str]:
-    lines = ["<b>🏦 FII / DII MONITOR</b>"]
+    lines = ["<b>🏦 FII / DII MONITOR</b> <i>(market flows)</i>"]
     if not snap:
         lines.append("• Data unavailable today")
         lines.append("")
@@ -268,7 +268,7 @@ def format_fii_dii_section(snap: Optional[FIIDIISnapshot]) -> List[str]:
 
 
 def format_sector_fpi_section(sectors: List[SectorFPI], top_n: int = 6) -> List[str]:
-    lines = ["<b>🌍 SECTOR FPI ALLOCATION</b>"]
+    lines = ["<b>🌍 SECTOR FPI</b> <i>(where FPI money sits / moved)</i>"]
     if not sectors:
         lines.append("• Sector FPI data unavailable")
         lines.append("")
@@ -292,3 +292,82 @@ def format_sector_fpi_section(sectors: List[SectorFPI], top_n: int = 6) -> List[
         lines.append(f"<i>As of {sectors[0].last_date}</i>")
     lines.append("")
     return lines
+
+
+def format_flows_telegram_message(
+    snap: Optional[FIIDIISnapshot] = None,
+    sectors: Optional[List[SectorFPI]] = None,
+) -> str:
+    """Clear standalone message: where FII/DII money is going (market + sectors)."""
+    from datetime import datetime
+
+    if snap is None:
+        snap = fetch_fii_dii(include_history=True)
+    if sectors is None:
+        sectors = fetch_sector_fpi()
+
+    now = datetime.now().strftime("%d %b %Y | %H:%M IST")
+    lines = [
+        "<b>🏦 FII / DII – Where money is flowing</b>",
+        now,
+        "",
+        "<i>Market flows = daily. Sector FPI = allocation when available.</i>",
+        "<i>Not stock-level buy lists.</i>",
+        "",
+    ]
+
+    def fmt(x: float) -> str:
+        sign = "+" if x >= 0 else ""
+        return f"{sign}{x:,.0f} Cr"
+
+    lines.append("<b>1) Today’s market (all equities)</b>")
+    if not snap:
+        lines.append("• Data unavailable")
+    else:
+        fii_e = "🟢" if snap.fii_net > 500 else ("🔴" if snap.fii_net < -500 else "⚪")
+        dii_e = "🟢" if snap.dii_net > 500 else ("🔴" if snap.dii_net < -500 else "⚪")
+        lines.append(f"• Date: <b>{snap.date}</b>")
+        lines.append(f"• FII net: {fii_e} <b>{fmt(snap.fii_net)}</b> → {snap.fii_bias}")
+        lines.append(f"• DII net: {dii_e} <b>{fmt(snap.dii_net)}</b> → {snap.dii_bias}")
+        lines.append(f"• Read: <i>{snap.overall_tone}</i>")
+        pts, reason = snap.swing_bias_points()
+        lines.append(f"• Effect on Swing scores: <b>{pts:+.0f}</b> ({reason})")
+        if snap.history_nets:
+            lines.append("• Last few sessions:")
+            for h in snap.history_nets[:4]:
+                d = h.get("date", "")
+                fn, dn = h.get("fii_net"), h.get("dii_net")
+                if fn is None or dn is None:
+                    continue
+                lines.append(f"  – {d}: FII {fmt(float(fn))} | DII {fmt(float(dn))}")
+    lines.append("")
+
+    lines.append("<b>2) Sectors (FPI allocation / flow)</b>")
+    if not sectors:
+        lines.append("• Sector FPI data unavailable this run")
+        lines.append("• System still applies market FII/DII bias to Swing")
+    else:
+        lines.append("<i>Positive = more FPI interest · Negative = reduced interest</i>")
+        ranked = sorted(sectors, key=lambda s: s.fortnight_cr, reverse=True)
+        top_in = [s for s in ranked if s.fortnight_cr > 0][:6]
+        top_out = [s for s in ranked if s.fortnight_cr < 0][:6]
+        if top_in:
+            lines.append("<b>Sectors seeing inflows</b>")
+            for s in top_in:
+                aum = f" · AUM {s.aum_pct:.1f}%" if s.aum_pct else ""
+                lines.append(f"• 🟢 <b>{s.name}</b>: {fmt(s.fortnight_cr)}{aum}")
+        if top_out:
+            lines.append("<b>Sectors seeing outflows</b>")
+            for s in top_out:
+                aum = f" · AUM {s.aum_pct:.1f}%" if s.aum_pct else ""
+                lines.append(f"• 🔴 <b>{s.name}</b>: {fmt(s.fortnight_cr)}{aum}")
+        if sectors[0].last_date:
+            lines.append(f"<i>Sector data as of {sectors[0].last_date}</i>")
+    lines.append("")
+    lines.append("<b>3) How to use</b>")
+    lines.append("• Prefer Swing ideas in inflow sectors when FII/DII tone is supportive")
+    lines.append("• Be cautious on new Swing buys when FII is in heavy selling")
+    lines.append("• Stock-level FII buys are not available in this free data")
+    lines.append("")
+    lines.append("<i>StockScorecard – Institutional flows</i>")
+    return "\n".join(lines)

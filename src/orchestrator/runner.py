@@ -26,7 +26,7 @@ from src.sectors.media import MediaScanner
 from src.sectors.textiles import TextilesScanner
 from src.sectors.others_residual import OthersResidualScanner
 from src.decision.ranking import merge_and_rank
-from src.shared.fii_dii import fetch_fii_dii, fetch_sector_fpi
+from src.shared.fii_dii import fetch_fii_dii, fetch_sector_fpi, format_flows_telegram_message
 from src.shared.results_logger import log_scan_result
 from src.strategies.madhusudan_kela import run_kela_strategy, format_kela_telegram
 from src.strategies.minervini_oneil import run_minervini_oneil, format_mo_telegram
@@ -169,6 +169,14 @@ def run_full_scan(
             logger.warning("Telegram delivery failed – check TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID")
 
         # Fresh buys – single sorted list
+        try:
+            flows_text = format_flows_telegram_message()
+            if len(flows_text) > 4000:
+                flows_text = flows_text[:3900] + "\n\n… (truncated)"
+            logger.info("FII/DII flows Telegram: %s", "sent" if telegram_send(flows_text) else "failed")
+        except Exception as e:
+            logger.warning("FII/DII flows message failed: %s", e)
+
         try:
             fb_text = format_fresh_buys_telegram()
             if len(fb_text) > 4000:
