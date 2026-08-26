@@ -127,3 +127,8 @@ python scripts/validate_tickers.py --sync --telegram
 
 Updates each ticker `status` (`ok` / `not_found` / `error`) and writes `data/ticker_validation_YYYYMMDD.csv`.
 
+
+
+## Sector rotation
+- Telegram: **Sector Rotation** multi-month ranking vs Nifty
+- Visual RRG dashboard: separate repo [Sectorial-RRG](https://github.com/Sayed632/Sectorial-RRG)

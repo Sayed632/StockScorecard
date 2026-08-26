@@ -27,6 +27,7 @@ from src.sectors.textiles import TextilesScanner
 from src.sectors.others_residual import OthersResidualScanner
 from src.decision.ranking import merge_and_rank
 from src.shared.fii_dii import fetch_fii_dii, fetch_sector_fpi, format_flows_telegram_message
+from src.intelligence.sector_rotation import format_sector_rotation_telegram
 from src.shared.results_logger import log_scan_result
 from src.strategies.madhusudan_kela import run_kela_strategy, format_kela_telegram
 from src.strategies.minervini_oneil import run_minervini_oneil, format_mo_telegram
@@ -169,6 +170,14 @@ def run_full_scan(
             logger.warning("Telegram delivery failed – check TELEGRAM_BOT_TOKEN and TELEGRAM_CHAT_ID")
 
         # Fresh buys – single sorted list
+        try:
+            sec_text = format_sector_rotation_telegram()
+            if len(sec_text) > 4000:
+                sec_text = sec_text[:3900] + "\n\n… (truncated)"
+            logger.info("Sector rotation Telegram: %s", "sent" if telegram_send(sec_text) else "failed")
+        except Exception as e:
+            logger.warning("Sector rotation failed: %s", e)
+
         try:
             flows_text = format_flows_telegram_message()
             if len(flows_text) > 4000:
