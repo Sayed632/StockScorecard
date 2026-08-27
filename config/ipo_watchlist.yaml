@@ -1,0 +1,66 @@
+# IPO watchlist – issue_price required for ranking.
+# symbol = NSE code (without .NS). Update as new IPOs list.
+
+ipos:
+  - symbol: SHIPROCKET
+    name: Shiprocket
+    issue_price: 97
+    list_date: "2026-08-19"
+  - symbol: MILKYMIST
+    name: Milky Mist Dairy Food
+    issue_price: 140
+    list_date: "2026-08-18"
+  - symbol: LALITHAA
+    name: Lalithaa Jewellery Mart
+    issue_price: 201
+    list_date: "2026-08-24"
+  - symbol: RUBICON
+    name: Rubicon Research
+    issue_price: 485
+    list_date: "2025-10-16"
+  - symbol: DHOOTTRANS
+    name: Dhoot Transmission
+    issue_price: 871
+    list_date: "2026-08"
+  - symbol: INDOMIM
+    name: Indo-MIM
+    issue_price: 480
+    list_date: "2026"
+    notes: "Issue approx – refine from RHP if needed"
+  - symbol: SHADOWFAX
+    name: Shadowfax Technologies
+    issue_price: 147
+    list_date: "2026"
+  - symbol: AEQUS
+    name: Aequs
+    issue_price: 124
+    list_date: "2026"
+  - symbol: SEDEMAC
+    name: Sedemac Mechatronics
+    issue_price: 1111
+    list_date: "2026"
+  - symbol: CORONA
+    name: CORONA Remedies
+    issue_price: 1062
+    list_date: "2026"
+  - symbol: CLEANMAX
+    name: Clean Max Enviro Energy
+    issue_price: 1089
+    list_date: "2026"
+  - symbol: SUNSHINE
+    name: Sunshine Pictures
+    issue_price: 360
+    list_date: "2026-08-25"
+  - symbol: SHANKESH
+    name: Shankesh Jewellers
+    issue_price: 93
+    list_date: "2026-08-25"
+  - symbol: GAJAALT
+    name: Gaja Alternative Asset Management
+    issue_price: 160
+    list_date: "2026-08-26"
+  - symbol: HORIZON
+    name: Horizon (verify entity)
+    issue_price: 60
+    list_date: "2026-08-24"
+    notes: "May map to wrong ticker – verify"

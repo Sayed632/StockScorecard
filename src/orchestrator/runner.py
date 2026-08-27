@@ -40,6 +40,7 @@ from src.intelligence.hot_stocks import format_hot_telegram
 from src.intelligence.trade_plans import format_trade_plans_telegram
 from src.intelligence.fresh_buys import format_fresh_buys_telegram
 from src.intelligence.daily_digest import format_daily_digest_telegram
+from src.intelligence.ipo_performance import format_ipo_telegram
 from src.telegram_notify import send_message as telegram_send
 from src.delivery.telegram_report import send_daily_report, format_report
 from src.shared.models import ScanResult
@@ -281,6 +282,14 @@ def run_full_scan(
             logger.info("Multibagger Telegram: %s", "sent" if telegram_send(mb_text) else "failed")
         except Exception as e:
             logger.warning("Multibagger screener failed: %s", e)
+
+        try:
+            ipo_text = format_ipo_telegram()
+            if len(ipo_text) > 4000:
+                ipo_text = ipo_text[:3900] + "\n\n… (truncated)"
+            logger.info("IPO performance Telegram: %s", "sent" if telegram_send(ipo_text) else "failed")
+        except Exception as e:
+            logger.warning("IPO performance failed: %s", e)
 
         try:
             tp_text = format_trade_plans_telegram()
