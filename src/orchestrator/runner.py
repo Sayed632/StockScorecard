@@ -28,6 +28,8 @@ from src.sectors.others_residual import OthersResidualScanner
 from src.decision.ranking import merge_and_rank
 from src.shared.fii_dii import fetch_fii_dii, fetch_sector_fpi, format_flows_telegram_message
 from src.intelligence.sector_rotation import format_sector_rotation_telegram
+from src.intelligence.penny_screener import format_penny_telegram
+from src.intelligence.multibagger_screener import format_multibagger_telegram
 from src.shared.results_logger import log_scan_result
 from src.strategies.madhusudan_kela import run_kela_strategy, format_kela_telegram
 from src.strategies.minervini_oneil import run_minervini_oneil, format_mo_telegram
@@ -253,6 +255,22 @@ def run_full_scan(
             logger.info("Hot stocks Telegram: %s", "sent" if hot_ok else "failed")
         except Exception as e:
             logger.warning("Hot stocks failed: %s", e)
+
+        try:
+            penny_text = format_penny_telegram()
+            if len(penny_text) > 4000:
+                penny_text = penny_text[:3900] + "\n\n… (truncated)"
+            logger.info("Penny screener Telegram: %s", "sent" if telegram_send(penny_text) else "failed")
+        except Exception as e:
+            logger.warning("Penny screener failed: %s", e)
+
+        try:
+            mb_text = format_multibagger_telegram()
+            if len(mb_text) > 4000:
+                mb_text = mb_text[:3900] + "\n\n… (truncated)"
+            logger.info("Multibagger Telegram: %s", "sent" if telegram_send(mb_text) else "failed")
+        except Exception as e:
+            logger.warning("Multibagger screener failed: %s", e)
 
         try:
             tp_text = format_trade_plans_telegram()
