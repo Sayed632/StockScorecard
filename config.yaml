@@ -59,3 +59,8 @@ news_intelligence:
   bullish_points: 4
   bearish_points: -5
   min_impact_score: 5            # only strong headlines drive bias
+
+# Telegram: digest is always sent WITH detail messages (not instead of)
+telegram:
+  send_digest: true
+  send_detail_messages: true

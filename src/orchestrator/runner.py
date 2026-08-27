@@ -39,6 +39,7 @@ from src.intelligence.horizon_monitor import format_horizon_telegram
 from src.intelligence.hot_stocks import format_hot_telegram
 from src.intelligence.trade_plans import format_trade_plans_telegram
 from src.intelligence.fresh_buys import format_fresh_buys_telegram
+from src.intelligence.daily_digest import format_daily_digest_telegram
 from src.telegram_notify import send_message as telegram_send
 from src.delivery.telegram_report import send_daily_report, format_report
 from src.shared.models import ScanResult
@@ -166,6 +167,15 @@ def run_full_scan(
 
     if send_telegram:
         ok = send_daily_report(scan_result)
+
+        # Digest first (with regular messages after)
+        try:
+            digest_text = format_daily_digest_telegram()
+            if len(digest_text) > 4000:
+                digest_text = digest_text[:3900] + "\n\n… (truncated)"
+            logger.info("Daily digest Telegram: %s", "sent" if telegram_send(digest_text) else "failed")
+        except Exception as e:
+            logger.warning("Daily digest failed: %s", e)
         if ok:
             logger.info("Report successfully sent to Telegram")
         else:
