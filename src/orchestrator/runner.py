@@ -41,6 +41,7 @@ from src.intelligence.trade_plans import format_trade_plans_telegram
 from src.intelligence.fresh_buys import format_fresh_buys_telegram
 from src.intelligence.daily_digest import format_daily_digest_telegram
 from src.intelligence.ipo_performance import format_ipo_telegram
+from src.intelligence.profit_opportunity import format_profit_opportunity_telegram
 from src.telegram_notify import send_message as telegram_send
 from src.delivery.telegram_report import send_daily_report, format_report
 from src.shared.models import ScanResult
@@ -175,6 +176,14 @@ def run_full_scan(
             if len(digest_text) > 4000:
                 digest_text = digest_text[:3900] + "\n\n… (truncated)"
             logger.info("Daily digest Telegram: %s", "sent" if telegram_send(digest_text) else "failed")
+
+        try:
+            po_text = format_profit_opportunity_telegram()
+            if len(po_text) > 4000:
+                po_text = po_text[:3900] + "\n\n… (truncated)"
+            logger.info("Profit opportunities Telegram: %s", "sent" if telegram_send(po_text) else "failed")
+        except Exception as e:
+            logger.warning("Profit opportunities failed: %s", e)
         except Exception as e:
             logger.warning("Daily digest failed: %s", e)
         if ok:
