@@ -1,0 +1,71 @@
+# Pre-IPO / IPO pipeline watchlist for StockScorecard
+# Status values: on_radar | drhp_filed | sebi_observed | rhp | open | listed
+# Update manually as SEBI / company filings change. Not investment advice.
+
+version: 1
+updated: "2026-08-31"
+
+names:
+  - id: nse
+    name: National Stock Exchange of India (NSE)
+    sector: Financial services / Exchange
+    status: sebi_observed
+    note: "DRHP filed (OFS). SEBI observations issued; approval described as close."
+    issue_size_hint: "~₹30,000 Cr OFS (est.)"
+    expected_window: "2026 H2 (subject to SEBI)"
+
+  - id: jio_platforms
+    name: Jio Platforms
+    sector: Telecom / Digital
+    status: sebi_observed
+    note: "Large Reliance-linked IPO pipeline; SEBI process reported advanced."
+    issue_size_hint: "Large (tens of ₹000 Cr)"
+    expected_window: "2026 (TBA)"
+
+  - id: avaada_electro
+    name: Avaada Electro
+    sector: Renewables / Manufacturing
+    status: drhp_filed
+    note: "Updated DRHP for public issue; solar manufacturing."
+    issue_size_hint: "Up to ~₹7,600 Cr (reported)"
+    expected_window: "2026 (TBA)"
+
+  - id: aragen
+    name: Aragen Life Sciences
+    sector: Pharma / Life sciences
+    status: drhp_filed
+    note: "DRHP in pipeline (Aug 2026 filings lists)."
+    issue_size_hint: "~₹800 Cr (reported)"
+    expected_window: "TBA"
+
+  - id: atomberg
+    name: Atomberg Technologies
+    sector: Consumer / Appliances
+    status: drhp_filed
+    note: "DRHP in upcoming IPO trackers."
+    issue_size_hint: "~₹450 Cr (reported)"
+    expected_window: "TBA"
+
+  - id: purple_style
+    name: Purple Style Labs
+    sector: Consumer / Fashion
+    status: open
+    note: "Public issue window around late Aug / early Sep 2026 (check broker for live dates)."
+    issue_size_hint: "Fresh issue (check RHP)"
+    expected_window: "IPO open / closing window"
+
+  - id: oyo
+    name: Oravel Stays (OYO)
+    sector: Travel / Hospitality
+    status: on_radar
+    note: "Long-watched listing candidate; status changes often — verify SEBI filings."
+    issue_size_hint: "TBA"
+    expected_window: "TBA"
+
+  - id: zepto
+    name: Zepto
+    sector: Quick commerce
+    status: on_radar
+    note: "Unicorn / late-private stage chatter; not a buy signal."
+    issue_size_hint: "TBA"
+    expected_window: "TBA"
