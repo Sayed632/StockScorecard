@@ -11,12 +11,12 @@ UNIVERSE = [
     {"symbol": "ZEEL", "name": "Zee Entertainment Enterprises"},
     {"symbol": "SUNTV", "name": "Sun TV Network Ltd"},
     {"symbol": "PVRINOX", "name": "PVR INOX Ltd"},
-    {"symbol": "TV18BRDCST", "name": "TV18 Broadcast Ltd"},
+    {"symbol": "NETWORK18", "name": "TV18 Broadcast Ltd"},
     {"symbol": "NETWORK18", "name": "Network18 Media"},
     {"symbol": "DISHTV", "name": "Dish TV India Ltd"},
     {"symbol": "HATHWAY", "name": "Hathway Cable & Datacom"},
     {"symbol": "NAZARA", "name": "Nazara Technologies Ltd"},
-    {"symbol": "TIPS", "name": "Tips Industries Ltd"},
+    {"symbol": "TIPSMUSIC", "name": "Tips Industries Ltd"},
     {"symbol": "SAREGAMA", "name": "Saregama India Ltd"},
 ]
 

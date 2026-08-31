@@ -10,7 +10,7 @@ from src.sectors._helpers import (
 UNIVERSE = [
     {"symbol": "PAGEIND", "name": "Page Industries Ltd"},
     {"symbol": "KPRMILL", "name": "KPR Mill Ltd"},
-    {"symbol": "WELSPUNIND", "name": "Welspun India Ltd"},
+    {"symbol": "WELSPUNLIV", "name": "Welspun India Ltd"},
     {"symbol": "RAYMOND", "name": "Raymond Ltd"},
     {"symbol": "ARVIND", "name": "Arvind Ltd"},
     {"symbol": "TRIDENT", "name": "Trident Ltd"},

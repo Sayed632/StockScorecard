@@ -24,11 +24,11 @@ from src.sectors._helpers import market_cap_bucket
 KELA_PORTFOLIO = [
     {"symbol": "CHOICEIN", "name": "Choice International Ltd", "stake_pct": 7.2, "note": "Largest disclosed holding"},
     {"symbol": "MKVENTURES", "name": "MKVentures Capital Ltd", "stake_pct": 74.4, "note": "Promoter / related entity"},
-    {"symbol": "WINDMACH", "name": "Windsor Machines Ltd", "stake_pct": 6.4, "note": "Trimmed in Jun quarter"},
+    {"symbol": "WINDMACHIN", "name": "Windsor Machines Ltd", "stake_pct": 6.4, "note": "Trimmed in Jun quarter"},
     {"symbol": "SANGAMIND", "name": "Sangam (India) Ltd", "stake_pct": 4.9, "note": "Textiles"},
     {"symbol": "RPTECH", "name": "Rashi Peripherals Ltd", "stake_pct": 1.8, "note": "Strong CY26 performer"},
     {"symbol": "SGFIN", "name": "SG Finserve Ltd", "stake_pct": 1.4, "note": "NBFC"},
-    {"symbol": "IBULHSGFIN", "name": "Indiabulls / related housing finance", "stake_pct": 2.2, "note": "Newer large entry"},
+    {"symbol": "SAMMAANCAP", "name": "Indiabulls / related housing finance", "stake_pct": 2.2, "note": "Newer large entry"},
     {"symbol": "INDOSTAR", "name": "Indostar Capital Finance Ltd", "stake_pct": 2.1, "note": "NBFC"},
     {"symbol": "KOPRAN", "name": "Kopran Ltd", "stake_pct": 1.7, "note": "Pharma"},
     {"symbol": "SUBAM", "name": "Subam Papers Ltd", "stake_pct": 7.0, "note": "Newer entry"},

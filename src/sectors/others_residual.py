@@ -43,7 +43,7 @@ UNIVERSE = [
     {"symbol": "DIXON", "name": "Dixon Technologies Ltd"},
     # Tracked investor / mid-small residual (Kela portfolio examples)
     {"symbol": "RPTECH", "name": "Rashi Peripherals Ltd"},
-    {"symbol": "WINDMACH", "name": "Windsor Machines Ltd"},
+    {"symbol": "WINDMACHIN", "name": "Windsor Machines Ltd"},
     {"symbol": "SUBAM", "name": "Subam Papers Ltd"},
     {"symbol": "REPRO", "name": "Repro India Ltd"},
     {"symbol": "EMKAY", "name": "Emkay Global Financial Services"},

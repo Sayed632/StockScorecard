@@ -33,9 +33,9 @@ PENNY_UNIVERSE = [
     {"symbol": "IOB", "name": "Indian Overseas Bank"},
     {"symbol": "TRIDENT", "name": "Trident Ltd"},
     {"symbol": "JAICORPLTD", "name": "Jai Corp Ltd"},
-    {"symbol": "GMRINFRA", "name": "GMR Airports Infrastructure"},
+    {"symbol": "GMRAIRPORT", "name": "GMR Airports Infrastructure"},
     {"symbol": "BOMDYEING", "name": "Bombay Dyeing & Mfg Co"},
-    {"symbol": "IBULHSGFIN", "name": "Indiabulls Housing Finance"},
+    {"symbol": "SAMMAANCAP", "name": "Indiabulls Housing Finance"},
 ]
 
 

@@ -16,7 +16,7 @@ tickers:
   status: unknown
   last_checked: null
   notes: ''
-- symbol: ABBOTTINDIA
+- symbol: ABBOTINDIA
   name: Abbott India Ltd
   sources:
   - src/sectors/pharmaceuticals.py
@@ -476,7 +476,7 @@ tickers:
   status: unknown
   last_checked: null
   notes: ''
-- symbol: GMRINFRA
+- symbol: GMRAIRPORT
   name: GMR Airports Infrastructure
   sources:
   - src/sectors/penny_monitor.py
@@ -605,7 +605,7 @@ tickers:
   status: unknown
   last_checked: null
   notes: ''
-- symbol: IBULHSGFIN
+- symbol: SAMMAANCAP
   name: Indiabulls Housing Finance
   sources:
   - src/sectors/banks_financials.py
@@ -854,7 +854,7 @@ tickers:
   status: unknown
   last_checked: null
   notes: ''
-- symbol: LTIM
+- symbol: LTM
   name: LTIMindtree Ltd
   sources:
   - src/sectors/information_technology.py
@@ -1383,7 +1383,7 @@ tickers:
   status: unknown
   last_checked: null
   notes: ''
-- symbol: TATAMOTORS
+- symbol: TMPV
   name: Tata Motors Ltd
   sources:
   - src/sectors/automobile_ev.py
@@ -1404,7 +1404,7 @@ tickers:
   status: unknown
   last_checked: null
   notes: ''
-- symbol: TATATELE
+- symbol: TTML
   name: Tata Teleservices
   sources:
   - src/sectors/telecom.py
@@ -1447,7 +1447,7 @@ tickers:
   status: unknown
   last_checked: null
   notes: ''
-- symbol: TIPS
+- symbol: TIPSMUSIC
   name: Tips Industries Ltd
   sources:
   - src/sectors/media.py
@@ -1485,7 +1485,7 @@ tickers:
   status: unknown
   last_checked: null
   notes: ''
-- symbol: TV18BRDCST
+- symbol: NETWORK18
   name: TV18 Broadcast Ltd
   sources:
   - src/sectors/media.py
@@ -1536,7 +1536,7 @@ tickers:
   status: unknown
   last_checked: null
   notes: ''
-- symbol: VARUNBEV
+- symbol: VBL
   name: Varun Beverages
   sources:
   - src/strategies/minervini_oneil.py
@@ -1564,14 +1564,14 @@ tickers:
   status: unknown
   last_checked: null
   notes: ''
-- symbol: WELSPUNIND
+- symbol: WELSPUNLIV
   name: Welspun India Ltd
   sources:
   - src/sectors/textiles.py
   status: unknown
   last_checked: null
   notes: ''
-- symbol: WINDMACH
+- symbol: WINDMACHIN
   name: Windsor Machines Ltd
   sources:
   - src/sectors/others_residual.py

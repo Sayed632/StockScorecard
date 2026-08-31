@@ -9,7 +9,7 @@ from src.sectors._helpers import (
 
 UNIVERSE = [
     {"symbol": "MARUTI", "name": "Maruti Suzuki India Ltd"},
-    {"symbol": "TATAMOTORS", "name": "Tata Motors Ltd"},
+    {"symbol": "TMPV", "name": "Tata Motors Ltd"},
     {"symbol": "M&M", "name": "Mahindra & Mahindra Ltd"},
     {"symbol": "BAJAJ-AUTO", "name": "Bajaj Auto Ltd"},
     {"symbol": "HEROMOTOCO", "name": "Hero MotoCorp Ltd"},

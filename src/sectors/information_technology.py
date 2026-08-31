@@ -13,7 +13,7 @@ UNIVERSE = [
     {"symbol": "HCLTECH", "name": "HCL Technologies Ltd"},
     {"symbol": "WIPRO", "name": "Wipro Ltd"},
     {"symbol": "TECHM", "name": "Tech Mahindra Ltd"},
-    {"symbol": "LTIM", "name": "LTIMindtree Ltd"},
+    {"symbol": "LTM", "name": "LTIMindtree Ltd"},
     {"symbol": "PERSISTENT", "name": "Persistent Systems Ltd"},
     {"symbol": "COFORGE", "name": "Coforge Ltd"},
     {"symbol": "MPHASIS", "name": "Mphasis Ltd"},

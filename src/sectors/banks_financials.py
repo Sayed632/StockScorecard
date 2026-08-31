@@ -22,7 +22,7 @@ UNIVERSE = [
     {"symbol": "SBILIFE", "name": "SBI Life Insurance"},
     {"symbol": "CHOLAFIN", "name": "Cholamandalam Investment"},
     {"symbol": "MFSL", "name": "Max Financial Services"},
-    {"symbol": "IBULHSGFIN", "name": "Indiabulls Housing Finance"},
+    {"symbol": "SAMMAANCAP", "name": "Indiabulls Housing Finance"},
     {"symbol": "SGFIN", "name": "SG Finserve Ltd"},
 ]
 

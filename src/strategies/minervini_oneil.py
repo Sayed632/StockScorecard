@@ -38,7 +38,7 @@ MO_UNIVERSE = [
     {"symbol": "BEL", "name": "Bharat Electronics"},
     {"symbol": "SOLARINDS", "name": "Solar Industries"},
     {"symbol": "TRENT", "name": "Trent"},
-    {"symbol": "VARUNBEV", "name": "Varun Beverages"},
+    {"symbol": "VBL", "name": "Varun Beverages Ltd"},
     {"symbol": "MAXHEALTH", "name": "Max Healthcare"},
     {"symbol": "DIVISLAB", "name": "Divi's Labs"},
     {"symbol": "SUNPHARMA", "name": "Sun Pharma"},

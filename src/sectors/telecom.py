@@ -15,7 +15,7 @@ UNIVERSE = [
     {"symbol": "INDUSTOWER", "name": "Indus Towers Ltd"},
     {"symbol": "BHARTIHEXA", "name": "Bharti Hexacom Ltd"},
     {"symbol": "ROUTE", "name": "Route Mobile Ltd"},
-    {"symbol": "TATATELE", "name": "Tata Teleservices"},
+    {"symbol": "TTML", "name": "Tata Teleservices"},
     {"symbol": "MTNL", "name": "Mahanagar Telephone Nigam"},
     {"symbol": "HFCL", "name": "HFCL Ltd"},
 ]
