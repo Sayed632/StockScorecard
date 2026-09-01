@@ -107,7 +107,10 @@ def format_price(px: Optional[float]) -> str:
     if px is None:
         return "—"
     try:
+        import math
         p = float(px)
+        if math.isnan(p) or math.isinf(p) or p <= 0:
+            return "—"
         if p >= 1000:
             return f"₹{p:,.1f}"
         return f"₹{p:.2f}"

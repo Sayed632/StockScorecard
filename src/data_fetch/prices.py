@@ -21,9 +21,36 @@ def fetch_price_history(
         ticker = yf.Ticker(symbol)
         df = ticker.history(period=period, interval=interval, auto_adjust=True)
         if df is None or df.empty:
+            # fallback download once
+            df = yf.download(symbol, period=period, interval=interval, progress=False, auto_adjust=True)
+        if df is None or df.empty:
             return None
-        df = df[["Open", "High", "Low", "Close", "Volume"]].copy()
-        df.columns = ["open", "high", "low", "close", "volume"]
+        # flatten multiindex columns if present
+        if isinstance(df.columns, pd.MultiIndex):
+            df.columns = [c[0] if isinstance(c, tuple) else c for c in df.columns]
+        cols = {str(c).lower(): c for c in df.columns}
+        need = []
+        for k in ("open", "high", "low", "close", "volume"):
+            if k not in cols and k.title() not in df.columns:
+                # try exact
+                pass
+        try:
+            df = df[["Open", "High", "Low", "Close", "Volume"]].copy()
+        except Exception:
+            # already lower or mixed
+            rename = {}
+            for c in df.columns:
+                cl = str(c).lower()
+                if cl in ("open", "high", "low", "close", "volume") or cl.startswith("adj"):
+                    rename[c] = "close" if "close" in cl else cl
+            df = df.rename(columns=rename)
+            keep = [c for c in ("open", "high", "low", "close", "volume") if c in df.columns]
+            df = df[keep].copy()
+        else:
+            df.columns = ["open", "high", "low", "close", "volume"]
+        df = df.dropna(subset=["close"])
+        if df.empty or len(df) < 5:
+            return None
         return df
     except Exception:
         return None

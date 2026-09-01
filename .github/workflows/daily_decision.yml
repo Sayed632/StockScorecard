@@ -70,6 +70,24 @@ jobs:
             python scripts/run_decision.py
           fi
 
+      - name: Notify failure on Telegram
+        if: failure()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python - <<'PY'
+          import os, requests
+          token = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
+          chat = os.environ.get("TELEGRAM_CHAT_ID", "").strip()
+          if token and chat:
+              requests.post(
+                  f"https://api.telegram.org/bot{token}/sendMessage",
+                  json={"chat_id": chat, "text": "❌ StockScorecard daily job FAILED. Check GitHub Actions log."},
+                  timeout=30,
+              )
+          PY
+
       - name: Upload CSV snapshot
         if: always()
         uses: actions/upload-artifact@v4

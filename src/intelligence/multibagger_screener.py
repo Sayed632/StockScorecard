@@ -19,6 +19,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import List, Dict, Any, Optional, Tuple
 import logging
+import math
 import re
 
 from src.data_fetch.prices import fetch_price_history
@@ -80,15 +81,17 @@ def run_multibagger_screener(limit: int = 15) -> Dict[str, Any]:
             ccol = cols.get("close") or cols.get("adj close")
             if not ccol:
                 continue
-            close = df[ccol].astype(float)
+            close = df[ccol].astype(float).dropna()
+            if len(close) < 100:
+                continue
             px = float(close.iloc[-1])
-            if px < MIN_PRICE or px > MAX_PRICE:
+            if math.isnan(px) or math.isinf(px) or px < MIN_PRICE or px > MAX_PRICE:
                 continue
 
             r2 = _ret(close, 10)
             r3 = _ret(close, 63)
             r6 = _ret(close, 126)
-            if r6 is None or r6 < 35:
+            if r6 is None or (isinstance(r6, float) and math.isnan(r6)) or r6 < 35:
                 continue
             if r3 is not None and r3 < -5:
                 continue
@@ -151,11 +154,13 @@ def format_multibagger_telegram(result: Optional[Dict[str, Any]] = None) -> str:
     else:
         for h in hits:
             parts = []
-            if h.ret_6m is not None:
+            def _ok(v):
+                return v is not None and not (isinstance(v, float) and math.isnan(v))
+            if _ok(h.ret_6m):
                 parts.append(f"6M {h.ret_6m:+.0f}%")
-            if h.ret_3m is not None:
+            if _ok(h.ret_3m):
                 parts.append(f"3M {h.ret_3m:+.0f}%")
-            if h.ret_2w is not None:
+            if _ok(h.ret_2w):
                 parts.append(f"2W {h.ret_2w:+.0f}%")
             meta = " · ".join(parts)
             lines.append(f"• {h.tier} <b>{h.symbol}</b> – {h.name}")
