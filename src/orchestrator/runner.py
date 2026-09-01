@@ -177,6 +177,8 @@ def run_full_scan(
             if len(digest_text) > 4000:
                 digest_text = digest_text[:3900] + "\n\n… (truncated)"
             logger.info("Daily digest Telegram: %s", "sent" if telegram_send(digest_text) else "failed")
+        except Exception as e:
+            logger.warning("Daily digest failed: %s", e)
 
         try:
             po_text = format_profit_opportunity_telegram()
@@ -185,8 +187,6 @@ def run_full_scan(
             logger.info("Profit opportunities Telegram: %s", "sent" if telegram_send(po_text) else "failed")
         except Exception as e:
             logger.warning("Profit opportunities failed: %s", e)
-        except Exception as e:
-            logger.warning("Daily digest failed: %s", e)
         if ok:
             logger.info("Report successfully sent to Telegram")
         else:
