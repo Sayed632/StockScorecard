@@ -605,15 +605,6 @@ tickers:
   status: unknown
   last_checked: null
   notes: ''
-- symbol: SAMMAANCAP
-  name: Indiabulls Housing Finance
-  sources:
-  - src/sectors/banks_financials.py
-  - src/sectors/penny_monitor.py
-  - src/strategies/madhusudan_kela.py
-  status: unknown
-  last_checked: null
-  notes: ''
 - symbol: ICICIBANK
   name: ICICI Bank Ltd
   sources:
@@ -1004,7 +995,7 @@ tickers:
   last_checked: null
   notes: ''
 - symbol: NETWORK18
-  name: Network18 Media
+  name: TV18 Broadcast Ltd
   sources:
   - src/sectors/media.py
   - src/sectors/penny_monitor.py
@@ -1223,6 +1214,15 @@ tickers:
   status: unknown
   last_checked: null
   notes: ''
+- symbol: SAMMAANCAP
+  name: Indiabulls Housing Finance
+  sources:
+  - src/sectors/banks_financials.py
+  - src/sectors/penny_monitor.py
+  - src/strategies/madhusudan_kela.py
+  status: unknown
+  last_checked: null
+  notes: ''
 - symbol: SANGAMIND
   name: Sangam (India) Ltd
   sources:
@@ -1383,13 +1383,6 @@ tickers:
   status: unknown
   last_checked: null
   notes: ''
-- symbol: TMPV
-  name: Tata Motors Ltd
-  sources:
-  - src/sectors/automobile_ev.py
-  status: unknown
-  last_checked: null
-  notes: ''
 - symbol: TATAPOWER
   name: Tata Power Company
   sources:
@@ -1401,13 +1394,6 @@ tickers:
   name: Tata Steel Ltd
   sources:
   - src/sectors/metals_mining.py
-  status: unknown
-  last_checked: null
-  notes: ''
-- symbol: TTML
-  name: Tata Teleservices
-  sources:
-  - src/sectors/telecom.py
   status: unknown
   last_checked: null
   notes: ''
@@ -1462,6 +1448,13 @@ tickers:
   status: unknown
   last_checked: null
   notes: ''
+- symbol: TMPV
+  name: Tata Motors Ltd
+  sources:
+  - src/sectors/automobile_ev.py
+  status: unknown
+  last_checked: null
+  notes: ''
 - symbol: TORNTPHARM
   name: Torrent Pharmaceuticals Ltd
   sources:
@@ -1485,10 +1478,10 @@ tickers:
   status: unknown
   last_checked: null
   notes: ''
-- symbol: NETWORK18
-  name: TV18 Broadcast Ltd
+- symbol: TTML
+  name: Tata Teleservices
   sources:
-  - src/sectors/media.py
+  - src/sectors/telecom.py
   status: unknown
   last_checked: null
   notes: ''
@@ -1537,16 +1530,10 @@ tickers:
   last_checked: null
   notes: ''
 - symbol: VBL
-  name: Varun Beverages
-  sources:
-  - src/strategies/minervini_oneil.py
-  status: unknown
-  last_checked: null
-  notes: ''
-- symbol: VBL
   name: Varun Beverages Ltd
   sources:
   - src/sectors/fmcg.py
+  - src/strategies/minervini_oneil.py
   status: unknown
   last_checked: null
   notes: ''
@@ -1600,4 +1587,4 @@ tickers:
   status: unknown
   last_checked: null
   notes: ''
-last_sync: '2026-08-15T17:19:20'
+last_sync: '2026-09-01T08:29:28'

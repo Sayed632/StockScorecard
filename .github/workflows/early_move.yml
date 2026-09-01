@@ -1,0 +1,41 @@
+# Lighter intra-day early move scan (Mon-Fri)
+name: Early Move Alerts
+
+on:
+  schedule:
+    # ~11:30 IST and ~14:00 IST (Mon-Fri)
+    - cron: "0 6 * * 1-5"
+    - cron: "30 8 * * 1-5"
+  workflow_dispatch:
+
+jobs:
+  early-move:
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Heartbeat
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python - <<'PY'
+          import os, requests
+          t, c = os.environ.get("TELEGRAM_BOT_TOKEN","").strip(), os.environ.get("TELEGRAM_CHAT_ID","").strip()
+          if t and c:
+              requests.post(f"https://api.telegram.org/bot{t}/sendMessage",
+                json={"chat_id": c, "text": "⚡ Early Move scan started…"}, timeout=30)
+          PY
+      - name: Run early move alert
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/run_early_move.py

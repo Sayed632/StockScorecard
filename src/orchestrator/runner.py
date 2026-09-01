@@ -42,6 +42,7 @@ from src.intelligence.fresh_buys import format_fresh_buys_telegram
 from src.intelligence.daily_digest import format_daily_digest_telegram
 from src.intelligence.ipo_performance import format_ipo_telegram
 from src.intelligence.pre_ipo import format_pre_ipo_telegram
+from src.intelligence.early_move_alert import format_early_move_telegram
 from src.intelligence.profit_opportunity import format_profit_opportunity_telegram
 from src.telegram_notify import send_message as telegram_send
 from src.delivery.telegram_report import send_daily_report, format_report
@@ -322,6 +323,14 @@ def run_full_scan(
             logger.info("Pre-IPO Telegram: %s", "sent" if telegram_send(pre_text) else "failed")
         except Exception as e:
             logger.warning("Pre-IPO failed: %s", e)
+
+        try:
+            early_text = format_early_move_telegram()
+            if len(early_text) > 4000:
+                early_text = early_text[:3900] + "\n\n… (truncated)"
+            logger.info("Early move alert Telegram: %s", "sent" if telegram_send(early_text) else "failed")
+        except Exception as e:
+            logger.warning("Early move alert failed: %s", e)
 
         try:
             tp_text = format_trade_plans_telegram()
