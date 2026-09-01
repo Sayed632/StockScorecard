@@ -169,9 +169,23 @@ def run_full_scan(
     print("=" * 60 + "\n")
 
     if send_telegram:
-        ok = send_daily_report(scan_result)
+        # 1) MAIN Daily Decision Report (must always attempt first)
+        try:
+            ok = send_daily_report(scan_result)
+            if ok:
+                logger.info("Main Daily Decision Report sent to Telegram")
+            else:
+                logger.warning("Main Daily Decision Report FAILED to send")
+                telegram_send("⚠️ StockScorecard: main Daily Decision Report failed to send. Check bot permissions.")
+        except Exception as e:
+            logger.exception("Main report send crashed: %s", e)
+            try:
+                telegram_send(f"❌ Main report crash: {e}")
+            except Exception:
+                pass
+            ok = False
 
-        # Digest first (with regular messages after)
+        # Digest + other layers (each isolated; failures must not block others)
         try:
             digest_text = format_daily_digest_telegram()
             if len(digest_text) > 4000:
