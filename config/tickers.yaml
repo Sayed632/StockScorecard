@@ -922,7 +922,7 @@ tickers:
   - src/strategies/madhusudan_kela.py
   status: unknown
   last_checked: null
-  notes: ''
+  notes: 'BSE-only on Yahoo as MKVENTURES.BO'
 - symbol: MOTHERSON
   name: Samvardhana Motherson
   sources:
@@ -1015,7 +1015,7 @@ tickers:
   - src/strategies/madhusudan_kela.py
   status: unknown
   last_checked: null
-  notes: ''
+  notes: 'BSE-only; Yahoo 538772.BO / NIYOGIN.BO'
 - symbol: NMDC
   name: NMDC Ltd
   sources:
@@ -1325,7 +1325,7 @@ tickers:
   - src/strategies/madhusudan_kela.py
   status: unknown
   last_checked: null
-  notes: ''
+  notes: 'BSE-only Subam Papers; Yahoo 544267.BO'
 - symbol: SUNPHARMA
   name: Sun Pharmaceutical Industries Ltd
   sources:

@@ -38,31 +38,47 @@ def save_registry(data: dict) -> None:
 
 
 def check_symbol(symbol: str, suffix: str = ".NS") -> tuple[str, str]:
-    """Return (status, notes)."""
+    """Return (status, notes). Try .NS then .BO (BSE-only names)."""
     import yfinance as yf
 
-    yahoo = symbol + suffix
-    try:
-        t = yf.Ticker(yahoo)
-        # fast_info / history
-        hist = t.history(period="5d")
-        if hist is None or len(hist) == 0:
-            # try info
+    suffixes = [suffix]
+    if suffix == ".NS":
+        suffixes.append(".BO")
+    # numeric BSE codes used by Yahoo for some thin names
+    BSE_CODE = {"NIYOGIN": "538772", "SUBAM": "544267"}
+    last_msg = ""
+    for suf in suffixes:
+        yahoo = symbol + suf
+        try:
+            t = yf.Ticker(yahoo)
+            hist = t.history(period="5d")
+            if hist is not None and len(hist) > 0:
+                last = float(hist["Close"].iloc[-1])
+                tag = "BSE" if suf == ".BO" else "NSE"
+                return "ok", f"{tag} last={last:.2f} ({yahoo})"
             info = {}
             try:
                 info = t.info or {}
             except Exception:
                 pass
-            if not info.get("regularMarketPrice") and not info.get("currentPrice"):
-                return "not_found", f"No history/price for {yahoo}"
-            return "ok", "info only"
-        last = float(hist["Close"].iloc[-1])
-        return "ok", f"last={last:.2f}"
-    except Exception as e:
-        msg = str(e)[:120]
-        if "delisted" in msg.lower() or "not found" in msg.lower():
-            return "not_found", msg
-        return "error", msg
+            if info.get("regularMarketPrice") or info.get("currentPrice"):
+                tag = "BSE" if suf == ".BO" else "NSE"
+                return "ok", f"{tag} info only ({yahoo})"
+            last_msg = f"No history/price for {yahoo}"
+        except Exception as e:
+            last_msg = str(e)[:120]
+    # Yahoo numeric BSE code fallback
+    if symbol in BSE_CODE:
+        yahoo = BSE_CODE[symbol] + ".BO"
+        try:
+            t = yf.Ticker(yahoo)
+            hist = t.history(period="5d")
+            if hist is not None and len(hist) > 0:
+                last = float(hist["Close"].iloc[-1])
+                return "ok", f"BSE code last={last:.2f} ({yahoo})"
+        except Exception as e:
+            last_msg = str(e)[:120]
+    return "not_found", last_msg or f"No history/price for {symbol}.NS/.BO"
 
 
 def main():
