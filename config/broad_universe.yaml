@@ -1,0 +1,131 @@
+# Extra symbols beyond sector files – expand freely.
+# Used by wide parallel scan to catch day-movers (e.g. HIKAL-style).
+version: 1
+updated: "2026-09-07"
+
+symbols:
+  - { symbol: HIKAL, name: "Hikal Ltd" }
+  - { symbol: AARTIDRUGS, name: "Aarti Drugs Ltd" }
+  - { symbol: ALKYLAMINE, name: "Alkyl Amines Chemicals Ltd" }
+  - { symbol: ANURAS, name: "Anupam Rasayan India Ltd" }
+  - { symbol: CLEAN, name: "Clean Science and Technology Ltd" }
+  - { symbol: FINEORG, name: "Fine Organic Industries Ltd" }
+  - { symbol: GALAXYSURF, name: "Galaxy Surfactants Ltd" }
+  - { symbol: ROSSARI, name: "Rossari Biotech Ltd" }
+  - { symbol: SUDARSCHEM, name: "Sudarshan Chemical Industries Ltd" }
+  - { symbol: VINATIORGA, name: "Vinati Organics Ltd" }
+  - { symbol: FLUOROCHEM, name: "Gujarat Fluorochemicals Ltd" }
+  - { symbol: NEOGEN, name: "Neogen Chemicals Ltd" }
+  - { symbol: PRIVISCL, name: "Privi Speciality Chemicals Ltd" }
+  - { symbol: CAMPUS, name: "Campus Activewear Ltd" }
+  - { symbol: METROPOLIS, name: "Metropolis Healthcare Ltd" }
+  - { symbol: LALPATHLAB, name: "Dr Lal PathLabs Ltd" }
+  - { symbol: KIMS, name: "Krishna Institute of Medical Sciences" }
+  - { symbol: RAINBOW, name: "Rainbow Childrens Medicare Ltd" }
+  - { symbol: MEDANTA, name: "Global Health Ltd" }
+  - { symbol: KAYNES, name: "Kaynes Technology India Ltd" }
+  - { symbol: SYRMA, name: "Syrma SGS Technology Ltd" }
+  - { symbol: DIXON, name: "Dixon Technologies India Ltd" }
+  - { symbol: AMBER, name: "Amber Enterprises India Ltd" }
+  - { symbol: POLYCAB, name: "Polycab India Ltd" }
+  - { symbol: KEI, name: "KEI Industries Ltd" }
+  - { symbol: RRKABEL, name: "RR Kabel Ltd" }
+  - { symbol: CGPOWER, name: "CG Power and Industrial Solutions" }
+  - { symbol: SCHNEIDER, name: "Schneider Electric Infrastructure" }
+  - { symbol: BHEL, name: "Bharat Heavy Electricals Ltd" }
+  - { symbol: THERMAX, name: "Thermax Ltd" }
+  - { symbol: TRITURBINE, name: "Triveni Turbine Ltd" }
+  - { symbol: KIRLOSENG, name: "Kirloskar Oil Engines Ltd" }
+  - { symbol: GRSE, name: "Garden Reach Shipbuilders" }
+  - { symbol: COCHINSHIP, name: "Cochin Shipyard Ltd" }
+  - { symbol: DATAPATTNS, name: "Data Patterns India Ltd" }
+  - { symbol: PARAS, name: "Paras Defence and Space Technologies" }
+  - { symbol: IDEA, name: "Vodafone Idea Ltd" }
+  - { symbol: HFCL, name: "HFCL Ltd" }
+  - { symbol: STLTECH, name: "Sterlite Technologies Ltd" }
+  - { symbol: TEJASNET, name: "Tejas Networks Ltd" }
+  - { symbol: ROUTE, name: "Route Mobile Ltd" }
+  - { symbol: TANLA, name: "Tanla Platforms Ltd" }
+  - { symbol: ZOMATO, name: "Eternal Ltd / Zomato" }
+  - { symbol: SWIGGY, name: "Swiggy Ltd" }
+  - { symbol: NYKAA, name: "FSN E-Commerce Ventures" }
+  - { symbol: POLICYBZR, name: "PB Fintech Ltd" }
+  - { symbol: PAYTM, name: "One 97 Communications Ltd" }
+  - { symbol: IRCTC, name: "IRCTC Ltd" }
+  - { symbol: IRFC, name: "Indian Railway Finance Corp" }
+  - { symbol: RVNL, name: "Rail Vikas Nigam Ltd" }
+  - { symbol: IREDA, name: "Indian Renewable Energy Development" }
+  - { symbol: SUZLON, name: "Suzlon Energy Ltd" }
+  - { symbol: INOXWIND, name: "Inox Wind Ltd" }
+  - { symbol: JPPOWER, name: "Jaiprakash Power Ventures" }
+  - { symbol: JINDALSAW, name: "Jindal Saw Ltd" }
+  - { symbol: WELCORP, name: "Welspun Corp Ltd" }
+  - { symbol: SAIL, name: "Steel Authority of India" }
+  - { symbol: JSWSTEEL, name: "JSW Steel Ltd" }
+  - { symbol: TATASTEEL, name: "Tata Steel Ltd" }
+  - { symbol: HINDALCO, name: "Hindalco Industries Ltd" }
+  - { symbol: VEDL, name: "Vedanta Ltd" }
+  - { symbol: NATIONALUM, name: "National Aluminium Co" }
+  - { symbol: HINDCOPPER, name: "Hindustan Copper Ltd" }
+  - { symbol: GNFC, name: "Gujarat Narmada Valley Fertilizers" }
+  - { symbol: GSFC, name: "Gujarat State Fertilizers" }
+  - { symbol: CHAMBLFERT, name: "Chambal Fertilisers" }
+  - { symbol: COROMANDEL, name: "Coromandel International" }
+  - { symbol: UPL, name: "UPL Ltd" }
+  - { symbol: PIIND, name: "PI Industries Ltd" }
+  - { symbol: BAYERCROP, name: "Bayer CropScience Ltd" }
+  - { symbol: SUMICHEM, name: "Sumitomo Chemical India" }
+  - { symbol: DEEPAKFERT, name: "Deepak Fertilisers" }
+  - { symbol: FACT, name: "Fertilisers and Chemicals Travancore" }
+  - { symbol: RCF, name: "Rashtriya Chemicals and Fertilizers" }
+  - { symbol: EIDPARRY, name: "EID Parry India Ltd" }
+  - { symbol: BALRAMCHIN, name: "Balrampur Chini Mills" }
+  - { symbol: DHAMPURSUG, name: "Dhampur Sugar Mills" }
+  - { symbol: TRIVENI, name: "Triveni Engineering" }
+  - { symbol: RADICO, name: "Radico Khaitan Ltd" }
+  - { symbol: UNITDSPR, name: "United Spirits Ltd" }
+  - { symbol: UBL, name: "United Breweries Ltd" }
+  - { symbol: GLAXO, name: "GlaxoSmithKline Pharmaceuticals" }
+  - { symbol: ABBOTINDIA, name: "Abbott India Ltd" }
+  - { symbol: PFIZER, name: "Pfizer Ltd" }
+  - { symbol: SANOFI, name: "Sanofi India Ltd" }
+  - { symbol: APLLTD, name: "Alembic Pharmaceuticals" }
+  - { symbol: AJANTPHARM, name: "Ajanta Pharma Ltd" }
+  - { symbol: JBCHEPHARM, name: "JB Chemicals and Pharmaceuticals" }
+  - { symbol: NATCOPHARM, name: "Natco Pharma Ltd" }
+  - { symbol: GRANULES, name: "Granules India Ltd" }
+  - { symbol: LAURUSLABS, name: "Laurus Labs Ltd" }
+  - { symbol: BIOCON, name: "Biocon Ltd" }
+  - { symbol: SYNGENE, name: "Syngene International Ltd" }
+  - { symbol: DIVISLAB, name: "Divi's Laboratories Ltd" }
+  - { symbol: SOLARA, name: "Solara Active Pharma Sciences" }
+  - { symbol: MARKSANS, name: "Marksans Pharma Ltd" }
+  - { symbol: RPG, name: "RPG Life Sciences" }
+  - { symbol: WOCKPHARMA, name: "Wockhardt Ltd" }
+  - { symbol: CAPLIPOINT, name: "Caplin Point Laboratories" }
+  - { symbol: ERIS, name: "Eris Lifesciences Ltd" }
+  - { symbol: INDIGO, name: "InterGlobe Aviation Ltd" }
+  - { symbol: SPICEJET, name: "SpiceJet Ltd" }
+  - { symbol: MAHLOG, name: "Mahindra Logistics Ltd" }
+  - { symbol: TCI, name: "Transport Corporation of India" }
+  - { symbol: CONCOR, name: "Container Corporation of India" }
+  - { symbol: WESTLIFE, name: "Westlife Foodworld Ltd" }
+  - { symbol: JUBLFOOD, name: "Jubilant FoodWorks Ltd" }
+  - { symbol: DEVYANI, name: "Devyani International Ltd" }
+  - { symbol: SAPPHIRE, name: "Sapphire Foods India Ltd" }
+  - { symbol: MEDPLUS, name: "Medplus Health Services" }
+  - { symbol: PTEASY, name: "Easy Trip Planners Ltd" }
+  - { symbol: YATRA, name: "Yatra Online Ltd" }
+  - { symbol: MMTC, name: "MMTC Ltd" }
+  - { symbol: ITC, name: "ITC Ltd" }
+  - { symbol: HINDUNILVR, name: "Hindustan Unilever Ltd" }
+  - { symbol: NESTLEIND, name: "Nestle India Ltd" }
+  - { symbol: BRITANNIA, name: "Britannia Industries Ltd" }
+  - { symbol: DABUR, name: "Dabur India Ltd" }
+  - { symbol: MARICO, name: "Marico Ltd" }
+  - { symbol: COLPAL, name: "Colgate-Palmolive India" }
+  - { symbol: GODREJCP, name: "Godrej Consumer Products" }
+  - { symbol: TATACONSUM, name: "Tata Consumer Products" }
+  - { symbol: EMAMILTD, name: "Emami Ltd" }
+  - { symbol: VBL, name: "Varun Beverages Ltd" }
+  - { symbol: RADICO, name: "Radico Khaitan Ltd" }
