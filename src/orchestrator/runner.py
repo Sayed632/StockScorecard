@@ -35,6 +35,7 @@ from src.strategies.madhusudan_kela import run_kela_strategy, format_kela_telegr
 from src.strategies.minervini_oneil import run_minervini_oneil, format_mo_telegram
 from src.intelligence.news_layer import format_news_telegram_message
 from src.intelligence.nse_announcements import format_nse_telegram_message
+from src.intelligence.corporate_alerts import format_corporate_alerts_telegram
 from src.intelligence.horizon_monitor import format_horizon_telegram
 from src.intelligence.hot_stocks import format_hot_telegram
 from src.intelligence.trade_plans import format_trade_plans_telegram
@@ -273,6 +274,14 @@ def run_full_scan(
             logger.info("NSE announcements Telegram: %s", "sent" if nse_ok else "failed")
         except Exception as e:
             logger.warning("NSE announcements failed: %s", e)
+
+        try:
+            corp_text = format_corporate_alerts_telegram()
+            if len(corp_text) > 4000:
+                corp_text = corp_text[:3900] + "\n\n… (truncated)"
+            logger.info("Corporate alerts Telegram: %s", "sent" if telegram_send(corp_text) else "failed")
+        except Exception as e:
+            logger.warning("Corporate alerts failed: %s", e)
 
         try:
             hz = format_horizon_telegram()

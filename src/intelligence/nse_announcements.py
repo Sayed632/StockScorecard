@@ -50,7 +50,14 @@ HIGH_IMPACT = [
     r"joint venture",
     r"capacity",
     r"expansion",
+    r"letter of award",
+    r"purchase order",
+    r"commercial production",
+    r"lowest bidder",
+    r"launched",
+    r"inspection",
 ]
+
 
 # Usually noise for trading decisions
 LOW_IMPACT = [
