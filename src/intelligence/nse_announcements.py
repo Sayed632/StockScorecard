@@ -56,6 +56,10 @@ HIGH_IMPACT = [
     r"lowest bidder",
     r"launched",
     r"inspection",
+    r"aerospace",
+    r"defence order",
+    r"offset",
+    r"export order",
 ]
 
 

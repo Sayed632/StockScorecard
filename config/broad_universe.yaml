@@ -4,6 +4,12 @@ version: 1
 updated: "2026-09-07"
 
 symbols:
+  - { symbol: AEQUS, name: "Aequs Ltd" }
+  - { symbol: BDL, name: "Bharat Dynamics Ltd" }
+  - { symbol: MIDHANI, name: "Mishra Dhatu Nigam Ltd" }
+  - { symbol: ZENTECH, name: "Zen Technologies Ltd" }
+  - { symbol: DCXINDIA, name: "DCX Systems Ltd" }
+  - { symbol: ASTRAMICRO, name: "Astra Microwave Products Ltd" }
   - { symbol: HIKAL, name: "Hikal Ltd" }
   - { symbol: AARTIDRUGS, name: "Aarti Drugs Ltd" }
   - { symbol: ALKYLAMINE, name: "Alkyl Amines Chemicals Ltd" }

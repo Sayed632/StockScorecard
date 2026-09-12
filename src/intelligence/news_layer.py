@@ -56,7 +56,7 @@ RSS_FEEDS = [
     ),
     (
         "Sector catalysts",
-        "https://news.google.com/rss/search?q=India+(pharma+FDA+OR+defence+order+OR+EV+OR+banking+NPA+OR+IT+deal)&hl=en-IN&gl=IN&ceid=IN:en",
+        "https://news.google.com/rss/search?q=India+(aerospace+OR+defence+order+OR+HAL+OR+drone+OR+Aequs+OR+Boeing+OR+Airbus+India+OR+pharma+FDA+OR+EV+OR+banking)&hl=en-IN&gl=IN&ceid=IN:en",
     ),
 ]
 
@@ -73,7 +73,8 @@ IMPACT_KEYWORDS: List[Tuple[str, int]] = [
     (r"\bfed\b|\brate cut\b|\brate hike\b", 4),
     (r"\bearnings\b|\bresults\b|\bprofit\b|\brevenue\b", 3),
     (r"\bfda\b|\bwarning letter\b|\busfda\b", 5),
-    (r"\border win\b|\bcontract\b|\bdefence order\b", 4),
+    (r"\border win\b|\bcontract\b|\bdefence order\b|\baerospace\b|\bairbus\b|\bboeing\b", 5),
+    (r"\baequs\b|\bhal\b|\bbel\b|\bmazdock\b|\bdata patterns\b|\bparas defence\b", 4),
     (r"\bipo\b|\blisting\b", 2),
     (r"\bmerger\b|\bacquisition\b|\btakeover\b", 4),
     (r"\bbankruptcy\b|\bdefault\b|\bfraud\b", 5),
@@ -88,7 +89,7 @@ SECTOR_TAGS: List[Tuple[str, str]] = [
     (r"\bbank\b|\bnbfc\b|\bnpa\b", "Banks"),
     (r"\bit\b|\bsoftware\b|\binfosys\b|\btcs\b", "IT"),
     (r"\bauto\b|\bev\b|\bvehicle\b", "Auto/EV"),
-    (r"\bdefence\b|\bhal\b|\bdrone\b", "Defence"),
+    (r"\bdefence\b|\baerospace\b|\bhal\b|\bdrone\b|\baequs\b|\bairbus\b|\bboeing\b", "Aerospace & Defence"),
     (r"\bmetal\b|\bsteel\b|\bcopper\b", "Metals"),
     (r"\boil\b|\bgas\b|\bcrude\b|\bongc\b", "Energy"),
     (r"\brealty\b|\bhousing\b|\bproperty\b", "Realty"),

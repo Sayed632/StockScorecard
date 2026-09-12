@@ -12,7 +12,7 @@ import re
 logger = logging.getLogger(__name__)
 
 SECTOR_THEMES = {
-    "defence_aerospace": "Defence / order-book momentum",
+    "defence_aerospace": "Aerospace & defence manufacturing / order-book / export outsourcing",
     "pharmaceuticals": "Pharma / healthcare sector flow",
     "information_technology": "IT / software demand",
     "telecom": "Telecom / network capex theme",
