@@ -97,6 +97,9 @@ def run_scorecard(
             "debt_to_equity": fund.get("debt_to_equity"),
             "revenue_growth": fund.get("revenue_growth"),
             "earnings_growth": fund.get("earnings_growth"),
+            "revenue_cagr": fund.get("revenue_cagr"),
+            "earnings_cagr": fund.get("earnings_cagr"),
+            "price_cagr_3y": fund.get("price_cagr_3y"),
         }
         records.append(rec)
 
