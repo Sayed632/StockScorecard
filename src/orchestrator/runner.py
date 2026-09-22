@@ -28,6 +28,7 @@ from src.sectors.others_residual import OthersResidualScanner
 from src.decision.ranking import merge_and_rank
 from src.shared.fii_dii import fetch_fii_dii, fetch_sector_fpi, format_flows_telegram_message
 from src.intelligence.sector_rotation import format_sector_rotation_telegram
+from src.intelligence.sector_heatmap import format_sector_heatmap_telegram
 from src.intelligence.penny_screener import format_penny_telegram
 from src.intelligence.multibagger_screener import format_multibagger_telegram
 from src.shared.results_logger import log_scan_result
@@ -218,6 +219,14 @@ def run_full_scan(
             logger.info("Sector rotation Telegram: %s", "sent" if telegram_send(sec_text) else "failed")
         except Exception as e:
             logger.warning("Sector rotation failed: %s", e)
+
+        try:
+            hm_text = format_sector_heatmap_telegram()
+            if len(hm_text) > 4000:
+                hm_text = hm_text[:3900] + "\n\n… (truncated)"
+            logger.info("Sector heat map Telegram: %s", "sent" if telegram_send(hm_text) else "failed")
+        except Exception as e:
+            logger.warning("Sector heat map failed: %s", e)
 
         try:
             flows_text = format_flows_telegram_message()
