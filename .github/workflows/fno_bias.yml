@@ -1,0 +1,31 @@
+name: F&O Bias Board
+
+on:
+  schedule:
+    # ~09:45 IST and ~14:45 IST Mon-Fri (cash market hours)
+    - cron: "15 4 * * 1-5"
+    - cron: "15 9 * * 1-5"
+  workflow_dispatch:
+
+jobs:
+  fno:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run F&O bias board
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ secrets.OPENAI_MODEL }}
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+        run: python scripts/run_fno_bias.py

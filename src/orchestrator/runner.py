@@ -47,6 +47,7 @@ from src.intelligence.pre_ipo import format_pre_ipo_telegram
 from src.intelligence.early_move_alert import format_early_move_telegram
 from src.intelligence.wide_parallel_scan import format_wide_scan_telegram
 from src.intelligence.daily_brief import format_daily_brief_telegram
+from src.intelligence.fno_bias import format_fno_bias_telegram
 from src.intelligence.profit_opportunity import format_profit_opportunity_telegram
 from src.telegram_notify import send_message as telegram_send
 from src.delivery.telegram_report import send_daily_report, format_report
@@ -368,6 +369,15 @@ def run_full_scan(
             logger.info("Trade plans Telegram: %s", "sent" if tp_ok else "failed")
         except Exception as e:
             logger.warning("Trade plans failed: %s", e)
+
+        
+        try:
+            fno_text = format_fno_bias_telegram(use_ai=True)
+            if len(fno_text) > 4000:
+                fno_text = fno_text[:3900] + "\n\n… (truncated)"
+            logger.info("F&O Bias Telegram: %s", "sent" if telegram_send(fno_text) else "failed")
+        except Exception as e:
+            logger.warning("F&O Bias failed: %s", e)
 
         # Curated Daily Brief LAST (existing messages unchanged)
         try:
