@@ -1,0 +1,30 @@
+name: Screener Insights
+
+on:
+  schedule:
+    - cron: "0 3 * * 1-5"   # ~08:30 IST
+    - cron: "0 11 * * 1-5"  # ~16:30 IST
+  workflow_dispatch:
+
+jobs:
+  screener:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run Screener insights
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SCREENER_EMAIL: ${{ secrets.SCREENER_EMAIL }}
+          SCREENER_USERNAME: ${{ secrets.SCREENER_USERNAME }}
+          SCREENER_PASSWORD: ${{ secrets.SCREENER_PASSWORD }}
+        run: python scripts/run_screener_insights.py

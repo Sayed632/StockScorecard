@@ -50,6 +50,7 @@ from src.intelligence.wide_parallel_scan import format_wide_scan_telegram
 from src.intelligence.daily_brief import format_daily_brief_telegram
 from src.intelligence.fno_bias import format_fno_bias_telegram
 from src.intelligence.big_money_flow import format_big_money_telegram
+from src.intelligence.screener_insights import format_screener_insights_telegram
 from src.intelligence.profit_opportunity import format_profit_opportunity_telegram
 from src.telegram_notify import send_message as telegram_send
 from src.delivery.telegram_report import send_daily_report, format_report
@@ -389,6 +390,15 @@ def run_full_scan(
             logger.info("Big Money Flow Telegram: %s", "sent" if telegram_send(bm_text) else "failed")
         except Exception as e:
             logger.warning("Big Money Flow failed: %s", e)
+
+        
+        try:
+            si_text = format_screener_insights_telegram()
+            if len(si_text) > 4000:
+                si_text = si_text[:3900] + "\n\n… (truncated)"
+            logger.info("Screener Insights Telegram: %s", "sent" if telegram_send(si_text) else "failed")
+        except Exception as e:
+            logger.warning("Screener Insights failed: %s", e)
 
         # Curated Daily Brief LAST (existing messages unchanged)
         try:
