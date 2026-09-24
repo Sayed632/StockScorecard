@@ -129,7 +129,7 @@ def merge_and_rank(
         notes.append(news_note)
 
     return ScanResult(
-        scan_time=datetime.now(),
+        scan_time=now_ist(),
         frequency=frequency,
         swing_ideas=all_swing[:max_per_list],
         long_term_ideas=all_long[:max_per_list],

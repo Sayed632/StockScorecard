@@ -1,3 +1,4 @@
+from src.shared.time_ist import format_ist, now_ist
 """
 Telegram delivery for StockScorecard reports.
 Posts formatted Q-G-V-T score summaries to a channel.
@@ -60,7 +61,7 @@ def send_message(
 
 def format_scorecard_report(df: pd.DataFrame, max_rows: int = 12) -> str:
     """Create a clean, readable HTML report for Telegram."""
-    now = datetime.now().strftime("%d %b %Y, %H:%M IST")
+    now = format_ist(fmt="%d %b %Y, %H:%M IST")
 
     lines = [
         f"<b>📊 StockScorecard Report</b>",

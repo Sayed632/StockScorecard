@@ -10,6 +10,8 @@ Horizons (trading days approx):
 
 from __future__ import annotations
 
+from src.shared.time_ist import format_ist, now_ist
+
 from dataclasses import dataclass, field
 from datetime import datetime
 from typing import List, Optional, Dict, Any, Tuple
@@ -214,7 +216,7 @@ def run_horizon_monitor(max_rows: int = 25) -> Dict[str, Any]:
 
     rows.sort(key=rank)
     return {
-        "scan_time": datetime.now(),
+        "scan_time": now_ist(),
         "rows": rows[:max_rows],
         "all_count": len(rows),
     }
@@ -223,7 +225,7 @@ def run_horizon_monitor(max_rows: int = 25) -> Dict[str, Any]:
 def format_horizon_telegram(result: Optional[Dict[str, Any]] = None) -> str:
     if result is None:
         result = run_horizon_monitor()
-    now = result["scan_time"].strftime("%d %b %Y | %H:%M IST")
+    now = format_ist(result["scan_time"])
     lines = [
         "<b>⏱ Horizon Monitor</b> – multi-week / multi-month",
         now,

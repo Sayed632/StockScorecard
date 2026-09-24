@@ -10,6 +10,8 @@ Explicit focus message – not mixed into scores.
 
 from __future__ import annotations
 
+from src.shared.time_ist import format_ist, now_ist
+
 from datetime import datetime
 from typing import List, Optional
 import logging
@@ -106,7 +108,7 @@ def format_corporate_alerts_telegram(
 ) -> str:
     if items is None:
         items = collect_corporate_alerts(15)
-    now = datetime.now().strftime("%d %b %Y | %H:%M IST")
+    now = format_ist()
 
     lines = [
         "<b>📢 CORPORATE ALERTS</b>",

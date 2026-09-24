@@ -10,6 +10,8 @@ Niche: headlines that can influence stocks and the broader market.
 
 from __future__ import annotations
 
+from src.shared.time_ist import format_ist, now_ist
+
 from dataclasses import dataclass, field
 from datetime import datetime
 from typing import List, Dict, Optional, Tuple
@@ -266,7 +268,7 @@ def format_news_section(items: Optional[List[NewsItem]] = None, cfg: Optional[di
 def format_news_telegram_message(items: Optional[List[NewsItem]] = None) -> str:
     if items is None:
         items = fetch_market_news()
-    now = datetime.now().strftime("%d %b %Y | %H:%M IST")
+    now = format_ist()
     lines = [
         "<b>📰 News Intelligence – Market & Stocks</b>",
         now,

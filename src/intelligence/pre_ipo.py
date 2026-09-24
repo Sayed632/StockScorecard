@@ -10,6 +10,8 @@ This is a status tracker — not a pre-IPO share purchase product.
 
 from __future__ import annotations
 
+from src.shared.time_ist import format_ist, now_ist
+
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
@@ -82,7 +84,7 @@ def collect_pre_ipo() -> Dict[str, Any]:
         key = n.status if n.status in by_status else "on_radar"
         by_status[key].append(n)
     return {
-        "scan_time": datetime.now(),
+        "scan_time": now_ist(),
         "by_status": by_status,
         "total": len(names),
     }
@@ -91,7 +93,7 @@ def collect_pre_ipo() -> Dict[str, Any]:
 def format_pre_ipo_telegram(result: Optional[Dict[str, Any]] = None) -> str:
     if result is None:
         result = collect_pre_ipo()
-    now = result["scan_time"].strftime("%d %b %Y | %H:%M IST")
+    now = format_ist(result["scan_time"])
     by_status: Dict[str, List[PreIpoName]] = result.get("by_status") or {}
 
     lines = [

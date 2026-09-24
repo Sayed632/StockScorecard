@@ -1,3 +1,4 @@
+from src.shared.time_ist import format_ist, now_ist
 """
 Madhusudan Kela portfolio tracker + multi-year strategy sleeve.
 
@@ -127,7 +128,7 @@ def run_kela_strategy() -> Dict[str, Any]:
     holdings.sort(key=lambda x: (x.stake_pct or 0, x.score), reverse=True)
 
     return {
-        "scan_time": datetime.now(),
+        "scan_time": now_ist(),
         "as_of_label": "Disclosed holdings basis ~Jun 2026 public data (update quarterly)",
         "ideas": holdings,
         "philosophy": [
@@ -141,7 +142,7 @@ def run_kela_strategy() -> Dict[str, Any]:
 
 
 def format_kela_telegram(result: Dict[str, Any]) -> str:
-    now = result["scan_time"].strftime("%d %b %Y | %H:%M IST")
+    now = format_ist(result["scan_time"])
     lines = [
         "<b>📌 Madhusudan Kela’s Strategy – Portfolio Tracker</b>",
         f"{now}",

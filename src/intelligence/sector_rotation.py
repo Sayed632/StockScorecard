@@ -13,6 +13,8 @@ Complements:
 
 from __future__ import annotations
 
+from src.shared.time_ist import format_ist, now_ist
+
 from dataclasses import dataclass
 from datetime import datetime
 from typing import List, Dict, Any, Optional, Tuple
@@ -133,7 +135,7 @@ def run_sector_rotation() -> Dict[str, Any]:
 
     rows.sort(key=lambda x: -x.score)
     return {
-        "scan_time": datetime.now(),
+        "scan_time": now_ist(),
         "benchmark": {
             "name": BENCHMARK[0],
             "ret_1m": b1,
@@ -147,7 +149,7 @@ def run_sector_rotation() -> Dict[str, Any]:
 def format_sector_rotation_telegram(result: Optional[Dict[str, Any]] = None) -> str:
     if result is None:
         result = run_sector_rotation()
-    now = result["scan_time"].strftime("%d %b %Y | %H:%M IST")
+    now = format_ist(result["scan_time"])
     b = result.get("benchmark") or {}
     sectors: List[SectorStrength] = result.get("sectors") or []
 

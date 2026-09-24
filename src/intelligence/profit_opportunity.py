@@ -18,6 +18,8 @@ Not guarantees — ranked opportunity list with reasons.
 
 from __future__ import annotations
 
+from src.shared.time_ist import format_ist, now_ist
+
 from dataclasses import dataclass, field
 from datetime import datetime
 from typing import List, Dict, Any, Optional, Set
@@ -228,7 +230,7 @@ def collect_opportunities(limit: int = 18) -> Dict[str, Any]:
 
     ranked = sorted(bag.values(), key=lambda x: -x.score)
     return {
-        "scan_time": datetime.now(),
+        "scan_time": now_ist(),
         "opportunities": ranked[:limit],
         "prefer_sectors": sorted(prefer_sectors),
         "fii_note": fii_note,
@@ -239,7 +241,7 @@ def collect_opportunities(limit: int = 18) -> Dict[str, Any]:
 def format_profit_opportunity_telegram(result: Optional[Dict[str, Any]] = None) -> str:
     if result is None:
         result = collect_opportunities()
-    now = result["scan_time"].strftime("%d %b %Y | %H:%M IST")
+    now = format_ist(result["scan_time"])
     opps: List[Opportunity] = result.get("opportunities") or []
     prefer = result.get("prefer_sectors") or []
 

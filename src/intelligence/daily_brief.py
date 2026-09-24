@@ -11,6 +11,8 @@ never invent numbers not present in the scan packet.
 
 from __future__ import annotations
 
+from src.shared.time_ist import format_ist, now_ist
+
 from datetime import datetime
 from typing import Any, Dict, List, Optional
 import logging
@@ -93,7 +95,7 @@ def build_brief_packet(scan_result: ScanResult, extra_notes: Optional[List[str]]
 
 def format_brief_rule_based(packet: Dict[str, Any]) -> str:
     """Deterministic curated message – no external AI required."""
-    now = datetime.now().strftime("%d %b %Y | %H:%M IST")
+    now = format_ist()
     multi = packet.get("multi_layer") or {}
 
     lines = [

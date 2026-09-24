@@ -1,3 +1,4 @@
+from src.shared.time_ist import format_ist, now_ist
 """
 Telegram Delivery Layer
 Produces the exact approved message format.
@@ -12,7 +13,7 @@ from src.intelligence.nse_announcements import format_nse_section
 
 def format_report(result: ScanResult) -> str:
     """Build the full Telegram message as per URS."""
-    now = result.scan_time.strftime("%d %b %Y | %H:%M IST")
+    now = format_ist(result.scan_time)
 
     lines = [
         f"<b>📊 StockScorecard | Daily Decision Report</b>",

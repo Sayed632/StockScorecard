@@ -13,6 +13,8 @@ politely (low volume, delays). Fail soft if credentials missing or site blocks.
 
 from __future__ import annotations
 
+from src.shared.time_ist import format_ist, now_ist
+
 from dataclasses import dataclass
 from datetime import datetime
 from typing import Any, Dict, List, Optional, Tuple
@@ -306,7 +308,7 @@ def run_big_money_flow() -> Dict[str, Any]:
         logger.debug("fii context: %s", e)
 
     return {
-        "scan_time": datetime.now(),
+        "scan_time": now_ist(),
         "credentials_present": bool(_creds()[0] and _creds()[1]),
         "moves": moves,
         "accumulation": accum[:10],
@@ -320,7 +322,7 @@ def run_big_money_flow() -> Dict[str, Any]:
 def format_big_money_telegram(result: Optional[Dict[str, Any]] = None) -> str:
     if result is None:
         result = run_big_money_flow()
-    now = result["scan_time"].strftime("%d %b %Y | %H:%M IST")
+    now = format_ist(result["scan_time"])
     cred = result.get("credentials_present")
 
     lines = [

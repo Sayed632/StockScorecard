@@ -14,6 +14,8 @@ Label as candidates with risk note.
 
 from __future__ import annotations
 
+from src.shared.time_ist import format_ist, now_ist
+
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
@@ -133,13 +135,13 @@ def run_multibagger_screener(limit: int = 15) -> Dict[str, Any]:
             logger.debug("multi %s: %s", sym, e)
 
     hits.sort(key=lambda x: -x.score)
-    return {"scan_time": datetime.now(), "hits": hits[:limit], "total": len(hits)}
+    return {"scan_time": now_ist(), "hits": hits[:limit], "total": len(hits)}
 
 
 def format_multibagger_telegram(result: Optional[Dict[str, Any]] = None) -> str:
     if result is None:
         result = run_multibagger_screener()
-    now = result["scan_time"].strftime("%d %b %Y | %H:%M IST")
+    now = format_ist(result["scan_time"])
     hits: List[MultiHit] = result.get("hits") or []
     lines = [
         "<b>🚀 MULTI-BAGGER CANDIDATES</b>",

@@ -7,6 +7,8 @@ Purpose: surface OFSS-like / HFCL-like movers so they are never "missed".
 
 from __future__ import annotations
 
+from src.shared.time_ist import format_ist, now_ist
+
 from dataclasses import dataclass
 from datetime import datetime
 from typing import List, Optional, Dict, Any, Tuple
@@ -119,13 +121,13 @@ def run_hot_stocks(limit: int = 20) -> Dict[str, Any]:
             logger.debug("hot %s: %s", sym, e)
 
     hot.sort(key=lambda x: -(x.ret_6m if x.ret_6m is not None else x.ret_3m or 0))
-    return {"scan_time": datetime.now(), "stocks": hot[:limit], "total_hot": len(hot)}
+    return {"scan_time": now_ist(), "stocks": hot[:limit], "total_hot": len(hot)}
 
 
 def format_hot_telegram(result: Optional[Dict[str, Any]] = None) -> str:
     if result is None:
         result = run_hot_stocks()
-    now = result["scan_time"].strftime("%d %b %Y | %H:%M IST")
+    now = format_ist(result["scan_time"])
     lines = [
         "<b>🔥 HOT STOCKS</b> – strong multi-month movers",
         now,

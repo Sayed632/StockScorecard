@@ -12,6 +12,8 @@ Goal: catch names like sharp day-movers (e.g. HIKAL-style) that curated swing li
 
 from __future__ import annotations
 
+from src.shared.time_ist import format_ist, now_ist
+
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
 from datetime import datetime
@@ -166,7 +168,7 @@ def run_wide_parallel_scan(
 
     movers.sort(key=lambda x: -x.score)
     return {
-        "scan_time": datetime.now(),
+        "scan_time": now_ist(),
         "universe_size": len(universe),
         "movers_found": len(movers),
         "movers": movers[:top_n],
@@ -176,7 +178,7 @@ def run_wide_parallel_scan(
 def format_wide_scan_telegram(result: Optional[Dict[str, Any]] = None) -> str:
     if result is None:
         result = run_wide_parallel_scan()
-    now = result["scan_time"].strftime("%d %b %Y | %H:%M IST")
+    now = format_ist(result["scan_time"])
     movers: List[Mover] = result.get("movers") or []
 
     lines = [

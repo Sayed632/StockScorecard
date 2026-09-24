@@ -1,3 +1,4 @@
+from src.shared.time_ist import format_ist, now_ist
 """
 FII / DII Monitor + sector FPI allocation + Swing bias helpers.
 """
@@ -306,7 +307,7 @@ def format_flows_telegram_message(
     if sectors is None:
         sectors = fetch_sector_fpi()
 
-    now = datetime.now().strftime("%d %b %Y | %H:%M IST")
+    now = format_ist()
     lines = [
         "<b>🏦 FII / DII – Where money is flowing</b>",
         now,

@@ -10,6 +10,8 @@ Decision support only — does not place orders.
 
 from __future__ import annotations
 
+from src.shared.time_ist import format_ist, now_ist
+
 from dataclasses import dataclass, asdict, field
 from datetime import datetime, date
 from pathlib import Path
@@ -281,7 +283,7 @@ def format_trade_plans_telegram() -> str:
         logger.warning("auto seed: %s", e)
     plans = refresh_open_positions()
 
-    now = datetime.now().strftime("%d %b %Y | %H:%M IST")
+    now = format_ist()
     lines = [
         "<b>📋 TRADE PLANS / OPEN POSITIONS</b>",
         now,

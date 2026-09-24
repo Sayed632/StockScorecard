@@ -15,6 +15,8 @@ Important:
 
 from __future__ import annotations
 
+from src.shared.time_ist import format_ist, now_ist
+
 from dataclasses import dataclass
 from datetime import datetime
 from typing import Any, Dict, List, Optional
@@ -178,7 +180,7 @@ def run_fno_bias(max_stocks: int = 12) -> Dict[str, Any]:
     neutral = [x for x in stock_rows if x.bias == "NEUTRAL"]
 
     return {
-        "scan_time": datetime.now(),
+        "scan_time": now_ist(),
         "indices": index_rows,
         "bullish": bullish[:6],
         "bearish": bearish[:6],
@@ -188,7 +190,7 @@ def run_fno_bias(max_stocks: int = 12) -> Dict[str, Any]:
 
 
 def format_fno_bias_rule(result: Dict[str, Any]) -> str:
-    now = result["scan_time"].strftime("%d %b %Y | %H:%M IST")
+    now = format_ist(result["scan_time"])
     lines = [
         "<b>📉 F&amp;O BIAS BOARD</b>",
         now,

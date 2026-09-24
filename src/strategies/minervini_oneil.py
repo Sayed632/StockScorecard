@@ -1,3 +1,4 @@
+from src.shared.time_ist import format_ist, now_ist
 """
 Minervini / O'Neil–style swing strategy (separate sleeve).
 
@@ -255,7 +256,7 @@ def run_minervini_oneil() -> Dict[str, Any]:
     ideas.sort(key=lambda x: (rank.get(x.action, 9), -x.score))
 
     return {
-        "scan_time": datetime.now(),
+        "scan_time": now_ist(),
         "ideas": ideas,
         "rules": [
             "Price in uptrend (above 50 & 150 DMA, MAs stacked)",
@@ -268,7 +269,7 @@ def run_minervini_oneil() -> Dict[str, Any]:
 
 
 def format_mo_telegram(result: Dict[str, Any]) -> str:
-    now = result["scan_time"].strftime("%d %b %Y | %H:%M IST")
+    now = format_ist(result["scan_time"])
     lines = [
         "<b>📈 Minervini/O’Neil Strategy</b>",
         f"{now}",

@@ -10,6 +10,8 @@ Does not replace existing sector-rotation message; this is a richer companion.
 
 from __future__ import annotations
 
+from src.shared.time_ist import format_ist, now_ist
+
 from datetime import datetime
 from typing import Any, Dict, List, Optional
 import logging
@@ -126,7 +128,7 @@ def run_sector_heatmap(top_n: int = 5, rising_only: bool = True) -> Dict[str, An
             })
 
     return {
-        "scan_time": datetime.now(),
+        "scan_time": now_ist(),
         "ranked": ranked,
         "max_score": max_sc,
         "per_sector": per_sector,
@@ -138,7 +140,7 @@ def format_sector_heatmap_telegram(result: Optional[Dict[str, Any]] = None) -> s
     if result is None:
         result = run_sector_heatmap(top_n=5, rising_only=True)
 
-    now = result["scan_time"].strftime("%d %b %Y | %H:%M IST")
+    now = format_ist(result["scan_time"])
     ranked = result.get("ranked") or []
     max_sc = float(result.get("max_score") or 100)
     per = result.get("per_sector") or []

@@ -11,6 +11,8 @@ Honest limit: this is an early-warning screen, NOT a guarantee of price increase
 
 from __future__ import annotations
 
+from src.shared.time_ist import format_ist, now_ist
+
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
@@ -197,7 +199,7 @@ def run_early_move_alert(limit: int = 12) -> Dict[str, Any]:
 
     alerts.sort(key=lambda a: -a.score)
     return {
-        "scan_time": datetime.now(),
+        "scan_time": now_ist(),
         "alerts": alerts[:limit],
         "total": len(alerts),
         "results_hits": len(results_syms),
@@ -207,7 +209,7 @@ def run_early_move_alert(limit: int = 12) -> Dict[str, Any]:
 def format_early_move_telegram(result: Optional[Dict[str, Any]] = None) -> str:
     if result is None:
         result = run_early_move_alert()
-    now = result["scan_time"].strftime("%d %b %Y | %H:%M IST")
+    now = format_ist(result["scan_time"])
     alerts: List[EarlyAlert] = result.get("alerts") or []
 
     lines = [

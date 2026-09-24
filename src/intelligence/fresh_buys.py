@@ -12,6 +12,8 @@ One Telegram message so the user has one place to look.
 
 from __future__ import annotations
 
+from src.shared.time_ist import format_ist, now_ist
+
 from dataclasses import dataclass
 from datetime import datetime
 from typing import List, Dict, Any, Optional, Tuple
@@ -126,7 +128,7 @@ def collect_fresh_buys() -> Dict[str, Any]:
         fb.catalyst = catalyst_for(fb.symbol, fb.name, "", cmap)
     items = sorted(by_sym.values(), key=lambda x: -x.score)
     return {
-        "scan_time": datetime.now(),
+        "scan_time": now_ist(),
         "buys": items,
         "count": len(items),
     }
@@ -135,7 +137,7 @@ def collect_fresh_buys() -> Dict[str, Any]:
 def format_fresh_buys_telegram(result: Optional[Dict[str, Any]] = None) -> str:
     if result is None:
         result = collect_fresh_buys()
-    now = result["scan_time"].strftime("%d %b %Y | %H:%M IST")
+    now = format_ist(result["scan_time"])
     buys: List[FreshBuy] = result.get("buys") or []
 
     lines = [

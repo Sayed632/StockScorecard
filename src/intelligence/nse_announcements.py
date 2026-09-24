@@ -10,6 +10,8 @@ Filters to higher-impact subjects for StockScorecard.
 
 from __future__ import annotations
 
+from src.shared.time_ist import format_ist, now_ist
+
 from dataclasses import dataclass
 from datetime import datetime
 from typing import List, Optional, Dict, Any
@@ -189,7 +191,7 @@ def format_nse_section(items: Optional[List[NSEAnnouncement]] = None) -> List[st
 def format_nse_telegram_message(items: Optional[List[NSEAnnouncement]] = None) -> str:
     if items is None:
         items = fetch_nse_announcements(25)
-    now = datetime.now().strftime("%d %b %Y | %H:%M IST")
+    now = format_ist()
     lines = [
         "<b>🏛️ NSE Corporate Announcements</b>",
         now,

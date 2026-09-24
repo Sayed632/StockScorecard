@@ -6,6 +6,8 @@ Sent TOGETHER with regular detail messages (not instead of them).
 
 from __future__ import annotations
 
+from src.shared.time_ist import format_ist, now_ist
+
 from datetime import datetime
 from typing import List, Optional
 import logging
@@ -15,7 +17,7 @@ logger = logging.getLogger(__name__)
 
 def format_daily_digest_telegram() -> str:
     """Build a compact action digest from core layers."""
-    now = datetime.now().strftime("%d %b %Y | %H:%M IST")
+    now = format_ist()
     lines: List[str] = [
         "<b>📋 StockScorecard DIGEST</b>",
         now,

@@ -1,3 +1,4 @@
+from src.shared.time_ist import format_ist, now_ist
 #!/usr/bin/env python3
 """
 Weekly ticker maintenance.
@@ -104,7 +105,7 @@ def main():
     if args.limit:
         tickers = tickers[: args.limit]
 
-    now = datetime.now()
+    now = now_ist()
     rows = []
     counts = {"ok": 0, "not_found": 0, "no_price": 0, "error": 0, "unknown": 0}
 
@@ -157,7 +158,7 @@ def main():
             from src.telegram_notify import send_message
             lines = [
                 "<b>🛠 Ticker maintenance (weekly)</b>",
-                now.strftime("%d %b %Y | %H:%M IST"),
+                format_ist(now),
                 "",
                 f"Total checked: <b>{len(rows)}</b>",
                 f"✅ OK: {counts.get('ok',0)}",

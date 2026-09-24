@@ -10,6 +10,8 @@ Not investment advice — IPO performance changes quickly.
 
 from __future__ import annotations
 
+from src.shared.time_ist import format_ist, now_ist
+
 from dataclasses import dataclass
 from datetime import datetime
 from pathlib import Path
@@ -127,7 +129,7 @@ def run_ipo_performance(min_gain_pct: float = 0.0, limit: int = 20) -> Dict[str,
     losers = [r for r in rows if r.gain_pct < 0]
 
     return {
-        "scan_time": datetime.now(),
+        "scan_time": now_ist(),
         "all": rows,
         "profitable": [r for r in profitable if r.gain_pct >= 0][:limit],
         "losers": sorted(losers, key=lambda r: r.gain_pct)[:8],
@@ -139,7 +141,7 @@ def run_ipo_performance(min_gain_pct: float = 0.0, limit: int = 20) -> Dict[str,
 def format_ipo_telegram(result: Optional[Dict[str, Any]] = None) -> str:
     if result is None:
         result = run_ipo_performance()
-    now = result["scan_time"].strftime("%d %b %Y | %H:%M IST")
+    now = format_ist(result["scan_time"])
     profit: List[IPOResult] = result.get("profitable") or []
     losers: List[IPOResult] = result.get("losers") or []
 
