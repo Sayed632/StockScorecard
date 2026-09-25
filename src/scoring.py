@@ -92,6 +92,7 @@ def run_scorecard(
             "V": round(v, 1),
             "T": round(t, 1),
             "pe": fund.get("pe"),
+            "peg": fund.get("peg"),
             "pb": fund.get("pb"),
             "roe": fund.get("roe"),
             "debt_to_equity": fund.get("debt_to_equity"),

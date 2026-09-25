@@ -82,6 +82,7 @@ class ScreenerSnapshot:
     symbol: str
     market_cap: Optional[str] = None
     pe: Optional[float] = None
+    peg: Optional[float] = None
     roe: Optional[float] = None
     roce: Optional[float] = None
     debt_to_equity: Optional[float] = None
@@ -235,6 +236,12 @@ def fetch_company(session: requests.Session, symbol: str) -> ScreenerSnapshot:
                 snap.fii_pct = _num(cells[-1]) or snap.fii_pct
             if "dii" in lab or "domestic" in lab:
                 snap.dii_pct = _num(cells[-1]) or snap.dii_pct
+        # PEG ≈ PE / YoY profit growth % when both present
+        if snap.pe and snap.profit_growth_yoy and snap.profit_growth_yoy > 1:
+            try:
+                snap.peg = round(float(snap.pe) / float(snap.profit_growth_yoy), 2)
+            except Exception:
+                pass
         snap.ok = True
         return snap
     except Exception as e:

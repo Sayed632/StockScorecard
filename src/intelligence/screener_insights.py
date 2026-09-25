@@ -53,6 +53,13 @@ def _lt_score(s: ScreenerSnapshot) -> float:
         sc -= 10
     if s.sales_growth_yoy is not None:
         sc += max(-10, min(15, s.sales_growth_yoy * 0.2))
+    if getattr(s, "peg", None) is not None and s.peg > 0:
+        if s.peg < 1:
+            sc += 10
+        elif s.peg < 1.5:
+            sc += 5
+        elif s.peg > 2.5:
+            sc -= 8
     return sc
 
 
@@ -109,6 +116,8 @@ def format_screener_insights_telegram(result: Optional[Dict[str, Any]] = None) -
                 bits.append(f"Sales QoQ {s.sales_growth_qoq:+.0f}%")
             if s.pe is not None:
                 bits.append(f"PE {s.pe:.0f}")
+            if getattr(s, "peg", None) is not None:
+                bits.append(f"PEG {s.peg:.2f}")
             lines.append(
                 f"• <b>{s.symbol}</b> – {', '.join(bits) if bits else 'ratios ok'}"
             )
@@ -131,6 +140,8 @@ def format_screener_insights_telegram(result: Optional[Dict[str, Any]] = None) -
                 bits.append(f"D/E {s.debt_to_equity:.2f}")
             if s.promoter_pct is not None:
                 bits.append(f"Prom {s.promoter_pct:.0f}%")
+            if getattr(s, "peg", None) is not None:
+                bits.append(f"PEG {s.peg:.2f}")
             lines.append(
                 f"• <b>{s.symbol}</b> – {', '.join(bits) if bits else 'see page'}"
             )

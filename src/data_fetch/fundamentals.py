@@ -102,6 +102,7 @@ def fetch_basic_fundamentals(yahoo_symbol: str) -> Dict[str, Any]:
         "pb": None,
         "ps": None,
         "peg": None,
+        "peg_derived": False,
         "roe": None,
         "roa": None,
         "debt_to_equity": None,
@@ -136,6 +137,18 @@ def fetch_basic_fundamentals(yahoo_symbol: str) -> Dict[str, Any]:
         out["pb"] = info.get("priceToBook")
         out["ps"] = info.get("priceToSalesTrailing12Months")
         out["peg"] = info.get("pegRatio")
+        # Derive PEG when vendor field missing: PE / (EPS growth %)
+        if out["peg"] is None and out.get("pe") and out.get("earnings_growth"):
+            try:
+                eg = float(out["earnings_growth"])
+                pe = float(out["pe"])
+                # yfinance earningsGrowth is often decimal (0.15 = 15%)
+                growth_pct = eg * 100.0 if abs(eg) <= 2 else eg
+                if pe > 0 and growth_pct > 1:
+                    out["peg"] = round(pe / growth_pct, 2)
+                    out["peg_derived"] = True
+            except Exception:
+                pass
         out["roe"] = info.get("returnOnEquity")
         out["roa"] = info.get("returnOnAssets")
         out["debt_to_equity"] = info.get("debtToEquity")
