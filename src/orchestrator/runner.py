@@ -49,6 +49,7 @@ from src.intelligence.early_move_alert import format_early_move_telegram
 from src.intelligence.wide_parallel_scan import format_wide_scan_telegram
 from src.intelligence.daily_brief import format_daily_brief_telegram
 from src.intelligence.fno_bias import format_fno_bias_telegram
+from src.intelligence.fno_strike_alerts import format_fno_strike_alerts_telegram
 from src.intelligence.big_money_flow import format_big_money_telegram
 from src.intelligence.screener_insights import format_screener_insights_telegram
 from src.intelligence.rally_detector import format_rally_detector_telegram
@@ -382,6 +383,14 @@ def run_full_scan(
             logger.info("F&O Bias Telegram: %s", "sent" if telegram_send(fno_text) else "failed")
         except Exception as e:
             logger.warning("F&O Bias failed: %s", e)
+
+        try:
+            fsa_text = format_fno_strike_alerts_telegram()
+            if len(fsa_text) > 4000:
+                fsa_text = fsa_text[:3900] + "\n\n… (truncated)"
+            logger.info("F&O Strike Alerts Telegram: %s", "sent" if telegram_send(fsa_text) else "failed")
+        except Exception as e:
+            logger.warning("F&O Strike Alerts failed: %s", e)
 
         
         try:
