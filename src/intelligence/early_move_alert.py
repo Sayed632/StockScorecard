@@ -7,6 +7,7 @@ Combines:
   - Quarterly / results catalysts (NSE announcements + news keywords)
 
 Honest limit: this is an early-warning screen, NOT a guarantee of price increase.
+RALLY_BOOST: pairs with dedicated Rally Detector for multi-day strength.
 """
 
 from __future__ import annotations

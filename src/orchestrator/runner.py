@@ -51,6 +51,7 @@ from src.intelligence.daily_brief import format_daily_brief_telegram
 from src.intelligence.fno_bias import format_fno_bias_telegram
 from src.intelligence.big_money_flow import format_big_money_telegram
 from src.intelligence.screener_insights import format_screener_insights_telegram
+from src.intelligence.rally_detector import format_rally_detector_telegram
 from src.intelligence.profit_opportunity import format_profit_opportunity_telegram
 from src.telegram_notify import send_message as telegram_send
 from src.delivery.telegram_report import send_daily_report, format_report
@@ -399,6 +400,15 @@ def run_full_scan(
             logger.info("Screener Insights Telegram: %s", "sent" if telegram_send(si_text) else "failed")
         except Exception as e:
             logger.warning("Screener Insights failed: %s", e)
+
+        
+        try:
+            rally_text = format_rally_detector_telegram()
+            if len(rally_text) > 4000:
+                rally_text = rally_text[:3900] + "\n\n… (truncated)"
+            logger.info("Rally Detector Telegram: %s", "sent" if telegram_send(rally_text) else "failed")
+        except Exception as e:
+            logger.warning("Rally Detector failed: %s", e)
 
         # Curated Daily Brief LAST (existing messages unchanged)
         try:
