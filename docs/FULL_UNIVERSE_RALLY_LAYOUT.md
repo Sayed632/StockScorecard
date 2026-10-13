@@ -47,3 +47,14 @@ Scan as much of NSE as practical → rank **rally stocks** → Telegram shortlis
 - Workflow: Rally Detector (multi times / day)
 - Manual: Actions → Rally Detector → Run workflow
 - Add urgent symbols to config/broad_universe.yaml
+
+
+## IPO stocks
+
+| Stage | Scanner |
+|-------|---------|
+| Pre-listing / DRHP | Pre-IPO module (separate) |
+| Listed + issue price tracking | IPO performance module (separate) |
+| Listed + **price rally** | Full universe + **Rally Detector** (IPO symbols auto-merged from `ipo_watchlist.yaml`) |
+
+Listed IPO symbols in `config/ipo_watchlist.yaml` are **always** added to the merged scan universe.

@@ -166,5 +166,29 @@ def load_merged_universe(
     ]:
         add(s, n)
 
+    # Listed IPOs from IPO performance watchlist
+    ipo_path = ROOT / "config" / "ipo_watchlist.yaml"
+    if ipo_path.exists():
+        try:
+            data = yaml.safe_load(ipo_path.read_text(encoding="utf-8")) or {}
+            for row in data.get("ipos") or []:
+                add(str(row.get("symbol") or ""), str(row.get("name") or ""))
+        except Exception as e:
+            logger.debug("ipo_watchlist merge: %s", e)
+
+    # Pre-IPO file: only status == listed (if symbol provided)
+    pre_path = ROOT / "config" / "pre_ipo_watchlist.yaml"
+    if pre_path.exists():
+        try:
+            data = yaml.safe_load(pre_path.read_text(encoding="utf-8")) or {}
+            for row in data.get("names") or []:
+                if str(row.get("status") or "").lower() != "listed":
+                    continue
+                sym = str(row.get("symbol") or row.get("nse") or "").upper()
+                if sym:
+                    add(sym, str(row.get("name") or sym))
+        except Exception as e:
+            logger.debug("pre_ipo merge: %s", e)
+
     logger.info("Merged universe size: %s", len(out))
     return out

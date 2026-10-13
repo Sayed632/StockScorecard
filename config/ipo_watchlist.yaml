@@ -64,3 +64,8 @@ ipos:
     issue_price: 60
     list_date: "2026-08-24"
     notes: "May map to wrong ticker – verify"
+  - symbol: CMLL
+    name: Caliber Mining and Logistics
+    issue_price: 0
+    list_date: "2026-07-24"
+    notes: "Issue price refine from RHP if needed; force-tracked for rally universe"
