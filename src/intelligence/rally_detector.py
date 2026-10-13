@@ -26,11 +26,12 @@ import re
 import yaml
 
 from src.data_fetch.prices import fetch_price_history
+from src.data_fetch.nse_universe import load_merged_universe
 
 logger = logging.getLogger(__name__)
 
 ROOT = Path(__file__).resolve().parents[2]
-MAX_WORKERS = 18
+MAX_WORKERS = 20
 TOP_N = 12
 
 
@@ -50,39 +51,16 @@ class RallyName:
 
 
 def _load_symbols() -> List[Tuple[str, str]]:
-    seen = set()
-    out: List[Tuple[str, str]] = []
-
-    def add(sym: str, name: str = ""):
-        sym = (sym or "").strip().upper()
-        if not sym or sym in seen:
-            return
-        seen.add(sym)
-        out.append((sym, name or sym))
-
-    ty = ROOT / "config" / "tickers.yaml"
-    if ty.exists():
-        data = yaml.safe_load(ty.read_text(encoding="utf-8")) or {}
-        for row in data.get("tickers") or []:
-            add(str(row.get("symbol") or ""), str(row.get("name") or ""))
-
-    by = ROOT / "config" / "broad_universe.yaml"
-    if by.exists():
-        data = yaml.safe_load(by.read_text(encoding="utf-8")) or {}
-        for row in data.get("symbols") or []:
-            if isinstance(row, str):
-                add(row)
-            else:
-                add(str(row.get("symbol") or ""), str(row.get("name") or ""))
-
-    for p in (ROOT / "src" / "sectors").glob("*.py"):
-        if p.name.startswith("_") or p.name.startswith("penny"):
-            continue
-        text = p.read_text(errors="ignore")
-        for m in re.finditer(r'\{"symbol":\s*"([^"]+)",\s*"name":\s*"([^"]+)"', text):
-            add(m.group(1), m.group(2))
-
-    return out
+    """Full merged universe (NSE master when available + local lists)."""
+    try:
+        return load_merged_universe(
+            include_nse_master=True,
+            include_local_yaml=True,
+            include_sectors=True,
+        )
+    except Exception as e:
+        logger.warning("merged universe failed (%s); fallback local only", e)
+        return load_merged_universe(include_nse_master=False)
 
 
 def _ret(close, days: int) -> Optional[float]:
@@ -200,7 +178,7 @@ def _analyse(symbol: str, name: str) -> Optional[RallyName]:
         return None
 
 
-def run_rally_detector(max_symbols: int = 280) -> Dict[str, Any]:
+def run_rally_detector(max_symbols: int = 1200) -> Dict[str, Any]:
     symbols = _load_symbols()[:max_symbols]
     hits: List[RallyName] = []
 

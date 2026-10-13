@@ -26,6 +26,7 @@ import re
 import yaml
 
 from src.data_fetch.prices import fetch_price_history
+from src.data_fetch.nse_universe import load_merged_universe
 from src.intelligence.catalysts import format_price
 
 logger = logging.getLogger(__name__)
@@ -51,7 +52,13 @@ class Mover:
 
 
 def _load_symbols() -> List[Tuple[str, str]]:
-    """(symbol, name) from tickers.yaml + broad_universe.yaml."""
+    """Prefer full merged NSE+local universe."""
+    try:
+        u = load_merged_universe()
+        if len(u) >= 100:
+            return u
+    except Exception:
+        pass
     seen = set()
     out: List[Tuple[str, str]] = []
 
