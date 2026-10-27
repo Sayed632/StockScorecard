@@ -1,0 +1,32 @@
+name: Swing Catcher (Do Not Miss)
+
+on:
+  schedule:
+    # Dense on trading days – primary miss-avoidance scan
+    - cron: "30 3 * * 1-5"   # ~09:00 IST
+    - cron: "0 5 * * 1-5"    # ~10:30 IST
+    - cron: "30 6 * * 1-5"   # ~12:00 IST
+    - cron: "0 8 * * 1-5"    # ~13:30 IST
+    - cron: "30 9 * * 1-5"   # ~15:00 IST
+  workflow_dispatch:
+
+jobs:
+  swing-catcher:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run Swing Catcher
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SWING_CATCHER_MAX: "1500"
+        run: python scripts/run_swing_catcher.py

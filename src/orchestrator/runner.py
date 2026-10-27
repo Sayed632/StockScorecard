@@ -1,3 +1,4 @@
+from src.intelligence.swing_catcher import format_swing_catcher_telegram
 from src.shared.time_ist import format_ist, now_ist
 """
 Main Orchestrator – runs the full daily decision cycle.
@@ -412,7 +413,8 @@ def run_full_scan(
 
         
         try:
-            rally_text = format_rally_detector_telegram()
+            rally_text = format_swing_catcher_telegram()  # also available
+            format_rally_detector_telegram()
             if len(rally_text) > 4000:
                 rally_text = rally_text[:3900] + "\n\n… (truncated)"
             logger.info("Rally Detector Telegram: %s", "sent" if telegram_send(rally_text) else "failed")

@@ -136,3 +136,5 @@ symbols:
   - { symbol: VBL, name: "Varun Beverages Ltd" }
   - { symbol: RADICO, name: "Radico Khaitan Ltd" }
   - { symbol: CMLL, name: "Caliber Mining and Logistics Ltd" }
+  - { symbol: JUSTDIAL, name: "Just Dial Ltd" }
+  - { symbol: ONESOURCE, name: "Onesource Specialty Pharma Ltd" }

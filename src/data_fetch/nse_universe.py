@@ -163,6 +163,8 @@ def load_merged_universe(
     for s, n in [
         ("CMLL", "Caliber Mining and Logistics Ltd"),
         ("HIKAL", "Hikal Ltd"),
+        ("JUSTDIAL", "Just Dial Ltd"),
+        ("ONESOURCE", "Onesource Specialty Pharma Ltd"),
     ]:
         add(s, n)
 

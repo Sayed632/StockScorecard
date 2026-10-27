@@ -8,6 +8,7 @@ from src.sectors._helpers import (
 )
 
 UNIVERSE = [
+    {"symbol": "JUSTDIAL", "name": "Just Dial Ltd"},
     {"symbol": "ZEEL", "name": "Zee Entertainment Enterprises"},
     {"symbol": "SUNTV", "name": "Sun TV Network Ltd"},
     {"symbol": "PVRINOX", "name": "PVR INOX Ltd"},

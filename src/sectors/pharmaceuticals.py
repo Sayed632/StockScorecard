@@ -27,6 +27,7 @@ PHARMA_UNIVERSE = [
     {"symbol": "TORNTPHARM", "name": "Torrent Pharmaceuticals Ltd"},
     {"symbol": "ALKEM", "name": "Alkem Laboratories Ltd"},
     {"symbol": "BIOCON", "name": "Biocon Ltd"},
+    {"symbol": "ONESOURCE", "name": "Onesource Specialty Pharma Ltd"},
     {"symbol": "GLENMARK", "name": "Glenmark Pharmaceuticals Ltd"},
     {"symbol": "IPCALAB", "name": "IPCA Laboratories Ltd"},
     {"symbol": "NATCOPHARM", "name": "Natco Pharma Ltd"},
