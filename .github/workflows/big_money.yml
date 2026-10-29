@@ -2,11 +2,8 @@ name: Big Money Flow
 
 on:
   schedule:
-    # ~08:00 IST and ~18:00 IST Mon-Fri (shareholding is slow-moving; 2x enough)
-    - cron: "30 2 * * 1-5"
-    - cron: "30 12 * * 1-5"
+    - cron: "0 5 * * 1-5"    # ~10:30 IST (was also ~18:00 IST)
   workflow_dispatch:
-
 jobs:
   big-money:
     runs-on: ubuntu-latest

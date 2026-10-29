@@ -2,13 +2,12 @@ name: Wide Parallel Scan
 
 on:
   schedule:
-    - cron: "30 5 * * 1-5"
-    - cron: "30 9 * * 1-5"
+    - cron: "30 5 * * 1-5"   # ~11:00 IST
+    - cron: "0 10 * * 1-5"   # ~15:30 IST (afternoon capture)
   workflow_dispatch:
 
 permissions:
   contents: write
-
 jobs:
   wide-scan:
     runs-on: ubuntu-latest

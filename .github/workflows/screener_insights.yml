@@ -2,10 +2,8 @@ name: Screener Insights
 
 on:
   schedule:
-    - cron: "0 3 * * 1-5"   # ~08:30 IST
-    - cron: "0 11 * * 1-5"  # ~16:30 IST
+    - cron: "0 4 * * 1-5"    # ~09:30 IST only (was also 16:30)
   workflow_dispatch:
-
 jobs:
   screener:
     runs-on: ubuntu-latest

@@ -2,10 +2,8 @@ name: Wide Scan Next-Day Plan
 
 on:
   schedule:
-    - cron: "50 3 * * 1-5"
-    - cron: "30 5 * * 1-5"
+    - cron: "45 3 * * 1-5"   # ~09:15 IST main plan
   workflow_dispatch:
-
 jobs:
   followup:
     runs-on: ubuntu-latest

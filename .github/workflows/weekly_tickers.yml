@@ -1,12 +1,9 @@
-# Weekly ticker registry validation
 name: Weekly Ticker Maintenance
 
 on:
   schedule:
-    # Monday 06:30 IST ≈ 01:00 UTC
-    - cron: "0 1 * * 1"
+    - cron: "30 3 * * 1"     # Monday ~09:00 IST (was ~06:30)
   workflow_dispatch:
-
 jobs:
   validate-tickers:
     runs-on: ubuntu-latest

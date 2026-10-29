@@ -2,9 +2,8 @@ name: Universe Refresh (NSE + IPO merge)
 
 on:
   schedule:
-    - cron: "0 2 * * 1"   # Monday ~07:30 IST
+    - cron: "0 3 * * 1"      # Monday ~08:30 IST
   workflow_dispatch:
-
 jobs:
   refresh:
     runs-on: ubuntu-latest

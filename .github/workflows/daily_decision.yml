@@ -1,22 +1,17 @@
-# StockScorecard – Automated Daily Decision Report
-# Runs at NSE-aligned times and posts to Telegram.
-
 name: Daily Decision Report
 
 on:
   schedule:
-    # FAST path: all sector niches (pharma, metals, banks, …)
-    - cron: "20 3 * * 1-5"    # ~08:50 IST pre-open
-    - cron: "45 5 * * 1-5"    # ~11:15 IST mid-morning
-    - cron: "15 8 * * 1-5"    # ~13:45 IST afternoon
-    - cron: "30 10 * * 1-5"   # ~16:00 IST post-close
+    # Market-hours IST only
+    - cron: "30 3 * * 1-5"   # ~09:00 IST
+    - cron: "0 8 * * 1-5"    # ~13:30 IST
+    - cron: "30 10 * * 1-5"  # ~16:00 IST post-close
   workflow_dispatch:
     inputs:
       force_frequency:
         description: "Force frequency (1 / 2 / 3). Leave empty for auto."
         required: false
         default: ""
-
 jobs:
   run-decision:
     runs-on: ubuntu-latest

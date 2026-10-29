@@ -2,11 +2,9 @@ name: Swing Catcher (Do Not Miss)
 
 on:
   schedule:
-    # BREADTH safety net (full universe – slower)
-    - cron: "40 4 * * 1-5"    # ~10:10 IST
-    - cron: "10 9 * * 1-5"    # ~14:40 IST
+    - cron: "40 4 * * 1-5"   # ~10:10 IST
+    - cron: "0 9 * * 1-5"    # ~14:30 IST
   workflow_dispatch:
-
 jobs:
   swing-catcher:
     runs-on: ubuntu-latest

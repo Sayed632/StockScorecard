@@ -1,13 +1,10 @@
-# Lighter intra-day early move scan (Mon-Fri)
 name: Early Move Alerts
 
 on:
   schedule:
-    # ~11:30 IST and ~14:00 IST (Mon-Fri)
-    - cron: "0 6 * * 1-5"
-    - cron: "30 8 * * 1-5"
+    - cron: "45 3 * * 1-5"   # ~09:15 IST
+    - cron: "0 6 * * 1-5"    # ~11:30 IST
   workflow_dispatch:
-
 jobs:
   early-move:
     runs-on: ubuntu-latest
