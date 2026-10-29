@@ -1,0 +1,127 @@
+{
+  "saved_at": "seed from 29 Oct 2026 wide scan message",
+  "captured_day": "2026-10-29",
+  "count": 12,
+  "items": [
+    {
+      "symbol": "SAKUMA",
+      "name": "Sakuma Exports",
+      "capture_price": 1.95,
+      "capture_ret_1d": 19.6,
+      "capture_ret_5d": 36,
+      "capture_vol_ratio": 10.4,
+      "capture_score": 56,
+      "captured_at": "2026-10-29"
+    },
+    {
+      "symbol": "NILKAMAL",
+      "name": "Nilkamal",
+      "capture_price": 2003.9,
+      "capture_ret_1d": 13.6,
+      "capture_ret_5d": 19,
+      "capture_vol_ratio": 32.5,
+      "capture_score": 43,
+      "captured_at": "2026-10-29"
+    },
+    {
+      "symbol": "MANAKCOAT",
+      "name": "Manaksia Coated",
+      "capture_price": 147.84,
+      "capture_ret_1d": 11.5,
+      "capture_ret_5d": 17,
+      "capture_vol_ratio": 9.8,
+      "capture_score": 40,
+      "captured_at": "2026-10-29"
+    },
+    {
+      "symbol": "APOLLOPIPE",
+      "name": "Apollo Pipes",
+      "capture_price": 544.25,
+      "capture_ret_1d": 13.0,
+      "capture_ret_5d": 11,
+      "capture_vol_ratio": 13.1,
+      "capture_score": 40,
+      "captured_at": "2026-10-29"
+    },
+    {
+      "symbol": "BSOFT",
+      "name": "Birlasoft",
+      "capture_price": 342.5,
+      "capture_ret_1d": 11.9,
+      "capture_ret_5d": 9,
+      "capture_vol_ratio": 17.0,
+      "capture_score": 37,
+      "captured_at": "2026-10-29"
+    },
+    {
+      "symbol": "SATIN",
+      "name": "Satin Creditcare",
+      "capture_price": 251.18,
+      "capture_ret_1d": 10.1,
+      "capture_ret_5d": 12,
+      "capture_vol_ratio": 47.0,
+      "capture_score": 36,
+      "captured_at": "2026-10-29"
+    },
+    {
+      "symbol": "AEROFLEX",
+      "name": "Aeroflex Industries",
+      "capture_price": 538.35,
+      "capture_ret_1d": 9.4,
+      "capture_ret_5d": 12,
+      "capture_vol_ratio": 9.6,
+      "capture_score": 36,
+      "captured_at": "2026-10-29"
+    },
+    {
+      "symbol": "SANOFI",
+      "name": "Sanofi India",
+      "capture_price": 3189.5,
+      "capture_ret_1d": 6.6,
+      "capture_ret_5d": 13,
+      "capture_vol_ratio": 5.9,
+      "capture_score": 32,
+      "captured_at": "2026-10-29"
+    },
+    {
+      "symbol": "HEG",
+      "name": "HEG Limited",
+      "capture_price": 228.74,
+      "capture_ret_1d": 6.3,
+      "capture_ret_5d": 9,
+      "capture_vol_ratio": 5.2,
+      "capture_score": 31,
+      "captured_at": "2026-10-29"
+    },
+    {
+      "symbol": "HUBTOWN",
+      "name": "Hubtown",
+      "capture_price": 183.89,
+      "capture_ret_1d": 6.7,
+      "capture_ret_5d": 23,
+      "capture_vol_ratio": 23.4,
+      "capture_score": 36,
+      "captured_at": "2026-10-29"
+    },
+    {
+      "symbol": "SGFIN",
+      "name": "SG Finserve",
+      "capture_price": 734.95,
+      "capture_ret_1d": 12.8,
+      "capture_ret_5d": 19,
+      "capture_vol_ratio": 3.4,
+      "capture_score": 36,
+      "captured_at": "2026-10-29"
+    },
+    {
+      "symbol": "RPOWER",
+      "name": "Reliance Power",
+      "capture_price": 18.98,
+      "capture_ret_1d": 9.1,
+      "capture_ret_5d": 11,
+      "capture_vol_ratio": 6.5,
+      "capture_score": 35,
+      "captured_at": "2026-10-29"
+    }
+  ]
+}

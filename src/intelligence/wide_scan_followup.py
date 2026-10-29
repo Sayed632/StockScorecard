@@ -26,7 +26,7 @@ from src.data_fetch.prices import fetch_price_history
 logger = logging.getLogger(__name__)
 
 ROOT = Path(__file__).resolve().parents[2]
-WATCH_PATH = ROOT / "data" / "wide_scan_watch.json"
+WATCH_PATH = ROOT / "config" / "wide_scan_watch.json"
 MAX_WATCH = 15
 
 
