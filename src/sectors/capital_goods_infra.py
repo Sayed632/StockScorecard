@@ -16,6 +16,7 @@ UNIVERSE = [
     {"symbol": "KEI", "name": "KEI Industries Ltd"},
     {"symbol": "THERMAX", "name": "Thermax Ltd"},
     {"symbol": "BHEL", "name": "Bharat Heavy Electricals"},
+    {"symbol": "AEROFLEX", "name": "Aeroflex Industries Ltd"},
     {"symbol": "CUMMINSIND", "name": "Cummins India Ltd"},
     {"symbol": "AIAENG", "name": "AIA Engineering Ltd"},
     {"symbol": "KIRLOSENG", "name": "Kirloskar Oil Engines"},
