@@ -1,0 +1,27 @@
+name: Wide Scan Next-Day Plan
+
+on:
+  schedule:
+    - cron: "50 3 * * 1-5"
+    - cron: "30 5 * * 1-5"
+  workflow_dispatch:
+
+jobs:
+  followup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Evaluate yesterday movers
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/run_wide_scan_followup.py

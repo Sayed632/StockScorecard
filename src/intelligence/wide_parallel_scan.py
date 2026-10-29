@@ -28,6 +28,7 @@ import yaml
 from src.data_fetch.prices import fetch_price_history
 from src.data_fetch.nse_universe import load_merged_universe
 from src.intelligence.catalysts import format_price
+from src.intelligence.wide_scan_followup import save_watch_from_movers
 
 logger = logging.getLogger(__name__)
 
@@ -174,11 +175,16 @@ def run_wide_parallel_scan(
                 movers.append(m)
 
     movers.sort(key=lambda x: -x.score)
+    top = movers[:top_n]
+    try:
+        save_watch_from_movers(top)
+    except Exception as e:
+        logger.warning("save wide-scan watch failed: %s", e)
     return {
         "scan_time": now_ist(),
         "universe_size": len(universe),
         "movers_found": len(movers),
-        "movers": movers[:top_n],
+        "movers": top,
     }
 
 
@@ -213,6 +219,6 @@ def format_wide_scan_telegram(result: Optional[Dict[str, Any]] = None) -> str:
     lines.append("")
     lines.append(
         "<i>Parallel scan catches moves outside curated Swing lists. "
-        "Verify volume & news. Use stops. StockScorecard</i>"
+        "Verify volume & news. Use stops. Saved for next-day plan. StockScorecard</i>"
     )
     return "\n".join(lines)

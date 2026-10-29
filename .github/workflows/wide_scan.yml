@@ -1,12 +1,13 @@
-# Wide parallel day-mover scan (full registry + broad universe)
 name: Wide Parallel Scan
 
 on:
   schedule:
-    # ~11:00 IST and ~15:00 IST Mon-Fri (after open / near close)
     - cron: "30 5 * * 1-5"
     - cron: "30 9 * * 1-5"
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   wide-scan:
@@ -27,3 +28,11 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python scripts/run_wide_scan.py
+      - name: Commit watchlist for next-day plan
+        run: |
+          git config user.name "stockscorecard-bot"
+          git config user.email "bot@stockscorecard.local"
+          mkdir -p data
+          git add data/wide_scan_watch.json || true
+          git diff --staged --quiet || git commit -m "chore: wide-scan watchlist for next-day plan"
+          git push || true
