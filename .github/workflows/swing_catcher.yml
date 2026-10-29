@@ -13,7 +13,7 @@ on:
 jobs:
   swing-catcher:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 90
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -28,5 +28,5 @@ jobs:
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-          SWING_CATCHER_MAX: "1500"
+          SWING_CATCHER_MAX: "2200"
         run: python scripts/run_swing_catcher.py

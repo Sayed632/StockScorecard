@@ -30,6 +30,8 @@ CACHE = ROOT / "config" / "nse_equity_cache.yaml"
 
 # Public NSE equity list (may occasionally block; fail soft)
 NSE_EQUITY_URLS = [
+    "https://raw.githubusercontent.com/imanojkumar/NSE-India-All-Stocks-Tickers-Data/main/Ticker_List_NSE_India.csv",
+    "https://raw.githubusercontent.com/feroze/YFinance-stock-history/master/EQUITY_L.csv",
     "https://nsearchives.nseindia.com/content/equities/EQUITY_L.csv",
     "https://archives.nseindia.com/content/equities/EQUITY_L.csv",
 ]

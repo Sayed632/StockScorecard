@@ -21,8 +21,8 @@ from src.data_fetch.nse_universe import load_merged_universe
 
 logger = logging.getLogger(__name__)
 
-MAX_WORKERS = int(os.getenv("SWING_CATCHER_WORKERS", "20"))
-MAX_SYMBOLS = int(os.getenv("SWING_CATCHER_MAX", "800"))
+MAX_WORKERS = int(os.getenv("SWING_CATCHER_WORKERS", "24"))
+MAX_SYMBOLS = int(os.getenv("SWING_CATCHER_MAX", "2200"))
 TOP_N = 15
 
 
