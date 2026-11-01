@@ -1,3 +1,4 @@
+from src.intelligence.context_intelligence import format_context_intelligence_telegram
 from src.intelligence.swing_catcher import format_swing_catcher_telegram
 from src.shared.time_ist import format_ist, now_ist
 """
@@ -420,6 +421,15 @@ def run_full_scan(
             logger.info("Rally Detector Telegram: %s", "sent" if telegram_send(rally_text) else "failed")
         except Exception as e:
             logger.warning("Rally Detector failed: %s", e)
+
+        
+        try:
+            ctx = format_context_intelligence_telegram()
+            if len(ctx) > 4000:
+                ctx = ctx[:3900] + "\n\n… (truncated)"
+            logger.info("Context intelligence: %s", "sent" if telegram_send(ctx) else "failed")
+        except Exception as e:
+            logger.warning("Context intelligence failed: %s", e)
 
         # Curated Daily Brief LAST (existing messages unchanged)
         try:
