@@ -1,157 +1,157 @@
 {
-  "saved_at": "30 Oct 2026 | 10:07 PM IST",
-  "captured_day": "2026-10-30",
+  "saved_at": "02 Nov 2026 | 7:12 PM IST",
+  "captured_day": "2026-11-02",
   "count": 15,
   "items": [
     {
+      "symbol": "ITI",
+      "name": "ITI Limited",
+      "capture_price": 259.1400146484375,
+      "capture_ret_1d": 20.00000847906791,
+      "capture_ret_5d": 19.18319614481696,
+      "capture_vol_ratio": 115.08312000902367,
+      "capture_score": 50.71412882556743,
+      "captured_at": "2026-11-02"
+    },
+    {
+      "symbol": "GAYAHWS",
+      "name": "Gayatri Highways Limited",
+      "capture_price": 1.8799999952316284,
+      "capture_ret_1d": 19.745218625653614,
+      "capture_ret_5d": 16.049382080121145,
+      "capture_vol_ratio": 5.371281396306114,
+      "capture_score": 49.31154607882674,
+      "captured_at": "2026-11-02"
+    },
+    {
+      "symbol": "ROML",
+      "name": "Raj Oil Mills Limited",
+      "capture_price": 46.08000183105469,
+      "capture_ret_1d": 16.658232483682745,
+      "capture_ret_5d": 18.214475044119062,
+      "capture_vol_ratio": 88.767522855899,
+      "capture_score": 46.364945245860966,
+      "captured_at": "2026-11-02"
+    },
+    {
+      "symbol": "BHARATWIRE",
+      "name": "Bharat Wire Ropes Limited",
+      "capture_price": 165.24000549316406,
+      "capture_ret_1d": 16.612568138247852,
+      "capture_ret_5d": 15.60904915736634,
+      "capture_vol_ratio": 21.068677223857335,
+      "capture_score": 45.398248970975644,
+      "captured_at": "2026-11-02"
+    },
+    {
+      "symbol": "ENGINERSIN",
+      "name": "Engineers India Limited",
+      "capture_price": 289.6499938964844,
+      "capture_ret_1d": 15.008928678537403,
+      "capture_ret_5d": 18.61179259468837,
+      "capture_vol_ratio": 12.867252269138069,
+      "capture_score": 44.52484182238581,
+      "captured_at": "2026-11-02"
+    },
+    {
+      "symbol": "SKMEGGPROD",
+      "name": "SKM Egg Products Export (India) Limited",
+      "capture_price": 221.02000427246094,
+      "capture_ret_1d": 14.287194255139667,
+      "capture_ret_5d": 20.690219177296896,
+      "capture_vol_ratio": 7.950562002890735,
+      "capture_score": 44.386209818221516,
+      "captured_at": "2026-11-02"
+    },
+    {
       "symbol": "BOROLTD",
       "name": "Borosil Limited",
-      "capture_price": 286.3999938964844,
-      "capture_ret_1d": 19.983241540880737,
-      "capture_ret_5d": 21.433108537119196,
-      "capture_vol_ratio": 80.2265562472049,
-      "capture_score": 51.4814778370486,
-      "captured_at": "2026-10-30"
+      "capture_price": 312.3500061035156,
+      "capture_ret_1d": 9.060758645270983,
+      "capture_ret_5d": 31.59890375873435,
+      "capture_vol_ratio": 7.077831298982906,
+      "capture_score": 41.9325266898822,
+      "captured_at": "2026-11-02"
     },
     {
-      "symbol": "JISLJALEQS",
-      "name": "Jain Irrigation Systems Limited",
-      "capture_price": 28.469999313354492,
-      "capture_ret_1d": 19.873681319387337,
-      "capture_ret_5d": 20.840407295041995,
-      "capture_vol_ratio": 24.903230329173823,
-      "capture_score": 51.142560136529504,
-      "captured_at": "2026-10-30"
-    },
-    {
-      "symbol": "JISLDVREQS",
-      "name": "Jain Irrigation Systems Limited",
-      "capture_price": 19.18000030517578,
-      "capture_ret_1d": 15.126053306387742,
-      "capture_ret_5d": 19.352835528386624,
-      "capture_vol_ratio": 28.93249364365343,
-      "capture_score": 44.92475640260061,
-      "captured_at": "2026-10-30"
-    },
-    {
-      "symbol": "DHANUKA",
-      "name": "Dhanuka Agritech Limited",
-      "capture_price": 980.1500244140625,
-      "capture_ret_1d": 12.029945943879472,
-      "capture_ret_5d": 17.43245620847411,
-      "capture_vol_ratio": 62.802601426778914,
-      "capture_score": 40.5372948056213,
-      "captured_at": "2026-10-30"
-    },
-    {
-      "symbol": "QUICKHEAL",
-      "name": "Quick Heal Technologies Limited",
-      "capture_price": 154.4600067138672,
-      "capture_ret_1d": 12.917621386801903,
-      "capture_ret_5d": 11.620177239242091,
-      "capture_vol_ratio": 53.37626333951654,
-      "capture_score": 39.568207697897016,
-      "captured_at": "2026-10-30"
-    },
-    {
-      "symbol": "ESSARSHPNG",
-      "name": "Essar Shipping Limited",
-      "capture_price": 17.549999237060547,
-      "capture_ret_1d": 9.277707476129926,
-      "capture_ret_5d": 19.87704115775537,
-      "capture_vol_ratio": 5.648408811057,
-      "capture_score": 38.09021337657029,
-      "captured_at": "2026-10-30"
-    },
-    {
-      "symbol": "LAURUSLABS",
-      "name": "Laurus Labs Limited",
-      "capture_price": 2405.5,
-      "capture_ret_1d": 7.196969696969702,
-      "capture_ret_5d": 22.106598984771566,
-      "capture_vol_ratio": 4.692019158132129,
-      "capture_score": 35.14174991356221,
-      "captured_at": "2026-10-30"
-    },
-    {
-      "symbol": "SMSPHARMA",
-      "name": "SMS Pharmaceuticals Limited",
-      "capture_price": 511.3500061035156,
-      "capture_ret_1d": 5.2593698955454515,
-      "capture_ret_5d": 23.33574495313535,
-      "capture_vol_ratio": 11.247620295513027,
-      "capture_score": 34.47875460825191,
-      "captured_at": "2026-10-30"
-    },
-    {
-      "symbol": "GREENPOWER",
-      "name": "Orient Green Power Company Limited",
-      "capture_price": 8.979999542236328,
-      "capture_ret_1d": 7.673853452506796,
-      "capture_ret_5d": 14.687096165206114,
-      "capture_vol_ratio": 6.323872186769636,
-      "capture_score": 34.349107800830296,
-      "captured_at": "2026-10-30"
+      "symbol": "JAYBARMARU",
+      "name": "Jay Bharat Maruti Limited",
+      "capture_price": 130.00999450683594,
+      "capture_ret_1d": 13.140710437298209,
+      "capture_ret_5d": 15.51309727379473,
+      "capture_vol_ratio": 6.651041046995836,
+      "capture_score": 41.198436570586004,
+      "captured_at": "2026-11-02"
     },
     {
       "symbol": "MENONBE",
       "name": "Menon Bearings Limited",
-      "capture_price": 276.20001220703125,
-      "capture_ret_1d": 9.451161294496746,
-      "capture_ret_5d": 4.641030283564307,
-      "capture_vol_ratio": 16.61965852925769,
-      "capture_score": 31.341393553396095,
-      "captured_at": "2026-10-30"
+      "capture_price": 311.1000061035156,
+      "capture_ret_1d": 12.635768412031933,
+      "capture_ret_5d": 14.712386467750282,
+      "capture_vol_ratio": 8.167757584422159,
+      "capture_score": 40.312257358150916,
+      "captured_at": "2026-11-02"
     },
     {
-      "symbol": "GREAVESCOT",
-      "name": "Greaves Cotton Limited",
-      "capture_price": 199.39999389648438,
-      "capture_ret_1d": 6.745177001541802,
-      "capture_ret_5d": 8.653001991241993,
-      "capture_vol_ratio": 24.649067656851763,
-      "capture_score": 31.12276309878486,
-      "captured_at": "2026-10-30"
+      "symbol": "AFFLE",
+      "name": "Affle (India) Limited",
+      "capture_price": 1506.5,
+      "capture_ret_1d": 12.274552480134226,
+      "capture_ret_5d": 14.397446432602013,
+      "capture_vol_ratio": 30.768901085878976,
+      "capture_score": 39.768569227571774,
+      "captured_at": "2026-11-02"
     },
     {
-      "symbol": "BPL",
-      "name": "BPL Limited",
-      "capture_price": 45.13999938964844,
-      "capture_ret_1d": 5.912718256495353,
-      "capture_ret_5d": 16.04112498457941,
-      "capture_vol_ratio": 4.08718169612607,
-      "capture_score": 29.058382436901496,
-      "captured_at": "2026-10-30"
+      "symbol": "KIRLOSBROS",
+      "name": "Kirloskar Brothers Limited",
+      "capture_price": 1792.800048828125,
+      "capture_ret_1d": 11.924085040435317,
+      "capture_ret_5d": 14.746545110972331,
+      "capture_vol_ratio": 34.60603545831761,
+      "capture_score": 39.470192837362696,
+      "captured_at": "2026-11-02"
     },
     {
-      "symbol": "SANGHVIMOV",
-      "name": "Sanghvi Movers Limited",
-      "capture_price": 366.29998779296875,
-      "capture_ret_1d": 6.158527967475269,
-      "capture_ret_5d": 14.343680603709807,
-      "capture_vol_ratio": 3.8807816742466694,
-      "capture_score": 27.93364846925543,
-      "captured_at": "2026-10-30"
+      "symbol": "DIXON",
+      "name": "Dixon Technologies (India) Limited",
+      "capture_price": 12319.0,
+      "capture_ret_1d": 11.990909090909096,
+      "capture_ret_5d": 10.375414389391624,
+      "capture_vol_ratio": 5.310613221202307,
+      "capture_score": 38.020485945377985,
+      "captured_at": "2026-11-02"
     },
     {
-      "symbol": "HIKAL",
-      "name": "Hikal Limited",
-      "capture_price": 211.5800018310547,
-      "capture_ret_1d": 3.5127241433317025,
-      "capture_ret_5d": 9.258976762041527,
-      "capture_vol_ratio": 15.196790852084103,
-      "capture_score": 26.753366010046236,
-      "captured_at": "2026-10-30"
+      "symbol": "PRAJIND",
+      "name": "Praj Industries Limited",
+      "capture_price": 271.1300048828125,
+      "capture_ret_1d": 12.176254988067914,
+      "capture_ret_5d": 8.778336964017042,
+      "capture_vol_ratio": 9.148242447831562,
+      "capture_score": 37.68392392308746,
+      "captured_at": "2026-11-02"
     },
     {
-      "symbol": "ORICONENT",
-      "name": "Oricon Enterprises Limited",
-      "capture_price": 56.369998931884766,
-      "capture_ret_1d": 3.1284286301614728,
-      "capture_ret_5d": 12.447631619418464,
-      "capture_vol_ratio": 4.409032718722841,
-      "capture_score": 25.1212305718493,
-      "captured_at": "2026-10-30"
+      "symbol": "RELIANCE",
+      "name": "Reliance Industries Limited",
+      "capture_price": 1300.0,
+      "capture_ret_1d": 11.597559683621084,
+      "capture_ret_5d": 8.1710723233561,
+      "capture_vol_ratio": 5.73019375011346,
+      "capture_score": 36.77694693351994,
+      "captured_at": "2026-11-02"
+    },
+    {
+      "symbol": "NELCAST",
+      "name": "Nelcast Limited",
+      "capture_price": 143.64999389648438,
+      "capture_ret_1d": 8.423268126361517,
+      "capture_ret_5d": 18.66996305242834,
+      "capture_vol_ratio": 10.965720011022812,
+      "capture_score": 36.64240881998374,
+      "captured_at": "2026-11-02"
     }
   ]
 }
