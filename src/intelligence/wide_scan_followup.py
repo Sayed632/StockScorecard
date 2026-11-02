@@ -189,14 +189,26 @@ def format_followup_telegram(result: Optional[Dict[str, Any]] = None) -> str:
         result = evaluate_watch()
     now = format_ist(result.get("scan_time"))
     day = result.get("captured_day") or "?"
+    recs: List[FollowRec] = result.get("recs") or []
+    n_c = sum(1 for r in recs if r.action == "CONTINUE")
+    n_w = sum(1 for r in recs if r.action == "WAIT_PULLBACK")
+    n_f = sum(1 for r in recs if r.action in ("FADE", "SKIP"))
+
     lines = [
         "<b>📋 WIDE SCAN → NEXT-DAY PLAN</b>",
         now,
-        f"<i>Monitoring movers captured on {day} · "
+        f"<i>From 🌐 Wide Parallel Scan list on <b>{day}</b> · "
         f"{result.get('evaluated', 0)}/{result.get('watched', 0)} priced</i>",
         "",
+        "<b>👩 Simple guide</b>",
+        "• 🟢 CONTINUE = may buy small size + stop (only these)",
+        "• 🟡 WAIT = do <b>not</b> buy today — wait for next plan",
+        "• 🔴 FADE / ⚪ SKIP = avoid new buy",
+        "• No need to watch charts all day",
+        "",
+        f"<i>Today: {n_c} CONTINUE · {n_w} WAIT · {n_f} FADE/SKIP</i>",
+        "",
     ]
-    recs: List[FollowRec] = result.get("recs") or []
     if not recs:
         lines.append("• No watchlist yet. Run <b>Wide Parallel Scan</b> first (evening).")
         lines.append("")
@@ -204,10 +216,10 @@ def format_followup_telegram(result: Optional[Dict[str, Any]] = None) -> str:
         return "\n".join(lines)
 
     groups = [
-        ("🟢 CONTINUE (strength holding)", "CONTINUE"),
-        ("🟡 WAIT PULLBACK (prefer better entry)", "WAIT_PULLBACK"),
-        ("🔴 FADE / weak (avoid new buys)", "FADE"),
-        ("⚪ SKIP (too extended / unclear)", "SKIP"),
+        ("🟢 CONTINUE — strength holding (only buy zone)", "CONTINUE"),
+        ("🟡 WAIT — watch only, no buy now", "WAIT_PULLBACK"),
+        ("🔴 FADE — weak, avoid new buys", "FADE"),
+        ("⚪ SKIP — too extended / unclear", "SKIP"),
     ]
     for title, key in groups:
         bucket = [r for r in recs if r.action == key]
@@ -218,14 +230,14 @@ def format_followup_telegram(result: Optional[Dict[str, Any]] = None) -> str:
             for r in bucket[:8]:
                 lines.append(
                     f"• <b>{r.symbol}</b> ₹{r.now_price:.2f} "
-                    f"(vs capture ₹{r.capture_price:.2f}, {r.change_pct:+.1f}%)"
+                    f"(was ₹{r.capture_price:.2f} on list day, {r.change_pct:+.1f}%)"
                 )
                 lines.append(f"   {r.reason}")
         lines.append("")
 
     lines.append(
-        "<i>Plan from yesterday’s movers — not auto-buy. "
-        "Use stops. Prefer CONTINUE only with your own risk limit. StockScorecard</i>"
+        "<i>Linked to prior Wide Parallel Scan movers (e.g. BOROLTD-style list). "
+        "Not auto-buy. Prefer CONTINUE only. Use stops. StockScorecard</i>"
     )
     text = "\n".join(lines)
     if len(text) > 4000:
