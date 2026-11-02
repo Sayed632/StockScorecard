@@ -12,6 +12,7 @@ from src.shared.fii_dii import (
 )
 from datetime import datetime
 from src.shared.time_ist import now_ist, format_ist
+from src.intelligence.gift_nifty import gift_swing_bias_pts
 from src.decision.probability import attach_probabilities
 from src.intelligence.news_bias import compute_news_bias_for_ideas, news_scoring_status
 

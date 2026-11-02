@@ -1,0 +1,28 @@
+name: GIFT Nifty Market Tone
+
+on:
+  schedule:
+    # Pre-open and mid-morning IST
+    - cron: "30 3 * * 1-5"   # ~09:00 IST
+    - cron: "0 5 * * 1-5"    # ~10:30 IST
+  workflow_dispatch:
+
+jobs:
+  gift:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: GIFT Nifty tone
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/run_gift_nifty.py
