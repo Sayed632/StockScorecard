@@ -168,15 +168,63 @@ def main():
         prog.progress((i + 1) / max(len(items), 1))
     prog.empty()
     df_tbl = pd.DataFrame(rows)
-    st.dataframe(
-        df_tbl,
-        use_container_width=True,
-        hide_index=True,
-        column_config={
-            "Day %": st.column_config.NumberColumn(format="%+.2f"),
-            "Cap 1D %": st.column_config.NumberColumn(format="%+.1f"),
-        },
+
+    def _focus_row(r) -> bool:
+        """Stocks to focus: still green today and holding vs capture."""
+        try:
+            day = r.get("Day %")
+            last = r.get("Last ₹")
+            cap = r.get("Capture ₹")
+            if day is None or last is None or cap is None:
+                return False
+            if float(day) < 1.0:
+                return False
+            if float(cap) <= 0:
+                return False
+            # holding at least ~flat vs capture (not broken)
+            if float(last) < float(cap) * 0.98:
+                return False
+            return True
+        except Exception:
+            return False
+
+    focus_mask = [_focus_row(r) for r in rows]
+    n_focus = sum(focus_mask)
+    st.markdown(
+        f"**Focus (green):** {n_focus} names — Day% ≥ +1 and price holding near/above capture. "
+        "Observe only; Telegram CONTINUE still rules buys."
     )
+
+    def _style_focus(row):
+        try:
+            idx = row.name
+            if idx < len(focus_mask) and focus_mask[idx]:
+                return ["color: #0a7a2f; font-weight: 700"] * len(row)
+        except Exception:
+            pass
+        return [""] * len(row)
+
+    try:
+        styled = df_tbl.style.apply(_style_focus, axis=1)
+        st.dataframe(
+            styled,
+            use_container_width=True,
+            hide_index=True,
+            column_config={
+                "Day %": st.column_config.NumberColumn(format="%+.2f"),
+                "Cap 1D %": st.column_config.NumberColumn(format="%+.1f"),
+            },
+        )
+    except Exception:
+        st.dataframe(
+            df_tbl,
+            use_container_width=True,
+            hide_index=True,
+            column_config={
+                "Day %": st.column_config.NumberColumn(format="%+.2f"),
+                "Cap 1D %": st.column_config.NumberColumn(format="%+.1f"),
+            },
+        )
 
     st.subheader("Charts (observe only)")
     max_charts = st.slider("Charts shown", 4, min(20, len(items)), min(10, len(items)))
@@ -186,10 +234,22 @@ def main():
         name = it.get("name") or sym
         with cols[i % 2]:
             snap = fetch_quote_snapshot(sym)
-            head = f"**{sym}** — {name}"
+            is_focus = False
+            if snap and it.get("capture_price"):
+                try:
+                    is_focus = snap[1] >= 1.0 and snap[0] >= float(it["capture_price"]) * 0.98
+                except Exception:
+                    is_focus = False
+            if is_focus:
+                head = f"🟢 **{sym}** — {name}"
+            else:
+                head = f"**{sym}** — {name}"
             if snap:
                 head += f" · ₹{snap[0]:.2f} ({snap[1]:+.1f}%)"
-            st.markdown(head)
+            if is_focus:
+                st.markdown(f'<span style="color:#0a7a2f;font-weight:700">{head}</span>', unsafe_allow_html=True)
+            else:
+                st.markdown(head)
             df = fetch_history(sym, period=period)
             if df is None or df.empty:
                 st.caption("No chart data")
