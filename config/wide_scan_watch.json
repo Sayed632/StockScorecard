@@ -1,5 +1,5 @@
 {
-  "saved_at": "03 Nov 2026 | 6:25 PM IST",
+  "saved_at": "03 Nov 2026 | 11:09 PM IST",
   "captured_day": "2026-11-03",
   "count": 15,
   "items": [
@@ -44,16 +44,6 @@
       "captured_at": "2026-11-03"
     },
     {
-      "symbol": "SHREEPUSHK",
-      "name": "Shree Pushkar Chemicals & Fertilisers Limited",
-      "capture_price": 623.0999755859375,
-      "capture_ret_1d": 9.325372794202135,
-      "capture_ret_5d": 23.753719083602288,
-      "capture_vol_ratio": 9.960721075480528,
-      "capture_score": 39.50424903230336,
-      "captured_at": "2026-11-03"
-    },
-    {
       "symbol": "KRBL",
       "name": "KRBL Limited",
       "capture_price": 401.45001220703125,
@@ -74,16 +64,6 @@
       "captured_at": "2026-11-03"
     },
     {
-      "symbol": "TASTYBITE",
-      "name": "Tasty Bite Eatables Limited",
-      "capture_price": 10188.5,
-      "capture_ret_1d": 8.123739785630901,
-      "capture_ret_5d": 13.161548286777357,
-      "capture_vol_ratio": 5.0944602272727275,
-      "capture_score": 34.35502964312916,
-      "captured_at": "2026-11-03"
-    },
-    {
       "symbol": "BANARISUG",
       "name": "Bannari Amman Sugars Limited",
       "capture_price": 3435.800048828125,
@@ -91,26 +71,6 @@
       "capture_ret_5d": 9.462214711984762,
       "capture_vol_ratio": 12.562058756547483,
       "capture_score": 33.801708405371855,
-      "captured_at": "2026-11-03"
-    },
-    {
-      "symbol": "SICAGEN",
-      "name": "Sicagen India Limited",
-      "capture_price": 55.33000183105469,
-      "capture_ret_1d": 6.959215775517347,
-      "capture_ret_5d": 11.46253527672847,
-      "capture_vol_ratio": 5.743615732940185,
-      "capture_score": 32.36294627747578,
-      "captured_at": "2026-11-03"
-    },
-    {
-      "symbol": "TRIDENT",
-      "name": "Trident Limited",
-      "capture_price": 23.790000915527344,
-      "capture_ret_1d": 7.11392118948484,
-      "capture_ret_5d": 10.85741812887846,
-      "capture_vol_ratio": 75.1097407690336,
-      "capture_score": 32.33680177248927,
       "captured_at": "2026-11-03"
     },
     {
@@ -151,6 +111,46 @@
       "capture_ret_5d": 3.6649984143324987,
       "capture_vol_ratio": 8.688685664651697,
       "capture_score": 30.981822532685186,
+      "captured_at": "2026-11-03"
+    },
+    {
+      "symbol": "BYKE",
+      "name": "The Byke Hospitality Ltd",
+      "capture_price": 31.010000228881836,
+      "capture_ret_1d": 5.189961704217327,
+      "capture_ret_5d": 13.010202716261809,
+      "capture_vol_ratio": 6.327224422523431,
+      "capture_score": 30.781524995752427,
+      "captured_at": "2026-11-03"
+    },
+    {
+      "symbol": "ASAHIINDIA",
+      "name": "Asahi India Glass Limited",
+      "capture_price": 991.4500122070312,
+      "capture_ret_1d": 5.3893183318662,
+      "capture_ret_5d": 8.36111251755356,
+      "capture_vol_ratio": 20.70617030727121,
+      "capture_score": 29.393571379383186,
+      "captured_at": "2026-11-03"
+    },
+    {
+      "symbol": "MINDACORP",
+      "name": "Minda Corporation Limited",
+      "capture_price": 684.5999755859375,
+      "capture_ret_1d": 3.9004325724117495,
+      "capture_ret_5d": 12.257112895377432,
+      "capture_vol_ratio": 7.058058608164223,
+      "capture_score": 28.19042208579385,
+      "captured_at": "2026-11-03"
+    },
+    {
+      "symbol": "GRSE",
+      "name": "Garden Reach Shipbuilders & Engineers Limited",
+      "capture_price": 2131.0,
+      "capture_ret_1d": 4.113736034943072,
+      "capture_ret_5d": 10.363041745087687,
+      "capture_vol_ratio": 6.779787722038246,
+      "capture_score": 27.740800645723763,
       "captured_at": "2026-11-03"
     }
   ]
