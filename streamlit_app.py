@@ -1,21 +1,30 @@
 """
 StockScorecard – Watch dashboard (graphs only, not for buying).
 
-Deploy: Streamlit Community Cloud → main file streamlit_app.py
+Free dynamic features:
+  - Refresh button (clears cache)
+  - Optional auto-refresh every N seconds
+  - Shorter data cache during market watch
+  - Last price + day change when available
+
+Deploy: Streamlit Community Cloud → streamlit_app.py
 Local:  streamlit run streamlit_app.py
 """
 
 from __future__ import annotations
 
 import json
+import time
+from datetime import datetime, timezone, timedelta
 from pathlib import Path
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List, Optional, Tuple
 
 import pandas as pd
 import streamlit as st
 
 ROOT = Path(__file__).resolve().parent
 WATCH_PATH = ROOT / "config" / "wide_scan_watch.json"
+IST = timezone(timedelta(hours=5, minutes=30))
 
 st.set_page_config(
     page_title="StockScorecard Watch",
@@ -24,7 +33,11 @@ st.set_page_config(
 )
 
 
-@st.cache_data(ttl=300)
+def _now_ist_str() -> str:
+    return datetime.now(IST).strftime("%d %b %Y | %I:%M %p IST")
+
+
+@st.cache_data(ttl=90)
 def load_watch() -> Dict[str, Any]:
     if not WATCH_PATH.exists():
         return {}
@@ -34,7 +47,7 @@ def load_watch() -> Dict[str, Any]:
         return {}
 
 
-@st.cache_data(ttl=600)
+@st.cache_data(ttl=120)
 def fetch_history(symbol: str, period: str = "1mo") -> Optional[pd.DataFrame]:
     try:
         import yfinance as yf
@@ -43,84 +56,159 @@ def fetch_history(symbol: str, period: str = "1mo") -> Optional[pd.DataFrame]:
             t = yf.Ticker(symbol + suffix)
             df = t.history(period=period)
             if df is not None and len(df) >= 5:
-                df = df.reset_index()
-                return df
+                return df.reset_index()
+    except Exception:
+        return None
+    return None
+
+
+@st.cache_data(ttl=60)
+def fetch_quote_snapshot(symbol: str) -> Optional[Tuple[float, float]]:
+    """Return (last, day_change_pct) best-effort."""
+    try:
+        import yfinance as yf
+
+        for suffix in (".NS", ".BO"):
+            t = yf.Ticker(symbol + suffix)
+            fi = getattr(t, "fast_info", None)
+            if fi is not None:
+                try:
+                    last = float(fi.get("last_price") or fi.get("lastPrice") or 0)
+                    prev = float(fi.get("previous_close") or fi.get("previousClose") or 0)
+                    if last > 0 and prev > 0:
+                        return last, (last / prev - 1.0) * 100.0
+                except Exception:
+                    pass
+            df = t.history(period="5d")
+            if df is not None and len(df) >= 2:
+                last = float(df["Close"].iloc[-1])
+                prev = float(df["Close"].iloc[-2])
+                if last > 0 and prev > 0:
+                    return last, (last / prev - 1.0) * 100.0
     except Exception:
         return None
     return None
 
 
 def main():
-    st.title("📊 StockScorecard — Watch (graphs only)")
+    st.title("📊 StockScorecard — Watch")
     st.caption(
-        "Observe wide-scan names as charts. Not a broker. Not investment advice. "
-        "Buy decisions only from Telegram CONTINUE + your own risk rules."
+        "Graphs only · not a broker · not advice. "
+        f"Page time: {_now_ist_str()}"
     )
+
+    # --- controls ---
+    c1, c2, c3, c4 = st.columns([1.2, 1.2, 1.5, 1])
+    with c1:
+        if st.button("🔄 Refresh data", use_container_width=True):
+            st.cache_data.clear()
+            st.rerun()
+    with c2:
+        auto = st.toggle("Auto-refresh", value=False, help="Uses free rerun; tab must stay open")
+    with c3:
+        every = st.selectbox(
+            "Every",
+            options=[60, 120, 180, 300],
+            format_func=lambda s: f"{s // 60} min" if s >= 60 else f"{s}s",
+            index=1,
+            disabled=not auto,
+        )
+    with c4:
+        period = st.selectbox("Chart", ["5d", "1mo", "3mo"], index=1)
+
+    if auto:
+        st.info(f"Auto-refresh on · about every {every}s while this tab stays open (free tier).")
+        # Non-blocking style: sleep then rerun
+        time.sleep(0.3)
 
     watch = load_watch()
     items: List[Dict[str, Any]] = list(watch.get("items") or [])
 
-    col_a, col_b, col_c = st.columns(3)
-    with col_a:
+    m1, m2, m3 = st.columns(3)
+    with m1:
         st.metric("Captured day", watch.get("captured_day") or "—")
-    with col_b:
-        st.metric("Names on list", len(items))
-    with col_c:
-        st.metric("Saved at", (watch.get("saved_at") or "—")[:22])
+    with m2:
+        st.metric("Names", len(items))
+    with m3:
+        st.metric("Watch file", (watch.get("saved_at") or "—")[:24])
 
     if not items:
         st.warning(
-            "No watchlist file yet. Run **Wide Parallel Scan** on GitHub Actions "
-            "so `config/wide_scan_watch.json` is updated."
+            "No watchlist yet. Run **Wide Parallel Scan** on GitHub so "
+            "`config/wide_scan_watch.json` is committed."
         )
+        if auto:
+            time.sleep(every)
+            st.rerun()
         st.stop()
 
     symbols = [str(it.get("symbol", "")).upper() for it in items if it.get("symbol")]
     st.subheader("Copy symbols")
     st.code(",".join(symbols), language=None)
 
-    st.subheader("List")
-    table = pd.DataFrame(
-        [
+    # Live-ish snapshots
+    st.subheader("Snapshot (best-effort)")
+    rows = []
+    prog = st.progress(0)
+    for i, it in enumerate(items):
+        sym = str(it.get("symbol", "")).upper()
+        snap = fetch_quote_snapshot(sym)
+        last, chg = (snap if snap else (None, None))
+        rows.append(
             {
-                "Symbol": it.get("symbol"),
-                "Name": it.get("name"),
+                "Symbol": sym,
+                "Name": (it.get("name") or "")[:28],
+                "Last ₹": round(last, 2) if last else None,
+                "Day %": round(chg, 2) if chg is not None else None,
                 "Capture ₹": it.get("capture_price"),
-                "1D %": it.get("capture_ret_1d"),
-                "5D %": it.get("capture_ret_5d"),
-                "Vol×": it.get("capture_vol_ratio"),
+                "Cap 1D %": it.get("capture_ret_1d"),
                 "Score": it.get("capture_score"),
             }
-            for it in items
-        ]
+        )
+        prog.progress((i + 1) / max(len(items), 1))
+    prog.empty()
+    df_tbl = pd.DataFrame(rows)
+    st.dataframe(
+        df_tbl,
+        use_container_width=True,
+        hide_index=True,
+        column_config={
+            "Day %": st.column_config.NumberColumn(format="%+.2f"),
+            "Cap 1D %": st.column_config.NumberColumn(format="%+.1f"),
+        },
     )
-    st.dataframe(table, use_container_width=True, hide_index=True)
 
     st.subheader("Charts (observe only)")
-    period = st.selectbox("History", ["1mo", "3mo", "6mo"], index=0)
-    max_charts = st.slider("How many charts", 4, min(20, len(items)), min(12, len(items)))
-
+    max_charts = st.slider("Charts shown", 4, min(20, len(items)), min(10, len(items)))
     cols = st.columns(2)
     for i, it in enumerate(items[:max_charts]):
         sym = str(it.get("symbol", "")).upper()
         name = it.get("name") or sym
         with cols[i % 2]:
-            st.markdown(f"**{sym}** — {name}")
+            snap = fetch_quote_snapshot(sym)
+            head = f"**{sym}** — {name}"
+            if snap:
+                head += f" · ₹{snap[0]:.2f} ({snap[1]:+.1f}%)"
+            st.markdown(head)
             df = fetch_history(sym, period=period)
             if df is None or df.empty:
                 st.caption("No chart data")
                 continue
-            price_col = "Close" if "Close" in df.columns else df.columns[-1]
+            price_col = "Close" if "Close" in df.columns else [c for c in df.columns if c != df.columns[0]][0]
             st.line_chart(df.set_index(df.columns[0])[price_col], height=180)
-            cap = it.get("capture_price")
-            if cap:
-                st.caption(f"Capture ₹{cap}")
+            if it.get("capture_price"):
+                st.caption(f"Capture ₹{it.get('capture_price')}")
 
     st.divider()
     st.markdown(
-        "**How to use:** Telegram alerts → this page for graphs → "
-        "only consider buys when Next-Day Plan says CONTINUE."
+        "**Free setup limits:** Yahoo data delay · not tick-by-tick · "
+        "Streamlit free may sleep · auto-refresh only while tab is open. "
+        "Telegram = alerts · this page = watch graphs."
     )
+
+    if auto:
+        time.sleep(int(every))
+        st.rerun()
 
 
 if __name__ == "__main__":
