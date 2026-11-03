@@ -1,0 +1,88 @@
+# Theme peer groups for PEER WATCH (not full Groww similarity)
+# When any member is a strong mover, siblings are checked for co-move.
+
+version: 1
+groups:
+  packaging_plastics:
+    label: Packaging / plastics
+    symbols:
+      - ORICONENT
+      - TIMETECHNO
+      - EPL
+      - UFLEX
+      - AGI
+      - TCPLPACK
+      - JINDALPOLY
+      - POLYMED
+      - HUHTAMAKI
+
+  specialty_chemicals:
+    label: Specialty chemicals
+    symbols:
+      - HIKAL
+      - DHANUKA
+      - BODALCHEM
+      - AARTIIND
+      - CLEAN
+      - NAVINFLUOR
+      - VINATIORGA
+      - FINEORG
+
+  glass_consumer:
+    label: Glass / consumer
+    symbols:
+      - BOROLTD
+      - BORORENEW
+      - ASAHIINDIA
+      - LAOPALA
+
+  agro_chem:
+    label: Agro chemicals
+    symbols:
+      - DHANUKA
+      - PIIND
+      - BAYERCROP
+      - RALLIS
+      - UPL
+      - SUMICHEM
+
+  capital_goods_eng:
+    label: Capital goods / engineering
+    symbols:
+      - GREAVESCOT
+      - KIRLOSENG
+      - CUMMINSIND
+      - THERMAX
+      - BHEL
+      - AEROFLEX
+
+  it_mid:
+    label: IT mid
+    symbols:
+      - COFORGE
+      - PERSISTENT
+      - LTTS
+      - MPHASIS
+      - BSOFT
+      - TATATECH
+
+  pharma_mid:
+    label: Pharma mid
+    symbols:
+      - LAURUSLABS
+      - DIVISLAB
+      - BIOCON
+      - SYNGENE
+      - AJANTPHARM
+      - IPCA
+
+  defence:
+    label: Defence
+    symbols:
+      - HAL
+      - BEL
+      - BDL
+      - MAZDOCK
+      - DATAPATTNS
+      - PARAS
+      - SOLARINDS
