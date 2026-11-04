@@ -1,157 +1,157 @@
 {
-  "saved_at": "03 Nov 2026 | 9:18 AM IST",
-  "captured_day": "2026-11-03",
+  "saved_at": "04 Nov 2026 | 6:38 PM IST",
+  "captured_day": "2026-11-04",
   "count": 15,
   "items": [
     {
-      "symbol": "GAYAHWS",
-      "name": "Gayatri Highways Limited",
-      "capture_price": 2.0,
-      "capture_ret_1d": 27.388530775927155,
-      "capture_ret_5d": 23.45678976006922,
-      "capture_vol_ratio": 1.0160896811993398,
-      "capture_score": 38.20987641602423,
-      "captured_at": "2026-11-03"
+      "symbol": "PARAGMILK",
+      "name": "Parag Milk Foods Limited",
+      "capture_price": 291.9800109863281,
+      "capture_ret_1d": 17.016674409600995,
+      "capture_ret_5d": 22.06522354158158,
+      "capture_vol_ratio": 12.808944543339118,
+      "capture_score": 48.14283753107475,
+      "captured_at": "2026-11-04"
     },
     {
-      "symbol": "KITEX",
-      "name": "Kitex Garments Limited",
-      "capture_price": 131.72000122070312,
-      "capture_ret_1d": 16.710969792978815,
-      "capture_ret_5d": 19.138932823234867,
-      "capture_vol_ratio": 2.2991090821733877,
-      "capture_score": 35.94822656840033,
-      "captured_at": "2026-11-03"
+      "symbol": "DALMIASUG",
+      "name": "Dalmia Bharat Sugar and Industries Limited",
+      "capture_price": 483.54998779296875,
+      "capture_ret_1d": 16.546154472494944,
+      "capture_ret_5d": 18.954486541935722,
+      "capture_vol_ratio": 22.88988493703553,
+      "capture_score": 46.48945565667144,
+      "captured_at": "2026-11-04"
     },
     {
-      "symbol": "SUPREMEINF",
-      "name": "Supreme Infrastructure India Limited",
-      "capture_price": 66.69000244140625,
-      "capture_ret_1d": 20.968621711086467,
-      "capture_ret_5d": 23.637382534867115,
-      "capture_vol_ratio": 0.4080676820211799,
-      "capture_score": 33.43542994050725,
-      "captured_at": "2026-11-03"
+      "symbol": "MELSTAR",
+      "name": "Melstar Information Technologies Limited",
+      "capture_price": 346.5,
+      "capture_ret_1d": 8052.941176470588,
+      "capture_ret_5d": 8052.941176470588,
+      "capture_vol_ratio": null,
+      "capture_score": 44.0,
+      "captured_at": "2026-11-04"
     },
     {
-      "symbol": "TRIGYN",
-      "name": "Trigyn Technologies Limited",
-      "capture_price": 54.95000076293945,
-      "capture_ret_1d": 15.392696336552758,
-      "capture_ret_5d": 16.741026384543844,
-      "capture_vol_ratio": 2.2220300953086727,
-      "capture_score": 33.21871521968835,
-      "captured_at": "2026-11-03"
+      "symbol": "SAREGAMA",
+      "name": "Saregama India Limited",
+      "capture_price": 636.7999877929688,
+      "capture_ret_1d": 13.26929455107624,
+      "capture_ret_5d": 21.538309563269276,
+      "capture_vol_ratio": 49.3690611304049,
+      "capture_score": 43.46156180843573,
+      "captured_at": "2026-11-04"
     },
     {
-      "symbol": "ROML",
-      "name": "Raj Oil Mills Limited",
-      "capture_price": 45.099998474121094,
-      "capture_ret_1d": 14.17721132688885,
-      "capture_ret_5d": 15.70035660275857,
-      "capture_vol_ratio": 1.9460165433173704,
-      "capture_score": 30.291844576501603,
-      "captured_at": "2026-11-03"
+      "symbol": "ICIL",
+      "name": "Indo Count Industries Limited",
+      "capture_price": 525.3499755859375,
+      "capture_ret_1d": 12.530784774039505,
+      "capture_ret_5d": 22.7166475346666,
+      "capture_vol_ratio": 29.95350360183366,
+      "capture_score": 42.98776836598071,
+      "captured_at": "2026-11-04"
     },
     {
-      "symbol": "VRLLOG",
-      "name": "VRL Logistics Limited",
-      "capture_price": 307.70001220703125,
-      "capture_ret_1d": 10.3658628692348,
-      "capture_ret_5d": 15.006550643213167,
-      "capture_vol_ratio": 2.70624462154898,
-      "capture_score": 28.51630665440229,
-      "captured_at": "2026-11-03"
-    },
-    {
-      "symbol": "TASTYBITE",
-      "name": "Tasty Bite Eatables Limited",
-      "capture_price": 9733.0,
-      "capture_ret_1d": 4.3809319534559465,
-      "capture_ret_5d": 9.878076315195305,
-      "capture_vol_ratio": 7.417589335308277,
-      "capture_score": 27.838258663774305,
-      "captured_at": "2026-11-03"
-    },
-    {
-      "symbol": "BHAGYANGR",
-      "name": "Bhagyanagar India Limited",
-      "capture_price": 94.25,
-      "capture_ret_1d": 10.233918128654974,
-      "capture_ret_5d": 33.78283049358124,
-      "capture_vol_ratio": 1.0207260762242187,
-      "capture_score": 24.104692427139398,
-      "captured_at": "2026-11-03"
-    },
-    {
-      "symbol": "TRIDENT",
-      "name": "Trident Limited",
-      "capture_price": 23.399999618530273,
-      "capture_ret_1d": 10.533772008501163,
-      "capture_ret_5d": 13.427050753504432,
-      "capture_vol_ratio": 1.6759503617228637,
-      "capture_score": 24.043795620819402,
-      "captured_at": "2026-11-03"
-    },
-    {
-      "symbol": "PRAXIS",
-      "name": "Praxis Home Retail Limited",
-      "capture_price": 4.679999828338623,
-      "capture_ret_1d": 10.117643019732302,
-      "capture_ret_5d": 32.95454129822981,
-      "capture_vol_ratio": 1.281988576230082,
-      "capture_score": 23.675261078059194,
-      "captured_at": "2026-11-03"
-    },
-    {
-      "symbol": "KRIDHANINF",
-      "name": "Kridhan Infra Limited",
-      "capture_price": 2.430000066757202,
-      "capture_ret_1d": 9.954752253972533,
-      "capture_ret_5d": 27.894741960509716,
-      "capture_vol_ratio": 0.004549793837466739,
-      "capture_score": 21.708862390945438,
-      "captured_at": "2026-11-03"
-    },
-    {
-      "symbol": "SHREEPUSHK",
-      "name": "Shree Pushkar Chemicals & Fertilisers Limited",
-      "capture_price": 630.0,
-      "capture_ret_1d": 10.536009563441496,
-      "capture_ret_5d": 25.12413108242304,
-      "capture_vol_ratio": 0.5774336297467844,
-      "capture_score": 21.436657354977857,
-      "captured_at": "2026-11-03"
-    },
-    {
-      "symbol": "KRBL",
-      "name": "KRBL Limited",
-      "capture_price": 394.70001220703125,
-      "capture_ret_1d": 14.389226538345135,
-      "capture_ret_5d": 11.892278442815375,
-      "capture_vol_ratio": 0.9092340543565071,
-      "capture_score": 21.429369300999543,
-      "captured_at": "2026-11-03"
-    },
-    {
-      "symbol": "ITI",
-      "name": "ITI Limited",
-      "capture_price": 270.54998779296875,
-      "capture_ret_1d": 4.40301477948537,
-      "capture_ret_5d": 24.35649514111784,
-      "capture_vol_ratio": 1.7138455023826429,
-      "capture_score": 19.783170088407186,
-      "captured_at": "2026-11-03"
+      "symbol": "RUSHIL",
+      "name": "Rushil Decor Limited",
+      "capture_price": 17.969999313354492,
+      "capture_ret_1d": 13.59038975982838,
+      "capture_ret_5d": 17.681720855601355,
+      "capture_vol_ratio": 9.053852487791053,
+      "capture_score": 42.49707001125453,
+      "captured_at": "2026-11-04"
     },
     {
       "symbol": "SADBHIN",
       "name": "Sadbhav Infrastructure Project Limited",
-      "capture_price": 2.559999942779541,
-      "capture_ret_1d": 12.280700653653831,
-      "capture_ret_5d": 13.777775234646272,
-      "capture_vol_ratio": 0.23439491022162975,
-      "capture_score": 19.55906211651079,
-      "captured_at": "2026-11-03"
+      "capture_price": 2.950000047683716,
+      "capture_ret_1d": 9.665426949169342,
+      "capture_ret_5d": 30.530976112040698,
+      "capture_vol_ratio": 5.292968467624379,
+      "capture_score": 42.28435397821745,
+      "captured_at": "2026-11-04"
+    },
+    {
+      "symbol": "INVENTURE",
+      "name": "Inventure Growth & Securities Limited",
+      "capture_price": 0.8999999761581421,
+      "capture_ret_1d": 11.111107840623058,
+      "capture_ret_5d": 23.287664745600843,
+      "capture_vol_ratio": 6.532202691999535,
+      "capture_score": 41.484012069707966,
+      "captured_at": "2026-11-04"
+    },
+    {
+      "symbol": "APLLTD",
+      "name": "Alembic Pharmaceuticals Limited",
+      "capture_price": 906.7000122070312,
+      "capture_ret_1d": 12.942205529885587,
+      "capture_ret_5d": 15.827801015095444,
+      "capture_vol_ratio": 42.856573819454304,
+      "capture_score": 41.070376991146105,
+      "captured_at": "2026-11-04"
+    },
+    {
+      "symbol": "CAPACITE",
+      "name": "Capacit'e Infraprojects Limited",
+      "capture_price": 166.58999633789062,
+      "capture_ret_1d": 10.353728755225111,
+      "capture_ret_5d": 11.76785838779355,
+      "capture_vol_ratio": 5.5242149056535945,
+      "capture_score": 36.54322494199788,
+      "captured_at": "2026-11-04"
+    },
+    {
+      "symbol": "LINDEINDIA",
+      "name": "Linde India Limited",
+      "capture_price": 6390.5,
+      "capture_ret_1d": 9.267333504317342,
+      "capture_ret_5d": 11.634203860599168,
+      "capture_vol_ratio": 12.335309824066584,
+      "capture_score": 35.19277155639052,
+      "captured_at": "2026-11-04"
+    },
+    {
+      "symbol": "CONFIPET",
+      "name": "Confidence Petroleum India Limited",
+      "capture_price": 63.290000915527344,
+      "capture_ret_1d": 12.655750394676545,
+      "capture_ret_5d": -7.941816850142047,
+      "capture_vol_ratio": 8.767982638525082,
+      "capture_score": 35.18690047361186,
+      "captured_at": "2026-11-04"
+    },
+    {
+      "symbol": "PRINCEPIPE",
+      "name": "Prince Pipes And Fittings Limited",
+      "capture_price": 297.75,
+      "capture_ret_1d": 7.919538451209096,
+      "capture_ret_5d": 14.82838951682892,
+      "capture_vol_ratio": 5.5507645010042745,
+      "capture_score": 34.693382472341035,
+      "captured_at": "2026-11-04"
+    },
+    {
+      "symbol": "FACT",
+      "name": "Fertilizers and Chemicals Travancore Limited",
+      "capture_price": 764.0499877929688,
+      "capture_ret_1d": 6.852667762605025,
+      "capture_ret_5d": 12.492634579057382,
+      "capture_vol_ratio": 26.350779634234193,
+      "capture_score": 32.59562341779611,
+      "captured_at": "2026-11-04"
+    },
+    {
+      "symbol": "ARMANFIN",
+      "name": "Arman Financial Services Limited",
+      "capture_price": 1584.0,
+      "capture_ret_1d": 6.173334277014275,
+      "capture_ret_5d": 14.71610254825304,
+      "capture_vol_ratio": 5.368746866621619,
+      "capture_score": 32.558637024305696,
+      "captured_at": "2026-11-04"
     }
   ]
 }
