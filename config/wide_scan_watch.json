@@ -1,5 +1,5 @@
 {
-  "saved_at": "04 Nov 2026 | 6:38 PM IST",
+  "saved_at": "04 Nov 2026 | 11:22 PM IST",
   "captured_day": "2026-11-04",
   "count": 15,
   "items": [
@@ -104,6 +104,26 @@
       "captured_at": "2026-11-04"
     },
     {
+      "symbol": "VRLLOG",
+      "name": "VRL Logistics Limited",
+      "capture_price": 331.20001220703125,
+      "capture_ret_1d": 12.100185656769868,
+      "capture_ret_5d": 22.848666435068132,
+      "capture_vol_ratio": 3.293815003567577,
+      "capture_score": 35.69251605466799,
+      "captured_at": "2026-11-04"
+    },
+    {
+      "symbol": "TASTYBITE",
+      "name": "Tasty Bite Eatables Limited",
+      "capture_price": 10897.0,
+      "capture_ret_1d": 6.953918633753742,
+      "capture_ret_5d": 23.12994350282487,
+      "capture_vol_ratio": 4.752610533531361,
+      "capture_score": 35.450624720618634,
+      "captured_at": "2026-11-04"
+    },
+    {
       "symbol": "LINDEINDIA",
       "name": "Linde India Limited",
       "capture_price": 6390.5,
@@ -131,26 +151,6 @@
       "capture_ret_5d": 14.82838951682892,
       "capture_vol_ratio": 5.5507645010042745,
       "capture_score": 34.693382472341035,
-      "captured_at": "2026-11-04"
-    },
-    {
-      "symbol": "FACT",
-      "name": "Fertilizers and Chemicals Travancore Limited",
-      "capture_price": 764.0499877929688,
-      "capture_ret_1d": 6.852667762605025,
-      "capture_ret_5d": 12.492634579057382,
-      "capture_vol_ratio": 26.350779634234193,
-      "capture_score": 32.59562341779611,
-      "captured_at": "2026-11-04"
-    },
-    {
-      "symbol": "ARMANFIN",
-      "name": "Arman Financial Services Limited",
-      "capture_price": 1584.0,
-      "capture_ret_1d": 6.173334277014275,
-      "capture_ret_5d": 14.71610254825304,
-      "capture_vol_ratio": 5.368746866621619,
-      "capture_score": 32.558637024305696,
       "captured_at": "2026-11-04"
     }
   ]
