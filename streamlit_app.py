@@ -63,8 +63,8 @@ def fetch_history(symbol: str, period: str = "1mo") -> Optional[pd.DataFrame]:
 
 
 @st.cache_data(ttl=60)
-def fetch_quote_snapshot(symbol: str) -> Optional[Tuple[float, float]]:
-    """Return (last, day_change_pct) best-effort."""
+def fetch_quote_snapshot(symbol: str) -> Optional[Tuple[float, float, float]]:
+    """Return (last, day_change_pct, day_change_rs) best-effort."""
     try:
         import yfinance as yf
 
@@ -76,7 +76,7 @@ def fetch_quote_snapshot(symbol: str) -> Optional[Tuple[float, float]]:
                     last = float(fi.get("last_price") or fi.get("lastPrice") or 0)
                     prev = float(fi.get("previous_close") or fi.get("previousClose") or 0)
                     if last > 0 and prev > 0:
-                        return last, (last / prev - 1.0) * 100.0
+                        return last, (last / prev - 1.0) * 100.0, last - prev
                 except Exception:
                     pass
             df = t.history(period="5d")
@@ -84,7 +84,7 @@ def fetch_quote_snapshot(symbol: str) -> Optional[Tuple[float, float]]:
                 last = float(df["Close"].iloc[-1])
                 prev = float(df["Close"].iloc[-2])
                 if last > 0 and prev > 0:
-                    return last, (last / prev - 1.0) * 100.0
+                    return last, (last / prev - 1.0) * 100.0, last - prev
     except Exception:
         return None
     return None
@@ -153,7 +153,9 @@ def main():
     for i, it in enumerate(items):
         sym = str(it.get("symbol", "")).upper()
         snap = fetch_quote_snapshot(sym)
-        last, chg = (snap if snap else (None, None))
+        last = chg = day_rs = None
+        if snap:
+            last, chg, day_rs = snap[0], snap[1], snap[2] if len(snap) > 2 else None
         cap = it.get("capture_price")
         delta_rs = None
         try:
@@ -178,6 +180,7 @@ def main():
                 "Last ₹": round(last, 2) if last else None,
                 "Δ ₹ vs cap": delta_rs,
                 "Day %": round(chg, 2) if chg is not None else None,
+                "Day Δ ₹": round(day_rs, 2) if day_rs is not None else None,
                 "Capture ₹": cap,
                 "Cap 1D %": it.get("capture_ret_1d"),
                 "Tech": tech,
@@ -225,6 +228,7 @@ def main():
 
     col_cfg = {
         "Day %": st.column_config.NumberColumn(format="%+.2f"),
+        "Day Δ ₹": st.column_config.NumberColumn(format="%+.2f"),
         "Cap 1D %": st.column_config.NumberColumn(format="%+.1f"),
         "Δ ₹ vs cap": st.column_config.NumberColumn(format="%+.2f"),
         "Tech": st.column_config.NumberColumn(format="%.0f"),
