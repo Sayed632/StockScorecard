@@ -260,10 +260,40 @@ def main():
                 st.caption(f"Capture ₹{it.get('capture_price')}")
 
     st.divider()
+    st.subheader("📰 News intelligence")
+    st.caption(
+        "Market headlines (Telegram news-layer family). Context only — not buy signals."
+    )
+    try:
+        import sys
+
+        if str(ROOT) not in sys.path:
+            sys.path.insert(0, str(ROOT))
+        from src.intelligence.news_layer import fetch_market_news
+
+        news_items = fetch_market_news(max_items=10)
+        if not news_items:
+            st.info("No headlines fetched right now (network/RSS).")
+        else:
+            for n in news_items:
+                title = getattr(n, "title", "") or ""
+                source = getattr(n, "source", "") or ""
+                bias = getattr(n, "bias", "") or ""
+                syms = getattr(n, "matched_symbols", None) or []
+                extra = ""
+                if syms:
+                    extra = f" · _{', '.join(list(syms)[:4])}_"
+                if bias and str(bias) != "Neutral":
+                    extra += f" · {bias}"
+                st.markdown(f"- **{title[:160]}** ({source}){extra}")
+    except Exception as e:
+        st.warning(f"News layer unavailable in this session: {e}")
+
+    st.divider()
     st.markdown(
         "**Free setup limits:** Yahoo data delay · not tick-by-tick · "
         "Streamlit free may sleep · auto-refresh only while tab is open. "
-        "Telegram = alerts · this page = watch graphs."
+        "Telegram = alerts · this page = watch graphs + news at bottom."
     )
 
     if auto:
