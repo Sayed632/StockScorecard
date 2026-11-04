@@ -154,14 +154,33 @@ def main():
         sym = str(it.get("symbol", "")).upper()
         snap = fetch_quote_snapshot(sym)
         last, chg = (snap if snap else (None, None))
+        cap = it.get("capture_price")
+        delta_rs = None
+        try:
+            if last is not None and cap is not None:
+                delta_rs = round(float(last) - float(cap), 2)
+        except Exception:
+            delta_rs = None
+        # Simple technical score 0-100 from momentum (free, no paid API)
+        tech = None
+        try:
+            r1 = float(it.get("capture_ret_1d") or 0)
+            r5 = float(it.get("capture_ret_5d") or 0)
+            vol = float(it.get("capture_vol_ratio") or 1)
+            tech = max(0, min(100, 40 + r1 * 2.5 + max(r5, 0) * 0.8 + min(vol, 5) * 3))
+            tech = round(tech, 1)
+        except Exception:
+            tech = None
         rows.append(
             {
                 "Symbol": sym,
                 "Name": (it.get("name") or "")[:28],
                 "Last ₹": round(last, 2) if last else None,
+                "Δ ₹ vs cap": delta_rs,
                 "Day %": round(chg, 2) if chg is not None else None,
-                "Capture ₹": it.get("capture_price"),
+                "Capture ₹": cap,
                 "Cap 1D %": it.get("capture_ret_1d"),
+                "Tech": tech,
                 "Score": it.get("capture_score"),
             }
         )
@@ -204,27 +223,63 @@ def main():
             pass
         return [""] * len(row)
 
+    col_cfg = {
+        "Day %": st.column_config.NumberColumn(format="%+.2f"),
+        "Cap 1D %": st.column_config.NumberColumn(format="%+.1f"),
+        "Δ ₹ vs cap": st.column_config.NumberColumn(format="%+.2f"),
+        "Tech": st.column_config.NumberColumn(format="%.0f"),
+    }
     try:
         styled = df_tbl.style.apply(_style_focus, axis=1)
         st.dataframe(
             styled,
             use_container_width=True,
             hide_index=True,
-            column_config={
-                "Day %": st.column_config.NumberColumn(format="%+.2f"),
-                "Cap 1D %": st.column_config.NumberColumn(format="%+.1f"),
-            },
+            column_config=col_cfg,
         )
     except Exception:
         st.dataframe(
             df_tbl,
             use_container_width=True,
             hide_index=True,
-            column_config={
-                "Day %": st.column_config.NumberColumn(format="%+.2f"),
-                "Cap 1D %": st.column_config.NumberColumn(format="%+.1f"),
-            },
+            column_config=col_cfg,
         )
+
+    st.subheader("Why these may be rising (context)")
+    st.caption(
+        "Tech = momentum/volume score from the scan (0–100). "
+        "Full fundamental ROE/PE needs Screener login per stock — shown as N/A here on free path. "
+        "Reasoning is rule-based, not guaranteed news cause."
+    )
+    reason_rows = []
+    for it, r in zip(items, rows):
+        sym = r.get("Symbol")
+        r1 = it.get("capture_ret_1d")
+        r5 = it.get("capture_ret_5d")
+        vol = it.get("capture_vol_ratio")
+        bits = []
+        try:
+            if r1 is not None and float(r1) >= 5:
+                bits.append(f"strong 1D move ({float(r1):+.1f}%)")
+            if r5 is not None and float(r5) >= 8:
+                bits.append(f"multi-day strength ({float(r5):+.1f}% 5D)")
+            if vol is not None and float(vol) >= 2:
+                bits.append(f"volume spike ({float(vol):.1f}x)")
+        except Exception:
+            pass
+        if not bits:
+            bits.append("scan momentum / relative strength")
+        # crude fundamental placeholder
+        fund = "N/A (free)"
+        reason_rows.append(
+            {
+                "Symbol": sym,
+                "Tech": r.get("Tech"),
+                "Fund": fund,
+                "Likely drivers": "; ".join(bits),
+            }
+        )
+    st.dataframe(pd.DataFrame(reason_rows), use_container_width=True, hide_index=True)
 
     st.subheader("Charts (observe only)")
     max_charts = st.slider("Charts shown", 4, min(20, len(items)), min(10, len(items)))
