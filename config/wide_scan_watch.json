@@ -1,5 +1,5 @@
 {
-  "saved_at": "05 Nov 2026 | 6:52 PM IST",
+  "saved_at": "05 Nov 2026 | 11:26 PM IST",
   "captured_day": "2026-11-05",
   "count": 15,
   "items": [
@@ -34,6 +34,16 @@
       "captured_at": "2026-11-05"
     },
     {
+      "symbol": "TRIGYN",
+      "name": "Trigyn Technologies Limited",
+      "capture_price": 61.959999084472656,
+      "capture_ret_1d": 17.705166798799365,
+      "capture_ret_5d": 24.342758995963763,
+      "capture_vol_ratio": 33.03079937343548,
+      "capture_score": 49.76616580714655,
+      "captured_at": "2026-11-05"
+    },
+    {
       "symbol": "ANSALHSG",
       "name": "Ansal Housing Limited",
       "capture_price": 5.309999942779541,
@@ -64,6 +74,16 @@
       "captured_at": "2026-11-05"
     },
     {
+      "symbol": "VERTOZ",
+      "name": "Vertoz Advertising Limited",
+      "capture_price": 35.349998474121094,
+      "capture_ret_1d": 11.796323642912743,
+      "capture_ret_5d": 16.05383958183102,
+      "capture_vol_ratio": 5.367224770427066,
+      "capture_score": 39.77443222513615,
+      "captured_at": "2026-11-05"
+    },
+    {
       "symbol": "ASHOKLEY",
       "name": "Ashok Leyland Limited",
       "capture_price": 170.2100067138672,
@@ -81,6 +101,16 @@
       "capture_ret_5d": 8460.470760569853,
       "capture_vol_ratio": 4.882992327365729,
       "capture_score": 38.530528421791566,
+      "captured_at": "2026-11-05"
+    },
+    {
+      "symbol": "TARC",
+      "name": "Anant Raj Global Limited",
+      "capture_price": 125.18000030517578,
+      "capture_ret_1d": 10.817989836884534,
+      "capture_ret_5d": 13.614086003315574,
+      "capture_vol_ratio": 83.91818850441291,
+      "capture_score": 37.74651790542189,
       "captured_at": "2026-11-05"
     },
     {
@@ -121,36 +151,6 @@
       "capture_ret_5d": 11.39897169940507,
       "capture_vol_ratio": 4.160299118501815,
       "capture_score": 35.00584553277903,
-      "captured_at": "2026-11-05"
-    },
-    {
-      "symbol": "ENERGYDEV",
-      "name": "Energy Development Company Limited",
-      "capture_price": 15.109999656677246,
-      "capture_ret_1d": 8.005717683221691,
-      "capture_ret_5d": 14.904943688249595,
-      "capture_vol_ratio": 10.406573232436305,
-      "capture_score": 34.82359151075339,
-      "captured_at": "2026-11-05"
-    },
-    {
-      "symbol": "NOIDATOLL",
-      "name": "Noida Toll Bridge Company Limited",
-      "capture_price": 3.8499999046325684,
-      "capture_ret_1d": 12.90322016794596,
-      "capture_ret_5d": 11.271672317508497,
-      "capture_vol_ratio": 3.7847864326117837,
-      "capture_score": 34.56809524311026,
-      "captured_at": "2026-11-05"
-    },
-    {
-      "symbol": "MAANALU",
-      "name": "Maan Aluminium Limited",
-      "capture_price": 104.86000061035156,
-      "capture_ret_1d": 6.934533164448231,
-      "capture_ret_5d": 16.021247839090847,
-      "capture_vol_ratio": 5.174551530851318,
-      "capture_score": 33.928876541019676,
       "captured_at": "2026-11-05"
     }
   ]
