@@ -1,47 +1,47 @@
 {
-  "saved_at": "04 Nov 2026 | 11:22 PM IST",
-  "captured_day": "2026-11-04",
+  "saved_at": "05 Nov 2026 | 9:15 AM IST",
+  "captured_day": "2026-11-05",
   "count": 15,
   "items": [
     {
-      "symbol": "PARAGMILK",
-      "name": "Parag Milk Foods Limited",
-      "capture_price": 291.9800109863281,
-      "capture_ret_1d": 17.016674409600995,
-      "capture_ret_5d": 22.06522354158158,
-      "capture_vol_ratio": 12.808944543339118,
-      "capture_score": 48.14283753107475,
-      "captured_at": "2026-11-04"
+      "symbol": "HEG",
+      "name": "HEG Limited",
+      "capture_price": 288.17999267578125,
+      "capture_ret_1d": 19.745694461299323,
+      "capture_ret_5d": 25.985829218839275,
+      "capture_vol_ratio": 18.967816781292914,
+      "capture_score": 52.78987358015293,
+      "captured_at": "2026-11-05"
     },
     {
-      "symbol": "DALMIASUG",
-      "name": "Dalmia Bharat Sugar and Industries Limited",
-      "capture_price": 483.54998779296875,
-      "capture_ret_1d": 16.546154472494944,
-      "capture_ret_5d": 18.954486541935722,
-      "capture_vol_ratio": 22.88988493703553,
-      "capture_score": 46.48945565667144,
-      "captured_at": "2026-11-04"
+      "symbol": "SADBHIN",
+      "name": "Sadbhav Infrastructure Project Limited",
+      "capture_price": 3.0899999141693115,
+      "capture_ret_1d": 14.8698828416445,
+      "capture_ret_5d": 36.72566049595074,
+      "capture_vol_ratio": 5.322445192591797,
+      "capture_score": 50.69784058355616,
+      "captured_at": "2026-11-05"
     },
     {
-      "symbol": "MELSTAR",
-      "name": "Melstar Information Technologies Limited",
-      "capture_price": 346.5,
-      "capture_ret_1d": 8052.941176470588,
-      "capture_ret_5d": 8052.941176470588,
-      "capture_vol_ratio": null,
-      "capture_score": 44.0,
-      "captured_at": "2026-11-04"
+      "symbol": "NELCAST",
+      "name": "Nelcast Limited",
+      "capture_price": 164.02000427246094,
+      "capture_ret_1d": 14.18030716426999,
+      "capture_ret_5d": 30.278000226033686,
+      "capture_vol_ratio": 29.76847233469867,
+      "capture_score": 47.613668676235775,
+      "captured_at": "2026-11-05"
     },
     {
-      "symbol": "SAREGAMA",
-      "name": "Saregama India Limited",
-      "capture_price": 636.7999877929688,
-      "capture_ret_1d": 13.26929455107624,
-      "capture_ret_5d": 21.538309563269276,
-      "capture_vol_ratio": 49.3690611304049,
-      "capture_score": 43.46156180843573,
-      "captured_at": "2026-11-04"
+      "symbol": "TRIGYN",
+      "name": "Trigyn Technologies Limited",
+      "capture_price": 63.15999984741211,
+      "capture_ret_1d": 23.19094847569476,
+      "capture_ret_5d": 32.74484534842663,
+      "capture_vol_ratio": 1.7014327562509544,
+      "capture_score": 46.09556506778684,
+      "captured_at": "2026-11-05"
     },
     {
       "symbol": "ICIL",
@@ -49,29 +49,9 @@
       "capture_price": 525.3499755859375,
       "capture_ret_1d": 12.530784774039505,
       "capture_ret_5d": 22.7166475346666,
-      "capture_vol_ratio": 29.95350360183366,
+      "capture_vol_ratio": 29.962430190758056,
       "capture_score": 42.98776836598071,
-      "captured_at": "2026-11-04"
-    },
-    {
-      "symbol": "RUSHIL",
-      "name": "Rushil Decor Limited",
-      "capture_price": 17.969999313354492,
-      "capture_ret_1d": 13.59038975982838,
-      "capture_ret_5d": 17.681720855601355,
-      "capture_vol_ratio": 9.053852487791053,
-      "capture_score": 42.49707001125453,
-      "captured_at": "2026-11-04"
-    },
-    {
-      "symbol": "SADBHIN",
-      "name": "Sadbhav Infrastructure Project Limited",
-      "capture_price": 2.950000047683716,
-      "capture_ret_1d": 9.665426949169342,
-      "capture_ret_5d": 30.530976112040698,
-      "capture_vol_ratio": 5.292968467624379,
-      "capture_score": 42.28435397821745,
-      "captured_at": "2026-11-04"
+      "captured_at": "2026-11-05"
     },
     {
       "symbol": "INVENTURE",
@@ -79,49 +59,19 @@
       "capture_price": 0.8999999761581421,
       "capture_ret_1d": 11.111107840623058,
       "capture_ret_5d": 23.287664745600843,
-      "capture_vol_ratio": 6.532202691999535,
+      "capture_vol_ratio": 6.5406400628078245,
       "capture_score": 41.484012069707966,
-      "captured_at": "2026-11-04"
+      "captured_at": "2026-11-05"
     },
     {
-      "symbol": "APLLTD",
-      "name": "Alembic Pharmaceuticals Limited",
-      "capture_price": 906.7000122070312,
-      "capture_ret_1d": 12.942205529885587,
-      "capture_ret_5d": 15.827801015095444,
-      "capture_vol_ratio": 42.856573819454304,
-      "capture_score": 41.070376991146105,
-      "captured_at": "2026-11-04"
-    },
-    {
-      "symbol": "CAPACITE",
-      "name": "Capacit'e Infraprojects Limited",
-      "capture_price": 166.58999633789062,
-      "capture_ret_1d": 10.353728755225111,
-      "capture_ret_5d": 11.76785838779355,
-      "capture_vol_ratio": 5.5242149056535945,
-      "capture_score": 36.54322494199788,
-      "captured_at": "2026-11-04"
-    },
-    {
-      "symbol": "VRLLOG",
-      "name": "VRL Logistics Limited",
-      "capture_price": 331.20001220703125,
-      "capture_ret_1d": 12.100185656769868,
-      "capture_ret_5d": 22.848666435068132,
-      "capture_vol_ratio": 3.293815003567577,
-      "capture_score": 35.69251605466799,
-      "captured_at": "2026-11-04"
-    },
-    {
-      "symbol": "TASTYBITE",
-      "name": "Tasty Bite Eatables Limited",
-      "capture_price": 10897.0,
-      "capture_ret_1d": 6.953918633753742,
-      "capture_ret_5d": 23.12994350282487,
-      "capture_vol_ratio": 4.752610533531361,
-      "capture_score": 35.450624720618634,
-      "captured_at": "2026-11-04"
+      "symbol": "MARICO",
+      "name": "Marico Limited",
+      "capture_price": 878.4000244140625,
+      "capture_ret_1d": 9.999378603934762,
+      "capture_ret_5d": 13.173999456766294,
+      "capture_vol_ratio": 7.482010414717591,
+      "capture_score": 36.61015413458992,
+      "captured_at": "2026-11-05"
     },
     {
       "symbol": "LINDEINDIA",
@@ -129,9 +79,9 @@
       "capture_price": 6390.5,
       "capture_ret_1d": 9.267333504317342,
       "capture_ret_5d": 11.634203860599168,
-      "capture_vol_ratio": 12.335309824066584,
+      "capture_vol_ratio": 12.336277071759211,
       "capture_score": 35.19277155639052,
-      "captured_at": "2026-11-04"
+      "captured_at": "2026-11-05"
     },
     {
       "symbol": "CONFIPET",
@@ -139,9 +89,9 @@
       "capture_price": 63.290000915527344,
       "capture_ret_1d": 12.655750394676545,
       "capture_ret_5d": -7.941816850142047,
-      "capture_vol_ratio": 8.767982638525082,
+      "capture_vol_ratio": 8.768115498347882,
       "capture_score": 35.18690047361186,
-      "captured_at": "2026-11-04"
+      "captured_at": "2026-11-05"
     },
     {
       "symbol": "PRINCEPIPE",
@@ -149,9 +99,59 @@
       "capture_price": 297.75,
       "capture_ret_1d": 7.919538451209096,
       "capture_ret_5d": 14.82838951682892,
-      "capture_vol_ratio": 5.5507645010042745,
+      "capture_vol_ratio": 5.551820234416292,
       "capture_score": 34.693382472341035,
-      "captured_at": "2026-11-04"
+      "captured_at": "2026-11-05"
+    },
+    {
+      "symbol": "BANARISUG",
+      "name": "Bannari Amman Sugars Limited",
+      "capture_price": 3435.800048828125,
+      "capture_ret_1d": 8.741611046814324,
+      "capture_ret_5d": 9.462214711984762,
+      "capture_vol_ratio": 12.562058756547483,
+      "capture_score": 33.801708405371855,
+      "captured_at": "2026-11-05"
+    },
+    {
+      "symbol": "RKEC",
+      "name": "RKEC Projects Limited",
+      "capture_price": 22.989999771118164,
+      "capture_ret_1d": 7.229473873372161,
+      "capture_ret_5d": 29.37534709558145,
+      "capture_vol_ratio": 3.675629743286293,
+      "capture_score": 33.65925910464527,
+      "captured_at": "2026-11-05"
+    },
+    {
+      "symbol": "FACT",
+      "name": "Fertilizers and Chemicals Travancore Limited",
+      "capture_price": 764.0499877929688,
+      "capture_ret_1d": 6.852667762605025,
+      "capture_ret_5d": 12.492634579057382,
+      "capture_vol_ratio": 26.356700671577627,
+      "capture_score": 32.59562341779611,
+      "captured_at": "2026-11-05"
+    },
+    {
+      "symbol": "ARMANFIN",
+      "name": "Arman Financial Services Limited",
+      "capture_price": 1584.0,
+      "capture_ret_1d": 6.173334277014275,
+      "capture_ret_5d": 14.71610254825304,
+      "capture_vol_ratio": 5.370076508926041,
+      "capture_score": 32.558637024305696,
+      "captured_at": "2026-11-05"
+    },
+    {
+      "symbol": "SUPREMEINF",
+      "name": "Supreme Infrastructure India Limited",
+      "capture_price": 76.8499984741211,
+      "capture_ret_1d": 15.217394288271247,
+      "capture_ret_5d": 41.60677690417673,
+      "capture_vol_ratio": 0.1775738137654518,
+      "capture_score": 32.2608731459255,
+      "captured_at": "2026-11-05"
     }
   ]
 }
