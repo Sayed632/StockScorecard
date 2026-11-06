@@ -1,37 +1,17 @@
 {
-  "saved_at": "05 Nov 2026 | 11:26 PM IST",
-  "captured_day": "2026-11-05",
+  "saved_at": "06 Nov 2026 | 9:03 AM IST",
+  "captured_day": "2026-11-06",
   "count": 15,
   "items": [
-    {
-      "symbol": "AGARIND",
-      "name": "Agarwal Industrial Corporation Limited",
-      "capture_price": 414.0,
-      "capture_ret_1d": 19.999999999999996,
-      "capture_ret_5d": 26.663604793962705,
-      "capture_vol_ratio": 8.463884505586522,
-      "capture_score": 53.33226167788694,
-      "captured_at": "2026-11-05"
-    },
-    {
-      "symbol": "HEG",
-      "name": "HEG Limited",
-      "capture_price": 288.17999267578125,
-      "capture_ret_1d": 19.745694461299323,
-      "capture_ret_5d": 25.985829218839275,
-      "capture_vol_ratio": 18.967816781292914,
-      "capture_score": 52.78987358015293,
-      "captured_at": "2026-11-05"
-    },
     {
       "symbol": "POKARNA",
       "name": "Pokarna Limited",
       "capture_price": 810.4000244140625,
       "capture_ret_1d": 19.997046525537332,
       "capture_ret_5d": 20.032584627006187,
-      "capture_vol_ratio": 16.114733285600234,
+      "capture_vol_ratio": 16.115045533257234,
       "capture_score": 51.00786045009696,
-      "captured_at": "2026-11-05"
+      "captured_at": "2026-11-06"
     },
     {
       "symbol": "TRIGYN",
@@ -39,19 +19,9 @@
       "capture_price": 61.959999084472656,
       "capture_ret_1d": 17.705166798799365,
       "capture_ret_5d": 24.342758995963763,
-      "capture_vol_ratio": 33.03079937343548,
+      "capture_vol_ratio": 33.11104395521373,
       "capture_score": 49.76616580714655,
-      "captured_at": "2026-11-05"
-    },
-    {
-      "symbol": "ANSALHSG",
-      "name": "Ansal Housing Limited",
-      "capture_price": 5.309999942779541,
-      "capture_ret_1d": 16.192554558463932,
-      "capture_ret_5d": 24.065413142054794,
-      "capture_vol_ratio": 7.303396482841845,
-      "capture_score": 47.853960069875896,
-      "captured_at": "2026-11-05"
+      "captured_at": "2026-11-06"
     },
     {
       "symbol": "PARAGMILK",
@@ -59,29 +29,59 @@
       "capture_price": 323.75,
       "capture_ret_1d": 10.880878080095524,
       "capture_ret_5d": 32.16983222433279,
-      "capture_vol_ratio": 9.682325381794293,
+      "capture_vol_ratio": 9.683529387266477,
       "capture_score": 44.316494974631105,
-      "captured_at": "2026-11-05"
+      "captured_at": "2026-11-06"
+    },
+    {
+      "symbol": "MELSTAR",
+      "name": "Melstar Information Technologies Limited",
+      "capture_price": 346.5,
+      "capture_ret_1d": 8052.941176470588,
+      "capture_ret_5d": 8052.941176470588,
+      "capture_vol_ratio": null,
+      "capture_score": 44.0,
+      "captured_at": "2026-11-06"
+    },
+    {
+      "symbol": "ICIL",
+      "name": "Indo Count Industries Limited",
+      "capture_price": 525.3499755859375,
+      "capture_ret_1d": 12.530784774039505,
+      "capture_ret_5d": 22.7166475346666,
+      "capture_vol_ratio": 29.962421758841568,
+      "capture_score": 42.98776836598071,
+      "captured_at": "2026-11-06"
     },
     {
       "symbol": "RUSHIL",
       "name": "Rushil Decor Limited",
-      "capture_price": 19.719999313354492,
-      "capture_ret_1d": 9.738453349296904,
-      "capture_ret_5d": 32.260224783149425,
-      "capture_vol_ratio": 5.456687199310931,
-      "capture_score": 42.97722269325858,
-      "captured_at": "2026-11-05"
+      "capture_price": 17.969999313354492,
+      "capture_ret_1d": 13.59038975982838,
+      "capture_ret_5d": 17.681720855601355,
+      "capture_vol_ratio": 9.054719916177218,
+      "capture_score": 42.49707001125453,
+      "captured_at": "2026-11-06"
     },
     {
-      "symbol": "VERTOZ",
-      "name": "Vertoz Advertising Limited",
-      "capture_price": 35.349998474121094,
-      "capture_ret_1d": 11.796323642912743,
-      "capture_ret_5d": 16.05383958183102,
-      "capture_vol_ratio": 5.367224770427066,
-      "capture_score": 39.77443222513615,
-      "captured_at": "2026-11-05"
+      "symbol": "SADBHIN",
+      "name": "Sadbhav Infrastructure Project Limited",
+      "capture_price": 2.950000047683716,
+      "capture_ret_1d": 9.665426949169342,
+      "capture_ret_5d": 30.530976112040698,
+      "capture_vol_ratio": 5.292968467624379,
+      "capture_score": 42.28435397821745,
+      "captured_at": "2026-11-06"
+    },
+    {
+      "symbol": "INVENTURE",
+      "name": "Inventure Growth & Securities Limited",
+      "capture_price": 0.8999999761581421,
+      "capture_ret_1d": 11.111107840623058,
+      "capture_ret_5d": 23.287664745600843,
+      "capture_vol_ratio": 6.532202691999535,
+      "capture_score": 41.484012069707966,
+      "captured_at": "2026-11-06"
     },
     {
       "symbol": "ASHOKLEY",
@@ -89,69 +89,69 @@
       "capture_price": 170.2100067138672,
       "capture_ret_1d": 10.504452420176902,
       "capture_ret_5d": 17.38621152680495,
-      "capture_vol_ratio": 7.043606698081838,
+      "capture_vol_ratio": 7.044034176737731,
       "capture_score": 38.690516938594016,
-      "captured_at": "2026-11-05"
+      "captured_at": "2026-11-06"
     },
     {
-      "symbol": "MELSTAR",
-      "name": "Melstar Information Technologies Limited",
-      "capture_price": 363.82000732421875,
-      "capture_ret_1d": 4.998559112328649,
-      "capture_ret_5d": 8460.470760569853,
-      "capture_vol_ratio": 4.882992327365729,
-      "capture_score": 38.530528421791566,
-      "captured_at": "2026-11-05"
+      "symbol": "CAPACITE",
+      "name": "Capacit'e Infraprojects Limited",
+      "capture_price": 166.58999633789062,
+      "capture_ret_1d": 10.353728755225111,
+      "capture_ret_5d": 11.76785838779355,
+      "capture_vol_ratio": 5.525389265393318,
+      "capture_score": 36.54322494199788,
+      "captured_at": "2026-11-06"
     },
     {
-      "symbol": "TARC",
-      "name": "Anant Raj Global Limited",
-      "capture_price": 125.18000030517578,
-      "capture_ret_1d": 10.817989836884534,
-      "capture_ret_5d": 13.614086003315574,
-      "capture_vol_ratio": 83.91818850441291,
-      "capture_score": 37.74651790542189,
-      "captured_at": "2026-11-05"
+      "symbol": "TASTYBITE",
+      "name": "Tasty Bite Eatables Limited",
+      "capture_price": 10897.0,
+      "capture_ret_1d": 6.953918633753742,
+      "capture_ret_5d": 23.12994350282487,
+      "capture_vol_ratio": 4.821706843367989,
+      "capture_score": 35.727009959965145,
+      "captured_at": "2026-11-06"
     },
     {
-      "symbol": "JKTYRE",
-      "name": "JK Tyre & Industries Limited",
-      "capture_price": 361.95001220703125,
-      "capture_ret_1d": 8.742678554876026,
-      "capture_ret_5d": 16.495010616816508,
-      "capture_vol_ratio": 7.5228954142132425,
-      "capture_score": 36.264467981737006,
-      "captured_at": "2026-11-05"
+      "symbol": "LINDEINDIA",
+      "name": "Linde India Limited",
+      "capture_price": 6390.5,
+      "capture_ret_1d": 9.267333504317342,
+      "capture_ret_5d": 11.634203860599168,
+      "capture_vol_ratio": 12.336220174836116,
+      "capture_score": 35.19277155639052,
+      "captured_at": "2026-11-06"
     },
     {
-      "symbol": "ORIENTALTL",
-      "name": "Oriental Trimex Limited",
-      "capture_price": 5.210000038146973,
-      "capture_ret_1d": 9.22431989475594,
-      "capture_ret_5d": 17.342341689260053,
-      "capture_vol_ratio": 4.720891609751544,
-      "capture_score": 36.02256990395432,
-      "captured_at": "2026-11-05"
+      "symbol": "PRINCEPIPE",
+      "name": "Prince Pipes And Fittings Limited",
+      "capture_price": 297.75,
+      "capture_ret_1d": 7.919538451209096,
+      "capture_ret_5d": 14.82838951682892,
+      "capture_vol_ratio": 5.551820234416292,
+      "capture_score": 34.693382472341035,
+      "captured_at": "2026-11-06"
     },
     {
-      "symbol": "CLEDUCATE",
-      "name": "CL Educate Limited",
-      "capture_price": 54.630001068115234,
-      "capture_ret_1d": 7.475898288752236,
-      "capture_ret_5d": 19.90781260191399,
-      "capture_vol_ratio": 9.267672360054856,
-      "capture_score": 35.93881235717258,
-      "captured_at": "2026-11-05"
+      "symbol": "NOIDATOLL",
+      "name": "Noida Toll Bridge Company Limited",
+      "capture_price": 3.8499999046325684,
+      "capture_ret_1d": 12.90322016794596,
+      "capture_ret_5d": 11.271672317508497,
+      "capture_vol_ratio": 3.7848069457478832,
+      "capture_score": 34.56817729565466,
+      "captured_at": "2026-11-06"
     },
     {
-      "symbol": "GLOBE",
-      "name": "Globe Textiles (India) Limited",
-      "capture_price": 2.1500000953674316,
-      "capture_ret_1d": 11.979174136649995,
-      "capture_ret_5d": 11.39897169940507,
-      "capture_vol_ratio": 4.160299118501815,
-      "capture_score": 35.00584553277903,
-      "captured_at": "2026-11-05"
+      "symbol": "SOBHA",
+      "name": "Sobha Limited",
+      "capture_price": 1291.9000244140625,
+      "capture_ret_1d": 8.745793300847016,
+      "capture_ret_5d": 11.794743138430341,
+      "capture_vol_ratio": 4.766191941601661,
+      "capture_score": 33.68787982587368,
+      "captured_at": "2026-11-06"
     }
   ]
 }
