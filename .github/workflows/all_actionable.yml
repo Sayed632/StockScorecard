@@ -1,0 +1,62 @@
+name: All Actionable (one click)
+
+on:
+  workflow_dispatch:
+  schedule:
+    # Optional single morning pack ~09:20 IST (03:50 UTC)
+    - cron: "50 3 * * 1-5"
+
+jobs:
+  all-actionable:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Heartbeat
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          python - <<'PY'
+          import os, urllib.request, urllib.parse
+          token = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
+          chat = os.environ.get("TELEGRAM_CHAT_ID", "").strip()
+          if not token or not chat:
+              raise SystemExit("Missing TELEGRAM secrets")
+          msg = "⚡ All Actionable started — running priority flows…"
+          data = urllib.parse.urlencode({"chat_id": chat, "text": msg}).encode()
+          urllib.request.urlopen(
+              f"https://api.telegram.org/bot{token}/sendMessage", data=data, timeout=30
+          )
+          print("heartbeat ok")
+          PY
+
+      - name: Run all actionable flows
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SCREENER_EMAIL: ${{ secrets.SCREENER_EMAIL }}
+          SCREENER_PASSWORD: ${{ secrets.SCREENER_PASSWORD }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: python scripts/run_all_actionable.py
+
+      - name: Commit watch / brief artifacts if changed
+        run: |
+          git config user.name "stockscorecard-bot"
+          git config user.email "bot@stockscorecard.local"
+          git add config/wide_scan_watch.json config/daily_brief_latest.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "chore: all-actionable artifacts" || true
+          git push origin main || true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
