@@ -142,6 +142,46 @@ def main():
             st.rerun()
         st.stop()
 
+
+    # --- Display merge: SWING (brief) + WIDE (watch) ---
+    brief_path = ROOT / "config" / "daily_brief_latest.json"
+    brief = {}
+    if brief_path.exists():
+        try:
+            brief = json.loads(brief_path.read_text(encoding="utf-8"))
+        except Exception:
+            brief = {}
+    swing_rows = list(brief.get("swing_buy") or [])
+    wide_syms = [str(it.get("symbol", "")).upper() for it in items if it.get("symbol")]
+    swing_syms = [str(r.get("symbol", "")).upper() for r in swing_rows]
+    both = [s for s in swing_syms if s in set(wide_syms)]
+
+    st.subheader("Display board (swing + wide)")
+    st.caption("Same data as Telegram sections — rules not merged. Observe only.")
+    b1, b2, b3 = st.columns(3)
+    with b1:
+        st.markdown("**🟢 SWING – priority**")
+        if not swing_rows:
+            st.write("• Run Daily Decision to refresh")
+        else:
+            for r in swing_rows[:8]:
+                st.write(f"• **{r.get('symbol')}** — {(r.get('reason') or '')[:60]}")
+    with b2:
+        st.markdown("**🌐 WIDE – day movers**")
+        for s in wide_syms[:10]:
+            tag = " ⭐BOTH" if s in both else ""
+            st.write(f"• **{s}**{tag}")
+    with b3:
+        st.markdown("**⭐ BOTH**")
+        if not both:
+            st.write("• None right now")
+        else:
+            for s in both:
+                st.write(f"• **{s}**")
+        if brief.get("saved_at"):
+            st.caption(f"Brief: {brief.get('saved_at')}")
+
+
     symbols = [str(it.get("symbol", "")).upper() for it in items if it.get("symbol")]
     st.subheader("Copy symbols")
     st.code(",".join(symbols), language=None)

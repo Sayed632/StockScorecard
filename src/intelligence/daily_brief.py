@@ -152,7 +152,41 @@ def format_brief_rule_based(packet: Dict[str, Any]) -> str:
             lines.append(f"• <b>{row['symbol']}</b>{tag} – {row.get('reason', '')[:90]}")
         lines.append("")
 
-    lines.append("<i>Curated from full scan. Not investment advice. Use stop-losses for swing.</i>")
+    # Display-only merge: wide-scan day movers (separate engine)
+    wide_syms: List[str] = []
+    try:
+        import json
+        from pathlib import Path
+
+        wp = Path(__file__).resolve().parents[2] / "config" / "wide_scan_watch.json"
+        if wp.exists():
+            w = json.loads(wp.read_text(encoding="utf-8"))
+            for it in (w.get("items") or [])[:12]:
+                s = str(it.get("symbol") or "").upper()
+                if s:
+                    wide_syms.append(s)
+            day = w.get("captured_day") or "?"
+            lines.append(f"<b>🌐 WIDE – day movers</b> <i>(scan {day})</i>")
+            if not wide_syms:
+                lines.append("• No wide-scan list yet")
+            else:
+                swing_set = {str(r.get("symbol", "")).upper() for r in swing}
+                for s in wide_syms[:10]:
+                    both = " ⭐BOTH" if s in swing_set else ""
+                    lines.append(f"• <b>{s}</b>{both}")
+            lines.append("")
+            both = [s for s in wide_syms if s in {str(r.get("symbol", "")).upper() for r in swing}]
+            if both:
+                lines.append("<b>⭐ DISPLAY OVERLAP (swing + wide)</b>")
+                lines.append("• " + ", ".join(both[:8]))
+                lines.append("")
+    except Exception:
+        pass
+
+    lines.append(
+        "<i>Display merge only — swing rules and wide scan stay separate. "
+        "Not investment advice. Use stop-losses for swing.</i>"
+    )
     lines.append("<i>StockScorecard – Daily Brief</i>")
     return "\n".join(lines)
 
@@ -234,6 +268,23 @@ def format_daily_brief_telegram(
     use_ai: bool = True,
 ) -> str:
     packet = build_brief_packet(scan_result, extra_notes=extra_notes)
+    # Persist for Streamlit display-merge (swing + wide on one page)
+    try:
+        import json
+        from pathlib import Path
+
+        out = Path(__file__).resolve().parents[2] / "config" / "daily_brief_latest.json"
+        slim = {
+            "saved_at": format_ist(),
+            "swing_buy": packet.get("swing_buy") or [],
+            "long_term": packet.get("long_term") or [],
+            "dark_horse": packet.get("dark_horse") or [],
+            "multi_layer": packet.get("multi_layer") or {},
+        }
+        out.write_text(json.dumps(slim, indent=2), encoding="utf-8")
+    except Exception as e:
+        logger.debug("brief persist skip: %s", e)
+
     base = format_brief_rule_based(packet)
     if use_ai:
         polished = _optional_ai_polish(packet, base)
