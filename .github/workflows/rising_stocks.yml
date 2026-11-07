@@ -1,0 +1,27 @@
+name: Rising Stocks (multi-day)
+
+on:
+  schedule:
+    - cron: "20 4 * * 1-5"   # ~09:50 IST
+    - cron: "20 10 * * 1-5"  # ~15:50 IST
+  workflow_dispatch:
+
+jobs:
+  rising:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Rising stocks scan
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/run_rising_stocks.py

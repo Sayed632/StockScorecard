@@ -19,6 +19,7 @@ sys.path.insert(0, str(ROOT))
 STEPS = [
     ("GIFT Nifty", [sys.executable, "scripts/run_gift_nifty.py"]),
     ("Wide Parallel Scan", [sys.executable, "scripts/run_wide_scan.py"]),
+    ("Rising Stocks", [sys.executable, "scripts/run_rising_stocks.py"]),
     ("Wide Scan Next-Day Plan", [sys.executable, "scripts/run_wide_scan_followup.py"]),
     ("Swing Catcher", [sys.executable, "scripts/run_swing_catcher.py"]),
     ("Daily Decision (+ Brief)", [sys.executable, "scripts/run_decision.py"]),
