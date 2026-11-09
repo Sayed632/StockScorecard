@@ -1,6 +1,6 @@
 {
-  "saved_at": "09 Nov 2026 | 7:37 PM IST",
-  "captured_day": "2026-11-09",
+  "saved_at": "10 Nov 2026 | 2:03 AM IST",
+  "captured_day": "2026-11-10",
   "count": 15,
   "items": [
     {
@@ -11,7 +11,7 @@
       "capture_ret_5d": 24.27698741306854,
       "capture_vol_ratio": 78.34099220588787,
       "capture_score": 48.60260597193247,
-      "captured_at": "2026-11-09"
+      "captured_at": "2026-11-10"
     },
     {
       "symbol": "SALZERELEC",
@@ -21,7 +21,7 @@
       "capture_ret_5d": 14.94121103253503,
       "capture_vol_ratio": 59.78706385203271,
       "capture_score": 44.375002156832394,
-      "captured_at": "2026-11-09"
+      "captured_at": "2026-11-10"
     },
     {
       "symbol": "PPAP",
@@ -31,7 +31,7 @@
       "capture_ret_5d": 19.786119382518443,
       "capture_vol_ratio": 12.867357129231703,
       "capture_score": 44.279308402477646,
-      "captured_at": "2026-11-09"
+      "captured_at": "2026-11-10"
     },
     {
       "symbol": "HMVL",
@@ -41,7 +41,7 @@
       "capture_ret_5d": 29.110650872801692,
       "capture_vol_ratio": 13.838223374939211,
       "capture_score": 44.102583962606175,
-      "captured_at": "2026-11-09"
+      "captured_at": "2026-11-10"
     },
     {
       "symbol": "SPMLINFRA",
@@ -51,7 +51,7 @@
       "capture_ret_5d": 15.574789896400087,
       "capture_vol_ratio": 28.957823397571087,
       "capture_score": 42.79080619559991,
-      "captured_at": "2026-11-09"
+      "captured_at": "2026-11-10"
     },
     {
       "symbol": "DAMODARIND",
@@ -61,7 +61,7 @@
       "capture_ret_5d": 15.26566410107344,
       "capture_vol_ratio": 9.71498599439776,
       "capture_score": 39.56383638303333,
-      "captured_at": "2026-11-09"
+      "captured_at": "2026-11-10"
     },
     {
       "symbol": "FINCABLES",
@@ -71,7 +71,7 @@
       "capture_ret_5d": 8.35238244776193,
       "capture_vol_ratio": 9.006705562023457,
       "capture_score": 38.476040483377986,
-      "captured_at": "2026-11-09"
+      "captured_at": "2026-11-10"
     },
     {
       "symbol": "SPARC",
@@ -81,7 +81,7 @@
       "capture_ret_5d": 20.395229573797934,
       "capture_vol_ratio": 38.49329073163746,
       "capture_score": 37.85350091581212,
-      "captured_at": "2026-11-09"
+      "captured_at": "2026-11-10"
     },
     {
       "symbol": "AARTIDRUGS",
@@ -91,7 +91,7 @@
       "capture_ret_5d": 10.125608956162967,
       "capture_vol_ratio": 16.94729188532366,
       "capture_score": 37.78011310667718,
-      "captured_at": "2026-11-09"
+      "captured_at": "2026-11-10"
     },
     {
       "symbol": "IOLCP",
@@ -101,7 +101,7 @@
       "capture_ret_5d": 12.599861719344796,
       "capture_vol_ratio": 12.13241555199726,
       "capture_score": 37.28136043951443,
-      "captured_at": "2026-11-09"
+      "captured_at": "2026-11-10"
     },
     {
       "symbol": "GUFICBIO",
@@ -111,7 +111,7 @@
       "capture_ret_5d": 13.862217751780449,
       "capture_vol_ratio": 7.732476284593584,
       "capture_score": 37.12085934340191,
-      "captured_at": "2026-11-09"
+      "captured_at": "2026-11-10"
     },
     {
       "symbol": "JMA",
@@ -121,7 +121,7 @@
       "capture_ret_5d": 16.353453191266134,
       "capture_vol_ratio": 4.216766901700539,
       "capture_score": 37.028165725515194,
-      "captured_at": "2026-11-09"
+      "captured_at": "2026-11-10"
     },
     {
       "symbol": "VASWANI",
@@ -131,7 +131,7 @@
       "capture_ret_5d": 15.334011394477432,
       "capture_vol_ratio": 5.726223685678735,
       "capture_score": 36.312562589560926,
-      "captured_at": "2026-11-09"
+      "captured_at": "2026-11-10"
     },
     {
       "symbol": "BANCOINDIA",
@@ -141,7 +141,7 @@
       "capture_ret_5d": 11.606849248531725,
       "capture_vol_ratio": 42.08191423558075,
       "capture_score": 36.28907947635798,
-      "captured_at": "2026-11-09"
+      "captured_at": "2026-11-10"
     },
     {
       "symbol": "BAJAJCON",
@@ -151,7 +151,7 @@
       "capture_ret_5d": 16.2933349609375,
       "capture_vol_ratio": 4.518341980046257,
       "capture_score": 35.694359134558965,
-      "captured_at": "2026-11-09"
+      "captured_at": "2026-11-10"
     }
   ]
 }
