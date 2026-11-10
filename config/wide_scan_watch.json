@@ -1,6 +1,157 @@
 {
-  "saved_at": "10 Nov 2026 | 5:29 PM IST",
+  "saved_at": "10 Nov 2026 | 7:09 PM IST",
   "captured_day": "2026-11-10",
-  "count": 0,
-  "items": []
+  "count": 15,
+  "items": [
+    {
+      "symbol": "REPCOHOME",
+      "name": "Repco Home Finance Limited",
+      "capture_price": 386.75,
+      "capture_ret_1d": 16.754716981132066,
+      "capture_ret_5d": 24.27698741306854,
+      "capture_vol_ratio": 78.34155126711227,
+      "capture_score": 48.60260597193247,
+      "captured_at": "2026-11-10"
+    },
+    {
+      "symbol": "SALZERELEC",
+      "name": "Salzer Electronics Limited",
+      "capture_price": 552.3499755859375,
+      "capture_ret_1d": 15.954648579537611,
+      "capture_ret_5d": 14.94121103253503,
+      "capture_vol_ratio": 59.78714701977313,
+      "capture_score": 44.375002156832394,
+      "captured_at": "2026-11-10"
+    },
+    {
+      "symbol": "PPAP",
+      "name": "PPAP Automotive Limited",
+      "capture_price": 249.7899932861328,
+      "capture_ret_1d": 14.461805515496827,
+      "capture_ret_5d": 19.786119382518443,
+      "capture_vol_ratio": 12.892492061176629,
+      "capture_score": 44.279308402477646,
+      "captured_at": "2026-11-10"
+    },
+    {
+      "symbol": "HMVL",
+      "name": "Hindustan Media Ventures Limited",
+      "capture_price": 95.08999633789062,
+      "capture_ret_1d": 11.594880130937991,
+      "capture_ret_5d": 29.110650872801692,
+      "capture_vol_ratio": 13.838223374939211,
+      "capture_score": 44.102583962606175,
+      "captured_at": "2026-11-10"
+    },
+    {
+      "symbol": "SPMLINFRA",
+      "name": "SPML Infra Limited",
+      "capture_price": 157.5399932861328,
+      "capture_ret_1d": 14.449691443216572,
+      "capture_ret_5d": 15.574789896400087,
+      "capture_vol_ratio": 28.957823397571087,
+      "capture_score": 42.79080619559991,
+      "captured_at": "2026-11-10"
+    },
+    {
+      "symbol": "DAMODARIND",
+      "name": "Damodar Industries Limited",
+      "capture_price": 29.06999969482422,
+      "capture_ret_1d": 11.850711623048028,
+      "capture_ret_5d": 15.26566410107344,
+      "capture_vol_ratio": 9.71498599439776,
+      "capture_score": 39.56383638303333,
+      "captured_at": "2026-11-10"
+    },
+    {
+      "symbol": "FINCABLES",
+      "name": "Finolex Cables Limited",
+      "capture_price": 1232.4000244140625,
+      "capture_ret_1d": 12.96058885555109,
+      "capture_ret_5d": 8.35238244776193,
+      "capture_vol_ratio": 9.009861164966663,
+      "capture_score": 38.476040483377986,
+      "captured_at": "2026-11-10"
+    },
+    {
+      "symbol": "SPARC",
+      "name": "Sun Pharma Advanced Research Company Limited",
+      "capture_price": 210.8000030517578,
+      "capture_ret_1d": 8.92930880415237,
+      "capture_ret_5d": 20.395229573797934,
+      "capture_vol_ratio": 38.49608864990647,
+      "capture_score": 37.85350091581212,
+      "captured_at": "2026-11-10"
+    },
+    {
+      "symbol": "AARTIDRUGS",
+      "name": "Aarti Drugs Limited",
+      "capture_price": 499.75,
+      "capture_ret_1d": 11.863458310016783,
+      "capture_ret_5d": 10.125608956162967,
+      "capture_vol_ratio": 16.94882967945795,
+      "capture_score": 37.78011310667718,
+      "captured_at": "2026-11-10"
+    },
+    {
+      "symbol": "IOLCP",
+      "name": "IOL Chemicals and Pharmaceuticals Limited",
+      "capture_price": 202.9499969482422,
+      "capture_ret_1d": 10.726174031453128,
+      "capture_ret_5d": 12.599861719344796,
+      "capture_vol_ratio": 12.13273666052671,
+      "capture_score": 37.28136043951443,
+      "captured_at": "2026-11-10"
+    },
+    {
+      "symbol": "GUFICBIO",
+      "name": "Gufic Biosciences Limited",
+      "capture_price": 474.3500061035156,
+      "capture_ret_1d": 10.224235941898963,
+      "capture_ret_5d": 13.862217751780449,
+      "capture_vol_ratio": 7.735564330171279,
+      "capture_score": 37.12085934340191,
+      "captured_at": "2026-11-10"
+    },
+    {
+      "symbol": "JMA",
+      "name": "Jullundur Motor Agency (Delhi) Limited",
+      "capture_price": 93.48999786376953,
+      "capture_ret_1d": 12.031157918141577,
+      "capture_ret_5d": 16.353453191266134,
+      "capture_vol_ratio": 4.216766901700539,
+      "capture_score": 37.028165725515194,
+      "captured_at": "2026-11-10"
+    },
+    {
+      "symbol": "VASWANI",
+      "name": "Vaswani Industries Limited",
+      "capture_price": 45.58000183105469,
+      "capture_ret_1d": 9.121382167911518,
+      "capture_ret_5d": 15.334011394477432,
+      "capture_vol_ratio": 5.726223685678735,
+      "capture_score": 36.312562589560926,
+      "captured_at": "2026-11-10"
+    },
+    {
+      "symbol": "BANCOINDIA",
+      "name": "Banco Products (I) Limited",
+      "capture_price": 659.1500244140625,
+      "capture_ret_1d": 10.18890186614323,
+      "capture_ret_5d": 11.606849248531725,
+      "capture_vol_ratio": 42.0860926316321,
+      "capture_score": 36.28907947635798,
+      "captured_at": "2026-11-10"
+    },
+    {
+      "symbol": "BAJAJCON",
+      "name": "Bajaj Consumer Care Limited",
+      "capture_price": 436.1000061035156,
+      "capture_ret_1d": 9.931936648371508,
+      "capture_ret_5d": 16.2933349609375,
+      "capture_vol_ratio": 4.519438749106597,
+      "capture_score": 35.69874621080032,
+      "captured_at": "2026-11-10"
+    }
+  ]
 }
