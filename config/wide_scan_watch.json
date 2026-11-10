@@ -1,5 +1,5 @@
 {
-  "saved_at": "10 Nov 2026 | 7:09 PM IST",
+  "saved_at": "10 Nov 2026 | 11:06 PM IST",
   "captured_day": "2026-11-10",
   "count": 15,
   "items": [
@@ -44,16 +44,6 @@
       "captured_at": "2026-11-10"
     },
     {
-      "symbol": "SPMLINFRA",
-      "name": "SPML Infra Limited",
-      "capture_price": 157.5399932861328,
-      "capture_ret_1d": 14.449691443216572,
-      "capture_ret_5d": 15.574789896400087,
-      "capture_vol_ratio": 28.957823397571087,
-      "capture_score": 42.79080619559991,
-      "captured_at": "2026-11-10"
-    },
-    {
       "symbol": "DAMODARIND",
       "name": "Damodar Industries Limited",
       "capture_price": 29.06999969482422,
@@ -71,16 +61,6 @@
       "capture_ret_5d": 8.35238244776193,
       "capture_vol_ratio": 9.009861164966663,
       "capture_score": 38.476040483377986,
-      "captured_at": "2026-11-10"
-    },
-    {
-      "symbol": "SPARC",
-      "name": "Sun Pharma Advanced Research Company Limited",
-      "capture_price": 210.8000030517578,
-      "capture_ret_1d": 8.92930880415237,
-      "capture_ret_5d": 20.395229573797934,
-      "capture_vol_ratio": 38.49608864990647,
-      "capture_score": 37.85350091581212,
       "captured_at": "2026-11-10"
     },
     {
@@ -124,16 +104,6 @@
       "captured_at": "2026-11-10"
     },
     {
-      "symbol": "VASWANI",
-      "name": "Vaswani Industries Limited",
-      "capture_price": 45.58000183105469,
-      "capture_ret_1d": 9.121382167911518,
-      "capture_ret_5d": 15.334011394477432,
-      "capture_vol_ratio": 5.726223685678735,
-      "capture_score": 36.312562589560926,
-      "captured_at": "2026-11-10"
-    },
-    {
       "symbol": "BANCOINDIA",
       "name": "Banco Products (I) Limited",
       "capture_price": 659.1500244140625,
@@ -151,6 +121,36 @@
       "capture_ret_5d": 16.2933349609375,
       "capture_vol_ratio": 4.519438749106597,
       "capture_score": 35.69874621080032,
+      "captured_at": "2026-11-10"
+    },
+    {
+      "symbol": "GHCL",
+      "name": "GHCL Limited",
+      "capture_price": 450.6000061035156,
+      "capture_ret_1d": 8.031646969500649,
+      "capture_ret_5d": 13.960549585006476,
+      "capture_vol_ratio": 5.525432713918995,
+      "capture_score": 34.52416871815304,
+      "captured_at": "2026-11-10"
+    },
+    {
+      "symbol": "DIVISLAB",
+      "name": "Divi's Laboratories Limited",
+      "capture_price": 11565.5,
+      "capture_ret_1d": 12.063369022818659,
+      "capture_ret_5d": 16.288773817304314,
+      "capture_vol_ratio": 3.5755621865549245,
+      "capture_score": 34.4793624096586,
+      "captured_at": "2026-11-10"
+    },
+    {
+      "symbol": "INDOWIND",
+      "name": "Indowind Energy Limited",
+      "capture_price": 9.270000457763672,
+      "capture_ret_1d": 7.790698215985925,
+      "capture_ret_5d": 13.186824575268496,
+      "capture_vol_ratio": 7.153533739393091,
+      "capture_score": 33.96422646052709,
       "captured_at": "2026-11-10"
     }
   ]
