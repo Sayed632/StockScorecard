@@ -132,18 +132,7 @@ def main():
     with m3:
         st.metric("Watch file", (watch.get("saved_at") or "—")[:24])
 
-    if not items:
-        st.warning(
-            "No watchlist yet. Run **Wide Parallel Scan** on GitHub so "
-            "`config/wide_scan_watch.json` is committed."
-        )
-        if auto:
-            time.sleep(every)
-            st.rerun()
-        st.stop()
-
-
-    # --- Display merge: SWING (brief) + WIDE (watch) ---
+    # Load brief + rising even when wide list is empty (do NOT stop the page)
     brief_path = ROOT / "config" / "daily_brief_latest.json"
     brief = {}
     if brief_path.exists():
@@ -156,8 +145,6 @@ def main():
     swing_syms = [str(r.get("symbol", "")).upper() for r in swing_rows]
     both = [s for s in swing_syms if s in set(wide_syms)]
 
-
-    # Rising stocks (multi-day) for wife watch page
     rising_path = ROOT / "config" / "rising_stocks_latest.json"
     rising = {}
     if rising_path.exists():
@@ -166,6 +153,23 @@ def main():
         except Exception:
             rising = {}
     rising_items = list(rising.get("items") or [])
+
+    if not items and not rising_items and not swing_rows:
+        st.warning(
+            "No lists yet. Run **Rising Stocks** and/or **Wide Parallel Scan** on GitHub."
+        )
+        if auto:
+            time.sleep(every)
+            st.rerun()
+        st.stop()
+
+    if not items:
+        st.info(
+            "🌐 Wide scan list is empty today. Showing **Rising** / other boards below. "
+            "Run Wide Parallel Scan after market moves to fill day-movers."
+        )
+
+    # Rising first — useful when wide is empty (wife watch page)
     if rising_items:
         st.subheader("📈 Rising (multi-day)")
         st.caption(
@@ -194,6 +198,8 @@ def main():
             },
         )
         st.code(",".join(str(it.get("symbol")) for it in rising_items), language=None)
+    else:
+        st.caption("📈 Rising list not saved yet — run Rising Stocks workflow once.")
 
 
     st.subheader("Display board (swing + wide)")
@@ -223,10 +229,18 @@ def main():
 
 
     symbols = [str(it.get("symbol", "")).upper() for it in items if it.get("symbol")]
-    st.subheader("Copy symbols")
-    st.code(",".join(symbols), language=None)
+    if symbols:
+        st.subheader("Copy symbols (wide)")
+        st.code(",".join(symbols), language=None)
 
-    # Live-ish snapshots
+    # Wide-scan snapshot + charts only when we have wide items
+    if not items:
+        st.caption("Wide snapshot/charts skipped (empty wide list).")
+        if auto:
+            time.sleep(int(every))
+            st.rerun()
+        return
+
     st.subheader("Snapshot (best-effort)")
     rows = []
     prog = st.progress(0)
