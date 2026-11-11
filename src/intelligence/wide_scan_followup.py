@@ -78,6 +78,21 @@ def save_watch_from_movers(movers: List[Any], captured_at: Optional[datetime] = 
             )
         except Exception:
             continue
+    # Never wipe a good list with an empty scan (holiday / feed fail / flaky morning)
+    if not items and WATCH_PATH.exists():
+        try:
+            prev = json.loads(WATCH_PATH.read_text(encoding="utf-8"))
+            if prev.get("items"):
+                logger.warning(
+                    "Wide-scan returned 0 movers — keeping previous watch "
+                    "(%s names, day %s)",
+                    len(prev.get("items") or []),
+                    prev.get("captured_day"),
+                )
+                return WATCH_PATH
+        except Exception:
+            pass
+
     payload = {
         "saved_at": format_ist(when),
         "captured_day": day,
