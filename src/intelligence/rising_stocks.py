@@ -95,12 +95,38 @@ def run_rising_stocks(max_symbols: int = 900) -> Dict[str, Any]:
 
     risers.sort(key=lambda x: -x.score)
     top = risers[:TOP_N]
-    return {
+    result = {
         "scan_time": now_ist(),
         "universe_size": len(universe),
         "candidates": len(risers),
         "top": top,
     }
+    # Persist for Streamlit (wife watch page)
+    try:
+        import json
+        from pathlib import Path
+        out = Path(__file__).resolve().parents[2] / "config" / "rising_stocks_latest.json"
+        slim = {
+            "saved_at": format_ist(result["scan_time"]),
+            "universe_size": result["universe_size"],
+            "candidates": result["candidates"],
+            "items": [
+                {
+                    "symbol": m.symbol,
+                    "name": m.name,
+                    "price": m.price,
+                    "ret_1d": m.ret_1d,
+                    "ret_5d": m.ret_5d,
+                    "ret_10d": m.ret_10d,
+                    "score": m.score,
+                }
+                for m in top
+            ],
+        }
+        out.write_text(json.dumps(slim, indent=2), encoding="utf-8")
+    except Exception as e:
+        logger.debug("rising persist skip: %s", e)
+    return result
 
 
 def format_rising_stocks_telegram(result: Optional[Dict[str, Any]] = None) -> str:

@@ -25,3 +25,14 @@ jobs:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python scripts/run_rising_stocks.py
+
+      - name: Commit rising list for Streamlit
+        run: |
+          git config user.name "stockscorecard-bot"
+          git config user.email "bot@stockscorecard.local"
+          git add config/rising_stocks_latest.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "chore: rising stocks list for Streamlit" || true
+          git push origin main || true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+

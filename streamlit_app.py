@@ -156,6 +156,46 @@ def main():
     swing_syms = [str(r.get("symbol", "")).upper() for r in swing_rows]
     both = [s for s in swing_syms if s in set(wide_syms)]
 
+
+    # Rising stocks (multi-day) for wife watch page
+    rising_path = ROOT / "config" / "rising_stocks_latest.json"
+    rising = {}
+    if rising_path.exists():
+        try:
+            rising = json.loads(rising_path.read_text(encoding="utf-8"))
+        except Exception:
+            rising = {}
+    rising_items = list(rising.get("items") or [])
+    if rising_items:
+        st.subheader("📈 Rising (multi-day)")
+        st.caption(
+            f"From Rising Stocks scan · {rising.get('saved_at') or '—'} · "
+            "Several-day strength, not only today. Observe only."
+        )
+        rrows = [
+            {
+                "Symbol": it.get("symbol"),
+                "Name": (it.get("name") or "")[:28],
+                "₹": round(float(it["price"]), 2) if it.get("price") is not None else None,
+                "1D %": round(float(it["ret_1d"]), 1) if it.get("ret_1d") is not None else None,
+                "5D %": round(float(it["ret_5d"]), 1) if it.get("ret_5d") is not None else None,
+                "~10D %": round(float(it["ret_10d"]), 1) if it.get("ret_10d") is not None else None,
+            }
+            for it in rising_items
+        ]
+        st.dataframe(
+            pd.DataFrame(rrows),
+            use_container_width=True,
+            hide_index=True,
+            column_config={
+                "1D %": st.column_config.NumberColumn(format="%+.1f"),
+                "5D %": st.column_config.NumberColumn(format="%+.1f"),
+                "~10D %": st.column_config.NumberColumn(format="%+.1f"),
+            },
+        )
+        st.code(",".join(str(it.get("symbol")) for it in rising_items), language=None)
+
+
     st.subheader("Display board (swing + wide)")
     st.caption("Same data as Telegram sections — rules not merged. Observe only.")
     b1, b2, b3 = st.columns(3)
