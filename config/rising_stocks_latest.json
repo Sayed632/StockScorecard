@@ -1,0 +1,142 @@
+{
+  "saved_at": "11 Nov 2026 | 10:05 AM IST",
+  "universe_size": 900,
+  "candidates": 416,
+  "items": [
+    {
+      "symbol": "ARSHIYA",
+      "name": "Arshiya Limited",
+      "price": 1.2000000476837158,
+      "ret_1d": 4.347832396711104,
+      "ret_5d": 27.659579864612493,
+      "ret_10d": 51.898736087314326,
+      "score": 92.1438892366207
+    },
+    {
+      "symbol": "AGARIND",
+      "name": "Agarwal Industrial Corporation Limited",
+      "price": 443.8500061035156,
+      "ret_1d": 14.453331633540367,
+      "ret_5d": 34.58157141659495,
+      "ret_10d": 34.642807317294235,
+      "score": 88.11567337226629
+    },
+    {
+      "symbol": "JYOTISTRUC",
+      "name": "Jyoti Structures Limited",
+      "price": 12.510000228881836,
+      "ret_1d": 15.726177088579751,
+      "ret_5d": 28.439430419469836,
+      "ret_10d": 38.84572598323184,
+      "score": 84.16509055149251
+    },
+    {
+      "symbol": "APLLTD",
+      "name": "Alembic Pharmaceuticals Limited",
+      "price": 1046.699951171875,
+      "ret_1d": 2.889999383828701,
+      "ret_5d": 30.38116181957451,
+      "ret_10d": 36.48453746909046,
+      "score": 80.02966380083483
+    },
+    {
+      "symbol": "BANKA",
+      "name": "Banka BioLoo Limited",
+      "price": 86.9800033569336,
+      "ret_1d": -0.5601896157897301,
+      "ret_5d": 24.026817001899126,
+      "ret_10d": 37.88839700716811,
+      "score": 71.52594080982689
+    },
+    {
+      "symbol": "IIFL",
+      "name": "IIFL Finance Limited",
+      "price": 686.3499755859375,
+      "ret_1d": 9.465705835077753,
+      "ret_5d": 26.738065009120614,
+      "ret_10d": 30.10141057102784,
+      "score": 70.84769862607392
+    },
+    {
+      "symbol": "HMVL",
+      "name": "Hindustan Media Ventures Limited",
+      "price": 95.7699966430664,
+      "ret_1d": 0.7151123476327514,
+      "ret_5d": 30.06926553785887,
+      "ret_10d": 25.304195029004784,
+      "score": 67.65145610367865
+    },
+    {
+      "symbol": "FLEXITUFF",
+      "name": "Flexituff Ventures International Limited",
+      "price": 3.2100000381469727,
+      "ret_1d": 19.77611784282789,
+      "ret_5d": 21.59090570428168,
+      "ret_10d": 28.915663688860114,
+      "score": 66.06457291984422
+    },
+    {
+      "symbol": "HEG",
+      "name": "HEG Limited",
+      "price": 289.17999267578125,
+      "ret_1d": -1.5959446419618328,
+      "ret_5d": 17.500301474388014,
+      "ret_10d": 41.06341106135672,
+      "score": 65.56383312549994
+    },
+    {
+      "symbol": "KAYA",
+      "name": "Kaya Limited",
+      "price": 363.5,
+      "ret_1d": 9.719291697394583,
+      "ret_5d": 21.26772310258549,
+      "ret_10d": 29.451572579128893,
+      "score": 62.62813701683668
+    },
+    {
+      "symbol": "ANSALHSG",
+      "name": "Ansal Housing Limited",
+      "price": 5.389999866485596,
+      "ret_1d": 1.8903573790866268,
+      "ret_5d": 24.193540944269376,
+      "ret_10d": 22.499994310465855,
+      "score": 57.0325767151233
+    },
+    {
+      "symbol": "DELTACORP",
+      "name": "Delta Corp Limited",
+      "price": 87.91000366210938,
+      "ret_1d": 8.356966150896517,
+      "ret_5d": 21.154915407928687,
+      "ret_10d": 23.834351750241623,
+      "score": 56.37617147415556
+    },
+    {
+      "symbol": "HUDCO",
+      "name": "Housing & Urban Development Corporation Limited",
+      "price": 173.89999389648438,
+      "ret_1d": 3.641447666966835,
+      "ret_5d": 21.21363923724826,
+      "ret_10d": 22.304578666800023,
+      "score": 53.278180282385975
+    },
+    {
+      "symbol": "ALEMBICLTD",
+      "name": "Alembic Limited",
+      "price": 107.31999969482422,
+      "ret_1d": 0.6943121139578734,
+      "ret_5d": 20.11192112768516,
+      "ret_10d": 23.04517105343724,
+      "score": 51.44486987208172
+    },
+    {
+      "symbol": "DAMODARIND",
+      "name": "Damodar Industries Limited",
+      "price": 29.979999542236328,
+      "ret_1d": 3.130374464964758,
+      "ret_5d": 21.327400457393185,
+      "ret_10d": 20.401606431855445,
+      "score": 51.35559813494357
+    }
+  ]
+}
