@@ -1,5 +1,5 @@
 {
-  "saved_at": "11 Nov 2026 | 5:00 PM IST",
+  "saved_at": "11 Nov 2026 | 6:22 PM IST",
   "captured_day": "2026-11-11",
   "count": 15,
   "items": [
@@ -31,6 +31,26 @@
       "capture_ret_5d": 21.59090570428168,
       "capture_vol_ratio": 4.271473591327367,
       "capture_score": 48.37405277320153,
+      "captured_at": "2026-11-11"
+    },
+    {
+      "symbol": "STEL",
+      "name": "Stel Holdings Limited",
+      "capture_price": 620.75,
+      "capture_ret_1d": 17.14473889417065,
+      "capture_ret_5d": 19.81278310194321,
+      "capture_vol_ratio": 20.809058678822083,
+      "capture_score": 47.5081607586849,
+      "captured_at": "2026-11-11"
+    },
+    {
+      "symbol": "TERASOFT",
+      "name": "Tera Software Limited",
+      "capture_price": 308.3999938964844,
+      "capture_ret_1d": 13.153552635910447,
+      "capture_ret_5d": 29.3895473040374,
+      "capture_vol_ratio": 4.53323429416596,
+      "capture_score": 44.20354189616947,
       "captured_at": "2026-11-11"
     },
     {
@@ -114,6 +134,16 @@
       "captured_at": "2026-11-11"
     },
     {
+      "symbol": "TALBROAUTO",
+      "name": "Talbros Automotive Components Limited",
+      "capture_price": 418.5,
+      "capture_ret_1d": 7.514450867052025,
+      "capture_ret_5d": 15.559852838109522,
+      "capture_vol_ratio": 90.90524440688901,
+      "capture_score": 34.46328953380076,
+      "captured_at": "2026-11-11"
+    },
+    {
       "symbol": "HLVLTD",
       "name": "HLV LIMITED",
       "capture_price": 6.329999923706055,
@@ -121,36 +151,6 @@
       "capture_ret_5d": 17.439704647587707,
       "capture_vol_ratio": 3.9418610734895245,
       "capture_score": 34.20583937596041,
-      "captured_at": "2026-11-11"
-    },
-    {
-      "symbol": "BALMLAWRIE",
-      "name": "Balmer Lawrie & Company Limited",
-      "capture_price": 179.61000061035156,
-      "capture_ret_1d": 8.828167666583987,
-      "capture_ret_5d": 9.920445115889297,
-      "capture_vol_ratio": 159.33132531248538,
-      "capture_score": 34.06595699046204,
-      "captured_at": "2026-11-11"
-    },
-    {
-      "symbol": "NELCO",
-      "name": "NELCO Limited",
-      "capture_price": 826.0499877929688,
-      "capture_ret_1d": 7.938063631125303,
-      "capture_ret_5d": 20.32774767559633,
-      "capture_vol_ratio": 4.148893216321092,
-      "capture_score": 33.23596090909345,
-      "captured_at": "2026-11-11"
-    },
-    {
-      "symbol": "ALEMBICLTD",
-      "name": "Alembic Limited",
-      "capture_price": 115.66999816894531,
-      "capture_ret_1d": 8.52880107123626,
-      "capture_ret_5d": 29.457190984113346,
-      "capture_vol_ratio": 3.140460009218248,
-      "capture_score": 33.106418166796175,
       "captured_at": "2026-11-11"
     }
   ]
