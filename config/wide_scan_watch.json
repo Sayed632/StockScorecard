@@ -1,6 +1,157 @@
 {
-  "saved_at": "11 Nov 2026 | 9:35 AM IST",
+  "saved_at": "11 Nov 2026 | 11:18 PM IST",
   "captured_day": "2026-11-11",
-  "count": 0,
-  "items": []
+  "count": 15,
+  "items": [
+    {
+      "symbol": "JYOTISTRUC",
+      "name": "Jyoti Structures Limited",
+      "capture_price": 12.970000267028809,
+      "capture_ret_1d": 19.981496425221223,
+      "capture_ret_5d": 33.162223529907095,
+      "capture_vol_ratio": 7.652536386224454,
+      "capture_score": 55.58457394573295,
+      "captured_at": "2026-11-11"
+    },
+    {
+      "symbol": "NECCLTD",
+      "name": "North Eastern Carrying Corporation Limited",
+      "capture_price": 22.6200008392334,
+      "capture_ret_1d": 18.12011117402539,
+      "capture_ret_5d": 33.13714622695787,
+      "capture_vol_ratio": 61.166100552153196,
+      "capture_score": 53.34213458826572,
+      "captured_at": "2026-11-11"
+    },
+    {
+      "symbol": "FLEXITUFF",
+      "name": "Flexituff Ventures International Limited",
+      "capture_price": 3.2100000381469727,
+      "capture_ret_1d": 19.77611784282789,
+      "capture_ret_5d": 21.59090570428168,
+      "capture_vol_ratio": 4.271473591327367,
+      "capture_score": 48.37405277320153,
+      "captured_at": "2026-11-11"
+    },
+    {
+      "symbol": "STEL",
+      "name": "Stel Holdings Limited",
+      "capture_price": 620.75,
+      "capture_ret_1d": 17.14473889417065,
+      "capture_ret_5d": 19.81278310194321,
+      "capture_vol_ratio": 20.809058678822083,
+      "capture_score": 47.5081607586849,
+      "captured_at": "2026-11-11"
+    },
+    {
+      "symbol": "TERASOFT",
+      "name": "Tera Software Limited",
+      "capture_price": 308.3999938964844,
+      "capture_ret_1d": 13.153552635910447,
+      "capture_ret_5d": 29.3895473040374,
+      "capture_vol_ratio": 4.53323429416596,
+      "capture_score": 44.20354189616947,
+      "captured_at": "2026-11-11"
+    },
+    {
+      "symbol": "SHAKTIPUMP",
+      "name": "Shakti Pumps (India) Limited",
+      "capture_price": 399.1000061035156,
+      "capture_ret_1d": 12.169763855006677,
+      "capture_ret_5d": 11.792718796502966,
+      "capture_vol_ratio": 19.776592081701068,
+      "capture_score": 38.73116820478405,
+      "captured_at": "2026-11-11"
+    },
+    {
+      "symbol": "ASHOKA",
+      "name": "Ashoka Buildcon Limited",
+      "capture_price": 114.37999725341797,
+      "capture_ret_1d": 11.113264562552727,
+      "capture_ret_5d": 13.867596543933548,
+      "capture_vol_ratio": 82.96766586228459,
+      "capture_score": 38.18957626544001,
+      "captured_at": "2026-11-11"
+    },
+    {
+      "symbol": "SALASAR",
+      "name": "Salasar Techno Engineering Limited",
+      "capture_price": 4.739999771118164,
+      "capture_ret_1d": 12.85714253276382,
+      "capture_ret_5d": 15.609753204200395,
+      "capture_vol_ratio": 4.142624292352294,
+      "capture_score": 37.4624818301959,
+      "captured_at": "2026-11-11"
+    },
+    {
+      "symbol": "AGARIND",
+      "name": "Agarwal Industrial Corporation Limited",
+      "capture_price": 429.3500061035156,
+      "capture_ret_1d": 10.714290773193325,
+      "capture_ret_5d": 30.1849672514358,
+      "capture_vol_ratio": 3.3241656596293634,
+      "capture_score": 36.718550104351976,
+      "captured_at": "2026-11-11"
+    },
+    {
+      "symbol": "BALAJITELE",
+      "name": "Balaji Telefilms Limited",
+      "capture_price": 97.41999816894531,
+      "capture_ret_1d": 10.541247254114761,
+      "capture_ret_5d": 11.235437465361532,
+      "capture_vol_ratio": 5.652112003437193,
+      "capture_score": 36.58189981781425,
+      "captured_at": "2026-11-11"
+    },
+    {
+      "symbol": "HINDOILEXP",
+      "name": "Hindustan Oil Exploration Company Limited",
+      "capture_price": 171.27000427246094,
+      "capture_ret_1d": 9.992933586591391,
+      "capture_ret_5d": 13.079358695670784,
+      "capture_vol_ratio": 5.003990826983604,
+      "capture_score": 36.56929584739444,
+      "captured_at": "2026-11-11"
+    },
+    {
+      "symbol": "IIFL",
+      "name": "IIFL Finance Limited",
+      "capture_price": 666.25,
+      "capture_ret_1d": 6.2599681020733655,
+      "capture_ret_5d": 23.02650078808668,
+      "capture_vol_ratio": 12.41312500684839,
+      "capture_score": 35.571236998318376,
+      "captured_at": "2026-11-11"
+    },
+    {
+      "symbol": "FACT",
+      "name": "Fertilizers and Chemicals Travancore Limited",
+      "capture_price": 813.25,
+      "capture_ret_1d": 8.665148780120614,
+      "capture_ret_5d": 13.733307304868237,
+      "capture_vol_ratio": 23.085802641601667,
+      "capture_score": 35.204836092848616,
+      "captured_at": "2026-11-11"
+    },
+    {
+      "symbol": "TALBROAUTO",
+      "name": "Talbros Automotive Components Limited",
+      "capture_price": 418.5,
+      "capture_ret_1d": 7.514450867052025,
+      "capture_ret_5d": 15.559852838109522,
+      "capture_vol_ratio": 90.90524440688901,
+      "capture_score": 34.46328953380076,
+      "captured_at": "2026-11-11"
+    },
+    {
+      "symbol": "HLVLTD",
+      "name": "HLV LIMITED",
+      "capture_price": 6.329999923706055,
+      "capture_ret_1d": 10.278748712788843,
+      "capture_ret_5d": 17.439704647587707,
+      "capture_vol_ratio": 3.9418610734895245,
+      "capture_score": 34.20583937596041,
+      "captured_at": "2026-11-11"
+    }
+  ]
 }
