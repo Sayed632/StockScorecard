@@ -1,0 +1,36 @@
+name: Mutual Fund Watch
+
+on:
+  schedule:
+    # Sunday ~09:00 IST (03:30 UTC)
+    - cron: "30 3 * * 0"
+  workflow_dispatch:
+
+jobs:
+  mf-watch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: MF watch
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/run_mf_watch.py
+      - name: Commit snapshot
+        run: |
+          git config user.name "stockscorecard-bot"
+          git config user.email "bot@stockscorecard.local"
+          git add config/mf_watch_latest.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "chore: mf watch snapshot" || true
+          git push origin main || true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

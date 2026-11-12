@@ -1,0 +1,30 @@
+# Curated mutual-fund watch (prefer Direct Growth codes).
+# scheme_code = mfapi.in / AMFI code.
+# Past returns ≠ future. Not investment advice.
+# Find codes: https://api.mfapi.in/mf/search?q=nifty+50
+
+schemes:
+  - code: 120716
+    label: "UTI Nifty 50 Index Direct Growth"
+    bucket: index_large
+  - code: 118989
+    label: "Parag Parikh Flexi Cap Direct Growth"
+    bucket: flexi
+  - code: 125497
+    label: "Quant Small Cap Direct Growth"
+    bucket: small_cap
+  - code: 120505
+    label: "Mirae Asset Large Cap Direct Growth"
+    bucket: large_cap
+  - code: 119062
+    label: "SBI Magnum Midcap Direct Growth"
+    bucket: mid_cap
+  - code: 120578
+    label: "ICICI Pru Bluechip Direct Growth"
+    bucket: large_cap
+  - code: 120503
+    label: "Axis ELSS Direct Growth"
+    bucket: elss
+
+nfo_rss:
+  - "https://news.google.com/rss/search?q=NFO+mutual+fund+India&hl=en-IN&gl=IN&ceid=IN:en"
