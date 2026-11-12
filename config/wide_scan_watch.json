@@ -1,5 +1,5 @@
 {
-  "saved_at": "12 Nov 2026 | 7:24 PM IST",
+  "saved_at": "12 Nov 2026 | 11:31 PM IST",
   "captured_day": "2026-11-12",
   "count": 15,
   "items": [
@@ -51,6 +51,16 @@
       "capture_ret_5d": 10.792026120177578,
       "capture_vol_ratio": 38.65595497833393,
       "capture_score": 38.038002197830565,
+      "captured_at": "2026-11-12"
+    },
+    {
+      "symbol": "DCXINDIA",
+      "name": "DCX Systems Ltd",
+      "capture_price": 161.99000549316406,
+      "capture_ret_1d": 10.807854701343578,
+      "capture_ret_5d": 14.262538344742715,
+      "capture_vol_ratio": 180.42470517890294,
+      "capture_score": 37.961314062272244,
       "captured_at": "2026-11-12"
     },
     {
@@ -141,16 +151,6 @@
       "capture_ret_5d": 15.334944034559484,
       "capture_vol_ratio": 3.9346100312643015,
       "capture_score": 30.426934928033486,
-      "captured_at": "2026-11-12"
-    },
-    {
-      "symbol": "AVANTIFEED",
-      "name": "Avanti Feeds Limited",
-      "capture_price": 762.9000244140625,
-      "capture_ret_1d": 8.35109371779097,
-      "capture_ret_5d": 7.975378613636797,
-      "capture_vol_ratio": 56.9269606816887,
-      "capture_score": 30.02131246134916,
       "captured_at": "2026-11-12"
     }
   ]
