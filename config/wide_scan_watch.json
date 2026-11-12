@@ -1,26 +1,36 @@
 {
-  "saved_at": "12 Nov 2026 | 9:27 AM IST",
+  "saved_at": "12 Nov 2026 | 9:36 AM IST",
   "captured_day": "2026-11-12",
   "count": 15,
   "items": [
     {
       "symbol": "FLEXITUFF",
       "name": "Flexituff Ventures International Limited",
-      "capture_price": 3.7899999618530273,
-      "capture_ret_1d": 41.41790550173099,
-      "capture_ret_5d": 43.5605989110593,
-      "capture_vol_ratio": 5.987344006050674,
+      "capture_price": 3.819999933242798,
+      "capture_ret_1d": 42.53730739137609,
+      "capture_ret_5d": 44.69696141854713,
+      "capture_vol_ratio": 8.542896760368082,
       "capture_score": 64.0,
       "captured_at": "2026-11-12"
     },
     {
       "symbol": "NECCLTD",
       "name": "North Eastern Carrying Corporation Limited",
-      "capture_price": 21.25,
-      "capture_ret_1d": 10.966059651707184,
-      "capture_ret_5d": 25.073574374753925,
-      "capture_vol_ratio": 3.0825675889651087,
-      "capture_score": 34.26529296907293,
+      "capture_price": 21.209999084472656,
+      "capture_ret_1d": 10.757177582129284,
+      "capture_ret_5d": 24.838136375541353,
+      "capture_vol_ratio": 3.3992511965021786,
+      "capture_score": 35.19896561600333,
+      "captured_at": "2026-11-12"
+    },
+    {
+      "symbol": "TERASOFT",
+      "name": "Tera Software Limited",
+      "capture_price": 317.8999938964844,
+      "capture_ret_1d": 16.63915176468982,
+      "capture_ret_5d": 33.375282465241526,
+      "capture_vol_ratio": 0.7986701701226755,
+      "capture_score": 31.648330980462315,
       "captured_at": "2026-11-12"
     },
     {
@@ -34,12 +44,22 @@
       "captured_at": "2026-11-12"
     },
     {
+      "symbol": "STEL",
+      "name": "Stel Holdings Limited",
+      "capture_price": 617.0,
+      "capture_ret_1d": 16.437058232304924,
+      "capture_ret_5d": 19.08898457333703,
+      "capture_vol_ratio": 1.2342811663410753,
+      "capture_score": 26.40561447943387,
+      "captured_at": "2026-11-12"
+    },
+    {
       "symbol": "MELSTAR",
       "name": "Melstar Information Technologies Limited",
       "capture_price": 464.32000732421875,
       "capture_ret_1d": 10.247887569289716,
       "capture_ret_5d": 10825.176642922794,
-      "capture_vol_ratio": 0.13131202966517613,
+      "capture_vol_ratio": 0.32522630603119207,
       "capture_score": 26.297465083147657,
       "captured_at": "2026-11-12"
     },
@@ -51,16 +71,6 @@
       "capture_ret_5d": 3.4090944496560915,
       "capture_vol_ratio": 6.016827394039663,
       "capture_score": 23.40909444965609,
-      "captured_at": "2026-11-12"
-    },
-    {
-      "symbol": "MIDHANI",
-      "name": "Mishra Dhatu Nigam Limited",
-      "capture_price": 408.6499938964844,
-      "capture_ret_1d": 3.1683886896202162,
-      "capture_ret_5d": 5.078426410378656,
-      "capture_vol_ratio": 5.0755467898976985,
-      "capture_score": 23.168388689620215,
       "captured_at": "2026-11-12"
     },
     {
@@ -76,11 +86,11 @@
     {
       "symbol": "AGARIND",
       "name": "Agarwal Industrial Corporation Limited",
-      "capture_price": 427.0,
-      "capture_ret_1d": 10.10830671504781,
-      "capture_ret_5d": 29.472412311927787,
-      "capture_vol_ratio": 0.092784360839637,
-      "capture_score": 22.4453123672321,
+      "capture_price": 426.8500061035156,
+      "capture_ret_1d": 10.069628555892107,
+      "capture_ret_5d": 29.426932050546295,
+      "capture_vol_ratio": 0.1339671454959055,
+      "capture_score": 22.38298048476173,
       "captured_at": "2026-11-12"
     },
     {
@@ -109,48 +119,38 @@
       "capture_price": 842.2000122070312,
       "capture_ret_1d": 10.24281677461303,
       "capture_ret_5d": 24.585800622341903,
-      "capture_vol_ratio": 0.25201818687946553,
+      "capture_vol_ratio": 0.3923169713278278,
       "capture_score": 20.8964103473553,
       "captured_at": "2026-11-12"
     },
     {
-      "symbol": "PPAP",
-      "name": "PPAP Automotive Limited",
-      "capture_price": 269.0,
-      "capture_ret_1d": 7.690462880897808,
-      "capture_ret_5d": 25.3903890041693,
-      "capture_vol_ratio": 0.1643423208040023,
-      "capture_score": 18.115191608536627,
+      "symbol": "SALASAR",
+      "name": "Salasar Techno Engineering Limited",
+      "capture_price": 4.71999979019165,
+      "capture_ret_1d": 12.380952489078734,
+      "capture_ret_5d": 15.121948780012096,
+      "capture_vol_ratio": 0.3010267699824097,
+      "capture_score": 20.149825059898713,
       "captured_at": "2026-11-12"
     },
     {
-      "symbol": "CUPID",
-      "name": "Cupid Limited",
-      "capture_price": 387.6000061035156,
-      "capture_ret_1d": 9.491527147885769,
-      "capture_ret_5d": 15.185737326453385,
-      "capture_vol_ratio": 1.0967826509607244,
-      "capture_score": 16.704840641721606,
+      "symbol": "SUPREMEENG",
+      "name": "Supreme Engineering Limited",
+      "capture_price": 5.489999771118164,
+      "capture_ret_1d": 10.020040539760577,
+      "capture_ret_5d": 23.094164218866965,
+      "capture_vol_ratio": 0.2135896044842287,
+      "capture_score": 20.10700612431613,
       "captured_at": "2026-11-12"
     },
     {
-      "symbol": "ICIL",
-      "name": "Indo Count Industries Limited",
-      "capture_price": 545.7000122070312,
-      "capture_ret_1d": 8.145066509389665,
-      "capture_ret_5d": 16.88979438205942,
-      "capture_vol_ratio": 0.07119065413061276,
-      "capture_score": 15.685507844988393,
-      "captured_at": "2026-11-12"
-    },
-    {
-      "symbol": "MORARJEE",
-      "name": "Morarjee Textiles Limited",
-      "capture_price": 4.300000190734863,
-      "capture_ret_1d": 9.974427016446441,
-      "capture_ret_5d": 9.137059093556775,
-      "capture_vol_ratio": 0.5027695356643824,
-      "capture_score": 15.1672831024806,
+      "symbol": "CONFIPET",
+      "name": "Confidence Petroleum India Limited",
+      "capture_price": 67.73999786376953,
+      "capture_ret_1d": 10.05686223141633,
+      "capture_ret_5d": 20.576713235668564,
+      "capture_vol_ratio": 0.12297702075772687,
+      "capture_score": 19.27008431018359,
       "captured_at": "2026-11-12"
     }
   ]
