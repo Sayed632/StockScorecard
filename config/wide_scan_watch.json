@@ -1,5 +1,5 @@
 {
-  "saved_at": "12 Nov 2026 | 5:26 PM IST",
+  "saved_at": "12 Nov 2026 | 7:24 PM IST",
   "captured_day": "2026-11-12",
   "count": 15,
   "items": [
@@ -21,6 +21,16 @@
       "capture_ret_5d": 18.116802422654676,
       "capture_vol_ratio": 48.21153274982831,
       "capture_score": 46.176148333500024,
+      "captured_at": "2026-11-12"
+    },
+    {
+      "symbol": "TERASOFT",
+      "name": "Tera Software Limited",
+      "capture_price": 334.25,
+      "capture_ret_1d": 8.381973610606575,
+      "capture_ret_5d": 37.77823231273045,
+      "capture_vol_ratio": 4.146116628786699,
+      "capture_score": 39.865216157330345,
       "captured_at": "2026-11-12"
     },
     {
@@ -141,16 +151,6 @@
       "capture_ret_5d": 7.975378613636797,
       "capture_vol_ratio": 56.9269606816887,
       "capture_score": 30.02131246134916,
-      "captured_at": "2026-11-12"
-    },
-    {
-      "symbol": "KOPRAN",
-      "name": "Kopran Limited",
-      "capture_price": 279.8599853515625,
-      "capture_ret_1d": 6.051752554715151,
-      "capture_ret_5d": 12.190815303810165,
-      "capture_vol_ratio": 4.489974352435075,
-      "capture_score": 29.488785831732038,
       "captured_at": "2026-11-12"
     }
   ]
