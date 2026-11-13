@@ -1,142 +1,142 @@
 {
-  "saved_at": "12 Nov 2026 | 11:56 PM IST",
+  "saved_at": "13 Nov 2026 | 5:53 PM IST",
   "universe_size": 900,
-  "candidates": 362,
+  "candidates": 278,
   "items": [
     {
       "symbol": "FLEXITUFF",
       "name": "Flexituff Ventures International Limited",
-      "price": 3.8499999046325684,
-      "ret_1d": 19.93769030778725,
-      "ret_5d": 41.02563654703526,
-      "ret_10d": 57.78687763713906,
-      "score": 122.20096041071395
+      "price": 4.230000019073486,
+      "ret_1d": 9.870133087111954,
+      "ret_5d": 57.249067996091,
+      "ret_10d": 67.85714488451174,
+      "score": 151.46038665952833
     },
     {
       "symbol": "JYOTISTRUC",
       "name": "Jyoti Structures Limited",
-      "price": 13.460000038146973,
-      "ret_1d": 3.777947270855475,
-      "ret_5d": 37.48723279462911,
-      "ret_10d": 30.5528563562113,
-      "score": 84.35726381349146
+      "price": 13.300000190734863,
+      "ret_1d": -1.1887061438235813,
+      "ret_5d": 31.683165231717346,
+      "ret_10d": 31.94444733532229,
+      "score": 76.30087865972658
     },
     {
-      "symbol": "AGARIND",
-      "name": "Agarwal Industrial Corporation Limited",
-      "price": 441.8500061035156,
-      "ret_1d": 2.911377622523248,
-      "ret_5d": 28.072465537250913,
-      "ret_10d": 32.94719361789164,
-      "score": 73.26762753792605
+      "symbol": "JMA",
+      "name": "Jullundur Motor Agency (Delhi) Limited",
+      "price": 103.94999694824219,
+      "ret_1d": 8.768439133804673,
+      "ret_5d": 28.159285126396227,
+      "ret_10d": 29.88878987104673,
+      "score": 72.38074274483309
     },
     {
-      "symbol": "HEG",
-      "name": "HEG Limited",
-      "price": 289.3399963378906,
-      "ret_1d": 0.0553301286955854,
-      "ret_5d": 20.227703787509597,
-      "ret_10d": 34.40794843469295,
-      "score": 62.74609928224984
-    },
-    {
-      "symbol": "ARSHIYA",
-      "name": "Arshiya Limited",
-      "price": 1.1200000047683716,
-      "ret_1d": -4.273500354724069,
-      "ret_5d": 14.285712547969576,
-      "ret_10d": 41.772148651565665,
-      "score": 61.772146218723066
-    },
-    {
-      "symbol": "ALEMBICLTD",
-      "name": "Alembic Limited",
-      "price": 114.27999877929688,
-      "ret_1d": -1.2016939670200677,
-      "ret_5d": 20.66307663815894,
-      "ret_10d": 30.471519074445276,
-      "score": 59.39982636786779
+      "symbol": "ANUP",
+      "name": "The Anup Engineering Limited",
+      "price": 1725.0,
+      "ret_1d": 19.999999999999996,
+      "ret_5d": 24.48582382796376,
+      "ret_10d": 26.60550458715596,
+      "score": 67.88565794630522
     },
     {
       "symbol": "HINDOILEXP",
       "name": "Hindustan Oil Exploration Company Limited",
-      "price": 188.7899932861328,
-      "ret_1d": 10.229455582777124,
-      "ret_5d": 21.299148050940666,
-      "ret_10d": 23.335718463941333,
-      "score": 56.73483518923025
+      "price": 192.39999389648438,
+      "ret_1d": 1.9121779430757213,
+      "ret_5d": 24.273339874972955,
+      "ret_10d": 25.472804546390847,
+      "score": 60.124742651429486
+    },
+    {
+      "symbol": "DHANBANK",
+      "name": "Dhanlaxmi Bank Limited",
+      "price": 40.2400016784668,
+      "ret_1d": 14.807425262133922,
+      "ret_5d": 20.551229451290443,
+      "ret_10d": 25.202247799130895,
+      "score": 59.156567872684384
     },
     {
       "symbol": "APLLTD",
       "name": "Alembic Pharmaceuticals Limited",
-      "price": 1047.25,
-      "ret_1d": 1.6796980094460956,
-      "ret_5d": 15.501266780712953,
-      "ret_10d": 33.78257745667872,
-      "score": 56.07224525298299
+      "price": 1030.1500244140625,
+      "ret_1d": -1.6328456038135597,
+      "ret_5d": 15.293791204707619,
+      "ret_10d": 29.60307681391945,
+      "score": 51.01438450051012
     },
     {
-      "symbol": "DHUNINV",
-      "name": "Dhunseri Investments Limited",
-      "price": 1004.8499755859375,
-      "ret_1d": 5.115326403522857,
-      "ret_5d": 21.962610245164417,
-      "ret_10d": 21.48340034176439,
-      "score": 54.021418926227575
-    },
-    {
-      "symbol": "ALANKIT",
-      "name": "Alankit Limited",
-      "price": 8.770000457763672,
-      "ret_1d": 6.951227582401831,
-      "ret_5d": 18.673891964958212,
-      "ret_10d": 23.521134867078963,
-      "score": 52.0975132718611
+      "symbol": "ALEMBICLTD",
+      "name": "Alembic Limited",
+      "price": 113.47000122070312,
+      "ret_1d": -0.7087833105056784,
+      "ret_5d": 15.998774866799526,
+      "ret_10d": 27.05184673894845,
+      "score": 49.45013155246778
     },
     {
       "symbol": "GLFL",
       "name": "Gujarat Lease Financing Limited",
-      "price": 5.900000095367432,
-      "ret_1d": 9.665426949169342,
-      "ret_5d": 18.23648028034586,
-      "ret_10d": 23.173280633701655,
-      "score": 52.08725245839513
+      "price": 6.070000171661377,
+      "ret_1d": 2.881357178746935,
+      "ret_5d": 15.180269328847618,
+      "ret_10d": 26.195431265508983,
+      "score": 48.45628333845708
     },
     {
-      "symbol": "HLVLTD",
-      "name": "HLV LIMITED",
-      "price": 6.690000057220459,
-      "ret_1d": 5.687205969247988,
-      "ret_5d": 24.118742540572512,
-      "ret_10d": 15.544043200293833,
-      "score": 51.30080484633215
+      "symbol": "FIEMIND",
+      "name": "Fiem Industries Limited",
+      "price": 2133.300048828125,
+      "ret_1d": 9.76588880000644,
+      "ret_5d": 14.08021651487299,
+      "ret_10d": 24.274733727638132,
+      "score": 47.405097928462574
     },
     {
-      "symbol": "DCBBANK",
-      "name": "DCB Bank Limited",
-      "price": 227.9600067138672,
-      "ret_1d": 2.976921778938979,
-      "ret_5d": 20.26378424885664,
-      "ret_10d": 18.89637083068283,
-      "score": 48.307591401710766
+      "symbol": "DHUNINV",
+      "name": "Dhunseri Investments Limited",
+      "price": 999.8499755859375,
+      "ret_1d": -0.4975867165727399,
+      "ret_5d": 17.71249668560573,
+      "ret_10d": 21.02523101600944,
+      "score": 45.82272637585746
     },
     {
-      "symbol": "CUPID",
-      "name": "Cupid Limited",
-      "price": 384.79998779296875,
-      "ret_1d": 8.7005615234375,
-      "ret_5d": 14.353636788400825,
-      "ret_10d": 22.333493157290253,
-      "score": 45.47378119425453
+      "symbol": "MADRASFERT",
+      "name": "Madras Fertilizers Limited",
+      "price": 63.540000915527344,
+      "ret_1d": 8.969301010224196,
+      "ret_5d": 15.046173170680666,
+      "ret_10d": 19.167294222050014,
+      "score": 43.37119201458142
     },
     {
-      "symbol": "IIFL",
-      "name": "IIFL Finance Limited",
-      "price": 663.1500244140625,
-      "ret_1d": -0.4652871423545979,
-      "ret_5d": 14.692149846689029,
-      "ret_10d": 24.371719660909186,
-      "score": 44.94072944627382
+      "symbol": "IFBAGRO",
+      "name": "IFB Agro Industries Limited",
+      "price": 987.5,
+      "ret_1d": 4.0021063717746275,
+      "ret_5d": 13.88536821635855,
+      "ret_10d": 21.98134950161219,
+      "score": 42.82160223463527
+    },
+    {
+      "symbol": "HDIL",
+      "name": "Housing Development and Infrastructure Limited",
+      "price": 1.5099999904632568,
+      "ret_1d": 4.861106282031291,
+      "ret_5d": 15.267179879363834,
+      "ret_10d": 18.89763883001432,
+      "score": 41.97307785983464
+    },
+    {
+      "symbol": "BALAJITELE",
+      "name": "Balaji Telefilms Limited",
+      "price": 102.79000091552734,
+      "ret_1d": 1.350821111532552,
+      "ret_5d": 16.953011297476237,
+      "ret_10d": 17.676019131220254,
+      "score": 41.88302233672338
     }
   ]
 }
