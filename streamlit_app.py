@@ -197,7 +197,33 @@ def main():
                 "~10D %": st.column_config.NumberColumn(format="%+.1f"),
             },
         )
+
         st.code(",".join(str(it.get("symbol")) for it in rising_items), language=None)
+
+    # Filtered stocks (stricter)
+    filt_path = ROOT / "config" / "filtered_stocks_latest.json"
+    filt = {}
+    if filt_path.exists():
+        try:
+            filt = json.loads(filt_path.read_text(encoding="utf-8"))
+        except Exception:
+            filt = {}
+    filt_items = list(filt.get("items") or [])
+    if filt_items:
+        st.subheader("✅ Filtered stocks")
+        st.caption("Stricter rules · CONTINUE / WAIT · observe only — not auto-buy.")
+        frows = []
+        for it in filt_items:
+            frows.append({
+                "Symbol": it.get("symbol"),
+                "Label": it.get("filter_label") or "",
+                "Note": (it.get("filter_note") or "")[:40],
+                "5D %": round(float(it["ret_5d"]), 1) if it.get("ret_5d") is not None else None,
+                "1D %": round(float(it["ret_1d"]), 1) if it.get("ret_1d") is not None else None,
+                "EXT": "Y" if it.get("extended") else "",
+            })
+        st.dataframe(pd.DataFrame(frows), use_container_width=True, hide_index=True)
+
     else:
         st.caption("📈 Rising list not saved yet — run Rising Stocks workflow once.")
 

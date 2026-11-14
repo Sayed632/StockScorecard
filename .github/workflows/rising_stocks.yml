@@ -30,8 +30,8 @@ jobs:
         run: |
           git config user.name "stockscorecard-bot"
           git config user.email "bot@stockscorecard.local"
-          git add config/rising_stocks_latest.json 2>/dev/null || true
-          git diff --staged --quiet || git commit -m "chore: rising stocks list for Streamlit" || true
+          git add config/rising_stocks_latest.json config/filtered_stocks_latest.json config/raising_prev_symbols.json 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "chore: raising + filtered stocks lists" || true
           git push origin main || true
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
