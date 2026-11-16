@@ -1,157 +1,157 @@
 {
-  "saved_at": "16 Nov 2026 | 7:22 PM IST",
-  "captured_day": "2026-11-16",
+  "saved_at": "17 Nov 2026 | 1:38 AM IST",
+  "captured_day": "2026-11-17",
   "count": 15,
   "items": [
     {
-      "symbol": "YATRA",
-      "name": "Yatra Online Ltd",
-      "capture_price": 93.75,
-      "capture_ret_1d": 19.99232470969874,
-      "capture_ret_5d": 21.1396830848662,
-      "capture_vol_ratio": 40.84305404746604,
-      "capture_score": 51.389678731341654,
-      "captured_at": "2026-11-16"
+      "symbol": "MSTCLTD",
+      "name": "Mstc Limited",
+      "capture_price": 783.3499755859375,
+      "capture_ret_1d": 19.99846664126652,
+      "capture_ret_5d": 32.2556123130882,
+      "capture_vol_ratio": 19.117481956436503,
+      "capture_score": 55.2876242791007,
+      "captured_at": "2026-11-17"
     },
     {
-      "symbol": "HINDOILEXP",
-      "name": "Hindustan Oil Exploration Company Limited",
-      "capture_price": 212.66000366210938,
-      "capture_ret_1d": 10.530150939882743,
-      "capture_ret_5d": 40.0553271806432,
-      "capture_vol_ratio": 18.892840825453877,
-      "capture_score": 46.63618112785929,
-      "captured_at": "2026-11-16"
+      "symbol": "ANUP",
+      "name": "The Anup Engineering Limited",
+      "capture_price": 1725.0,
+      "capture_ret_1d": 19.999999999999996,
+      "capture_ret_5d": 24.48582382796376,
+      "capture_vol_ratio": 35.876910655632415,
+      "capture_score": 52.57003833978731,
+      "captured_at": "2026-11-17"
     },
     {
-      "symbol": "KILITCH",
-      "name": "Kilitch Drugs (India) Limited",
-      "capture_price": 238.55999755859375,
-      "capture_ret_1d": 10.90139783445927,
-      "capture_ret_5d": 22.18181693141805,
-      "capture_vol_ratio": 6.28401406617339,
-      "capture_score": 40.84531332734744,
-      "captured_at": "2026-11-16"
-    },
-    {
-      "symbol": "AARTISURF",
-      "name": "Aarti Surfactants Limited",
-      "capture_price": 582.75,
-      "capture_ret_1d": 9.994340020204495,
-      "capture_ret_5d": 25.05364806866952,
-      "capture_vol_ratio": 9.389189189189189,
-      "capture_score": 40.761984848279724,
-      "captured_at": "2026-11-16"
-    },
-    {
-      "symbol": "FLEXITUFF",
-      "name": "Flexituff Ventures International Limited",
-      "capture_price": 4.650000095367432,
-      "capture_ret_1d": 9.929079773052575,
-      "capture_ret_5d": 67.26619220225443,
-      "capture_vol_ratio": 3.4028565079734365,
-      "capture_score": 39.526321759556836,
-      "captured_at": "2026-11-16"
+      "symbol": "ALICON",
+      "name": "Alicon Castalloy Limited",
+      "capture_price": 976.1500244140625,
+      "capture_ret_1d": 17.318675408351638,
+      "capture_ret_5d": 13.869935773002329,
+      "capture_vol_ratio": 146.19947021423252,
+      "capture_score": 45.636888010572775,
+      "captured_at": "2026-11-17"
     },
     {
       "symbol": "DHANBANK",
       "name": "Dhanlaxmi Bank Limited",
-      "capture_price": 42.84000015258789,
-      "capture_ret_1d": 6.46122854292126,
-      "capture_ret_5d": 30.689450115674475,
-      "capture_vol_ratio": 9.75661437602435,
-      "capture_score": 38.49478179199158,
-      "captured_at": "2026-11-16"
-    },
-    {
-      "symbol": "MELSTAR",
-      "name": "Melstar Information Technologies Limited",
-      "capture_price": 510.8500061035156,
-      "capture_ret_1d": 4.783296901238621,
-      "capture_ret_5d": 33.7268639680248,
-      "capture_vol_ratio": 10.794183864915572,
-      "capture_score": 36.5876992900473,
-      "captured_at": "2026-11-16"
-    },
-    {
-      "symbol": "DSSL",
-      "name": "Dynacons Systems & Solutions Limited",
-      "capture_price": 1149.949951171875,
-      "capture_ret_1d": 9.1551923276578,
-      "capture_ret_5d": 12.729142112894642,
-      "capture_vol_ratio": 31.006427631069464,
-      "capture_score": 35.44143053270248,
-      "captured_at": "2026-11-16"
-    },
-    {
-      "symbol": "BROOKS",
-      "name": "Brooks Laboratories Limited",
-      "capture_price": 69.9000015258789,
-      "capture_ret_1d": 9.18463791180053,
-      "capture_ret_5d": 10.513836404551636,
-      "capture_vol_ratio": 4.985935189769489,
-      "capture_score": 34.645148994831665,
-      "captured_at": "2026-11-16"
-    },
-    {
-      "symbol": "DEEPAKFERT",
-      "name": "Deepak Fertilizers and Petrochemicals Corporation Limited",
-      "capture_price": 1352.800048828125,
-      "capture_ret_1d": 7.211919201026706,
-      "capture_ret_5d": 17.095126084373803,
-      "capture_vol_ratio": 16.433049370734008,
-      "capture_score": 34.637597170762874,
-      "captured_at": "2026-11-16"
-    },
-    {
-      "symbol": "NDGL",
-      "name": "Naga Dhunseri Group Limited",
-      "capture_price": 2666.5,
-      "capture_ret_1d": 9.206702433697235,
-      "capture_ret_5d": 9.466731265696659,
-      "capture_vol_ratio": 16.765432098765434,
-      "capture_score": 34.36139886343051,
-      "captured_at": "2026-11-16"
+      "capture_price": 40.2400016784668,
+      "capture_ret_1d": 14.807425262133922,
+      "capture_ret_5d": 20.551229451290443,
+      "capture_vol_ratio": 50.04317964619603,
+      "capture_score": 44.96184062251236,
+      "captured_at": "2026-11-17"
     },
     {
       "symbol": "SHALPAINTS",
       "name": "Shalimar Paints Limited",
-      "capture_price": 100.58000183105469,
-      "capture_ret_1d": 4.847286053462074,
-      "capture_ret_5d": 26.94686049417252,
-      "capture_vol_ratio": 7.540440350385582,
-      "capture_score": 34.278687226422456,
-      "captured_at": "2026-11-16"
+      "capture_price": 95.93000030517578,
+      "capture_ret_1d": 12.593901104775762,
+      "capture_ret_5d": 21.723135740302023,
+      "capture_vol_ratio": 19.93467135074589,
+      "capture_score": 42.71577883483663,
+      "captured_at": "2026-11-17"
     },
     {
-      "symbol": "BFINVEST",
-      "name": "BF Investment Limited",
-      "capture_price": 473.6499938964844,
-      "capture_ret_1d": 6.163846324377742,
-      "capture_ret_5d": 16.676925644462525,
-      "capture_vol_ratio": 6.49001996007984,
-      "capture_score": 33.233539564815175,
-      "captured_at": "2026-11-16"
+      "symbol": "JMA",
+      "name": "Jullundur Motor Agency (Delhi) Limited",
+      "capture_price": 103.94999694824219,
+      "capture_ret_1d": 8.768439133804673,
+      "capture_ret_5d": 28.159285126396227,
+      "capture_vol_ratio": 41.68336235690428,
+      "capture_score": 40.37787675480429,
+      "captured_at": "2026-11-17"
     },
     {
-      "symbol": "DONEAR",
-      "name": "Donear Industries Limited",
-      "capture_price": 91.52999877929688,
-      "capture_ret_1d": 6.368385279711064,
-      "capture_ret_5d": 14.212627247810627,
-      "capture_vol_ratio": 7.6975331828061355,
-      "capture_score": 32.616481872387,
-      "captured_at": "2026-11-16"
+      "symbol": "STEL",
+      "name": "Stel Holdings Limited",
+      "capture_price": 664.0499877929688,
+      "capture_ret_1d": 7.616886950781265,
+      "capture_ret_5d": 26.79968919505271,
+      "capture_vol_ratio": 5.278433468848031,
+      "capture_score": 38.52015555920597,
+      "captured_at": "2026-11-17"
     },
     {
-      "symbol": "PENINLAND",
-      "name": "Peninsula Land Limited",
-      "capture_price": 15.420000076293945,
-      "capture_ret_1d": 7.756810790554658,
-      "capture_ret_5d": 8.515130435599637,
-      "capture_vol_ratio": 5.0876247032934065,
-      "capture_score": 32.28846860112546,
-      "captured_at": "2026-11-16"
+      "symbol": "PRECOT",
+      "name": "Precot Limited",
+      "capture_price": 706.7999877929688,
+      "capture_ret_1d": 12.386700644746295,
+      "capture_ret_5d": 10.230813215386615,
+      "capture_vol_ratio": 42.96860076408787,
+      "capture_score": 38.44482539908087,
+      "captured_at": "2026-11-17"
+    },
+    {
+      "symbol": "POWERINDIA",
+      "name": "ABB Power Products and Systems India Limited",
+      "capture_price": 31595.0,
+      "capture_ret_1d": 10.684883517253452,
+      "capture_ret_5d": 12.039007092198585,
+      "capture_vol_ratio": 5.509694623974518,
+      "capture_score": 37.03551270297365,
+      "captured_at": "2026-11-17"
+    },
+    {
+      "symbol": "AUTOAXLES",
+      "name": "Automotive Axles Limited",
+      "capture_price": 1815.300048828125,
+      "capture_ret_1d": 10.084902900432091,
+      "capture_ret_5d": 13.32168182543847,
+      "capture_vol_ratio": 132.85394402035624,
+      "capture_score": 36.764472119421974,
+      "captured_at": "2026-11-17"
+    },
+    {
+      "symbol": "KENNAMET",
+      "name": "Kennametal India Limited",
+      "capture_price": 3954.800048828125,
+      "capture_ret_1d": 13.93506201386927,
+      "capture_ret_5d": 4.059993391083405,
+      "capture_vol_ratio": 44.75718080879181,
+      "capture_score": 36.722074416643125,
+      "captured_at": "2026-11-17"
+    },
+    {
+      "symbol": "FIEMIND",
+      "name": "Fiem Industries Limited",
+      "capture_price": 2133.300048828125,
+      "capture_ret_1d": 9.76588880000644,
+      "capture_ret_5d": 14.08021651487299,
+      "capture_vol_ratio": 15.216746110832544,
+      "capture_score": 36.64714234021327,
+      "captured_at": "2026-11-17"
+    },
+    {
+      "symbol": "SHIVAMILLS",
+      "name": "Shiva Mills Limited",
+      "capture_price": 64.51000213623047,
+      "capture_ret_1d": 9.991475631532376,
+      "capture_ret_5d": 12.838908872437639,
+      "capture_vol_ratio": 20.390004744583266,
+      "capture_score": 36.483388863192026,
+      "captured_at": "2026-11-17"
+    },
+    {
+      "symbol": "BFUTILITIE",
+      "name": "BF Utilities Limited",
+      "capture_price": 498.54998779296875,
+      "capture_ret_1d": 10.715079126802806,
+      "capture_ret_5d": 9.091901048789651,
+      "capture_vol_ratio": 201.57381507493196,
+      "capture_score": 36.04026031923974,
+      "captured_at": "2026-11-17"
+    },
+    {
+      "symbol": "MADRASFERT",
+      "name": "Madras Fertilizers Limited",
+      "capture_price": 63.540000915527344,
+      "capture_ret_1d": 8.969301010224196,
+      "capture_ret_5d": 15.046173170680666,
+      "capture_vol_ratio": 66.17820713326782,
+      "capture_score": 36.02932182200727,
+      "captured_at": "2026-11-17"
     }
   ]
 }
