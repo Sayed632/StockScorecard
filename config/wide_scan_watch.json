@@ -1,8 +1,18 @@
 {
-  "saved_at": "16 Nov 2026 | 5:37 PM IST",
+  "saved_at": "16 Nov 2026 | 7:22 PM IST",
   "captured_day": "2026-11-16",
   "count": 15,
   "items": [
+    {
+      "symbol": "YATRA",
+      "name": "Yatra Online Ltd",
+      "capture_price": 93.75,
+      "capture_ret_1d": 19.99232470969874,
+      "capture_ret_5d": 21.1396830848662,
+      "capture_vol_ratio": 40.84305404746604,
+      "capture_score": 51.389678731341654,
+      "captured_at": "2026-11-16"
+    },
     {
       "symbol": "HINDOILEXP",
       "name": "Hindustan Oil Exploration Company Limited",
@@ -141,16 +151,6 @@
       "capture_ret_5d": 8.515130435599637,
       "capture_vol_ratio": 5.0876247032934065,
       "capture_score": 32.28846860112546,
-      "captured_at": "2026-11-16"
-    },
-    {
-      "symbol": "ANUP",
-      "name": "The Anup Engineering Limited",
-      "capture_price": 1811.4000244140625,
-      "capture_ret_1d": 5.008697067481882,
-      "capture_ret_5d": 34.68659316912732,
-      "capture_vol_ratio": 3.5266027994392997,
-      "capture_score": 32.25715528793002,
       "captured_at": "2026-11-16"
     }
   ]
