@@ -1,18 +1,8 @@
 {
-  "saved_at": "17 Nov 2026 | 1:38 AM IST",
+  "saved_at": "17 Nov 2026 | 9:02 AM IST",
   "captured_day": "2026-11-17",
   "count": 15,
   "items": [
-    {
-      "symbol": "MSTCLTD",
-      "name": "Mstc Limited",
-      "capture_price": 783.3499755859375,
-      "capture_ret_1d": 19.99846664126652,
-      "capture_ret_5d": 32.2556123130882,
-      "capture_vol_ratio": 19.117481956436503,
-      "capture_score": 55.2876242791007,
-      "captured_at": "2026-11-17"
-    },
     {
       "symbol": "ANUP",
       "name": "The Anup Engineering Limited",
@@ -24,23 +14,13 @@
       "captured_at": "2026-11-17"
     },
     {
-      "symbol": "ALICON",
-      "name": "Alicon Castalloy Limited",
-      "capture_price": 976.1500244140625,
-      "capture_ret_1d": 17.318675408351638,
-      "capture_ret_5d": 13.869935773002329,
-      "capture_vol_ratio": 146.19947021423252,
-      "capture_score": 45.636888010572775,
-      "captured_at": "2026-11-17"
-    },
-    {
-      "symbol": "DHANBANK",
-      "name": "Dhanlaxmi Bank Limited",
-      "capture_price": 40.2400016784668,
-      "capture_ret_1d": 14.807425262133922,
-      "capture_ret_5d": 20.551229451290443,
-      "capture_vol_ratio": 50.04317964619603,
-      "capture_score": 44.96184062251236,
+      "symbol": "HINDOILEXP",
+      "name": "Hindustan Oil Exploration Company Limited",
+      "capture_price": 212.66000366210938,
+      "capture_ret_1d": 10.530150939882743,
+      "capture_ret_5d": 40.0553271806432,
+      "capture_vol_ratio": 18.894807933904723,
+      "capture_score": 46.63618112785929,
       "captured_at": "2026-11-17"
     },
     {
@@ -74,6 +54,16 @@
       "captured_at": "2026-11-17"
     },
     {
+      "symbol": "DHANBANK",
+      "name": "Dhanlaxmi Bank Limited",
+      "capture_price": 42.84000015258789,
+      "capture_ret_1d": 6.46122854292126,
+      "capture_ret_5d": 30.689450115674475,
+      "capture_vol_ratio": 9.757793431379733,
+      "capture_score": 38.49478179199158,
+      "captured_at": "2026-11-17"
+    },
+    {
       "symbol": "PRECOT",
       "name": "Precot Limited",
       "capture_price": 706.7999877929688,
@@ -81,26 +71,6 @@
       "capture_ret_5d": 10.230813215386615,
       "capture_vol_ratio": 42.96860076408787,
       "capture_score": 38.44482539908087,
-      "captured_at": "2026-11-17"
-    },
-    {
-      "symbol": "POWERINDIA",
-      "name": "ABB Power Products and Systems India Limited",
-      "capture_price": 31595.0,
-      "capture_ret_1d": 10.684883517253452,
-      "capture_ret_5d": 12.039007092198585,
-      "capture_vol_ratio": 5.509694623974518,
-      "capture_score": 37.03551270297365,
-      "captured_at": "2026-11-17"
-    },
-    {
-      "symbol": "AUTOAXLES",
-      "name": "Automotive Axles Limited",
-      "capture_price": 1815.300048828125,
-      "capture_ret_1d": 10.084902900432091,
-      "capture_ret_5d": 13.32168182543847,
-      "capture_vol_ratio": 132.85394402035624,
-      "capture_score": 36.764472119421974,
       "captured_at": "2026-11-17"
     },
     {
@@ -134,23 +104,53 @@
       "captured_at": "2026-11-17"
     },
     {
-      "symbol": "BFUTILITIE",
-      "name": "BF Utilities Limited",
-      "capture_price": 498.54998779296875,
-      "capture_ret_1d": 10.715079126802806,
-      "capture_ret_5d": 9.091901048789651,
-      "capture_vol_ratio": 201.57381507493196,
-      "capture_score": 36.04026031923974,
+      "symbol": "DSSL",
+      "name": "Dynacons Systems & Solutions Limited",
+      "capture_price": 1149.949951171875,
+      "capture_ret_1d": 9.1551923276578,
+      "capture_ret_5d": 12.729142112894642,
+      "capture_vol_ratio": 31.013458365893896,
+      "capture_score": 35.44143053270248,
       "captured_at": "2026-11-17"
     },
     {
-      "symbol": "MADRASFERT",
-      "name": "Madras Fertilizers Limited",
-      "capture_price": 63.540000915527344,
-      "capture_ret_1d": 8.969301010224196,
-      "capture_ret_5d": 15.046173170680666,
-      "capture_vol_ratio": 66.17820713326782,
-      "capture_score": 36.02932182200727,
+      "symbol": "RSSOFTWARE",
+      "name": "R. S. Software (India) Limited",
+      "capture_price": 32.34000015258789,
+      "capture_ret_1d": 8.196724031342551,
+      "capture_ret_5d": 15.500000544956748,
+      "capture_vol_ratio": 5.50124712481924,
+      "capture_score": 35.26106902834592,
+      "captured_at": "2026-11-17"
+    },
+    {
+      "symbol": "BROOKS",
+      "name": "Brooks Laboratories Limited",
+      "capture_price": 69.9000015258789,
+      "capture_ret_1d": 9.18463791180053,
+      "capture_ret_5d": 10.513836404551636,
+      "capture_vol_ratio": 4.986977278186856,
+      "capture_score": 34.649317348501135,
+      "captured_at": "2026-11-17"
+    },
+    {
+      "symbol": "MORARJEE",
+      "name": "Morarjee Textiles Limited",
+      "capture_price": 5.199999809265137,
+      "capture_ret_1d": 4.8387050256521125,
+      "capture_ret_5d": 32.99231956820749,
+      "capture_vol_ratio": 4.391609633264463,
+      "capture_score": 33.95245540758259,
+      "captured_at": "2026-11-17"
+    },
+    {
+      "symbol": "BFINVEST",
+      "name": "BF Investment Limited",
+      "capture_price": 473.6499938964844,
+      "capture_ret_1d": 6.163846324377742,
+      "capture_ret_5d": 16.676925644462525,
+      "capture_vol_ratio": 6.492967651195499,
+      "capture_score": 33.233539564815175,
       "captured_at": "2026-11-17"
     }
   ]
