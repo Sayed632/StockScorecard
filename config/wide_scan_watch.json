@@ -1,5 +1,5 @@
 {
-  "saved_at": "18 Nov 2026 | 5:49 PM IST",
+  "saved_at": "18 Nov 2026 | 7:53 PM IST",
   "captured_day": "2026-11-18",
   "count": 15,
   "items": [
@@ -61,6 +61,16 @@
       "capture_ret_5d": 11.686340218609415,
       "capture_vol_ratio": 68.81670673236204,
       "capture_score": 36.82657931747413,
+      "captured_at": "2026-11-18"
+    },
+    {
+      "symbol": "WSI",
+      "name": "W S Industries (I) Limited",
+      "capture_price": 78.31999969482422,
+      "capture_ret_1d": 8.057389717728203,
+      "capture_ret_5d": 15.482158724930395,
+      "capture_vol_ratio": 6.012432778752202,
+      "capture_score": 35.08762321499948,
       "captured_at": "2026-11-18"
     },
     {
@@ -141,16 +151,6 @@
       "capture_ret_5d": 6.810709123002123,
       "capture_vol_ratio": 25.40345327301004,
       "capture_score": 27.7428486909037,
-      "captured_at": "2026-11-18"
-    },
-    {
-      "symbol": "TFL",
-      "name": "Transwarranty Finance Limited",
-      "capture_price": 12.0600004196167,
-      "capture_ret_1d": 5.604206121252919,
-      "capture_ret_5d": 6.443075911971063,
-      "capture_vol_ratio": 6.697660761475971,
-      "capture_score": 26.725047345503505,
       "captured_at": "2026-11-18"
     }
   ]
