@@ -1,157 +1,157 @@
 {
-  "saved_at": "18 Nov 2026 | 7:53 PM IST",
-  "captured_day": "2026-11-18",
+  "saved_at": "19 Nov 2026 | 12:16 AM IST",
+  "captured_day": "2026-11-19",
   "count": 15,
   "items": [
     {
-      "symbol": "BALAXI",
-      "name": "BALAXI PHARMACEUTICALS LIMITED",
-      "capture_price": 31.649999618530273,
-      "capture_ret_1d": 19.569325423300633,
-      "capture_ret_5d": 39.61181963835425,
-      "capture_vol_ratio": 48.25587490802922,
-      "capture_score": 57.347327381384744,
-      "captured_at": "2026-11-18"
-    },
-    {
-      "symbol": "SUBROS",
-      "name": "Subros Limited",
-      "capture_price": 693.25,
-      "capture_ret_1d": 13.100576913904426,
-      "capture_ret_5d": 14.341087573421119,
-      "capture_vol_ratio": 29.250474842031277,
-      "capture_score": 40.7400729473827,
-      "captured_at": "2026-11-18"
-    },
-    {
-      "symbol": "RPPINFRA",
-      "name": "R.P.P. Infra Projects Limited",
-      "capture_price": 47.56999969482422,
-      "capture_ret_1d": 16.08101568131024,
-      "capture_ret_5d": 4.5954269428849726,
-      "capture_vol_ratio": 7.498353179630099,
-      "capture_score": 39.297218817572286,
-      "captured_at": "2026-11-18"
-    },
-    {
-      "symbol": "GREAVESCOT",
-      "name": "Greaves Cotton Limited",
-      "capture_price": 266.6300048828125,
-      "capture_ret_1d": 9.49897531121664,
-      "capture_ret_5d": 20.854868454323782,
-      "capture_vol_ratio": 8.208590608348452,
-      "capture_score": 38.697974332473294,
-      "captured_at": "2026-11-18"
-    },
-    {
       "symbol": "SALASAR",
       "name": "Salasar Techno Engineering Limited",
-      "capture_price": 6.119999885559082,
-      "capture_ret_1d": 5.88234711780411,
-      "capture_ret_5d": 29.113927870831446,
-      "capture_vol_ratio": 7.905650512022195,
-      "capture_score": 37.24869129615594,
-      "captured_at": "2026-11-18"
+      "capture_price": 5.78000020980835,
+      "capture_ret_1d": 19.917012530231414,
+      "capture_ret_5d": 37.61905886418746,
+      "capture_vol_ratio": 8.263380340343133,
+      "capture_score": 57.06708563874331,
+      "captured_at": "2026-11-19"
     },
     {
-      "symbol": "GREENLAM",
-      "name": "Greenlam Industries Limited",
-      "capture_price": 228.02999877929688,
-      "capture_ret_1d": 10.613633534134026,
-      "capture_ret_5d": 11.686340218609415,
-      "capture_vol_ratio": 68.81670673236204,
-      "capture_score": 36.82657931747413,
-      "captured_at": "2026-11-18"
-    },
-    {
-      "symbol": "WSI",
-      "name": "W S Industries (I) Limited",
-      "capture_price": 78.31999969482422,
-      "capture_ret_1d": 8.057389717728203,
-      "capture_ret_5d": 15.482158724930395,
-      "capture_vol_ratio": 6.012432778752202,
-      "capture_score": 35.08762321499948,
-      "captured_at": "2026-11-18"
-    },
-    {
-      "symbol": "CHEMFAB",
-      "name": "Chemfab Alkalis Limited",
-      "capture_price": 338.45001220703125,
-      "capture_ret_1d": 8.948984019555617,
-      "capture_ret_5d": 8.913921868714802,
-      "capture_vol_ratio": 20.900819338192026,
-      "capture_score": 33.858653477516924,
-      "captured_at": "2026-11-18"
+      "symbol": "BALAXI",
+      "name": "BALAXI PHARMACEUTICALS LIMITED",
+      "capture_price": 26.469999313354492,
+      "capture_ret_1d": 19.990933609135155,
+      "capture_ret_5d": 16.813766511907136,
+      "capture_vol_ratio": 12.622680367515356,
+      "capture_score": 49.873938610129684,
+      "captured_at": "2026-11-19"
     },
     {
       "symbol": "KDDL",
       "name": "KDDL Limited",
-      "capture_price": 4876.7998046875,
-      "capture_ret_1d": 6.9379859029718105,
-      "capture_ret_5d": 13.479925647178593,
-      "capture_vol_ratio": 10.233900459744948,
-      "capture_score": 33.04355706007868,
-      "captured_at": "2026-11-18"
+      "capture_price": 4560.39990234375,
+      "capture_ret_1d": 16.524004375405287,
+      "capture_ret_5d": 8.6533805901581,
+      "capture_vol_ratio": 33.78904653424457,
+      "capture_score": 42.85748845704168,
+      "captured_at": "2026-11-19"
     },
     {
-      "symbol": "VESUVIUS",
-      "name": "Vesuvius India Limited",
-      "capture_price": 377.20001220703125,
-      "capture_ret_1d": 10.810816383779898,
-      "capture_ret_5d": 2.793295996463141,
-      "capture_vol_ratio": 251.3914521029545,
-      "capture_score": 32.97297966053588,
-      "captured_at": "2026-11-18"
+      "symbol": "DEEPAKFERT",
+      "name": "Deepak Fertilizers and Petrochemicals Corporation Limited",
+      "capture_price": 1443.699951171875,
+      "capture_ret_1d": 6.719389345268945,
+      "capture_ret_5d": 22.628037993281524,
+      "capture_vol_ratio": 5.086914229445806,
+      "capture_score": 35.983080511971266,
+      "captured_at": "2026-11-19"
     },
     {
-      "symbol": "APOLLOPIPE",
-      "name": "Apollo Pipes Limited",
-      "capture_price": 547.3499755859375,
-      "capture_ret_1d": 10.54225635320638,
-      "capture_ret_5d": 9.887566528595194,
-      "capture_vol_ratio": 4.200872185162651,
-      "capture_score": 32.91484464950658,
-      "captured_at": "2026-11-18"
+      "symbol": "FLEXITUFF",
+      "name": "Flexituff Ventures International Limited",
+      "capture_price": 5.110000133514404,
+      "capture_ret_1d": 9.892473735758589,
+      "capture_ret_5d": 90.67164202340861,
+      "capture_vol_ratio": 2.133389235237644,
+      "capture_score": 34.40452542386088,
+      "captured_at": "2026-11-19"
     },
     {
-      "symbol": "INDOCO",
-      "name": "Indoco Remedies Limited",
-      "capture_price": 242.00999450683594,
-      "capture_ret_1d": 7.569561339987296,
-      "capture_ret_5d": 10.2501027575304,
-      "capture_vol_ratio": 245.28264559829717,
-      "capture_score": 32.671009573120394,
-      "captured_at": "2026-11-18"
+      "symbol": "ASALCBR",
+      "name": "Associated Alcohols & Breweries Ltd.",
+      "capture_price": 566.9500122070312,
+      "capture_ret_1d": 9.502658079581128,
+      "capture_ret_5d": -0.2989557960158207,
+      "capture_vol_ratio": 6.099417733194973,
+      "capture_score": 31.403189695497353,
+      "captured_at": "2026-11-19"
     },
     {
-      "symbol": "NDRAUTO",
-      "name": "Ndr Auto Components Limited",
-      "capture_price": 777.5999755859375,
-      "capture_ret_1d": 7.805349888502744,
-      "capture_ret_5d": 3.500597393888971,
-      "capture_vol_ratio": 53.12207345824274,
-      "capture_score": 29.366419866203294,
-      "captured_at": "2026-11-18"
+      "symbol": "GREAVESCOT",
+      "name": "Greaves Cotton Limited",
+      "capture_price": 243.5,
+      "capture_ret_1d": 6.742067864288548,
+      "capture_ret_5d": 19.380300310202948,
+      "capture_vol_ratio": 3.867430913867442,
+      "capture_score": 30.343310201187055,
+      "captured_at": "2026-11-19"
     },
     {
-      "symbol": "ASHOKA",
-      "name": "Ashoka Buildcon Limited",
-      "capture_price": 115.19999694824219,
-      "capture_ret_1d": 6.5778525777035135,
-      "capture_ret_5d": 0.7169083008521593,
-      "capture_vol_ratio": 7.553715643028737,
-      "capture_score": 27.893423093244216,
-      "captured_at": "2026-11-18"
+      "symbol": "FILATEX",
+      "name": "Filatex India Limited",
+      "capture_price": 108.4800033569336,
+      "capture_ret_1d": 4.841985190996612,
+      "capture_ret_5d": 15.477965230623102,
+      "capture_vol_ratio": 15.211334765133646,
+      "capture_score": 30.259273021714698,
+      "captured_at": "2026-11-19"
     },
     {
-      "symbol": "SANGAMIND",
-      "name": "Sangam (India) Limited",
-      "capture_price": 682.2000122070312,
-      "capture_ret_1d": 6.452373909086417,
-      "capture_ret_5d": 6.810709123002123,
-      "capture_vol_ratio": 25.40345327301004,
-      "capture_score": 27.7428486909037,
-      "captured_at": "2026-11-18"
+      "symbol": "HINDOILEXP",
+      "name": "Hindustan Oil Exploration Company Limited",
+      "capture_price": 222.2899932861328,
+      "capture_ret_1d": 4.5283501637309875,
+      "capture_ret_5d": 42.758964550437064,
+      "capture_vol_ratio": 2.7721087205350132,
+      "capture_score": 29.61678504587104,
+      "captured_at": "2026-11-19"
+    },
+    {
+      "symbol": "CTE",
+      "name": "Cambridge Technology Enterprises Limited",
+      "capture_price": 42.380001068115234,
+      "capture_ret_1d": 4.978950184323483,
+      "capture_ret_5d": 16.68502594771386,
+      "capture_vol_ratio": 4.378574080950613,
+      "capture_score": 28.333005589825785,
+      "captured_at": "2026-11-19"
+    },
+    {
+      "symbol": "TATACHEM",
+      "name": "Tata Chemicals Limited",
+      "capture_price": 649.4500122070312,
+      "capture_ret_1d": 6.101950353018748,
+      "capture_ret_5d": 7.391486102857581,
+      "capture_vol_ratio": 17.45184388882494,
+      "capture_score": 27.3223404236225,
+      "captured_at": "2026-11-19"
+    },
+    {
+      "symbol": "SANDHAR",
+      "name": "Sandhar Technologies Limited",
+      "capture_price": 583.6500244140625,
+      "capture_ret_1d": 6.866245230004697,
+      "capture_ret_5d": 20.576394821373967,
+      "capture_vol_ratio": 2.9161187380385725,
+      "capture_score": 27.105707415640815,
+      "captured_at": "2026-11-19"
+    },
+    {
+      "symbol": "TATAINVEST",
+      "name": "Tata Investment Corporation Limited",
+      "capture_price": 609.5499877929688,
+      "capture_ret_1d": 5.742037450777193,
+      "capture_ret_5d": 5.5954937709777,
+      "capture_vol_ratio": 12.102642542477012,
+      "capture_score": 26.890444940932632,
+      "captured_at": "2026-11-19"
+    },
+    {
+      "symbol": "AVTNPL",
+      "name": "AVT Natural Products Limited",
+      "capture_price": 101.22000122070312,
+      "capture_ret_1d": 5.591488187172788,
+      "capture_ret_5d": 1.0784919489088107,
+      "capture_vol_ratio": 10.207309029761289,
+      "capture_score": 26.709785824607344,
+      "captured_at": "2026-11-19"
+    },
+    {
+      "symbol": "SHIVAMILLS",
+      "name": "Shiva Mills Limited",
+      "capture_price": 67.30999755859375,
+      "capture_ret_1d": 3.92157024420543,
+      "capture_ret_5d": 14.084741624735164,
+      "capture_vol_ratio": 4.178271644416021,
+      "capture_score": 25.56431639052682,
+      "captured_at": "2026-11-19"
     }
   ]
 }
