@@ -1,5 +1,5 @@
 {
-  "saved_at": "19 Nov 2026 | 5:44 PM IST",
+  "saved_at": "19 Nov 2026 | 8:04 PM IST",
   "captured_day": "2026-11-19",
   "count": 15,
   "items": [
@@ -54,16 +54,6 @@
       "captured_at": "2026-11-19"
     },
     {
-      "symbol": "VOLTAS",
-      "name": "Voltas Limited",
-      "capture_price": 1237.0,
-      "capture_ret_1d": 9.02520946743195,
-      "capture_ret_5d": 10.971566716186887,
-      "capture_vol_ratio": 5.60773259547381,
-      "capture_score": 34.67029971158375,
-      "captured_at": "2026-11-19"
-    },
-    {
       "symbol": "BLUESTARCO",
       "name": "Blue Star Limited",
       "capture_price": 1764.0,
@@ -74,16 +64,6 @@
       "captured_at": "2026-11-19"
     },
     {
-      "symbol": "TIRUPATIFL",
-      "name": "Tirupati Forge Limited",
-      "capture_price": 73.62999725341797,
-      "capture_ret_1d": 8.807446794357654,
-      "capture_ret_5d": 10.605374178997717,
-      "capture_vol_ratio": 6.2813582198227635,
-      "capture_score": 34.280817115878385,
-      "captured_at": "2026-11-19"
-    },
-    {
       "symbol": "RPPINFRA",
       "name": "R.P.P. Infra Projects Limited",
       "capture_price": 51.15999984741211,
@@ -91,16 +71,6 @@
       "capture_ret_5d": 13.714154120377398,
       "capture_vol_ratio": 11.234248651051942,
       "capture_score": 33.85608219679379,
-      "captured_at": "2026-11-19"
-    },
-    {
-      "symbol": "IREDA",
-      "name": "Indian Renewable Energy Dev Agency",
-      "capture_price": 129.8000030517578,
-      "capture_ret_1d": 8.347245196379216,
-      "capture_ret_5d": 8.302048147113815,
-      "capture_vol_ratio": 10.660369801362119,
-      "capture_score": 32.922411087144894,
       "captured_at": "2026-11-19"
     },
     {
@@ -144,13 +114,43 @@
       "captured_at": "2026-11-19"
     },
     {
-      "symbol": "V2RETAIL",
-      "name": "V2 Retail Limited",
-      "capture_price": 157.36000061035156,
-      "capture_ret_1d": 11.122095849245195,
-      "capture_ret_5d": -15.447853369358866,
-      "capture_vol_ratio": 3.0450882088126283,
-      "capture_score": 25.526867854344747,
+      "symbol": "MHRIL",
+      "name": "Mahindra Holidays & Resorts India Limited",
+      "capture_price": 197.77999877929688,
+      "capture_ret_1d": 3.354932142803313,
+      "capture_ret_5d": -1.4057862604269,
+      "capture_vol_ratio": 6.188311426098232,
+      "capture_score": 23.354932142803314,
+      "captured_at": "2026-11-19"
+    },
+    {
+      "symbol": "A2ZINFRA",
+      "name": "A2Z Infra Engineering Limited",
+      "capture_price": 12.569999694824219,
+      "capture_ret_1d": 4.837363926421201,
+      "capture_ret_5d": -8.248176132650109,
+      "capture_vol_ratio": 4.507673932684212,
+      "capture_score": 22.86805965715805,
+      "captured_at": "2026-11-19"
+    },
+    {
+      "symbol": "ARVINDFASN",
+      "name": "Arvind Fashions Limited",
+      "capture_price": 364.79998779296875,
+      "capture_ret_1d": 5.023745899763354,
+      "capture_ret_5d": 4.737295601000047,
+      "capture_vol_ratio": 3.848143186168307,
+      "capture_score": 21.421067824389254,
+      "captured_at": "2026-11-19"
+    },
+    {
+      "symbol": "AMBER",
+      "name": "Amber Enterprises India Limited",
+      "capture_price": 6697.0,
+      "capture_ret_1d": 7.383949330553996,
+      "capture_ret_5d": 7.859558705105485,
+      "capture_vol_ratio": 2.5257458559208197,
+      "capture_score": 18.963722620348072,
       "captured_at": "2026-11-19"
     }
   ]
