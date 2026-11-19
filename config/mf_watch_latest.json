@@ -1,0 +1,83 @@
+{
+  "saved_at": "15 Nov 2026 | 4:48 PM IST",
+  "schemes": [
+    {
+      "code": 120716,
+      "label": "UTI Nifty 50 Index Direct Growth",
+      "bucket": "index_large",
+      "name": "UTI Nifty 50 Index Fund - Direct Plan - Growth",
+      "nav": 177.162,
+      "ret_1m": 11.205825120833591,
+      "ret_1y": -2.0237813681365124,
+      "ret_3y": 9.973908201122006
+    },
+    {
+      "code": 118989,
+      "label": "Parag Parikh Flexi Cap Direct Growth",
+      "bucket": "flexi",
+      "name": "HDFC Mid Cap Fund - Direct Plan - Growth Option",
+      "nav": 229.697,
+      "ret_1m": 3.980932807612403,
+      "ret_1y": 2.3845246767043804,
+      "ret_3y": 16.029192034379736
+    },
+    {
+      "code": 125497,
+      "label": "Quant Small Cap Direct Growth",
+      "bucket": "small_cap",
+      "name": "SBI SMALL CAP FUND - Direct Plan - Growth",
+      "nav": 210.1702,
+      "ret_1m": 1.6875658921929881,
+      "ret_1y": 6.93644898316641,
+      "ret_3y": 11.582628220225999
+    },
+    {
+      "code": 120505,
+      "label": "Mirae Asset Large Cap Direct Growth",
+      "bucket": "large_cap",
+      "name": "Axis Midcap Fund - Direct Plan - Growth Option",
+      "nav": 145.16,
+      "ret_1m": 4.94505494505495,
+      "ret_1y": 8.293858095289863,
+      "ret_3y": 17.221599384263932
+    },
+    {
+      "code": 119062,
+      "label": "SBI Magnum Midcap Direct Growth",
+      "bucket": "mid_cap",
+      "name": "HDFC Aggressive Hybrid Fund - Direct Plan - Growth Option",
+      "nav": 128.118,
+      "ret_1m": 7.066570841202702,
+      "ret_1y": -2.3685469135419135,
+      "ret_3y": 8.3655642148744
+    },
+    {
+      "code": 120578,
+      "label": "ICICI Pru Bluechip Direct Growth",
+      "bucket": "large_cap",
+      "name": "SBI TECHNOLOGY OPPORTUNITIES FUND - Direct Plan - Growth",
+      "nav": 239.9668,
+      "ret_1m": 4.678420480723644,
+      "ret_1y": -6.737037174140259,
+      "ret_3y": 11.394295790701436
+    },
+    {
+      "code": 120503,
+      "label": "Axis ELSS Direct Growth",
+      "bucket": "elss",
+      "name": "Axis ELSS- Tax Saver Fund - Direct Plan - Growth Option",
+      "nav": 116.1262,
+      "ret_1m": 10.018938694149071,
+      "ret_1y": 4.2243573140357205,
+      "ret_3y": 12.688152350951354
+    }
+  ],
+  "nfo_headlines": [
+    "SBI Mutual Fund launches BSE India Defence ETF fund of funds - BusinessLine",
+    "SBI Mutual Fund to launch defence sector fund of fund on November 16 - CNBC TV18",
+    "NFO Warning: When to Skip a New Fund Offer in India - Value Research",
+    "NFO boom in 2026: What investors should know before subscribing - The Federal",
+    "NFO Alert: Groww Mutual Fund Launches Groww Small Cap Fund: NFO Details, Strategy & Insights - Groww",
+    "New Fund Offer - NFO to Invest in India | IIFL Capital - India Infoline"
+  ]
+}
