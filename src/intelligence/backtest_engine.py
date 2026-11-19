@@ -35,7 +35,7 @@ logger = logging.getLogger(__name__)
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT_JSON = ROOT / "config" / "backtest_latest.json"
-HISTORY = ROOT / "data" / "alert_history.jsonl"
+HISTORY = ROOT / "config" / "alert_history.jsonl"
 
 THR_5D = 8.0
 THR_10D = 12.0

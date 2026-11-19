@@ -37,7 +37,7 @@ jobs:
         run: |
           git config user.name "stockscorecard-bot"
           git config user.email "bot@stockscorecard.local"
-          git add config/backtest_latest.json data/alert_history.jsonl 2>/dev/null || true
+          git add config/backtest_latest.json config/alert_history.jsonl 2>/dev/null || true
           git diff --staged --quiet || git commit -m "chore: backtest results" || true
           git push origin main || true
         env:
