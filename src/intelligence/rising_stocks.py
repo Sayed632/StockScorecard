@@ -28,6 +28,7 @@ import math
 
 from src.data_fetch.prices import fetch_price_history
 from src.data_fetch.nse_universe import load_merged_universe
+from src.intelligence.backtest_engine import append_alert_history
 
 logger = logging.getLogger(__name__)
 
@@ -259,6 +260,29 @@ def _persist(result: Dict[str, Any]) -> None:
         )
     except Exception as e:
         logger.warning("persist raising/filtered: %s", e)
+    # Live alert history for future outcome scoring
+    try:
+        for m in (result.get("filtered") or [])[:20]:
+            append_alert_history(
+                m.symbol,
+                "filtered",
+                float(m.price),
+                {
+                    "label": m.filter_label,
+                    "ret_5d": m.ret_5d,
+                    "ret_1d": m.ret_1d,
+                    "extended": m.extended,
+                },
+            )
+        for m in (result.get("raising") or [])[:30]:
+            append_alert_history(
+                m.symbol,
+                "raising",
+                float(m.price),
+                {"ret_5d": m.ret_5d, "extended": m.extended, "still": m.still_raising},
+            )
+    except Exception as e:
+        logger.debug("history append: %s", e)
 
 
 def format_rising_stocks_telegram(result: Optional[Dict[str, Any]] = None) -> str:

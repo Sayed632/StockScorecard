@@ -1,0 +1,44 @@
+name: Backtest Engine
+
+on:
+  schedule:
+    # Sunday ~10:30 IST
+    - cron: "0 5 * * 0"
+  workflow_dispatch:
+    inputs:
+      symbols:
+        description: "Max symbols to sample"
+        required: false
+        default: "120"
+
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run backtest
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          N="${{ github.event.inputs.symbols }}"
+          N="${N:-120}"
+          python scripts/run_backtest.py --symbols "$N"
+      - name: Commit results
+        run: |
+          git config user.name "stockscorecard-bot"
+          git config user.email "bot@stockscorecard.local"
+          git add config/backtest_latest.json data/alert_history.jsonl 2>/dev/null || true
+          git diff --staged --quiet || git commit -m "chore: backtest results" || true
+          git push origin main || true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
