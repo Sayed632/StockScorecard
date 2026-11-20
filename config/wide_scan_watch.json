@@ -1,5 +1,5 @@
 {
-  "saved_at": "20 Nov 2026 | 7:43 PM IST",
+  "saved_at": "20 Nov 2026 | 11:57 PM IST",
   "captured_day": "2026-11-20",
   "count": 15,
   "items": [
@@ -34,16 +34,6 @@
       "captured_at": "2026-11-20"
     },
     {
-      "symbol": "WELINV",
-      "name": "Welspun Investments and Commercials Limited",
-      "capture_price": 2294.89990234375,
-      "capture_ret_1d": 12.10492549035791,
-      "capture_ret_5d": 9.54176144838903,
-      "capture_vol_ratio": 20.01900237529691,
-      "capture_score": 37.86552709536565,
-      "captured_at": "2026-11-20"
-    },
-    {
       "symbol": "NIRAJISPAT",
       "name": "Niraj Ispat Industries Limited",
       "capture_price": 289.95001220703125,
@@ -61,16 +51,6 @@
       "capture_ret_5d": 9.689410894614902,
       "capture_vol_ratio": 5.293319290479437,
       "capture_score": 33.70039013599248,
-      "captured_at": "2026-11-20"
-    },
-    {
-      "symbol": "VERTOZ",
-      "name": "Vertoz Advertising Limited",
-      "capture_price": 36.20000076293945,
-      "capture_ret_1d": 10.36585855171992,
-      "capture_ret_5d": 4.262671342747026,
-      "capture_vol_ratio": 21.589481885369743,
-      "capture_score": 32.4390302620639,
       "captured_at": "2026-11-20"
     },
     {
@@ -104,26 +84,6 @@
       "captured_at": "2026-11-20"
     },
     {
-      "symbol": "THYROCARE",
-      "name": "Thyrocare Technologies Limited",
-      "capture_price": 528.4500122070312,
-      "capture_ret_1d": 4.6746569908284075,
-      "capture_ret_5d": 6.061216699855754,
-      "capture_vol_ratio": 11.302513950168297,
-      "capture_score": 24.674656990828407,
-      "captured_at": "2026-11-20"
-    },
-    {
-      "symbol": "TTKHLTCARE",
-      "name": "TTK Healthcare Limited",
-      "capture_price": 1110.1500244140625,
-      "capture_ret_1d": 5.477436998960816,
-      "capture_ret_5d": 18.296127654495955,
-      "capture_vol_ratio": 2.8383403637731734,
-      "capture_score": 24.329930532919256,
-      "captured_at": "2026-11-20"
-    },
-    {
       "symbol": "DBL",
       "name": "Dilip Buildcon Limited",
       "capture_price": 402.45001220703125,
@@ -134,16 +94,6 @@
       "captured_at": "2026-11-20"
     },
     {
-      "symbol": "WORTH",
-      "name": "Worth Peripherals Limited",
-      "capture_price": 2.799999952316284,
-      "capture_ret_1d": 4.089215344087638,
-      "capture_ret_5d": 1.4492739851898806,
-      "capture_vol_ratio": 5.194531713579485,
-      "capture_score": 24.089215344087638,
-      "captured_at": "2026-11-20"
-    },
-    {
       "symbol": "ADROITINFO",
       "name": "Adroit Infotech Limited",
       "capture_price": 16.09000015258789,
@@ -151,6 +101,56 @@
       "capture_ret_5d": 8.49629288849625,
       "capture_vol_ratio": 3.7161236353324827,
       "capture_score": 22.795798048156094,
+      "captured_at": "2026-11-20"
+    },
+    {
+      "symbol": "ALICON",
+      "name": "Alicon Castalloy Limited",
+      "capture_price": 1075.75,
+      "capture_ret_1d": 5.621011291114386,
+      "capture_ret_5d": 10.20334713874773,
+      "capture_vol_ratio": 2.9230002450639483,
+      "capture_score": 22.00838602815476,
+      "captured_at": "2026-11-20"
+    },
+    {
+      "symbol": "AXISBANK",
+      "name": "Axis Bank Limited",
+      "capture_price": 1446.0,
+      "capture_ret_1d": 4.72189664442797,
+      "capture_ret_5d": 8.640120210368153,
+      "capture_vol_ratio": 3.289344768806607,
+      "capture_score": 20.90331779328325,
+      "captured_at": "2026-11-20"
+    },
+    {
+      "symbol": "NH",
+      "name": "Narayana Hrudayalaya Ltd.",
+      "capture_price": 1943.699951171875,
+      "capture_ret_1d": 3.769151487167832,
+      "capture_ret_5d": 4.477527717945939,
+      "capture_vol_ratio": 4.103300508158361,
+      "capture_score": 20.182353519801275,
+      "captured_at": "2026-11-20"
+    },
+    {
+      "symbol": "CYIENT",
+      "name": "Cyient Limited",
+      "capture_price": 1155.5,
+      "capture_ret_1d": 4.005400540054005,
+      "capture_ret_5d": 4.579597652988654,
+      "capture_vol_ratio": 3.705884644986422,
+      "capture_score": 18.828939119999692,
+      "captured_at": "2026-11-20"
+    },
+    {
+      "symbol": "PERSISTENT",
+      "name": "Persistent Systems Limited",
+      "capture_price": 6124.0,
+      "capture_ret_1d": 4.149659863945576,
+      "capture_ret_5d": 2.0156588372480355,
+      "capture_vol_ratio": 3.631178879012613,
+      "capture_score": 18.67437537999603,
       "captured_at": "2026-11-20"
     }
   ]
