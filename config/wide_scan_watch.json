@@ -1,16 +1,156 @@
 {
-  "saved_at": "20 Nov 2026 | 9:28 AM IST",
+  "saved_at": "20 Nov 2026 | 5:45 PM IST",
   "captured_day": "2026-11-20",
-  "count": 1,
+  "count": 15,
   "items": [
+    {
+      "symbol": "OAL",
+      "name": "Oriental Aromatics Limited",
+      "capture_price": 516.7000122070312,
+      "capture_ret_1d": 19.995356452182044,
+      "capture_ret_5d": 8.939495151867893,
+      "capture_vol_ratio": 189.1589578319127,
+      "capture_score": 47.123251045772214,
+      "captured_at": "2026-11-20"
+    },
+    {
+      "symbol": "JIYAECO",
+      "name": "Jiya Eco-Products Limited",
+      "capture_price": 24.31999969482422,
+      "capture_ret_1d": 10.194834758097727,
+      "capture_ret_5d": 21.47851717652196,
+      "capture_vol_ratio": 28.0,
+      "capture_score": 39.75128272149996,
+      "captured_at": "2026-11-20"
+    },
+    {
+      "symbol": "AJMERA",
+      "name": "Ajmera Realty & Infra India Limited",
+      "capture_price": 149.2899932861328,
+      "capture_ret_1d": 11.84446963188799,
+      "capture_ret_5d": 12.012300910467033,
+      "capture_vol_ratio": 8.76820723004394,
+      "capture_score": 38.41766887692905,
+      "captured_at": "2026-11-20"
+    },
+    {
+      "symbol": "WELINV",
+      "name": "Welspun Investments and Commercials Limited",
+      "capture_price": 2294.89990234375,
+      "capture_ret_1d": 12.10492549035791,
+      "capture_ret_5d": 9.54176144838903,
+      "capture_vol_ratio": 20.01900237529691,
+      "capture_score": 37.86552709536565,
+      "captured_at": "2026-11-20"
+    },
+    {
+      "symbol": "NIRAJISPAT",
+      "name": "Niraj Ispat Industries Limited",
+      "capture_price": 289.95001220703125,
+      "capture_ret_1d": 5.363570491180081,
+      "capture_ret_5d": 21.96610331804374,
+      "capture_vol_ratio": 7.097372488408037,
+      "capture_score": 34.1244207507314,
+      "captured_at": "2026-11-20"
+    },
+    {
+      "symbol": "INDUSINDBK",
+      "name": "IndusInd Bank Limited",
+      "capture_price": 1003.0,
+      "capture_ret_1d": 8.59091360239772,
+      "capture_ret_5d": 9.689410894614902,
+      "capture_vol_ratio": 5.293319290479437,
+      "capture_score": 33.70039013599248,
+      "captured_at": "2026-11-20"
+    },
+    {
+      "symbol": "VERTOZ",
+      "name": "Vertoz Advertising Limited",
+      "capture_price": 36.20000076293945,
+      "capture_ret_1d": 10.36585855171992,
+      "capture_ret_5d": 4.262671342747026,
+      "capture_vol_ratio": 21.589481885369743,
+      "capture_score": 32.4390302620639,
+      "captured_at": "2026-11-20"
+    },
+    {
+      "symbol": "EIHOTEL",
+      "name": "EIH Limited",
+      "capture_price": 334.1499938964844,
+      "capture_ret_1d": 7.790320611769164,
+      "capture_ret_5d": 5.559945279488199,
+      "capture_vol_ratio": 15.532912447595727,
+      "capture_score": 29.348384734122995,
+      "captured_at": "2026-11-20"
+    },
+    {
+      "symbol": "CHEMBOND",
+      "name": "Chembond Chemicals Ltd",
+      "capture_price": 210.75,
+      "capture_ret_1d": 6.450148776664832,
+      "capture_ret_5d": 6.78996376086034,
+      "capture_vol_ratio": 5.379627376690187,
+      "capture_score": 27.7401785319978,
+      "captured_at": "2026-11-20"
+    },
+    {
+      "symbol": "CUB",
+      "name": "City Union Bank Limited",
+      "capture_price": 248.8000030517578,
+      "capture_ret_1d": 6.25213493367287,
+      "capture_ret_5d": 7.0568027478427275,
+      "capture_vol_ratio": 6.100393206947215,
+      "capture_score": 27.502561920407445,
+      "captured_at": "2026-11-20"
+    },
+    {
+      "symbol": "THYROCARE",
+      "name": "Thyrocare Technologies Limited",
+      "capture_price": 528.4500122070312,
+      "capture_ret_1d": 4.6746569908284075,
+      "capture_ret_5d": 6.061216699855754,
+      "capture_vol_ratio": 11.302513950168297,
+      "capture_score": 24.674656990828407,
+      "captured_at": "2026-11-20"
+    },
+    {
+      "symbol": "TTKHLTCARE",
+      "name": "TTK Healthcare Limited",
+      "capture_price": 1110.1500244140625,
+      "capture_ret_1d": 5.477436998960816,
+      "capture_ret_5d": 18.296127654495955,
+      "capture_vol_ratio": 2.8383403637731734,
+      "capture_score": 24.329930532919256,
+      "captured_at": "2026-11-20"
+    },
+    {
+      "symbol": "DBL",
+      "name": "Dilip Buildcon Limited",
+      "capture_price": 402.45001220703125,
+      "capture_ret_1d": 4.221162389793132,
+      "capture_ret_5d": -1.625517916712449,
+      "capture_vol_ratio": 37.255028416450244,
+      "capture_score": 24.221162389793133,
+      "captured_at": "2026-11-20"
+    },
+    {
+      "symbol": "ADROITINFO",
+      "name": "Adroit Infotech Limited",
+      "capture_price": 16.09000015258789,
+      "capture_ret_1d": 4.957600995852474,
+      "capture_ret_5d": 8.49629288849625,
+      "capture_vol_ratio": 3.7161236353324827,
+      "capture_score": 22.795798048156094,
+      "captured_at": "2026-11-20"
+    },
     {
       "symbol": "ALICON",
       "name": "Alicon Castalloy Limited",
-      "capture_price": 1030.0999755859375,
-      "capture_ret_1d": 3.3199574308864,
-      "capture_ret_5d": 23.80265497248557,
-      "capture_vol_ratio": 0.07165946643779796,
-      "capture_score": 11.650886671256348,
+      "capture_price": 1075.75,
+      "capture_ret_1d": 5.621011291114386,
+      "capture_ret_5d": 10.20334713874773,
+      "capture_vol_ratio": 2.9230002450639483,
+      "capture_score": 22.00838602815476,
       "captured_at": "2026-11-20"
     }
   ]
