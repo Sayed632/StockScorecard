@@ -1,5 +1,5 @@
 {
-  "saved_at": "23 Nov 2026 | 4:49 PM IST",
+  "saved_at": "23 Nov 2026 | 7:19 PM IST",
   "captured_day": "2026-11-23",
   "count": 15,
   "items": [
@@ -14,16 +14,6 @@
       "captured_at": "2026-11-23"
     },
     {
-      "symbol": "THOMASCOOK",
-      "name": "Thomas Cook  (India)  Limited",
-      "capture_price": 129.38999938964844,
-      "capture_ret_1d": 12.846672995883356,
-      "capture_ret_5d": 16.58857044138362,
-      "capture_vol_ratio": 26.542506265076543,
-      "capture_score": 41.22200724954429,
-      "captured_at": "2026-11-23"
-    },
-    {
       "symbol": "HITECH",
       "name": "Hi-Tech Pipes Limited",
       "capture_price": 85.62999725341797,
@@ -31,26 +21,6 @@
       "capture_ret_5d": 13.839398914885503,
       "capture_vol_ratio": 26.159261942841354,
       "capture_score": 41.05268858453786,
-      "captured_at": "2026-11-23"
-    },
-    {
-      "symbol": "WINDMACHIN",
-      "name": "Windsor Machines Limited",
-      "capture_price": 354.70001220703125,
-      "capture_ret_1d": 10.429638457923662,
-      "capture_ret_5d": 19.851325418733733,
-      "capture_vol_ratio": 43.292134434045686,
-      "capture_score": 39.4635300460652,
-      "captured_at": "2026-11-23"
-    },
-    {
-      "symbol": "AJMERA",
-      "name": "Ajmera Realty & Infra India Limited",
-      "capture_price": 162.6199951171875,
-      "capture_ret_1d": 8.928931898004766,
-      "capture_ret_5d": 22.759865342080452,
-      "capture_vol_ratio": 23.745293902170285,
-      "capture_score": 38.680671147333875,
       "captured_at": "2026-11-23"
     },
     {
@@ -114,16 +84,6 @@
       "captured_at": "2026-11-23"
     },
     {
-      "symbol": "SUBEXLTD",
-      "name": "Subex Limited",
-      "capture_price": 18.81999969482422,
-      "capture_ret_1d": 7.481436029804311,
-      "capture_ret_5d": 17.698561377203536,
-      "capture_vol_ratio": 2.627932597604136,
-      "capture_score": 25.683950108202957,
-      "captured_at": "2026-11-23"
-    },
-    {
       "symbol": "INSECTICID",
       "name": "Insecticides (India) Limited",
       "capture_price": 569.4500122070312,
@@ -134,16 +94,6 @@
       "captured_at": "2026-11-23"
     },
     {
-      "symbol": "SHYAMTEL",
-      "name": "Shyam Telecom Limited",
-      "capture_price": 12.40999984741211,
-      "capture_ret_1d": 8.289701623934253,
-      "capture_ret_5d": 12.818180431019165,
-      "capture_vol_ratio": 2.5753099693657253,
-      "capture_score": 24.73524497704071,
-      "captured_at": "2026-11-23"
-    },
-    {
       "symbol": "ECLERX",
       "name": "eClerx Services Limited",
       "capture_price": 1511.4000244140625,
@@ -151,6 +101,56 @@
       "capture_ret_5d": -3.6035460884130344,
       "capture_vol_ratio": 5.402786454887067,
       "capture_score": 23.940585227300875,
+      "captured_at": "2026-11-23"
+    },
+    {
+      "symbol": "CANFINHOME",
+      "name": "Can Fin Homes Limited",
+      "capture_price": 796.4000244140625,
+      "capture_ret_1d": 3.3011235234531533,
+      "capture_ret_5d": 3.9686715945251416,
+      "capture_vol_ratio": 5.504468023033173,
+      "capture_score": 23.301123523453153,
+      "captured_at": "2026-11-23"
+    },
+    {
+      "symbol": "RUCHINFRA",
+      "name": "Ruchi Infrastructure Limited",
+      "capture_price": 5.099999904632568,
+      "capture_ret_1d": 3.0303050736824266,
+      "capture_ret_5d": 2.40963624697752,
+      "capture_vol_ratio": 42.48016951244255,
+      "capture_score": 23.030305073682428,
+      "captured_at": "2026-11-23"
+    },
+    {
+      "symbol": "LINDEINDIA",
+      "name": "Linde India Limited",
+      "capture_price": 6961.5,
+      "capture_ret_1d": 5.926658551430308,
+      "capture_ret_5d": 0.7234319612240414,
+      "capture_vol_ratio": 3.646860982421796,
+      "capture_score": 21.699434191403554,
+      "captured_at": "2026-11-23"
+    },
+    {
+      "symbol": "INTELLECT",
+      "name": "Intellect Design Arena Limited",
+      "capture_price": 578.4500122070312,
+      "capture_ret_1d": 5.364300948457412,
+      "capture_ret_5d": 7.809155785542554,
+      "capture_vol_ratio": 3.495382452371055,
+      "capture_score": 20.418690947633117,
+      "captured_at": "2026-11-23"
+    },
+    {
+      "symbol": "NAGAFERT",
+      "name": "Nagarjuna Fertilizers and Chemicals Limited",
+      "capture_price": 1.3899999856948853,
+      "capture_ret_1d": 4.511273747632516,
+      "capture_ret_5d": 4.511273747632516,
+      "capture_vol_ratio": 3.682264258714572,
+      "capture_score": 19.240330782490805,
       "captured_at": "2026-11-23"
     }
   ]
