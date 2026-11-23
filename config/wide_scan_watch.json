@@ -1,38 +1,8 @@
 {
-  "saved_at": "20 Nov 2026 | 11:57 PM IST",
-  "captured_day": "2026-11-20",
+  "saved_at": "23 Nov 2026 | 9:14 AM IST",
+  "captured_day": "2026-11-23",
   "count": 15,
   "items": [
-    {
-      "symbol": "OAL",
-      "name": "Oriental Aromatics Limited",
-      "capture_price": 516.7000122070312,
-      "capture_ret_1d": 19.995356452182044,
-      "capture_ret_5d": 8.939495151867893,
-      "capture_vol_ratio": 189.1589578319127,
-      "capture_score": 47.123251045772214,
-      "captured_at": "2026-11-20"
-    },
-    {
-      "symbol": "JIYAECO",
-      "name": "Jiya Eco-Products Limited",
-      "capture_price": 24.31999969482422,
-      "capture_ret_1d": 10.194834758097727,
-      "capture_ret_5d": 21.47851717652196,
-      "capture_vol_ratio": 28.0,
-      "capture_score": 39.75128272149996,
-      "captured_at": "2026-11-20"
-    },
-    {
-      "symbol": "AJMERA",
-      "name": "Ajmera Realty & Infra India Limited",
-      "capture_price": 149.2899932861328,
-      "capture_ret_1d": 11.84446963188799,
-      "capture_ret_5d": 12.012300910467033,
-      "capture_vol_ratio": 8.76820723004394,
-      "capture_score": 38.41766887692905,
-      "captured_at": "2026-11-20"
-    },
     {
       "symbol": "NIRAJISPAT",
       "name": "Niraj Ispat Industries Limited",
@@ -41,117 +11,147 @@
       "capture_ret_5d": 21.96610331804374,
       "capture_vol_ratio": 7.097372488408037,
       "capture_score": 34.1244207507314,
-      "captured_at": "2026-11-20"
+      "captured_at": "2026-11-23"
     },
     {
-      "symbol": "INDUSINDBK",
-      "name": "IndusInd Bank Limited",
-      "capture_price": 1003.0,
-      "capture_ret_1d": 8.59091360239772,
-      "capture_ret_5d": 9.689410894614902,
-      "capture_vol_ratio": 5.293319290479437,
-      "capture_score": 33.70039013599248,
-      "captured_at": "2026-11-20"
+      "symbol": "WINDMACHIN",
+      "name": "Windsor Machines Limited",
+      "capture_price": 350.0,
+      "capture_ret_1d": 8.966371948456086,
+      "capture_ret_5d": 18.263215260541422,
+      "capture_vol_ratio": 2.6135693215339235,
+      "capture_score": 27.606048965472496,
+      "captured_at": "2026-11-23"
     },
     {
-      "symbol": "EIHOTEL",
-      "name": "EIH Limited",
-      "capture_price": 334.1499938964844,
-      "capture_ret_1d": 7.790320611769164,
-      "capture_ret_5d": 5.559945279488199,
-      "capture_vol_ratio": 15.532912447595727,
-      "capture_score": 29.348384734122995,
-      "captured_at": "2026-11-20"
+      "symbol": "NAGAFERT",
+      "name": "Nagarjuna Fertilizers and Chemicals Limited",
+      "capture_price": 1.3899999856948853,
+      "capture_ret_1d": 4.511273747632516,
+      "capture_ret_5d": 4.511273747632516,
+      "capture_vol_ratio": 7.052522781379599,
+      "capture_score": 24.511273747632515,
+      "captured_at": "2026-11-23"
     },
     {
-      "symbol": "CHEMBOND",
-      "name": "Chembond Chemicals Ltd",
-      "capture_price": 210.75,
-      "capture_ret_1d": 6.450148776664832,
-      "capture_ret_5d": 6.78996376086034,
-      "capture_vol_ratio": 5.379627376690187,
-      "capture_score": 27.7401785319978,
-      "captured_at": "2026-11-20"
+      "symbol": "WORTH",
+      "name": "Worth Peripherals Limited",
+      "capture_price": 2.799999952316284,
+      "capture_ret_1d": 4.089215344087638,
+      "capture_ret_5d": 1.4492739851898806,
+      "capture_vol_ratio": 5.194531713579485,
+      "capture_score": 24.089215344087638,
+      "captured_at": "2026-11-23"
     },
     {
-      "symbol": "CUB",
-      "name": "City Union Bank Limited",
-      "capture_price": 248.8000030517578,
-      "capture_ret_1d": 6.25213493367287,
-      "capture_ret_5d": 7.0568027478427275,
-      "capture_vol_ratio": 6.100393206947215,
-      "capture_score": 27.502561920407445,
-      "captured_at": "2026-11-20"
+      "symbol": "VAISHALI",
+      "name": "Vaishali Pharma Limited",
+      "capture_price": 6.949999809265137,
+      "capture_ret_1d": 4.826541316752353,
+      "capture_ret_5d": -0.9971534451790443,
+      "capture_vol_ratio": 3.922601552562896,
+      "capture_score": 20.516947527003936,
+      "captured_at": "2026-11-23"
     },
     {
-      "symbol": "DBL",
-      "name": "Dilip Buildcon Limited",
-      "capture_price": 402.45001220703125,
-      "capture_ret_1d": 4.221162389793132,
-      "capture_ret_5d": -1.625517916712449,
-      "capture_vol_ratio": 37.255028416450244,
-      "capture_score": 24.221162389793133,
-      "captured_at": "2026-11-20"
+      "symbol": "DPSCLTD",
+      "name": "DPSC Limited",
+      "capture_price": 7.860000133514404,
+      "capture_ret_1d": 4.939924882547819,
+      "capture_ret_5d": 19.634702102706658,
+      "capture_vol_ratio": 2.0262694431996717,
+      "capture_score": 19.917148391293836,
+      "captured_at": "2026-11-23"
     },
     {
-      "symbol": "ADROITINFO",
-      "name": "Adroit Infotech Limited",
-      "capture_price": 16.09000015258789,
-      "capture_ret_1d": 4.957600995852474,
-      "capture_ret_5d": 8.49629288849625,
-      "capture_vol_ratio": 3.7161236353324827,
-      "capture_score": 22.795798048156094,
-      "captured_at": "2026-11-20"
+      "symbol": "HCL-INSYS",
+      "name": "HCL Infosystems Limited",
+      "capture_price": 10.600000381469727,
+      "capture_ret_1d": 11.696529369049458,
+      "capture_ret_5d": 8.273753041602516,
+      "capture_vol_ratio": 0.6953507244549845,
+      "capture_score": 16.93164880742023,
+      "captured_at": "2026-11-23"
     },
     {
-      "symbol": "ALICON",
-      "name": "Alicon Castalloy Limited",
-      "capture_price": 1075.75,
-      "capture_ret_1d": 5.621011291114386,
-      "capture_ret_5d": 10.20334713874773,
-      "capture_vol_ratio": 2.9230002450639483,
-      "capture_score": 22.00838602815476,
-      "captured_at": "2026-11-20"
+      "symbol": "ZODJRDMKJ",
+      "name": "Zodiac JRD- MKJ Limited",
+      "capture_price": 28.309999465942383,
+      "capture_ret_1d": 5.163444969201492,
+      "capture_ret_5d": -0.7015109131316088,
+      "capture_vol_ratio": 2.6529849558226535,
+      "capture_score": 16.808073786332404,
+      "captured_at": "2026-11-23"
     },
     {
-      "symbol": "AXISBANK",
-      "name": "Axis Bank Limited",
-      "capture_price": 1446.0,
-      "capture_ret_1d": 4.72189664442797,
-      "capture_ret_5d": 8.640120210368153,
-      "capture_vol_ratio": 3.289344768806607,
-      "capture_score": 20.90331779328325,
-      "captured_at": "2026-11-20"
+      "symbol": "TVVISION",
+      "name": "TV Vision Limited",
+      "capture_price": 2.390000104904175,
+      "capture_ret_1d": 3.4632105673722435,
+      "capture_ret_5d": -8.429111074104977,
+      "capture_vol_ratio": 2.9982659386847748,
+      "capture_score": 15.456274322111343,
+      "captured_at": "2026-11-23"
     },
     {
-      "symbol": "NH",
-      "name": "Narayana Hrudayalaya Ltd.",
-      "capture_price": 1943.699951171875,
-      "capture_ret_1d": 3.769151487167832,
-      "capture_ret_5d": 4.477527717945939,
-      "capture_vol_ratio": 4.103300508158361,
-      "capture_score": 20.182353519801275,
-      "captured_at": "2026-11-20"
+      "symbol": "GFLLIMITED",
+      "name": "GFL Limited",
+      "capture_price": 61.9900016784668,
+      "capture_ret_1d": 3.28224126237624,
+      "capture_ret_5d": 10.479417223585719,
+      "capture_vol_ratio": 1.9479932143417873,
+      "capture_score": 14.74201014799839,
+      "captured_at": "2026-11-23"
     },
     {
-      "symbol": "CYIENT",
-      "name": "Cyient Limited",
-      "capture_price": 1155.5,
-      "capture_ret_1d": 4.005400540054005,
-      "capture_ret_5d": 4.579597652988654,
-      "capture_vol_ratio": 3.705884644986422,
-      "capture_score": 18.828939119999692,
-      "captured_at": "2026-11-20"
+      "symbol": "BIL",
+      "name": "Bhartiya International Limited",
+      "capture_price": 1008.0,
+      "capture_ret_1d": 4.7272727272727355,
+      "capture_ret_5d": -2.908876188809928,
+      "capture_vol_ratio": 2.2329869855878903,
+      "capture_score": 13.659220669624297,
+      "captured_at": "2026-11-23"
     },
     {
-      "symbol": "PERSISTENT",
-      "name": "Persistent Systems Limited",
-      "capture_price": 6124.0,
-      "capture_ret_1d": 4.149659863945576,
-      "capture_ret_5d": 2.0156588372480355,
-      "capture_vol_ratio": 3.631178879012613,
-      "capture_score": 18.67437537999603,
-      "captured_at": "2026-11-20"
+      "symbol": "MADHAV",
+      "name": "Madhav Marbles and Granites Limited",
+      "capture_price": 36.0,
+      "capture_ret_1d": 8.728478817197317,
+      "capture_ret_5d": 9.090909090909083,
+      "capture_vol_ratio": 0.0035778878666352125,
+      "capture_score": 13.655992762454957,
+      "captured_at": "2026-11-23"
+    },
+    {
+      "symbol": "ASHOKA",
+      "name": "Ashoka Buildcon Limited",
+      "capture_price": 119.0,
+      "capture_ret_1d": 7.265186029584503,
+      "capture_ret_5d": 10.369134053811791,
+      "capture_vol_ratio": 0.5064700404182186,
+      "capture_score": 12.34742015433553,
+      "captured_at": "2026-11-23"
+    },
+    {
+      "symbol": "AKSHARCHEM",
+      "name": "AksharChem India Limited",
+      "capture_price": 361.95001220703125,
+      "capture_ret_1d": 3.8594009202385315,
+      "capture_ret_5d": 7.260334601786544,
+      "capture_vol_ratio": 2.0648693120688564,
+      "capture_score": 12.118878168513957,
+      "captured_at": "2026-11-23"
+    },
+    {
+      "symbol": "PREMIER",
+      "name": "Premier Limited",
+      "capture_price": 2.8499999046325684,
+      "capture_ret_1d": 3.6363601684570312,
+      "capture_ret_5d": 1.7857126131349377,
+      "capture_vol_ratio": 2.04106495879135,
+      "capture_score": 11.80062000362243,
+      "captured_at": "2026-11-23"
     }
   ]
 }
