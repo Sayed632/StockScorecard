@@ -1,6 +1,6 @@
 {
-  "saved_at": "23 Nov 2026 | 7:19 PM IST",
-  "captured_day": "2026-11-23",
+  "saved_at": "25 Nov 2026 | 2:04 AM IST",
+  "captured_day": "2026-11-25",
   "count": 15,
   "items": [
     {
@@ -11,7 +11,7 @@
       "capture_ret_5d": 16.241063930371457,
       "capture_vol_ratio": 21.121995225451652,
       "capture_score": 49.58321817844794,
-      "captured_at": "2026-11-23"
+      "captured_at": "2026-11-25"
     },
     {
       "symbol": "HITECH",
@@ -19,9 +19,19 @@
       "capture_price": 85.62999725341797,
       "capture_ret_1d": 13.507415803606616,
       "capture_ret_5d": 13.839398914885503,
-      "capture_vol_ratio": 26.159261942841354,
+      "capture_vol_ratio": 26.159821156355754,
       "capture_score": 41.05268858453786,
-      "captured_at": "2026-11-23"
+      "captured_at": "2026-11-25"
+    },
+    {
+      "symbol": "AJMERA",
+      "name": "Ajmera Realty & Infra India Limited",
+      "capture_price": 162.6199951171875,
+      "capture_ret_1d": 8.928931898004766,
+      "capture_ret_5d": 22.759865342080452,
+      "capture_vol_ratio": 23.745426896969935,
+      "capture_score": 38.680671147333875,
+      "captured_at": "2026-11-25"
     },
     {
       "symbol": "ITI",
@@ -29,9 +39,9 @@
       "capture_price": 276.2099914550781,
       "capture_ret_1d": 12.408428326104893,
       "capture_ret_5d": 8.181882943600339,
-      "capture_vol_ratio": 9.562627293053227,
+      "capture_vol_ratio": 9.56319768512383,
       "capture_score": 37.753773021585985,
-      "captured_at": "2026-11-23"
+      "captured_at": "2026-11-25"
     },
     {
       "symbol": "INDIAGLYCO",
@@ -39,9 +49,9 @@
       "capture_price": 294.8500061035156,
       "capture_ret_1d": 11.537733798294925,
       "capture_ret_5d": 0.8206509818113439,
-      "capture_vol_ratio": 34.21370156332161,
+      "capture_vol_ratio": 34.21379004368402,
       "capture_score": 33.84528055795391,
-      "captured_at": "2026-11-23"
+      "captured_at": "2026-11-25"
     },
     {
       "symbol": "BALAXI",
@@ -51,7 +61,7 @@
       "capture_ret_5d": 62.69265756355833,
       "capture_vol_ratio": 2.808389660223217,
       "capture_score": 33.52667648151738,
-      "captured_at": "2026-11-23"
+      "captured_at": "2026-11-25"
     },
     {
       "symbol": "SHALPAINTS",
@@ -59,9 +69,9 @@
       "capture_price": 103.97000122070312,
       "capture_ret_1d": 6.7234686664629395,
       "capture_ret_5d": 3.370450713793649,
-      "capture_vol_ratio": 20.173410209268372,
+      "capture_vol_ratio": 20.179250256853944,
       "capture_score": 28.06816239975553,
-      "captured_at": "2026-11-23"
+      "captured_at": "2026-11-25"
     },
     {
       "symbol": "PREMEXPLN",
@@ -69,9 +79,9 @@
       "capture_price": 582.4000244140625,
       "capture_ret_1d": 6.1611466154413375,
       "capture_ret_5d": 5.050504828096436,
-      "capture_vol_ratio": 14.216500573688275,
+      "capture_vol_ratio": 14.217758817382132,
       "capture_score": 27.393375938529605,
-      "captured_at": "2026-11-23"
+      "captured_at": "2026-11-25"
     },
     {
       "symbol": "CHALET",
@@ -81,7 +91,7 @@
       "capture_ret_5d": 4.735223473093386,
       "capture_vol_ratio": 9.189956592971605,
       "capture_score": 26.58980582524272,
-      "captured_at": "2026-11-23"
+      "captured_at": "2026-11-25"
     },
     {
       "symbol": "INSECTICID",
@@ -89,9 +99,9 @@
       "capture_price": 569.4500122070312,
       "capture_ret_1d": 6.121885597408627,
       "capture_ret_5d": 5.336669982240427,
-      "capture_vol_ratio": 4.565531621993684,
-      "capture_score": 25.60838920486509,
-      "captured_at": "2026-11-23"
+      "capture_vol_ratio": 4.573254919426675,
+      "capture_score": 25.639282394597053,
+      "captured_at": "2026-11-25"
     },
     {
       "symbol": "ECLERX",
@@ -99,9 +109,9 @@
       "capture_price": 1511.4000244140625,
       "capture_ret_1d": 3.9405852273008746,
       "capture_ret_5d": -3.6035460884130344,
-      "capture_vol_ratio": 5.402786454887067,
+      "capture_vol_ratio": 5.40341428435135,
       "capture_score": 23.940585227300875,
-      "captured_at": "2026-11-23"
+      "captured_at": "2026-11-25"
     },
     {
       "symbol": "CANFINHOME",
@@ -109,9 +119,9 @@
       "capture_price": 796.4000244140625,
       "capture_ret_1d": 3.3011235234531533,
       "capture_ret_5d": 3.9686715945251416,
-      "capture_vol_ratio": 5.504468023033173,
+      "capture_vol_ratio": 5.50522416703522,
       "capture_score": 23.301123523453153,
-      "captured_at": "2026-11-23"
+      "captured_at": "2026-11-25"
     },
     {
       "symbol": "RUCHINFRA",
@@ -121,7 +131,7 @@
       "capture_ret_5d": 2.40963624697752,
       "capture_vol_ratio": 42.48016951244255,
       "capture_score": 23.030305073682428,
-      "captured_at": "2026-11-23"
+      "captured_at": "2026-11-25"
     },
     {
       "symbol": "LINDEINDIA",
@@ -129,9 +139,9 @@
       "capture_price": 6961.5,
       "capture_ret_1d": 5.926658551430308,
       "capture_ret_5d": 0.7234319612240414,
-      "capture_vol_ratio": 3.646860982421796,
-      "capture_score": 21.699434191403554,
-      "captured_at": "2026-11-23"
+      "capture_vol_ratio": 3.64741049295265,
+      "capture_score": 21.701632233526972,
+      "captured_at": "2026-11-25"
     },
     {
       "symbol": "INTELLECT",
@@ -139,19 +149,9 @@
       "capture_price": 578.4500122070312,
       "capture_ret_1d": 5.364300948457412,
       "capture_ret_5d": 7.809155785542554,
-      "capture_vol_ratio": 3.495382452371055,
-      "capture_score": 20.418690947633117,
-      "captured_at": "2026-11-23"
-    },
-    {
-      "symbol": "NAGAFERT",
-      "name": "Nagarjuna Fertilizers and Chemicals Limited",
-      "capture_price": 1.3899999856948853,
-      "capture_ret_1d": 4.511273747632516,
-      "capture_ret_5d": 4.511273747632516,
-      "capture_vol_ratio": 3.682264258714572,
-      "capture_score": 19.240330782490805,
-      "captured_at": "2026-11-23"
+      "capture_vol_ratio": 3.5056379799366484,
+      "capture_score": 20.459713057895488,
+      "captured_at": "2026-11-25"
     }
   ]
 }

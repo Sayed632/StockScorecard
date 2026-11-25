@@ -1,5 +1,5 @@
 {
-  "saved_at": "23 Nov 2026 | 8:26 PM IST",
+  "saved_at": "25 Nov 2026 | 2:13 AM IST",
   "universe_size": 1200,
   "candidates": 62,
   "thresholds": {
@@ -84,7 +84,7 @@
       "ret_10d": 25.565594946113524,
       "score": 64.49418542834675,
       "extended": true,
-      "still_raising": false,
+      "still_raising": true,
       "filter_label": "WAIT",
       "filter_note": "EXTENDED \u2013 large multi-day run"
     },
@@ -123,7 +123,7 @@
       "ret_10d": 19.5348878471578,
       "score": 48.25008349410727,
       "extended": false,
-      "still_raising": false,
+      "still_raising": true,
       "filter_label": "SKIP",
       "filter_note": "Below min price filter"
     },
@@ -136,7 +136,7 @@
       "ret_10d": 16.47901311404616,
       "score": 46.238510321007965,
       "extended": true,
-      "still_raising": false,
+      "still_raising": true,
       "filter_label": "SKIP",
       "filter_note": "Below min price filter"
     },
@@ -149,7 +149,7 @@
       "ret_10d": 21.601760871029096,
       "score": 44.86101229581247,
       "extended": false,
-      "still_raising": false,
+      "still_raising": true,
       "filter_label": "CONTINUE",
       "filter_note": "Raising + not extreme 1D"
     },
@@ -214,7 +214,7 @@
       "ret_10d": 21.118705807996243,
       "score": 36.80225961003692,
       "extended": false,
-      "still_raising": false,
+      "still_raising": true,
       "filter_label": "CONTINUE",
       "filter_note": "Raising + not extreme 1D"
     },
@@ -240,7 +240,7 @@
       "ret_10d": 10.333715474802752,
       "score": 35.50303934551294,
       "extended": true,
-      "still_raising": false,
+      "still_raising": true,
       "filter_label": "WAIT",
       "filter_note": "EXTENDED \u2013 spike chase risk"
     },
@@ -266,7 +266,7 @@
       "ret_10d": 10.90517437813736,
       "score": 31.551602512471188,
       "extended": false,
-      "still_raising": false,
+      "still_raising": true,
       "filter_label": "CONTINUE",
       "filter_note": "Raising + not extreme 1D"
     },
@@ -292,7 +292,7 @@
       "ret_10d": 7.058222903481015,
       "score": 31.160210375970625,
       "extended": false,
-      "still_raising": false,
+      "still_raising": true,
       "filter_label": "CONTINUE",
       "filter_note": "Raising + not extreme 1D"
     },
@@ -318,7 +318,7 @@
       "ret_10d": 18.271463398951294,
       "score": 30.40211332113072,
       "extended": false,
-      "still_raising": false,
+      "still_raising": true,
       "filter_label": "CONTINUE",
       "filter_note": "10D strength + not extreme 1D"
     },
@@ -357,7 +357,7 @@
       "ret_10d": 14.226929864587579,
       "score": 29.107561263334528,
       "extended": false,
-      "still_raising": false,
+      "still_raising": true,
       "filter_label": "CONTINUE",
       "filter_note": "Raising + not extreme 1D"
     },
@@ -370,7 +370,7 @@
       "ret_10d": 12.452777176421659,
       "score": 28.615978055561342,
       "extended": false,
-      "still_raising": false,
+      "still_raising": true,
       "filter_label": "CONTINUE",
       "filter_note": "Raising + not extreme 1D"
     },
@@ -383,7 +383,7 @@
       "ret_10d": 9.882352941176475,
       "score": 28.041059955920957,
       "extended": false,
-      "still_raising": false,
+      "still_raising": true,
       "filter_label": "CONTINUE",
       "filter_note": "Raising + not extreme 1D"
     },
@@ -409,7 +409,7 @@
       "ret_10d": 10.994568889092736,
       "score": 27.468957274928744,
       "extended": true,
-      "still_raising": false,
+      "still_raising": true,
       "filter_label": "WAIT",
       "filter_note": "EXTENDED \u2013 spike chase risk"
     },
@@ -422,7 +422,7 @@
       "ret_10d": 12.331294008100802,
       "score": 26.619232324339066,
       "extended": false,
-      "still_raising": false,
+      "still_raising": true,
       "filter_label": "CONTINUE",
       "filter_note": "10D strength + not extreme 1D"
     },
@@ -448,7 +448,7 @@
       "ret_10d": 12.819384468570538,
       "score": 26.40809145452801,
       "extended": false,
-      "still_raising": false,
+      "still_raising": true,
       "filter_label": "CONTINUE",
       "filter_note": "10D strength + not extreme 1D"
     },
@@ -487,7 +487,7 @@
       "ret_10d": 14.263294185973407,
       "score": 24.805667500575737,
       "extended": false,
-      "still_raising": false,
+      "still_raising": true,
       "filter_label": "CONTINUE",
       "filter_note": "10D strength + not extreme 1D"
     },
@@ -500,7 +500,7 @@
       "ret_10d": 16.931292118916975,
       "score": 24.226685422681534,
       "extended": false,
-      "still_raising": false,
+      "still_raising": true,
       "filter_label": "CONTINUE",
       "filter_note": "10D strength + not extreme 1D"
     },
@@ -513,7 +513,7 @@
       "ret_10d": 16.725173144654228,
       "score": 23.817628440374914,
       "extended": false,
-      "still_raising": false,
+      "still_raising": true,
       "filter_label": "CONTINUE",
       "filter_note": "10D strength + not extreme 1D"
     },
@@ -526,7 +526,7 @@
       "ret_10d": 7.4430031240074745,
       "score": 23.514114354226066,
       "extended": false,
-      "still_raising": false,
+      "still_raising": true,
       "filter_label": "CONTINUE",
       "filter_note": "Raising + not extreme 1D"
     },
@@ -552,7 +552,7 @@
       "ret_10d": 6.981102608152434,
       "score": 22.432748840045775,
       "extended": false,
-      "still_raising": false,
+      "still_raising": true,
       "filter_label": "CONTINUE",
       "filter_note": "Raising + not extreme 1D"
     },
@@ -578,7 +578,7 @@
       "ret_10d": 15.276403590549425,
       "score": 20.691954654886374,
       "extended": false,
-      "still_raising": false,
+      "still_raising": true,
       "filter_label": "CONTINUE",
       "filter_note": "10D strength + not extreme 1D"
     },
@@ -591,7 +591,7 @@
       "ret_10d": 3.706788837984165,
       "score": 18.412205479545207,
       "extended": false,
-      "still_raising": false,
+      "still_raising": true,
       "filter_label": "CONTINUE",
       "filter_note": "Raising + not extreme 1D"
     },
@@ -617,7 +617,7 @@
       "ret_10d": 12.697003329633748,
       "score": 18.161777228094277,
       "extended": false,
-      "still_raising": false,
+      "still_raising": true,
       "filter_label": "CONTINUE",
       "filter_note": "10D strength + not extreme 1D"
     },
