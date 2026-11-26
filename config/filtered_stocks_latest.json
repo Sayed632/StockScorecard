@@ -1,5 +1,5 @@
 {
-  "saved_at": "25 Nov 2026 | 2:13 AM IST",
+  "saved_at": "26 Nov 2026 | 1:29 AM IST",
   "items": [
     {
       "symbol": "NIRAJISPAT",
@@ -75,7 +75,7 @@
       "ret_10d": 15.695836381972539,
       "score": 43.72248331476762,
       "extended": false,
-      "still_raising": true,
+      "still_raising": false,
       "filter_label": "CONTINUE",
       "filter_note": "Raising + not extreme 1D"
     },
@@ -88,7 +88,7 @@
       "ret_10d": 16.522440056494816,
       "score": 42.6669481321599,
       "extended": false,
-      "still_raising": true,
+      "still_raising": false,
       "filter_label": "CONTINUE",
       "filter_note": "Raising + not extreme 1D"
     },
@@ -166,7 +166,7 @@
       "ret_10d": 10.90517437813736,
       "score": 31.551602512471188,
       "extended": false,
-      "still_raising": true,
+      "still_raising": false,
       "filter_label": "CONTINUE",
       "filter_note": "Raising + not extreme 1D"
     },
@@ -218,7 +218,7 @@
       "ret_10d": 18.271463398951294,
       "score": 30.40211332113072,
       "extended": false,
-      "still_raising": true,
+      "still_raising": false,
       "filter_label": "CONTINUE",
       "filter_note": "10D strength + not extreme 1D"
     },
@@ -257,7 +257,7 @@
       "ret_10d": 14.226929864587579,
       "score": 29.107561263334528,
       "extended": false,
-      "still_raising": true,
+      "still_raising": false,
       "filter_label": "CONTINUE",
       "filter_note": "Raising + not extreme 1D"
     }
