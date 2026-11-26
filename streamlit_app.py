@@ -49,14 +49,46 @@ def load_watch() -> Dict[str, Any]:
 
 @st.cache_data(ttl=300)
 def load_sector_rotation() -> Dict[str, Any]:
-    """Prefer saved JSON; optional live compute is heavy — file first."""
+    """Prefer saved JSON; if missing/empty, compute live (cached 5 min)."""
     path = ROOT / "config" / "sector_rotation_latest.json"
     if path.exists():
         try:
-            return json.loads(path.read_text(encoding="utf-8"))
+            data = json.loads(path.read_text(encoding="utf-8"))
+            if data.get("sectors"):
+                return data
         except Exception:
             pass
-    return {}
+    try:
+        from src.intelligence.sector_rotation import run_sector_rotation
+
+        result = run_sector_rotation()
+        slim = []
+        for s in result.get("sectors") or []:
+            if hasattr(s, "name"):
+                slim.append(
+                    {
+                        "name": s.name,
+                        "label": s.label,
+                        "score": s.score,
+                        "ret_1m": s.ret_1m,
+                        "ret_3m": s.ret_3m,
+                        "ret_6m": s.ret_6m,
+                        "rel_1m": s.rel_1m,
+                        "rel_3m": s.rel_3m,
+                        "rel_6m": s.rel_6m,
+                        "note": s.note,
+                        "ss_sector": s.ss_sector,
+                    }
+                )
+            elif isinstance(s, dict):
+                slim.append(s)
+        return {
+            "saved_at": "live compute",
+            "benchmark": result.get("benchmark") or {},
+            "sectors": slim,
+        }
+    except Exception as e:
+        return {"error": str(e), "sectors": []}
 
 
 def _render_sector_heatmap(sec_data: Dict[str, Any]) -> None:
