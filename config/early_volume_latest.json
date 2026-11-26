@@ -1,127 +1,127 @@
 {
-  "saved_at": "25 Nov 2026 | 8:30 PM IST",
+  "saved_at": "26 Nov 2026 | 8:01 PM IST",
   "universe": 800,
-  "candidates": 34,
+  "candidates": 27,
   "items": [
     {
-      "symbol": "ADFFOODS",
-      "name": "ADF Foods Limited",
-      "price": 218.49000549316406,
-      "ret_1d": 2.577467367682651,
-      "vol_ratio": 18.04,
-      "score": 184.2
+      "symbol": "JISLJALEQS",
+      "name": "Jain Irrigation Systems Limited",
+      "price": 27.670000076293945,
+      "ret_1d": 3.7884479919825464,
+      "vol_ratio": 21.47,
+      "score": 220.4
     },
     {
-      "symbol": "ARIHANT",
-      "name": "Arihant Foundations & Housing Limited",
-      "price": 898.9000244140625,
-      "ret_1d": 2.573178462525516,
-      "vol_ratio": 14.6,
-      "score": 149.9
+      "symbol": "BALRAMCHIN",
+      "name": "Balrampur Chini Mills Limited",
+      "price": 649.9000244140625,
+      "ret_1d": 6.2275314451275765,
+      "vol_ratio": 9.87,
+      "score": 108.0
+    },
+    {
+      "symbol": "GMBREW",
+      "name": "GM Breweries Limited",
+      "price": 847.25,
+      "ret_1d": -0.8020109801827657,
+      "vol_ratio": 7.91,
+      "score": 79.1
+    },
+    {
+      "symbol": "AVADHSUGAR",
+      "name": "Avadh Sugar & Energy Limited",
+      "price": 869.9500122070312,
+      "ret_1d": 5.9170923559622945,
+      "vol_ratio": 5.71,
+      "score": 66.0
+    },
+    {
+      "symbol": "DALMIASUG",
+      "name": "Dalmia Bharat Sugar and Industries Limited",
+      "price": 451.1499938964844,
+      "ret_1d": 2.1278990144842913,
+      "vol_ratio": 5.8,
+      "score": 61.2
+    },
+    {
+      "symbol": "BVCL",
+      "name": "Barak Valley Cements Limited",
+      "price": 34.959999084472656,
+      "ret_1d": -1.3544005666935366,
+      "vol_ratio": 6.02,
+      "score": 60.2
+    },
+    {
+      "symbol": "J&KBANK",
+      "name": "The Jammu & Kashmir Bank Limited",
+      "price": 162.82000732421875,
+      "ret_1d": 4.828740436732226,
+      "vol_ratio": 4.81,
+      "score": 55.3
+    },
+    {
+      "symbol": "FACT",
+      "name": "Fertilizers and Chemicals Travancore Limited",
+      "price": 783.75,
+      "ret_1d": 5.36398813250385,
+      "vol_ratio": 4.68,
+      "score": 54.8
+    },
+    {
+      "symbol": "ARSHIYA",
+      "name": "Arshiya Limited",
+      "price": 0.800000011920929,
+      "ret_1d": 3.8961080178621987,
+      "vol_ratio": 4.65,
+      "score": 52.3
+    },
+    {
+      "symbol": "BAJAJHIND",
+      "name": "Bajaj Hindusthan Sugar Limited",
+      "price": 17.15999984741211,
+      "ret_1d": 7.586207226435837,
+      "vol_ratio": 3.64,
+      "score": 47.8
+    },
+    {
+      "symbol": "HUHTAMAKI",
+      "name": "Huhtamaki India Limited",
+      "price": 220.25,
+      "ret_1d": 2.2278965512869897,
+      "vol_ratio": 4.12,
+      "score": 44.5
+    },
+    {
+      "symbol": "CONCOR",
+      "name": "Container Corporation of India Limited",
+      "price": 421.0,
+      "ret_1d": -1.1272869728926826,
+      "vol_ratio": 4.39,
+      "score": 43.9
     },
     {
       "symbol": "BRIGADE",
       "name": "Brigade Enterprises Limited",
-      "price": 589.7000122070312,
-      "ret_1d": 1.3839916539293728,
-      "vol_ratio": 13.95,
-      "score": 141.6
-    },
-    {
-      "symbol": "DABUR",
-      "name": "Dabur India Limited",
-      "price": 430.0,
-      "ret_1d": 7.769423558897248,
-      "vol_ratio": 8.03,
-      "score": 92.0
-    },
-    {
-      "symbol": "ABFRL",
-      "name": "Aditya Birla Fashion and Retail Limited",
-      "price": 39.880001068115234,
-      "ret_1d": 5.391122905129864,
-      "vol_ratio": 8.11,
-      "score": 89.2
-    },
-    {
-      "symbol": "IMPAL",
-      "name": "India Motor Parts and Accessories Limited",
-      "price": 1024.800048828125,
-      "ret_1d": 2.163301143488905,
-      "vol_ratio": 8.35,
-      "score": 86.7
-    },
-    {
-      "symbol": "HCL-INSYS",
-      "name": "HCL Infosystems Limited",
-      "price": 11.8100004196167,
-      "ret_1d": 3.7785615189065203,
-      "vol_ratio": 7.6,
-      "score": 81.6
-    },
-    {
-      "symbol": "CEATLTD",
-      "name": "CEAT Limited",
-      "price": 3579.39990234375,
-      "ret_1d": 2.4911236522946467,
-      "vol_ratio": 7.31,
-      "score": 76.9
-    },
-    {
-      "symbol": "JISLJALEQS",
-      "name": "Jain Irrigation Systems Limited",
-      "price": 26.65999984741211,
-      "ret_1d": 7.025291090805874,
-      "vol_ratio": 4.92,
-      "score": 59.7
-    },
-    {
-      "symbol": "BAJAJFINSV",
-      "name": "Bajaj Finserv Limited",
-      "price": 1925.0,
-      "ret_1d": 2.3881721715394155,
-      "vol_ratio": 5.53,
-      "score": 58.9
-    },
-    {
-      "symbol": "DMART",
-      "name": "Avenue Supermarts Limited",
-      "price": 3592.0,
-      "ret_1d": 5.47953553201852,
-      "vol_ratio": 5.03,
-      "score": 58.5
+      "price": 628.5,
+      "ret_1d": 6.5796145480402135,
+      "vol_ratio": 3.12,
+      "score": 41.1
     },
     {
       "symbol": "EASTSILK",
       "name": "Eastern Silk Industries Limited",
-      "price": 78.98999786376953,
-      "ret_1d": 3.133570493058735,
-      "vol_ratio": 5.0,
-      "score": 54.7
+      "price": 81.0,
+      "ret_1d": 2.544628675262195,
+      "vol_ratio": 3.28,
+      "score": 36.6
     },
     {
-      "symbol": "BANG",
-      "name": "Bang Overseas Limited",
-      "price": 28.040000915527344,
-      "ret_1d": 0.035676877049106714,
-      "vol_ratio": 4.98,
-      "score": 49.8
-    },
-    {
-      "symbol": "CREDITACC",
-      "name": "CREDITACCESS GRAMEEN LIMITED",
-      "price": 1019.7999877929688,
-      "ret_1d": 3.6592803869373247,
-      "vol_ratio": 4.24,
-      "score": 47.9
-    },
-    {
-      "symbol": "GODREJCP",
-      "name": "Godrej Consumer Products Limited",
-      "price": 963.0,
-      "ret_1d": 5.557383852397546,
-      "vol_ratio": 3.7,
-      "score": 45.4
+      "symbol": "DANGEE",
+      "name": "Dangee Dums Limited",
+      "price": 3.0999999046325684,
+      "ret_1d": 3.3333301544189453,
+      "vol_ratio": 3.08,
+      "score": 35.8
     }
   ]
 }
