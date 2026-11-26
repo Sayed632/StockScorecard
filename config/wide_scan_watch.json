@@ -1,8 +1,48 @@
 {
-  "saved_at": "26 Nov 2026 | 6:49 PM IST",
+  "saved_at": "26 Nov 2026 | 9:00 PM IST",
   "captured_day": "2026-11-26",
-  "count": 1,
+  "count": 15,
   "items": [
+    {
+      "symbol": "BALKRISHNA",
+      "name": "Balkrishna Paper Mills Limited",
+      "capture_price": 20.530000686645508,
+      "capture_ret_1d": 19.77830465410888,
+      "capture_ret_5d": 36.95797865321844,
+      "capture_vol_ratio": 21.91196743816382,
+      "capture_score": 56.669258113557106,
+      "captured_at": "2026-11-26"
+    },
+    {
+      "symbol": "HUBTOWN",
+      "name": "Hubtown Limited",
+      "capture_price": 215.0399932861328,
+      "capture_ret_1d": 10.731203226251784,
+      "capture_ret_5d": 27.032133055776253,
+      "capture_vol_ratio": 8.85703605194439,
+      "capture_score": 42.33869044102383,
+      "captured_at": "2026-11-26"
+    },
+    {
+      "symbol": "DHAMPURSUG",
+      "name": "Dhampur Sugar Mills Limited",
+      "capture_price": 180.00999450683594,
+      "capture_ret_1d": 13.213833023167254,
+      "capture_ret_5d": 12.309705439109075,
+      "capture_vol_ratio": 76.62256471611572,
+      "capture_score": 40.16499653148888,
+      "captured_at": "2026-11-26"
+    },
+    {
+      "symbol": "PRESTIGE",
+      "name": "Prestige Estates Projects Limited",
+      "capture_price": 1832.0999755859375,
+      "capture_ret_1d": 8.723518018501286,
+      "capture_ret_5d": 10.540602666736199,
+      "capture_vol_ratio": 7.019390482582856,
+      "capture_score": 34.15743255555921,
+      "captured_at": "2026-11-26"
+    },
     {
       "symbol": "ACE",
       "name": "Action Construction Equipment Limited",
@@ -11,6 +51,106 @@
       "capture_ret_5d": 8.896741773649275,
       "capture_vol_ratio": 9.106009981714028,
       "capture_score": 33.66370058121071,
+      "captured_at": "2026-11-26"
+    },
+    {
+      "symbol": "RENUKA",
+      "name": "Shree Renuka Sugars Limited",
+      "capture_price": 18.59000015258789,
+      "capture_ret_1d": 10.326407903418655,
+      "capture_ret_5d": 5.385492039738593,
+      "capture_vol_ratio": 39.53852510148201,
+      "capture_score": 32.391689484102386,
+      "captured_at": "2026-11-26"
+    },
+    {
+      "symbol": "DWARKESH",
+      "name": "Dwarikesh Sugar Industries Limited",
+      "capture_price": 45.79999923706055,
+      "capture_ret_1d": 9.911210102219602,
+      "capture_ret_5d": 6.289160071655053,
+      "capture_vol_ratio": 4.930464548537868,
+      "capture_score": 31.615310316814995,
+      "captured_at": "2026-11-26"
+    },
+    {
+      "symbol": "J&KBANK",
+      "name": "The Jammu & Kashmir Bank Limited",
+      "capture_price": 162.82000732421875,
+      "capture_ret_1d": 4.828740436732226,
+      "capture_ret_5d": 15.614574456616248,
+      "capture_vol_ratio": 5.039745988427801,
+      "capture_score": 30.293841496547913,
+      "captured_at": "2026-11-26"
+    },
+    {
+      "symbol": "GREAVESCOT",
+      "name": "Greaves Cotton Limited",
+      "capture_price": 325.7900085449219,
+      "capture_ret_1d": 5.283740296832362,
+      "capture_ret_5d": 22.188051824141475,
+      "capture_vol_ratio": 3.569403996991512,
+      "capture_score": 28.3839224826144,
+      "captured_at": "2026-11-26"
+    },
+    {
+      "symbol": "PITTIENG",
+      "name": "Pitti Engineering Limited",
+      "capture_price": 902.9500122070312,
+      "capture_ret_1d": 6.845348277401642,
+      "capture_ret_5d": 0.06649710614821114,
+      "capture_vol_ratio": 86.7581394339609,
+      "capture_score": 28.21441793288197,
+      "captured_at": "2026-11-26"
+    },
+    {
+      "symbol": "PANACEABIO",
+      "name": "Panacea Biotec Limited",
+      "capture_price": 350.5,
+      "capture_ret_1d": 6.72960003479226,
+      "capture_ret_5d": -1.6968133501891192,
+      "capture_vol_ratio": 6.405514816814478,
+      "capture_score": 28.075520041750714,
+      "captured_at": "2026-11-26"
+    },
+    {
+      "symbol": "BALRAMCHIN",
+      "name": "Balrampur Chini Mills Limited",
+      "capture_price": 649.9000244140625,
+      "capture_ret_1d": 6.2275314451275765,
+      "capture_ret_5d": 1.9530962379192385,
+      "capture_vol_ratio": 6.15854617645936,
+      "capture_score": 27.473037734153092,
+      "captured_at": "2026-11-26"
+    },
+    {
+      "symbol": "SUPERHOUSE",
+      "name": "Superhouse Limited",
+      "capture_price": 160.7100067138672,
+      "capture_ret_1d": 5.56358441611029,
+      "capture_ret_5d": 3.5169125371125265,
+      "capture_vol_ratio": 5.480203905473852,
+      "capture_score": 26.676301299332348,
+      "captured_at": "2026-11-26"
+    },
+    {
+      "symbol": "FACT",
+      "name": "Fertilizers and Chemicals Travancore Limited",
+      "capture_price": 783.75,
+      "capture_ret_1d": 5.36398813250385,
+      "capture_ret_5d": 1.620745542949753,
+      "capture_vol_ratio": 5.177484945698183,
+      "capture_score": 26.43678575900462,
+      "captured_at": "2026-11-26"
+    },
+    {
+      "symbol": "BRIGADE",
+      "name": "Brigade Enterprises Limited",
+      "capture_price": 628.5,
+      "capture_ret_1d": 6.5796145480402135,
+      "capture_ret_5d": 11.052210697733367,
+      "capture_vol_ratio": 3.6212195568883687,
+      "capture_score": 26.248689429408408,
       "captured_at": "2026-11-26"
     }
   ]
