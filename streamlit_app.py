@@ -159,14 +159,27 @@ def _render_sector_heatmap(sec_data: Dict[str, Any]) -> None:
             "Top-right ≈ Leading · Bottom-right ≈ softening from strength · "
             "Top-left ≈ Improving · Bottom-left ≈ Lagging (simplified)"
         )
-        st.scatter_chart(
-            sdf,
-            x="RS_6M_vs_Nifty",
-            y="Mom_1M_vs_Nifty",
-            color="label",
-            size=None,
-            use_container_width=True,
-        )
+        try:
+            st.scatter_chart(
+                sdf,
+                x="RS_6M_vs_Nifty",
+                y="Mom_1M_vs_Nifty",
+                color="label",
+                use_container_width=True,
+            )
+        except Exception:
+            # Older Streamlit: plain scatter without color
+            try:
+                st.scatter_chart(
+                    sdf[["RS_6M_vs_Nifty", "Mom_1M_vs_Nifty"]],
+                    use_container_width=True,
+                )
+            except Exception:
+                st.dataframe(
+                    sdf,
+                    use_container_width=True,
+                    hide_index=True,
+                )
 
     # Quick preference strip
     prefer = [
