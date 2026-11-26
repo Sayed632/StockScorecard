@@ -134,7 +134,7 @@ def run_sector_rotation() -> Dict[str, Any]:
         )
 
     rows.sort(key=lambda x: -x.score)
-    return {
+    result = {
         "scan_time": now_ist(),
         "benchmark": {
             "name": BENCHMARK[0],
@@ -144,6 +144,39 @@ def run_sector_rotation() -> Dict[str, Any]:
         },
         "sectors": rows,
     }
+    # Persist for Streamlit heatmap / RRG-style view
+    try:
+        from pathlib import Path
+        import json
+
+        out = Path(__file__).resolve().parents[2] / "config" / "sector_rotation_latest.json"
+        slim_sectors = []
+        for s in rows:
+            slim_sectors.append(
+                {
+                    "name": s.name,
+                    "yf_ticker": s.yf_ticker,
+                    "ss_sector": s.ss_sector,
+                    "ret_1m": s.ret_1m,
+                    "ret_3m": s.ret_3m,
+                    "ret_6m": s.ret_6m,
+                    "rel_1m": s.rel_1m,
+                    "rel_3m": s.rel_3m,
+                    "rel_6m": s.rel_6m,
+                    "label": s.label,
+                    "score": s.score,
+                    "note": s.note,
+                }
+            )
+        payload = {
+            "saved_at": format_ist(result["scan_time"]),
+            "benchmark": result["benchmark"],
+            "sectors": slim_sectors,
+        }
+        out.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    except Exception as e:
+        logger.debug("sector_rotation persist: %s", e)
+    return result
 
 
 def format_sector_rotation_telegram(result: Optional[Dict[str, Any]] = None) -> str:

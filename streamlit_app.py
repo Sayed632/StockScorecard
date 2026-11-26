@@ -47,6 +47,148 @@ def load_watch() -> Dict[str, Any]:
         return {}
 
 
+@st.cache_data(ttl=300)
+def load_sector_rotation() -> Dict[str, Any]:
+    """Prefer saved JSON; optional live compute is heavy — file first."""
+    path = ROOT / "config" / "sector_rotation_latest.json"
+    if path.exists():
+        try:
+            return json.loads(path.read_text(encoding="utf-8"))
+        except Exception:
+            pass
+    return {}
+
+
+def _render_sector_heatmap(sec_data: Dict[str, Any]) -> None:
+    """Full sector heatmap table + RRG-style scatter (rel strength vs momentum)."""
+    sectors = list(sec_data.get("sectors") or [])
+    if not sectors:
+        st.caption(
+            "Sector heatmap not saved yet. Run **sector rotation / heatmap** workflow "
+            "or Daily Decision pack so `config/sector_rotation_latest.json` is written."
+        )
+        return
+
+    st.subheader("🗺 Sector heatmap + RRG-style labels")
+    st.caption(
+        f"Saved: {sec_data.get('saved_at') or '—'} · "
+        "vs Nifty multi-month · observe only · prefer setups in Leading / Improving"
+    )
+    b = sec_data.get("benchmark") or {}
+    if b:
+        st.caption(
+            f"Benchmark {b.get('name', 'Nifty 50')}: "
+            f"1M {b.get('ret_1m'):+.1f}% · 3M {b.get('ret_3m'):+.1f}% · 6M {b.get('ret_6m'):+.1f}%"
+            if all(b.get(k) is not None for k in ("ret_1m", "ret_3m", "ret_6m"))
+            else f"Benchmark {b.get('name', 'Nifty 50')}"
+        )
+
+    rows = []
+    for s in sectors:
+        label = str(s.get("label") or "")
+        # normalize for buckets
+        if "Leading" in label:
+            bucket = "Leading"
+        elif "Improving" in label:
+            bucket = "Improving"
+        elif "Soft" in label:
+            bucket = "Softening"
+        elif "Lagging" in label:
+            bucket = "Lagging"
+        else:
+            bucket = "Neutral"
+        score = float(s.get("score") or 0)
+        heat_n = int(max(0, min(5, round((score + 15) / 8))))
+        heat = "🟩" * heat_n + "⬜" * (5 - heat_n)
+        rows.append(
+            {
+                "Sector": s.get("name"),
+                "RRG label": label,
+                "Bucket": bucket,
+                "Heat": heat,
+                "Score": round(score, 2),
+                "1M %": None if s.get("ret_1m") is None else round(float(s["ret_1m"]), 1),
+                "3M %": None if s.get("ret_3m") is None else round(float(s["ret_3m"]), 1),
+                "6M %": None if s.get("ret_6m") is None else round(float(s["ret_6m"]), 1),
+                "vs Nifty 1M": None if s.get("rel_1m") is None else round(float(s["rel_1m"]), 1),
+                "vs Nifty 3M": None if s.get("rel_3m") is None else round(float(s["rel_3m"]), 1),
+                "vs Nifty 6M": None if s.get("rel_6m") is None else round(float(s["rel_6m"]), 1),
+                "Note": (s.get("note") or "")[:48],
+            }
+        )
+
+    df = pd.DataFrame(rows)
+
+    def _color_bucket(val: str) -> str:
+        if val == "Leading":
+            return "background-color: #c6f6d5; color: #000"
+        if val == "Improving":
+            return "background-color: #bee3f8; color: #000"
+        if val == "Softening":
+            return "background-color: #fefcbf; color: #000"
+        if val == "Lagging":
+            return "background-color: #fed7d7; color: #000"
+        return ""
+
+    try:
+        styled = df.style.apply(
+            lambda col: [_color_bucket(v) if col.name == "Bucket" else "" for v in col],
+            axis=0,
+        )
+        st.dataframe(styled, use_container_width=True, hide_index=True)
+    except Exception:
+        st.dataframe(df, use_container_width=True, hide_index=True)
+
+    # RRG-style quadrant: X = relative strength (6M vs Nifty), Y = momentum (1M vs Nifty)
+    scatter_rows = []
+    for s in sectors:
+        if s.get("rel_6m") is None or s.get("rel_1m") is None:
+            continue
+        scatter_rows.append(
+            {
+                "sector": s.get("name"),
+                "RS_6M_vs_Nifty": float(s["rel_6m"]),
+                "Mom_1M_vs_Nifty": float(s["rel_1m"]),
+                "label": s.get("label") or "",
+            }
+        )
+    if scatter_rows:
+        sdf = pd.DataFrame(scatter_rows)
+        st.markdown("**RRG-style map** (X = 6M relative strength vs Nifty · Y = 1M relative momentum)")
+        st.caption(
+            "Top-right ≈ Leading · Bottom-right ≈ softening from strength · "
+            "Top-left ≈ Improving · Bottom-left ≈ Lagging (simplified)"
+        )
+        st.scatter_chart(
+            sdf,
+            x="RS_6M_vs_Nifty",
+            y="Mom_1M_vs_Nifty",
+            color="label",
+            size=None,
+            use_container_width=True,
+        )
+
+    # Quick preference strip
+    prefer = [
+        s.get("name")
+        for s in sectors
+        if "Leading" in str(s.get("label") or "") or "Improving" in str(s.get("label") or "")
+    ][:6]
+    lag = [
+        s.get("name")
+        for s in sectors
+        if "Lagging" in str(s.get("label") or "")
+    ][:4]
+    c1, c2 = st.columns(2)
+    with c1:
+        st.markdown("**Prefer (Leading / Improving)**")
+        st.write(" · ".join(prefer) if prefer else "—")
+    with c2:
+        st.markdown("**De-prioritise (Lagging)**")
+        st.write(" · ".join(lag) if lag else "—")
+    st.divider()
+
+
 @st.cache_data(ttl=120)
 def fetch_history(symbol: str, period: str = "1mo") -> Optional[pd.DataFrame]:
     try:
@@ -154,18 +296,22 @@ def main():
             rising = {}
     rising_items = list(rising.get("items") or [])
 
-    if not items and not rising_items and not swing_rows:
+    # Sector heatmap + RRG labels (file-backed; works even if stock lists empty)
+    sec_data = load_sector_rotation()
+    _render_sector_heatmap(sec_data)
+
+    if not items and not rising_items and not swing_rows and not (sec_data.get("sectors")):
         st.warning(
-            "No lists yet. Run **Rising Stocks** and/or **Wide Parallel Scan** on GitHub."
+            "No lists yet. Run **Rising Stocks**, **Wide Parallel Scan**, or **sector rotation** on GitHub."
         )
         if auto:
             time.sleep(every)
             st.rerun()
         st.stop()
 
-    if not items:
+    if not items and (rising_items or sec_data.get("sectors")):
         st.info(
-            "🌐 Wide scan list is empty today. Showing **Rising** / other boards below. "
+            "🌐 Wide scan list is empty today. Showing sector / Rising boards below. "
             "Run Wide Parallel Scan after market moves to fill day-movers."
         )
 
