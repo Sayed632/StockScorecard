@@ -1,156 +1,16 @@
 {
-  "saved_at": "26 Nov 2026 | 9:30 AM IST",
+  "saved_at": "26 Nov 2026 | 6:49 PM IST",
   "captured_day": "2026-11-26",
-  "count": 15,
+  "count": 1,
   "items": [
     {
-      "symbol": "BALKRISHNA",
-      "name": "Balkrishna Paper Mills Limited",
-      "capture_price": 17.889999389648438,
-      "capture_ret_1d": 18.870426331701616,
-      "capture_ret_5d": 17.004574455736687,
-      "capture_vol_ratio": 4.9940839194318745,
-      "capture_score": 48.57244833527727,
-      "captured_at": "2026-11-26"
-    },
-    {
-      "symbol": "DHAMPURSUG",
-      "name": "Dhampur Sugar Mills Limited",
-      "capture_price": 177.36000061035156,
-      "capture_ret_1d": 10.98179295405044,
-      "capture_ret_5d": 6.330933672295558,
-      "capture_vol_ratio": 4.1599273509902055,
-      "capture_score": 29.817860948821348,
-      "captured_at": "2026-11-26"
-    },
-    {
-      "symbol": "SHYAMTEL",
-      "name": "Shyam Telecom Limited",
-      "capture_price": 12.40999984741211,
-      "capture_ret_1d": 8.289701623934253,
-      "capture_ret_5d": 12.818180431019165,
-      "capture_vol_ratio": 2.5753099693657253,
-      "capture_score": 24.73524497704071,
-      "captured_at": "2026-11-26"
-    },
-    {
-      "symbol": "NAGAFERT",
-      "name": "Nagarjuna Fertilizers and Chemicals Limited",
-      "capture_price": 1.3899999856948853,
-      "capture_ret_1d": 4.511273747632516,
-      "capture_ret_5d": 4.511273747632516,
-      "capture_vol_ratio": 3.682264258714572,
-      "capture_score": 19.240330782490805,
-      "captured_at": "2026-11-26"
-    },
-    {
-      "symbol": "RENUKA",
-      "name": "Shree Renuka Sugars Limited",
-      "capture_price": 18.31999969482422,
-      "capture_ret_1d": 8.724031335756411,
-      "capture_ret_5d": 3.8548771468485565,
-      "capture_vol_ratio": 1.6814175826081201,
-      "capture_score": 17.194507933340173,
-      "captured_at": "2026-11-26"
-    },
-    {
-      "symbol": "NILASPACES",
-      "name": "Nila Spaces Limited",
-      "capture_price": 9.4399995803833,
-      "capture_ret_1d": 13.598063823187179,
-      "capture_ret_5d": 3.056765694710095,
-      "capture_vol_ratio": 0.22649167835395692,
-      "capture_score": 16.317676587824614,
-      "captured_at": "2026-11-26"
-    },
-    {
-      "symbol": "BAFNAPH",
-      "name": "Bafna Pharmaceuticals Limited",
-      "capture_price": 532.5999755859375,
-      "capture_ret_1d": 10.246319365977264,
-      "capture_ret_5d": 10.958328247070304,
-      "capture_vol_ratio": 0.11741156875063921,
-      "capture_score": 16.130998125647324,
-      "captured_at": "2026-11-26"
-    },
-    {
-      "symbol": "J&KBANK",
-      "name": "The Jammu & Kashmir Bank Limited",
-      "capture_price": 158.47000122070312,
-      "capture_ret_1d": 8.001094414916988,
-      "capture_ret_5d": 13.233300947702208,
-      "capture_vol_ratio": 0.2818120022920341,
-      "capture_score": 14.232968629596158,
-      "captured_at": "2026-11-26"
-    },
-    {
-      "symbol": "PALASHSECU",
-      "name": "Palash Securities Limited",
-      "capture_price": 81.33000183105469,
-      "capture_ret_1d": 5.857086935771871,
-      "capture_ret_5d": 3.605097873955021,
-      "capture_vol_ratio": 1.7135749232938053,
-      "capture_score": 13.882804016101467,
-      "captured_at": "2026-11-26"
-    },
-    {
-      "symbol": "GTNTEX",
-      "name": "GTN Textiles Limited",
-      "capture_price": 8.949999809265137,
-      "capture_ret_1d": 10.493819602032906,
-      "capture_ret_5d": -9.595958039099106,
-      "capture_vol_ratio": 0.0819257880037239,
-      "capture_score": 12.592583522439487,
-      "captured_at": "2026-11-26"
-    },
-    {
-      "symbol": "GREAVESCOT",
-      "name": "Greaves Cotton Limited",
-      "capture_price": 323.95001220703125,
-      "capture_ret_1d": 4.689118941036896,
-      "capture_ret_5d": 21.49795832221195,
-      "capture_vol_ratio": 0.6445256258729988,
-      "capture_score": 12.213404353811079,
-      "captured_at": "2026-11-26"
-    },
-    {
-      "symbol": "ALPHAGEO",
-      "name": "Alphageo (India) Limited",
-      "capture_price": 234.75,
-      "capture_ret_1d": 9.008587576802341,
-      "capture_ret_5d": 0.1920601546653744,
-      "capture_vol_ratio": 0.05074548015966189,
-      "capture_score": 10.810305092162809,
-      "captured_at": "2026-11-26"
-    },
-    {
-      "symbol": "MAGADSUGAR",
-      "name": "Magadh Sugar & Energy Limited",
-      "capture_price": 563.8499755859375,
-      "capture_ret_1d": 8.068993883265453,
-      "capture_ret_5d": 2.995700614342889,
-      "capture_vol_ratio": 0.9526674713337356,
-      "capture_score": 9.682792659918542,
-      "captured_at": "2026-11-26"
-    },
-    {
-      "symbol": "21STCENMGM",
-      "name": "21st Century Management Services Limited",
-      "capture_price": 49.9900016784668,
-      "capture_ret_1d": 7.597939439421775,
-      "capture_ret_5d": -0.3389118210973874,
-      "capture_vol_ratio": 0.05406105841496916,
-      "capture_score": 9.11752732730613,
-      "captured_at": "2026-11-26"
-    },
-    {
-      "symbol": "SAKUMA",
-      "name": "Sakuma Exports Limited",
-      "capture_price": 1.7699999809265137,
-      "capture_ret_1d": 7.272727666807577,
-      "capture_ret_5d": -0.5617972260667625,
-      "capture_vol_ratio": 0.2828092236403797,
-      "capture_score": 8.727273200169092,
+      "symbol": "ACE",
+      "name": "Action Construction Equipment Limited",
+      "capture_price": 1295.0,
+      "capture_ret_1d": 8.791534133694556,
+      "capture_ret_5d": 8.896741773649275,
+      "capture_vol_ratio": 9.106009981714028,
+      "capture_score": 33.66370058121071,
       "captured_at": "2026-11-26"
     }
   ]
