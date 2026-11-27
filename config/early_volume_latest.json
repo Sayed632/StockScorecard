@@ -1,127 +1,127 @@
 {
-  "saved_at": "26 Nov 2026 | 8:01 PM IST",
+  "saved_at": "27 Nov 2026 | 7:56 PM IST",
   "universe": 800,
-  "candidates": 27,
+  "candidates": 30,
   "items": [
     {
-      "symbol": "JISLJALEQS",
-      "name": "Jain Irrigation Systems Limited",
-      "price": 27.670000076293945,
-      "ret_1d": 3.7884479919825464,
-      "vol_ratio": 21.47,
-      "score": 220.4
+      "symbol": "JUSTDIAL",
+      "name": "Just Dial Limited",
+      "price": 688.0499877929688,
+      "ret_1d": 5.723724753948511,
+      "vol_ratio": 10.37,
+      "score": 112.3
     },
     {
-      "symbol": "BALRAMCHIN",
-      "name": "Balrampur Chini Mills Limited",
-      "price": 649.9000244140625,
-      "ret_1d": 6.2275314451275765,
-      "vol_ratio": 9.87,
-      "score": 108.0
-    },
-    {
-      "symbol": "GMBREW",
-      "name": "GM Breweries Limited",
-      "price": 847.25,
-      "ret_1d": -0.8020109801827657,
-      "vol_ratio": 7.91,
-      "score": 79.1
-    },
-    {
-      "symbol": "AVADHSUGAR",
-      "name": "Avadh Sugar & Energy Limited",
-      "price": 869.9500122070312,
-      "ret_1d": 5.9170923559622945,
+      "symbol": "GOKEX",
+      "name": "Gokaldas Exports Limited",
+      "price": 793.6500244140625,
+      "ret_1d": 7.650054176203791,
       "vol_ratio": 5.71,
-      "score": 66.0
+      "score": 68.5
     },
     {
-      "symbol": "DALMIASUG",
-      "name": "Dalmia Bharat Sugar and Industries Limited",
-      "price": 451.1499938964844,
-      "ret_1d": 2.1278990144842913,
-      "vol_ratio": 5.8,
-      "score": 61.2
+      "symbol": "GALAXYSURF",
+      "name": "Galaxy Surfactants Limited",
+      "price": 2079.199951171875,
+      "ret_1d": 2.011578892268484,
+      "vol_ratio": 6.38,
+      "score": 66.9
     },
     {
-      "symbol": "BVCL",
-      "name": "Barak Valley Cements Limited",
-      "price": 34.959999084472656,
-      "ret_1d": -1.3544005666935366,
-      "vol_ratio": 6.02,
-      "score": 60.2
+      "symbol": "ARENTERP",
+      "name": "Rajdarshan Industries Limited",
+      "price": 32.459999084472656,
+      "ret_1d": 0.030811467790847757,
+      "vol_ratio": 6.63,
+      "score": 66.4
     },
     {
-      "symbol": "J&KBANK",
-      "name": "The Jammu & Kashmir Bank Limited",
-      "price": 162.82000732421875,
-      "ret_1d": 4.828740436732226,
-      "vol_ratio": 4.81,
-      "score": 55.3
-    },
-    {
-      "symbol": "FACT",
-      "name": "Fertilizers and Chemicals Travancore Limited",
-      "price": 783.75,
-      "ret_1d": 5.36398813250385,
-      "vol_ratio": 4.68,
-      "score": 54.8
-    },
-    {
-      "symbol": "ARSHIYA",
-      "name": "Arshiya Limited",
-      "price": 0.800000011920929,
-      "ret_1d": 3.8961080178621987,
-      "vol_ratio": 4.65,
-      "score": 52.3
-    },
-    {
-      "symbol": "BAJAJHIND",
-      "name": "Bajaj Hindusthan Sugar Limited",
-      "price": 17.15999984741211,
-      "ret_1d": 7.586207226435837,
-      "vol_ratio": 3.64,
-      "score": 47.8
-    },
-    {
-      "symbol": "HUHTAMAKI",
-      "name": "Huhtamaki India Limited",
-      "price": 220.25,
-      "ret_1d": 2.2278965512869897,
-      "vol_ratio": 4.12,
-      "score": 44.5
-    },
-    {
-      "symbol": "CONCOR",
-      "name": "Container Corporation of India Limited",
-      "price": 421.0,
-      "ret_1d": -1.1272869728926826,
-      "vol_ratio": 4.39,
-      "score": 43.9
-    },
-    {
-      "symbol": "BRIGADE",
-      "name": "Brigade Enterprises Limited",
-      "price": 628.5,
-      "ret_1d": 6.5796145480402135,
-      "vol_ratio": 3.12,
-      "score": 41.1
+      "symbol": "HAPPSTMNDS",
+      "name": "Happiest Minds Technologies Limited",
+      "price": 290.5,
+      "ret_1d": 1.9477057572246714,
+      "vol_ratio": 6.28,
+      "score": 65.7
     },
     {
       "symbol": "EASTSILK",
       "name": "Eastern Silk Industries Limited",
-      "price": 81.0,
-      "ret_1d": 2.544628675262195,
-      "vol_ratio": 3.28,
-      "score": 36.6
+      "price": 84.98999786376953,
+      "ret_1d": 4.92592328860435,
+      "vol_ratio": 5.46,
+      "score": 62.0
     },
     {
-      "symbol": "DANGEE",
-      "name": "Dangee Dums Limited",
-      "price": 3.0999999046325684,
-      "ret_1d": 3.3333301544189453,
-      "vol_ratio": 3.08,
-      "score": 35.8
+      "symbol": "DWARKESH",
+      "name": "Dwarikesh Sugar Industries Limited",
+      "price": 49.41999816894531,
+      "ret_1d": 7.903927930539201,
+      "vol_ratio": 4.95,
+      "score": 61.4
+    },
+    {
+      "symbol": "BSL",
+      "name": "BSL Limited",
+      "price": 120.25,
+      "ret_1d": 0.48466770279036453,
+      "vol_ratio": 5.6,
+      "score": 56.7
+    },
+    {
+      "symbol": "BHARATWIRE",
+      "name": "Bharat Wire Ropes Limited",
+      "price": 148.2899932861328,
+      "ret_1d": 3.9173065574192867,
+      "vol_ratio": 4.51,
+      "score": 51.0
+    },
+    {
+      "symbol": "ASIANHOTNR",
+      "name": "Asian Hotels (North) Limited",
+      "price": 330.5,
+      "ret_1d": 3.7188157321494275,
+      "vol_ratio": 3.89,
+      "score": 44.5
+    },
+    {
+      "symbol": "ESCORTS",
+      "name": "Escorts Limited",
+      "price": 2576.300048828125,
+      "ret_1d": 4.774498806253669,
+      "vol_ratio": 3.72,
+      "score": 44.4
+    },
+    {
+      "symbol": "ASHIANA",
+      "name": "Ashiana Housing Limited",
+      "price": 361.29998779296875,
+      "ret_1d": 0.3332356759550237,
+      "vol_ratio": 4.1,
+      "score": 41.5
+    },
+    {
+      "symbol": "DALMIASUG",
+      "name": "Dalmia Bharat Sugar and Industries Limited",
+      "price": 486.04998779296875,
+      "ret_1d": 7.735785075615476,
+      "vol_ratio": 2.98,
+      "score": 41.4
+    },
+    {
+      "symbol": "GMDCLTD",
+      "name": "Gujarat Mineral Development Corporation Limited",
+      "price": 466.0,
+      "ret_1d": 2.282702756180699,
+      "vol_ratio": 3.6,
+      "score": 39.4
+    },
+    {
+      "symbol": "GRSE",
+      "name": "Garden Reach Shipbuilders & Engineers Limited",
+      "price": 2144.0,
+      "ret_1d": 4.463072598651308,
+      "vol_ratio": 3.15,
+      "score": 38.2
     }
   ]
 }
