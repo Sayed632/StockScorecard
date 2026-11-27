@@ -1,16 +1,116 @@
 {
-  "saved_at": "27 Nov 2026 | 9:23 AM IST",
+  "saved_at": "27 Nov 2026 | 6:43 PM IST",
   "captured_day": "2026-11-27",
   "count": 15,
   "items": [
     {
       "symbol": "BALKRISHNA",
       "name": "Balkrishna Paper Mills Limited",
-      "capture_price": 24.1200008392334,
-      "capture_ret_1d": 40.72346381646008,
-      "capture_ret_5d": 60.907279569852804,
-      "capture_vol_ratio": 23.121697454300236,
-      "capture_score": 64.0,
+      "capture_price": 24.15999984741211,
+      "capture_ret_1d": 17.681437113286936,
+      "capture_ret_5d": 59.682747287968986,
+      "capture_vol_ratio": 32.67611988889164,
+      "capture_score": 55.21772453594433,
+      "captured_at": "2026-11-27"
+    },
+    {
+      "symbol": "UNITECH",
+      "name": "Unitech Limited",
+      "capture_price": 4.800000190734863,
+      "capture_ret_1d": 18.811887031138653,
+      "capture_ret_5d": 25.654457450739887,
+      "capture_vol_ratio": 17.22929441711897,
+      "capture_score": 51.55332454512534,
+      "captured_at": "2026-11-27"
+    },
+    {
+      "symbol": "BEML",
+      "name": "BEML Limited",
+      "capture_price": 2346.10009765625,
+      "capture_ret_1d": 14.993635614424372,
+      "capture_ret_5d": 15.298802897484087,
+      "capture_vol_ratio": 17.895929394803495,
+      "capture_score": 43.346943751428675,
+      "captured_at": "2026-11-27"
+    },
+    {
+      "symbol": "GEOJITFSL",
+      "name": "Geojit Financial Services Limited",
+      "capture_price": 78.2699966430664,
+      "capture_ret_1d": 13.287018080418168,
+      "capture_ret_5d": 8.935279478478586,
+      "capture_vol_ratio": 243.54137679937784,
+      "capture_score": 39.0717695139693,
+      "captured_at": "2026-11-27"
+    },
+    {
+      "symbol": "PRAJIND",
+      "name": "Praj Industries Limited",
+      "capture_price": 255.63999938964844,
+      "capture_ret_1d": 13.426210777912528,
+      "capture_ret_5d": 7.200066289702645,
+      "capture_vol_ratio": 40.08233177307456,
+      "capture_score": 36.11145293349503,
+      "captured_at": "2026-11-27"
+    },
+    {
+      "symbol": "DHAMPURSUG",
+      "name": "Dhampur Sugar Mills Limited",
+      "capture_price": 195.4600067138672,
+      "capture_ret_1d": 8.582863551192732,
+      "capture_ret_5d": 18.166980464580806,
+      "capture_vol_ratio": 4.701499995476763,
+      "capture_score": 35.46387940594161,
+      "captured_at": "2026-11-27"
+    },
+    {
+      "symbol": "DWARKESH",
+      "name": "Dwarikesh Sugar Industries Limited",
+      "capture_price": 49.41999816894531,
+      "capture_ret_1d": 7.903927930539201,
+      "capture_ret_5d": 11.456919257725652,
+      "capture_vol_ratio": 5.858367875055417,
+      "capture_score": 33.49463525685102,
+      "captured_at": "2026-11-27"
+    },
+    {
+      "symbol": "IDEAFORGE",
+      "name": "ideaForge Technology Ltd",
+      "capture_price": 789.2000122070312,
+      "capture_ret_1d": 7.939545353840272,
+      "capture_ret_5d": 15.777889524087874,
+      "capture_vol_ratio": 4.48967734531609,
+      "capture_score": 33.00842513930344,
+      "captured_at": "2026-11-27"
+    },
+    {
+      "symbol": "RADIOCITY",
+      "name": "Music Broadcast Limited",
+      "capture_price": 6.150000095367432,
+      "capture_ret_1d": 10.017887790580637,
+      "capture_ret_5d": 7.329844239020744,
+      "capture_vol_ratio": 7.417375240000645,
+      "capture_score": 32.021465348696765,
+      "captured_at": "2026-11-27"
+    },
+    {
+      "symbol": "EASTSILK",
+      "name": "Eastern Silk Industries Limited",
+      "capture_price": 84.98999786376953,
+      "capture_ret_1d": 4.92592328860435,
+      "capture_ret_5d": 19.033607909608996,
+      "capture_vol_ratio": 5.609528439474964,
+      "capture_score": 31.5876860569675,
+      "captured_at": "2026-11-27"
+    },
+    {
+      "symbol": "JAGRAN",
+      "name": "Jagran Prakashan Limited",
+      "capture_price": 68.26000213623047,
+      "capture_ret_1d": 9.49631371375097,
+      "capture_ret_5d": 5.895133580095213,
+      "capture_vol_ratio": 225.50306105926086,
+      "capture_score": 31.395576456501164,
       "captured_at": "2026-11-27"
     },
     {
@@ -24,133 +124,33 @@
       "captured_at": "2026-11-27"
     },
     {
-      "symbol": "EASTSILK",
-      "name": "Eastern Silk Industries Limited",
-      "capture_price": 78.98999786376953,
-      "capture_ret_1d": 3.133570493058735,
-      "capture_ret_5d": 11.979014514560582,
-      "capture_vol_ratio": 5.576291278577477,
-      "capture_score": 27.32622557315494,
-      "captured_at": "2026-11-27"
-    },
-    {
       "symbol": "PATELENG",
       "name": "Patel Engineering Limited",
-      "capture_price": 26.110000610351562,
-      "capture_ret_1d": 9.20117430773455,
-      "capture_ret_5d": 7.758981030264267,
-      "capture_vol_ratio": 2.7534475185726515,
-      "capture_score": 22.055199243572066,
+      "capture_price": 25.860000610351562,
+      "capture_ret_1d": 8.155586680819283,
+      "capture_ret_5d": 6.727202224143314,
+      "capture_vol_ratio": 30.602628679846305,
+      "capture_score": 29.786704016983137,
       "captured_at": "2026-11-27"
     },
     {
-      "symbol": "BAFNAPH",
-      "name": "Bafna Pharmaceuticals Limited",
-      "capture_price": 559.2000122070312,
-      "capture_ret_1d": 10.24150068152414,
-      "capture_ret_5d": 18.87755515789571,
-      "capture_vol_ratio": 0.022241911337875408,
-      "capture_score": 18.896945123092465,
+      "symbol": "MSPL",
+      "name": "MSP Steel & Power Limited",
+      "capture_price": 32.0099983215332,
+      "capture_ret_1d": 8.105361910538456,
+      "capture_ret_5d": 0.9142465777312259,
+      "capture_vol_ratio": 22.885380550984138,
+      "capture_score": 29.726434292646147,
       "captured_at": "2026-11-27"
     },
     {
-      "symbol": "DANGEE",
-      "name": "Dangee Dums Limited",
-      "capture_price": 3.130000114440918,
-      "capture_ret_1d": 4.333337148030592,
-      "capture_ret_5d": 7.560138217227186,
-      "capture_vol_ratio": 3.112751574307612,
-      "capture_score": 16.78434344526104,
-      "captured_at": "2026-11-27"
-    },
-    {
-      "symbol": "FELDVR",
-      "name": "Future Enterprises Limited",
-      "capture_price": 1.9700000286102295,
-      "capture_ret_1d": 3.684213333182762,
-      "capture_ret_5d": 2.6041704501647,
-      "capture_vol_ratio": 3.2197233754412453,
-      "capture_score": 16.563106834947742,
-      "captured_at": "2026-11-27"
-    },
-    {
-      "symbol": "ACE",
-      "name": "Action Construction Equipment Limited",
-      "capture_price": 1310.0,
-      "capture_ret_1d": 10.051667733698743,
-      "capture_ret_5d": 10.158093994965679,
-      "capture_vol_ratio": 0.4273288994434367,
-      "capture_score": 15.617334178676478,
-      "captured_at": "2026-11-27"
-    },
-    {
-      "symbol": "LIBERTSHOE",
-      "name": "Liberty Shoes Limited",
-      "capture_price": 238.69000244140625,
-      "capture_ret_1d": 9.455676812323134,
-      "capture_ret_5d": 11.31372037227376,
-      "capture_vol_ratio": 0.02512911354507123,
-      "capture_score": 15.306614305083574,
-      "captured_at": "2026-11-27"
-    },
-    {
-      "symbol": "BRIGADE",
-      "name": "Brigade Enterprises Limited",
-      "capture_price": 637.9500122070312,
-      "capture_ret_1d": 8.182126335629182,
-      "capture_ret_5d": 12.72197163124391,
-      "capture_vol_ratio": 0.13248487180482776,
-      "capture_score": 14.271241673690385,
-      "captured_at": "2026-11-27"
-    },
-    {
-      "symbol": "MTEDUCARE",
-      "name": "MT Educare Limited",
-      "capture_price": 1.5099999904632568,
-      "capture_ret_1d": 9.4202895420886,
-      "capture_ret_5d": 0.6666660308837891,
-      "capture_vol_ratio": 0.012977189808085902,
-      "capture_score": 11.30434745050632,
-      "captured_at": "2026-11-27"
-    },
-    {
-      "symbol": "CALSOFT",
-      "name": "California Software Company Limited",
-      "capture_price": 22.989999771118164,
-      "capture_ret_1d": 9.009007135057455,
-      "capture_ret_5d": -11.029413175852076,
-      "capture_vol_ratio": 0.40227933047185804,
-      "capture_score": 10.810808562068946,
-      "captured_at": "2026-11-27"
-    },
-    {
-      "symbol": "MELSTAR",
-      "name": "Melstar Information Technologies Limited",
-      "capture_price": 457.4599914550781,
-      "capture_ret_1d": 3.8690289968259517,
-      "capture_ret_5d": -10.516022385128831,
-      "capture_vol_ratio": 1.72168284789644,
-      "capture_score": 10.755760388411712,
-      "captured_at": "2026-11-27"
-    },
-    {
-      "symbol": "AVADHSUGAR",
-      "name": "Avadh Sugar & Energy Limited",
-      "capture_price": 874.9500122070312,
-      "capture_ret_1d": 6.525846254863077,
-      "capture_ret_5d": 8.045199480877073,
-      "capture_vol_ratio": 0.11482610422589268,
-      "capture_score": 10.646835324142668,
-      "captured_at": "2026-11-27"
-    },
-    {
-      "symbol": "GODREJPROP",
-      "name": "Godrej Properties Limited",
-      "capture_price": 2041.0999755859375,
-      "capture_ret_1d": 6.307290395100917,
-      "capture_ret_5d": 8.707925123879324,
-      "capture_vol_ratio": 0.12122962296603242,
-      "capture_score": 10.616522267478864,
+      "symbol": "GOKEX",
+      "name": "Gokaldas Exports Limited",
+      "capture_price": 793.6500244140625,
+      "capture_ret_1d": 7.650054176203791,
+      "capture_ret_5d": 7.446016135128275,
+      "capture_vol_ratio": 5.31226473561989,
+      "capture_score": 29.180065011444547,
       "captured_at": "2026-11-27"
     }
   ]
