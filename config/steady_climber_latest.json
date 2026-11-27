@@ -1,54 +1,54 @@
 {
-  "saved_at": "27 Nov 2026 | 1:50 AM IST",
+  "saved_at": "28 Nov 2026 | 1:36 AM IST",
   "universe": 700,
   "candidates": 6,
   "items": [
     {
       "symbol": "BAFNAPH",
       "name": "Bafna Pharmaceuticals Limited",
-      "price": 507.25,
-      "ret_60": 80.8,
+      "price": 532.5999755859375,
+      "ret_60": 91.9,
       "r2": 0.912,
       "score": 77.6
     },
     {
       "symbol": "CUBEXTUB",
       "name": "Cubex Tubings Limited",
-      "price": 207.07000732421875,
-      "ret_60": 165.9,
-      "r2": 0.786,
-      "score": 71.3
+      "price": 202.92999267578125,
+      "ret_60": 165.5,
+      "r2": 0.771,
+      "score": 70.6
     },
     {
       "symbol": "ALICON",
       "name": "Alicon Castalloy Limited",
-      "price": 1009.5999755859375,
-      "ret_60": 46.6,
-      "r2": 0.815,
-      "score": 59.4
+      "price": 983.9000244140625,
+      "ret_60": 44.5,
+      "r2": 0.818,
+      "score": 58.7
     },
     {
       "symbol": "DRREDDY",
       "name": "Dr. Reddy's Laboratories Limited",
-      "price": 1398.0,
+      "price": 1392.0,
       "ret_60": 18.3,
-      "r2": 0.873,
-      "score": 51.0
+      "r2": 0.886,
+      "score": 51.6
     },
     {
       "symbol": "HITECHCORP",
       "name": "Hitech Corporation Limited",
-      "price": 415.75,
-      "ret_60": 23.7,
-      "r2": 0.821,
+      "price": 414.04998779296875,
+      "ret_60": 23.5,
+      "r2": 0.824,
       "score": 50.6
     },
     {
       "symbol": "INDHOTEL",
       "name": "The Indian Hotels Company Limited",
-      "price": 903.8499755859375,
-      "ret_60": 25.4,
-      "r2": 0.78,
+      "price": 886.7000122070312,
+      "ret_60": 23.4,
+      "r2": 0.795,
       "score": 49.1
     }
   ]
